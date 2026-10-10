@@ -39,9 +39,18 @@ jobs:
         run: python -m unittest discover -s tests
       - name: Acquire + build (full map workflow)
         working-directory: research/R40_KZ
+        shell: bash
         run: |
           mkdir -p output_cartography
           python -m src.cartography all --assets ../../assets --package output_cartography/R40_CARTOGRAPHY_SOURCE_PACKAGE 2>&1 | tee output_cartography/console.log
+      - name: Verify expected outputs exist
+        working-directory: research/R40_KZ
+        shell: bash
+        run: |
+          P=output_cartography/R40_CARTOGRAPHY_SOURCE_PACKAGE
+          test -f $P/manifest.csv && test -f $P/README.md && test -f $P/exceptions_report.md
+          n=$(ls $P/figures/*.png | wc -l); echo "figures: $n"; test "$n" -ge 12
+          test -f $P/tables/verification_figB_vs_decisions_by_site.csv
       - name: Reproducibility check (offline rebuild from the package)
         if: always()
         working-directory: research/R40_KZ
