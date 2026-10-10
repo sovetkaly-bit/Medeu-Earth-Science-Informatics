@@ -1,0 +1,13 @@
+{
+  "n_elements": 1584,
+  "counts": {
+    "waterway=river": 295,
+    "natural=water": 317,
+    "boundary=administrative": 13,
+    "waterway=canal": 54,
+    "waterway=stream": 710,
+    "waterway=drain": 189,
+    "boundary=protected_area": 5,
+    "boundary=national_park": 1
+  }
+}

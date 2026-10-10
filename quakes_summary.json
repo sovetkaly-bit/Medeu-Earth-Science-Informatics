@@ -1,0 +1,43 @@
+{
+  "n_M4plus": 106,
+  "n_M6plus": 4,
+  "nearest_M6": [
+    {
+      "time": -1861662850700,
+      "mag": 8.02,
+      "depth_km": 20,
+      "lon": 76.808,
+      "lat": 42.919,
+      "dist_km": 32.0,
+      "place": "The 1911 Kemin Earthquake, Kyrgyzstan"
+    },
+    {
+      "time": 658412931520,
+      "mag": 6.4,
+      "depth_km": 19.1,
+      "lon": 78.071,
+      "lat": 42.959,
+      "dist_km": 84.6,
+      "place": "35 km NW of Tyup, Kyrgyzstan"
+    },
+    {
+      "time": -995069363370,
+      "mag": 7.03,
+      "depth_km": 15,
+      "lon": 75.947,
+      "lat": 42.717,
+      "dist_km": 102.1,
+      "place": "22 km ESE of Kemin, Kyrgyzstan"
+    },
+    {
+      "time": 259621548200,
+      "mag": 7.1,
+      "depth_km": 33,
+      "lon": 78.606,
+      "lat": 42.839,
+      "dist_km": 130.1,
+      "place": "23 km ENE of Tyup, Kyrgyzstan"
+    }
+  ],
+  "source": "USGS ComCat FDSN, radius 150 km around 77.06E 43.14N, since 1900; catalogue completeness varies in time"
+}
