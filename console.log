@@ -1,0 +1,37 @@
+[cartography] actions-artifacts: INVENTORY 25 artifacts, 25 not expired
+[cartography] reuse: INTEGRITY 102 ok, 0 mismatched
+[natural-earth] ne_110m_admin_0_countries.zip: OK https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip
+[natural-earth] ne_50m_admin_0_countries.zip: OK https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_0_countries.zip
+[davos_parsenn] swissALTI3D: REFERENCE_READY 2890000 px, 25/25 tiles
+[davos_parsenn] native-reference: OK 2890000 valid px
+[zermatt_gornergrat] swissALTI3D: REFERENCE_READY 2890000 px, 20/20 tiles
+[zermatt_gornergrat] native-reference: OK 2890000 valid px
+[alta_snowbird] 3dep-seamless: REFERENCE_READY 115600 px
+[alta_snowbird] native-reference: OK 115600 valid px
+[park_city] 3dep-seamless: REFERENCE_READY 115600 px
+[park_city] native-reference: OK 115600 valid px
+[EXC:INFO] scope: ALOS AW3D30 not mapped/packaged not redistributed here (JAXA terms require citation/registration; raster use previously limited to statistics in the main run). Figures C use Copernicus GLO-30 and NASADEM only.
+[EXC:INFO] scope: FABDEM not mapped/packaged CC BY-NC-SA 4.0 (non-commercial, share-alike) - raster not redistributed; the main run used it for statistics only. In the OSM-centred Kok-Zhailau window ~45 % of FABDEM pixels are nodata.
+[EXC:WARN] data: No lidar/DTM reference exists for Kazakhstan Kazakhstan maps show transferred decisions; error is NOT measured there. ICESat-2 gives point samples along tracks only.
+[EXC:WARN] data: Distance-only decision rasters were never published Figure B shows the combined rule (the rasters in r40-results). The distance-only shares exist only as table rows in decisions_by_site.csv.
+[EXC:WARN] boundaries: Official resort boundaries are not available Medeu territory = a 0.043 km2 OSM sports-centre polygon (not the resort); Kok-Zhailau has no named OSM polygon; footprints are derived. None is an official border.
+[EXC:WARN] data: KazEOSat imagery not used No public catalogue and no licence; proprietary pixels are not distributed.
+[EXC:WARN] vertical datum: Heights are not datum-harmonised in profile figures EGM2008/EGM96/LN02/NAVD88 differ by metres; profile difference panels remove the median offset.
+[EXC:WARN] common grid: overlapping windows differ slightly in the overlap; first-valid pixel used. Likely cause (not tested): each window was warped separately from the geographic source grid, so sub-pixel coordinate approximation differs between windows; this is a property of the reused r40-results rasters, not of this package {'cop_elevation_m': 'max 2.190, mean 0.287; 19.44% of 159338 overlap cells differ', 'nasadem_elevation_m': 'max 2.238, mean 0.265; 17.02% of 159338 overlap cells differ', 'cop_slope_deg': 'max 1.844, 
+[cartography] derived rasters: OK 
+[cartography] vectors: OK 
+[cartography] profile vectors: OK 
+[verify] figB: DONE 30 comparisons, 0 flagged
+[cartography] tables B: OK 
+[cartography] tables inter-DEM: OK 
+[EXC:INFO] ATL08: documented strict-filter counts vs recomputed docs: 1,484 strict segments / 897-902 pairs (see repository notes); recomputed Kazakhstan strict=1484, pairs_both_strict=902; sum over all five areas strict=3020
+[cartography] ATL08 layers: OK 
+[cartography] Figure A: OK 
+[cartography] Figure B t15: OK 
+[cartography] Figure B t7.5: OK 
+[cartography] Figure B t25: OK 
+[cartography] Figure C: OK 
+[cartography] Figure D: OK 
+[cartography] Figure E: OK 
+[cartography] build: DONE 12 figures; 9 exceptions
+DONE

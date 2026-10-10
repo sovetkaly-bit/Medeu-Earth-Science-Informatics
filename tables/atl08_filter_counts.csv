@@ -1,0 +1,6 @@
+site,n_segments_in_bbox,n_pass_common_filters,n_lenient_unc_lt_15m,n_strict_unc_lt_5m,pct_strict,n_adjacent_pairs_80_120m,n_pairs_both_lenient,n_pairs_both_strict,filter_definition
+kz_all,49162,24577,7018,1484,3.0185915951344535,44676,4852,902,"common: h_te valid, n_te_photons>=30, cloud_flag_atm<=2 (src/icesat2.py quality_mask); lenient: h_te_uncertainty<15 m; strict: <5 m"
+davos_parsenn,12485,8101,2390,509,4.07689227072487,11523,1782,306,"common: h_te valid, n_te_photons>=30, cloud_flag_atm<=2 (src/icesat2.py quality_mask); lenient: h_te_uncertainty<15 m; strict: <5 m"
+zermatt_gornergrat,11629,8603,2618,473,4.067417662739702,10114,1885,253,"common: h_te valid, n_te_photons>=30, cloud_flag_atm<=2 (src/icesat2.py quality_mask); lenient: h_te_uncertainty<15 m; strict: <5 m"
+alta_snowbird,11057,6457,912,116,1.0491091616170751,10047,604,62,"common: h_te valid, n_te_photons>=30, cloud_flag_atm<=2 (src/icesat2.py quality_mask); lenient: h_te_uncertainty<15 m; strict: <5 m"
+park_city,10940,7144,2045,438,4.003656307129799,10203,1542,280,"common: h_te valid, n_te_photons>=30, cloud_flag_atm<=2 (src/icesat2.py quality_mask); lenient: h_te_uncertainty<15 m; strict: <5 m"

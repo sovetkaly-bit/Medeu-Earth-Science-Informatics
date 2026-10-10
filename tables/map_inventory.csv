@@ -1,0 +1,69 @@
+figure,panel,site,quantity,crs,cell_size_m,n_valid_px,area_km2,contour_id,threshold_deg,BELOW_pct,ABOVE_pct,ABSTAIN_pct,class_disagreement_cop_vs_nasadem_pct
+B-supp,Medeu,medeu,decision shares (context),EPSG:32643,30.0,118944,107.0496,"WINDOW:medeu:EPSG:32643:x0=660690,y1=4785690,342x360@30m",7.5,2.73742265267689,95.77532284100081,1.487254506322303,2.029247453171213
+B-supp,Medeu,medeu,decision shares (territory_osm_polygon),EPSG:32643,30.0,49,0.0441,OSM:way/171504564,7.5,34.69387755102041,55.10204081632652,10.204081632653061,22.448979591836736
+B-supp,Medeu,medeu,decision shares (functional_footprint_derived),EPSG:32643,30.0,10665,9.5985,DERIVED:medeu:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),7.5,9.545241443975621,86.16033755274262,4.294421003281763,5.40084388185654
+B,Medeu,medeu,decision shares (context),EPSG:32643,30.0,118944,107.0496,"WINDOW:medeu:EPSG:32643:x0=660690,y1=4785690,342x360@30m",15,9.260660478880817,82.74313962873285,7.996199892386333,5.853598422609267
+B,Medeu,medeu,decision shares (territory_osm_polygon),EPSG:32643,30.0,49,0.0441,OSM:way/171504564,15,73.46938775510205,16.3265306122449,10.204081632653061,8.16326530612245
+B,Medeu,medeu,decision shares (functional_footprint_derived),EPSG:32643,30.0,10665,9.5985,DERIVED:medeu:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),15,24.62259728082513,61.18143459915611,14.195968120018755,9.760900140646976
+B-supp,Medeu,medeu,decision shares (context),EPSG:32643,30.0,118944,107.0496,"WINDOW:medeu:EPSG:32643:x0=660690,y1=4785690,342x360@30m",25,31.732580037664782,52.852602905569015,15.414817056766209,11.737594479132435
+B-supp,Medeu,medeu,decision shares (territory_osm_polygon),EPSG:32643,30.0,49,0.0441,OSM:way/171504564,25,95.91836734693877,0.0,4.081632653061225,0.0
+B-supp,Medeu,medeu,decision shares (functional_footprint_derived),EPSG:32643,30.0,10665,9.5985,DERIVED:medeu:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),25,57.25269573370839,26.14158462259728,16.60571964369433,10.464135021097047
+B-supp,Shymbulak,shymbulak,decision shares (context),EPSG:32643,30.0,95040,85.536,"WINDOW:shymbulak:EPSG:32643:x0=665160,y1=4782660,294x336@30m",7.5,0.8312289562289563,98.29650673400674,0.8722643097643097,1.2816832089246164
+B-supp,Shymbulak,shymbulak,decision shares (territory_osm_polygon),EPSG:32643,30.0,2419,2.1771,OSM:way/1254871130,7.5,2.0256304257957836,95.824720959074,2.149648615130219,4.092600248036379
+B-supp,Shymbulak,shymbulak,decision shares (functional_footprint_derived),EPSG:32643,30.0,2620,2.358,DERIVED:shymbulak:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),7.5,2.709923664122137,94.88549618320612,2.404580152671756,4.236641221374046
+B,Shymbulak,shymbulak,decision shares (context),EPSG:32643,30.0,95040,85.536,"WINDOW:shymbulak:EPSG:32643:x0=665160,y1=4782660,294x336@30m",15,4.938973063973064,89.09511784511784,5.965909090909091,4.361824296612255
+B,Shymbulak,shymbulak,decision shares (territory_osm_polygon),EPSG:32643,30.0,2419,2.1771,OSM:way/1254871130,15,13.642000826787928,73.2534105002067,13.104588673005374,10.252170318313352
+B,Shymbulak,shymbulak,decision shares (functional_footprint_derived),EPSG:32643,30.0,2620,2.358,DERIVED:shymbulak:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),15,15.0,72.44274809160305,12.557251908396946,10.15267175572519
+B-supp,Shymbulak,shymbulak,decision shares (context),EPSG:32643,30.0,95040,85.536,"WINDOW:shymbulak:EPSG:32643:x0=665160,y1=4782660,294x336@30m",25,20.324074074074076,67.37794612794613,12.297979797979798,10.05762447707325
+B-supp,Shymbulak,shymbulak,decision shares (territory_osm_polygon),EPSG:32643,30.0,2419,2.1771,OSM:way/1254871130,25,59.652749069863575,21.992558908639932,18.354692021496486,11.864406779661017
+B-supp,Shymbulak,shymbulak,decision shares (functional_footprint_derived),EPSG:32643,30.0,2620,2.358,DERIVED:shymbulak:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),25,59.656488549618324,23.62595419847328,16.717557251908396,11.068702290076336
+B-supp,Kok-Zhailau V1,kok_zhailau,decision shares (context),EPSG:32643,30.0,74088,66.6792,"WINDOW:kok_zhailau:EPSG:32643:x0=664080,y1=4779180,258x300@30m",7.5,1.2323183241550588,97.80396285498327,0.9637188208616779,1.4746749161073827
+B-supp,Kok-Zhailau V1,kok_zhailau,decision shares (functional_footprint_derived),EPSG:32643,30.0,683,0.6147,DERIVED:kok_zhailau:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),7.5,2.781844802342606,93.26500732064422,3.953147877013177,6.588579795021962
+B,Kok-Zhailau V1,kok_zhailau,decision shares (context),EPSG:32643,30.0,74088,66.6792,"WINDOW:kok_zhailau:EPSG:32643:x0=664080,y1=4779180,258x300@30m",15,6.91340028074722,87.09912536443149,5.987474354821294,4.447619546979865
+B,Kok-Zhailau V1,kok_zhailau,decision shares (functional_footprint_derived),EPSG:32643,30.0,683,0.6147,DERIVED:kok_zhailau:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),15,23.718887262079065,58.85797950219619,17.423133235724745,10.834553440702782
+B-supp,Kok-Zhailau V1,kok_zhailau,decision shares (context),EPSG:32643,30.0,74088,66.6792,"WINDOW:kok_zhailau:EPSG:32643:x0=664080,y1=4779180,258x300@30m",25,22.915991793542815,66.41561386459345,10.66839434186373,8.909658137583893
+B-supp,Kok-Zhailau V1,kok_zhailau,decision shares (functional_footprint_derived),EPSG:32643,30.0,683,0.6147,DERIVED:kok_zhailau:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),25,64.56808199121524,19.1800878477306,16.251830161054173,13.469985358711567
+B-supp,Kok-Zhailau V2,kok_zhailau_osm,decision shares (context),EPSG:32643,30.0,69696,62.7264,"WINDOW:kok_zhailau_osm:EPSG:32643:x0=658980,y1=4782420,270x270@30m",7.5,1.8896349862258952,96.6583448117539,1.452020202020202,1.9673089775005568
+B-supp,Kok-Zhailau V2,kok_zhailau_osm,decision shares (functional_footprint_derived),EPSG:32643,30.0,348,0.3132,DERIVED:kok_zhailau_osm:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),7.5,5.747126436781609,87.93103448275862,6.321839080459771,8.620689655172415
+B,Kok-Zhailau V2,kok_zhailau_osm,decision shares (context),EPSG:32643,30.0,69696,62.7264,"WINDOW:kok_zhailau_osm:EPSG:32643:x0=658980,y1=4782420,270x270@30m",15,8.7508608815427,83.67338154269972,7.575757575757576,5.475885497883716
+B,Kok-Zhailau V2,kok_zhailau_osm,decision shares (functional_footprint_derived),EPSG:32643,30.0,348,0.3132,DERIVED:kok_zhailau_osm:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),15,41.37931034482759,37.93103448275862,20.689655172413794,13.793103448275861
+B-supp,Kok-Zhailau V2,kok_zhailau_osm,decision shares (context),EPSG:32643,30.0,69696,62.7264,"WINDOW:kok_zhailau_osm:EPSG:32643:x0=658980,y1=4782420,270x270@30m",25,29.518193296602384,55.73203627180901,14.749770431588614,11.024170193807084
+B-supp,Kok-Zhailau V2,kok_zhailau_osm,decision shares (functional_footprint_derived),EPSG:32643,30.0,348,0.3132,DERIVED:kok_zhailau_osm:footprint(buffer250m-erode200m of mapped aerialway/piste/tourism/leisure features),25,79.59770114942529,4.597701149425287,15.804597701149426,8.908045977011495
+A,c,medeu,processing window,EPSG:32643,30.0,123120,110.808,"WINDOW:medeu:EPSG:32643:x0=660690,y1=4785690,342x360@30m",,,,,
+A,c,shymbulak,processing window,EPSG:32643,30.0,98784,88.9056,"WINDOW:shymbulak:EPSG:32643:x0=665160,y1=4782660,294x336@30m",,,,,
+A,c,kok_zhailau,processing window,EPSG:32643,30.0,77400,69.66,"WINDOW:kok_zhailau:EPSG:32643:x0=664080,y1=4779180,258x300@30m",,,,,
+A,c,kok_zhailau_osm,processing window,EPSG:32643,30.0,72900,65.61,"WINDOW:kok_zhailau_osm:EPSG:32643:x0=658980,y1=4782420,270x270@30m",,,,,
+A,c,kz_inset_bbox,"enlarged inset frame 76.85-77.20E, 43.05-43.25N",EPSG:32643,30,212866,632.489803515625,"BBOX:76.85,43.05,77.20,43.25",,,,,
+A-supp,a,davos_parsenn,processing window,EPSG:32632,30.0,93636,84.2724,"WINDOW:davos_parsenn:EPSG:32632:x0=556890,y1=5191470,306x306@30m",,,,,
+A-supp,b,zermatt_gornergrat,processing window,EPSG:32632,30.0,95472,85.9248,"WINDOW:zermatt_gornergrat:EPSG:32632:x0=399360,y1=5098260,312x306@30m",,,,,
+A-supp,c,alta_snowbird,processing window,EPSG:32612,30.0,93636,84.2724,"WINDOW:alta_snowbird:EPSG:32612:x0=441270,y1=4496880,306x306@30m",,,,,
+A-supp,d,park_city,processing window,EPSG:32612,30.0,93636,84.2724,"WINDOW:park_city:EPSG:32612:x0=452340,y1=4504560,306x306@30m",,,,,
+C1,a,medeu,(a) Medeu: NASADEM minus Copernicus slope,EPSG:32643,30.0,121720,109.548,"WINDOW:medeu:EPSG:32643:x0=660690,y1=4785690,342x360@30m",,,,,
+C1,b,shymbulak,(b) Shymbulak: NASADEM minus Copernicus slope,EPSG:32643,30.0,97528,87.7752,"WINDOW:shymbulak:EPSG:32643:x0=665160,y1=4782660,294x336@30m",,,,,
+C1,c,kok_zhailau,(c) Kok-Zhailau V1: NASADEM minus Copernicus slope,EPSG:32643,30.0,76288,68.6592,"WINDOW:kok_zhailau:EPSG:32643:x0=664080,y1=4779180,258x300@30m",,,,,
+C1,d,kok_zhailau_osm,(d) Kok-Zhailau V2: NASADEM minus Copernicus slope,EPSG:32643,30.0,71824,64.6416,"WINDOW:kok_zhailau_osm:EPSG:32643:x0=658980,y1=4782420,270x270@30m",,,,,
+C2,1a,davos_parsenn,Davos-Parsenn: Copernicus - lidar,EPSG:32632,30.0,92416,83.1744,"WINDOW:davos_parsenn:EPSG:32632:x0=556890,y1=5191470,306x306@30m",,,,,
+C2,1b,davos_parsenn,Davos-Parsenn: NASADEM - lidar,EPSG:32632,30.0,92416,83.1744,"WINDOW:davos_parsenn:EPSG:32632:x0=556890,y1=5191470,306x306@30m",,,,,
+C2,1c,davos_parsenn,Davos-Parsenn: NASADEM - Copernicus,EPSG:32632,30.0,92416,83.1744,"WINDOW:davos_parsenn:EPSG:32632:x0=556890,y1=5191470,306x306@30m",,,,,
+C2,2a,zermatt_gornergrat,Zermatt-Gornergrat: Copernicus - lidar,EPSG:32632,30.0,94240,84.816,"WINDOW:zermatt_gornergrat:EPSG:32632:x0=399360,y1=5098260,312x306@30m",,,,,
+C2,2b,zermatt_gornergrat,Zermatt-Gornergrat: NASADEM - lidar,EPSG:32632,30.0,94240,84.816,"WINDOW:zermatt_gornergrat:EPSG:32632:x0=399360,y1=5098260,312x306@30m",,,,,
+C2,2c,zermatt_gornergrat,Zermatt-Gornergrat: NASADEM - Copernicus,EPSG:32632,30.0,94240,84.816,"WINDOW:zermatt_gornergrat:EPSG:32632:x0=399360,y1=5098260,312x306@30m",,,,,
+C2,3a,alta_snowbird,Alta-Snowbird: Copernicus - lidar,EPSG:32612,30.0,92416,83.1744,"WINDOW:alta_snowbird:EPSG:32612:x0=441270,y1=4496880,306x306@30m",,,,,
+C2,3b,alta_snowbird,Alta-Snowbird: NASADEM - lidar,EPSG:32612,30.0,92416,83.1744,"WINDOW:alta_snowbird:EPSG:32612:x0=441270,y1=4496880,306x306@30m",,,,,
+C2,3c,alta_snowbird,Alta-Snowbird: NASADEM - Copernicus,EPSG:32612,30.0,92416,83.1744,"WINDOW:alta_snowbird:EPSG:32612:x0=441270,y1=4496880,306x306@30m",,,,,
+C2,4a,park_city,Park City: Copernicus - lidar,EPSG:32612,30.0,92416,83.1744,"WINDOW:park_city:EPSG:32612:x0=452340,y1=4504560,306x306@30m",,,,,
+C2,4b,park_city,Park City: NASADEM - lidar,EPSG:32612,30.0,92416,83.1744,"WINDOW:park_city:EPSG:32612:x0=452340,y1=4504560,306x306@30m",,,,,
+C2,4c,park_city,Park City: NASADEM - Copernicus,EPSG:32612,30.0,92416,83.1744,"WINDOW:park_city:EPSG:32612:x0=452340,y1=4504560,306x306@30m",,,,,
+D,davos_parsenn:WE,davos_parsenn,elevation profile 3 km,EPSG:32632,2.0,1501,,PROFILE:davos_parsenn:WE:3000m,,,,,
+D,davos_parsenn:SN,davos_parsenn,elevation profile 3 km,EPSG:32632,2.0,1501,,PROFILE:davos_parsenn:SN:3000m,,,,,
+D,zermatt_gornergrat:WE,zermatt_gornergrat,elevation profile 3 km,EPSG:32632,2.0,1501,,PROFILE:zermatt_gornergrat:WE:3000m,,,,,
+D,zermatt_gornergrat:SN,zermatt_gornergrat,elevation profile 3 km,EPSG:32632,2.0,1501,,PROFILE:zermatt_gornergrat:SN:3000m,,,,,
+D,alta_snowbird:WE,alta_snowbird,elevation profile 3 km,EPSG:32612,10.0,301,,PROFILE:alta_snowbird:WE:3000m,,,,,
+D,alta_snowbird:SN,alta_snowbird,elevation profile 3 km,EPSG:32612,10.0,301,,PROFILE:alta_snowbird:SN:3000m,,,,,
+D,park_city:WE,park_city,elevation profile 3 km,EPSG:32612,10.0,301,,PROFILE:park_city:WE:3000m,,,,,
+D,park_city:SN,park_city,elevation profile 3 km,EPSG:32612,10.0,301,,PROFILE:park_city:SN:3000m,,,,,
+E,a,kz_all,ATL08 segments in view,EPSG:32643,30.0,49162,664.0052603470143,"BBOX:76.85,43.05,77.20,43.25",,,,,
+E,b,davos_parsenn,ATL08 segments in view,EPSG:32632,30.0,8691,84.2724,"WINDOW:davos_parsenn:EPSG:32632:x0=556890,y1=5191470,306x306@30m",,,,,
+E,c,zermatt_gornergrat,ATL08 segments in view,EPSG:32632,30.0,8151,85.9248,"WINDOW:zermatt_gornergrat:EPSG:32632:x0=399360,y1=5098260,312x306@30m",,,,,
+E,d,alta_snowbird,ATL08 segments in view,EPSG:32612,30.0,7988,84.2724,"WINDOW:alta_snowbird:EPSG:32612:x0=441270,y1=4496880,306x306@30m",,,,,
+E,e,park_city,ATL08 segments in view,EPSG:32612,30.0,8229,84.2724,"WINDOW:park_city:EPSG:32612:x0=452340,y1=4504560,306x306@30m",,,,,
