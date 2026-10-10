@@ -1,0 +1,267 @@
+{
+  "generated_utc": "2026-10-10T14:52:48+00:00",
+  "bbox_WSEN": [
+    76.85,
+    43.05,
+    77.2,
+    43.25
+  ],
+  "submits_jobs": false,
+  "earthdata_token": {
+    "status": "HTTP_401",
+    "username": null,
+    "token_expires_utc": "2026-12-09T14:34:48+00:00"
+  },
+  "cmr_granules": [
+    {
+      "short_name": "ATL08",
+      "version": "007",
+      "hits": 126,
+      "returned": 126,
+      "total_size_GB": 19.62,
+      "mean_granule_MB": 159.4,
+      "by_year": {
+        "2018": 4,
+        "2019": 17,
+        "2020": 17,
+        "2021": 16,
+        "2022": 16,
+        "2023": 16,
+        "2024": 14,
+        "2025": 16,
+        "2026": 10
+      },
+      "first": "2018-11-02T09:20:43.876Z",
+      "last": "2026-07-18T18:53:45.857Z",
+      "example_ids": [
+        "ATL08_20181102092041_05310102_007_01.h5",
+        "ATL08_20181104212814_05690106_007_01.h5",
+        "ATL08_20181201075635_09730102_007_01.h5"
+      ]
+    },
+    {
+      "short_name": "ATL03",
+      "version": "007",
+      "hits": 127,
+      "returned": 127,
+      "total_size_GB": 439.1,
+      "mean_granule_MB": 3540.5,
+      "by_year": {
+        "2018": 4,
+        "2019": 17,
+        "2020": 17,
+        "2021": 16,
+        "2022": 16,
+        "2023": 17,
+        "2024": 14,
+        "2025": 16,
+        "2026": 10
+      },
+      "first": "2018-11-02T09:20:43.877Z",
+      "last": "2026-07-18T18:53:37.259Z",
+      "example_ids": [
+        "ATL03_20181102092041_05310102_007_01.h5",
+        "ATL03_20181104212814_05690106_007_01.h5",
+        "ATL03_20181201075635_09730102_007_01.h5"
+      ]
+    },
+    {
+      "short_name": "GEDI02_A",
+      "version": "003",
+      "hits": 136,
+      "returned": 136,
+      "total_size_GB": 265.24,
+      "mean_granule_MB": 1997.1,
+      "by_year": {
+        "2019": 21,
+        "2020": 32,
+        "2021": 24,
+        "2022": 25,
+        "2023": 3,
+        "2024": 15,
+        "2025": 16
+      },
+      "first": "2019-04-07T07:53:36.000Z",
+      "last": "2025-06-18T05:08:32.000Z",
+      "example_ids": [
+        "GEDI02_A_2019097075336_O01793_02_T05227_02_004_02_V003.h5",
+        "GEDI02_A_2019104051134_O01900_02_T00652_02_004_02_V003.h5",
+        "GEDI02_A_2019106094258_O01934_03_T02920_02_004_02_V003.h5"
+      ]
+    }
+  ],
+  "icesat2_streaming_test": {
+    "status": "OK",
+    "granule": "ATL08_20181102092041_05310102_007_01.h5",
+    "beams": [
+      "gt1l",
+      "gt1r",
+      "gt2l",
+      "gt2r",
+      "gt3l",
+      "gt3r"
+    ],
+    "segments_in_bbox_this_granule": 43,
+    "seconds": 8.4,
+    "datasets_example": [
+      "h_te_best_fit",
+      "h_te_best_fit_20m",
+      "h_te_interp",
+      "h_te_max",
+      "h_te_mean",
+      "h_te_median",
+      "h_te_min",
+      "h_te_mode",
+      "h_te_rh25",
+      "h_te_skew",
+      "h_te_std",
+      "h_te_uncertainty",
+      "n_te_photons",
+      "photon_rate_te",
+      "subset_te_flag",
+      "te_quality_score",
+      "terrain_slope"
+    ]
+  },
+  "sentinel1_slc_asf": {
+    "status": "OK",
+    "total_scenes": 700,
+    "tracks": [
+      {
+        "relative_orbit": 34,
+        "direction": "DESCENDING",
+        "scenes": 164,
+        "summer_JJAS_scenes": 56,
+        "first": "2022-08-15",
+        "last": "2026-10-06"
+      },
+      {
+        "relative_orbit": 56,
+        "direction": "ASCENDING",
+        "scenes": 184,
+        "summer_JJAS_scenes": 70,
+        "first": "2021-01-05",
+        "last": "2026-10-01"
+      },
+      {
+        "relative_orbit": 107,
+        "direction": "DESCENDING",
+        "scenes": 165,
+        "summer_JJAS_scenes": 59,
+        "first": "2021-01-09",
+        "last": "2026-10-05"
+      },
+      {
+        "relative_orbit": 129,
+        "direction": "ASCENDING",
+        "scenes": 187,
+        "summer_JJAS_scenes": 71,
+        "first": "2021-01-10",
+        "last": "2026-10-06"
+      }
+    ]
+  },
+  "hyp3": {
+    "status": "OK",
+    "remaining_credits": 8000,
+    "user": {
+      "application_status": "APPROVED",
+      "remaining_credits": 8000,
+      "user_id": "orazaly",
+      "job_names": []
+    },
+    "costs_http": 200,
+    "costs": {
+      "AUTORIFT": {
+        "cost": 25
+      },
+      "INSAR_GAMMA": {
+        "cost_parameters": [
+          "looks"
+        ],
+        "cost_table": {
+          "20x4": 10,
+          "10x2": 15
+        }
+      },
+      "RTC_GAMMA": {
+        "cost_parameters": [
+          "resolution"
+        ],
+        "cost_table": {
+          "30": 5,
+          "20": 15,
+          "10": 60
+        }
+      },
+      "INSAR_ISCE_BURST": {
+        "cost": 1
+      },
+      "INSAR_ISCE_MULTI_BURST": {
+        "cost_parameters": [
+          "looks",
+          "reference"
+        ],
+        "cost_table": {
+          "20x4": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "5": 5,
+            "6": 5,
+            "7": 5,
+            "8": 5,
+            "9": 5,
+            "10": 5,
+            "11": 5,
+            "12": 5,
+            "13": 10,
+            "14": 10,
+            "15": 10
+          },
+          "10x2": {
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 5,
+            "5": 5,
+            "6": 5,
+            "7": 5,
+            "8": 5,
+            "9": 5,
+            "10": 10,
+            "11": 10,
+            "12": 10,
+            "13": 10,
+            "14": 10,
+            "15": 10
+          },
+          "5x1": {
+            "1": 1,
+            "2": 5,
+            "3": 10,
+            "4": 15,
+            "5": 20,
+            "6": 25,
+            "7": 30,
+            "8": 35,
+            "9": 40,
+            "10": 45,
+            "11": 90,
+            "12": 95,
+            "13": 100,
+            "14": 105,
+            "15": 110
+          }
+        }
+      },
+      "ARIA_S1_GUNW": {
+        "cost": 60
+      },
+      "OPERA_DISP_TMS": {
+        "cost": 10001
+      }
+    }
+  }
+}

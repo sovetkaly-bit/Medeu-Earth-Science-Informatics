@@ -1,0 +1,5 @@
+time,site,source,status,details,count
+2026-10-10T14:52:49+00:00,E0,earthdata-token,HTTP_401,None,
+2026-10-10T14:52:49+00:00,E0,ATL08,FOUND,"v007: 126 granules, 19.62 GB (full granules)",126
+2026-10-10T14:52:50+00:00,E0,ATL03,FOUND,"v007: 127 granules, 439.1 GB (full granules)",127
+2026-10-10T14:52:51+00:00,E0,GEDI02_A,FOUND,"v003: 136 granules, 265.24 GB (full granules)",136
