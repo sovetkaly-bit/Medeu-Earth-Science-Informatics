@@ -45,7 +45,7 @@ class Acc:
             m = good & ~snow & (scl != WATER)
             with np.errstate(divide="ignore", invalid="ignore"):
                 nd = (nir - red) / (nir + red)
-            m &= np.isfinite(nd)
+            m &= np.isfinite(nd) & (nd > -1) & (nd < 1)
             self.nd_sum += np.where(m, nd, 0)
             self.nd_n += m
 
@@ -63,7 +63,10 @@ def scene_stats(item, bounds, shape):
                 return None
             win = from_bounds(*bounds, transform=src.transform)
             out[key] = src.read(1, window=win, out_shape=(h, w), boundless=True, fill_value=0, resampling=rasterio.enums.Resampling.nearest)
-    return out["SCL"].astype(np.uint8), out["B04"].astype(np.float32) / 1e4 - 0.1, out["B08"].astype(np.float32) / 1e4 - 0.1
+    # processing baseline >= 04.00 (from 2022-01-25) adds a +1000 DN offset to reflectance bands
+    pb = str(item.properties.get("s2:processing_baseline", "00.00"))
+    off = 0.1 if pb >= "04.00" else 0.0
+    return out["SCL"].astype(np.uint8), out["B04"].astype(np.float32) / 1e4 - off, out["B08"].astype(np.float32) / 1e4 - off
 
 
 def main():
