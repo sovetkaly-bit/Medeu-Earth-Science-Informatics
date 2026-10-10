@@ -1,0 +1,94 @@
+name: R40 cartography source package
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  carto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: r40-results, path: assets/r40-results, fetch-depth: 1 }
+      - uses: actions/checkout@v4
+        with: { ref: r40-icesat2, path: assets/r40-icesat2, fetch-depth: 1 }
+      - uses: actions/checkout@v4
+        with: { ref: r40-extra, path: assets/r40-extra, fetch-depth: 1 }
+      - name: Record asset commits
+        run: |
+          python3 - <<'PY'
+          import json, subprocess
+          out = {}
+          for b in ("r40-results", "r40-icesat2", "r40-extra"):
+              out[b] = subprocess.check_output(["git", "-C", f"assets/{b}", "rev-parse", "HEAD"], text=True).strip()
+          out["code_commit"] = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          out["code_ref"] = "${{ github.ref_name }}"
+          json.dump(out, open("assets/commits.json", "w"), indent=2)
+          print(out)
+          PY
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install
+        working-directory: research/R40_KZ
+        run: python -m pip install -r requirements.txt -r requirements-carto.txt
+      - name: Unit tests
+        working-directory: research/R40_KZ
+        run: python -m unittest discover -s tests
+      - name: Acquire + build (full map workflow)
+        working-directory: research/R40_KZ
+        run: |
+          mkdir -p output_cartography
+          python -m src.cartography all --assets ../../assets --package output_cartography/R40_CARTOGRAPHY_SOURCE_PACKAGE 2>&1 | tee output_cartography/console.log
+      - name: Reproducibility check (offline rebuild from the package)
+        if: always()
+        working-directory: research/R40_KZ
+        run: |
+          set +e
+          python -m src.cartography build --package output_cartography/R40_CARTOGRAPHY_SOURCE_PACKAGE --out output_cartography/rebuild_check 2>&1 | tail -5
+          diff -rq output_cartography/R40_CARTOGRAPHY_SOURCE_PACKAGE/tables output_cartography/rebuild_check/tables > output_cartography/repro_diff.txt
+          echo "exit=$? (0 = tables identical)" | tee -a output_cartography/repro_diff.txt
+          cat output_cartography/repro_diff.txt
+      - name: Secret scan of package
+        working-directory: research/R40_KZ
+        run: |
+          if grep -rIl -E "(ghp_|github_pat_|eyJ[A-Za-z0-9_-]{30,}\.[A-Za-z0-9_-]{20,})" output_cartography/R40_CARTOGRAPHY_SOURCE_PACKAGE; then echo "possible token found"; exit 1; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: R40_CARTOGRAPHY_SOURCE_PACKAGE
+          path: research/R40_KZ/output_cartography/R40_CARTOGRAPHY_SOURCE_PACKAGE
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: R40_CARTOGRAPHY_LOGS
+          path: |
+            research/R40_KZ/output_cartography/console.log
+            research/R40_KZ/output_cartography/repro_diff.txt
+          retention-days: 90
+      - name: Publish light files (no rasters) to branch r40-cartography-results
+        if: always()
+        continue-on-error: true
+        working-directory: research/R40_KZ
+        run: |
+          P=output_cartography/R40_CARTOGRAPHY_SOURCE_PACKAGE
+          rm -rf /tmp/res && mkdir -p /tmp/res/previews
+          cp $P/README.md $P/manifest.csv $P/exceptions_report.md $P/exceptions_report.csv /tmp/res/ 2>/dev/null || true
+          cp -r $P/tables /tmp/res/ 2>/dev/null || true
+          cp $P/figures/CAPTIONS.md /tmp/res/ 2>/dev/null || true
+          cp $P/inputs/provenance/asset_commits.json $P/inputs/provenance/reuse_integrity_check.csv /tmp/res/ 2>/dev/null || true
+          cp output_cartography/console.log output_cartography/repro_diff.txt /tmp/res/ 2>/dev/null || true
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          Image.MAX_IMAGE_PIXELS = None
+          for p in Path("output_cartography/R40_CARTOGRAPHY_SOURCE_PACKAGE/figures").glob("*.png"):
+              im = Image.open(p); w = 1500; im = im.resize((w, int(im.height * w / im.width)))
+              im.save(Path("/tmp/res/previews") / p.name, optimize=True)
+          PY
+          cd /tmp/res && git init -q -b r40-cartography-results
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -q -m "R40 cartography: light outputs of run ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" "HEAD:refs/heads/r40-cartography-results"

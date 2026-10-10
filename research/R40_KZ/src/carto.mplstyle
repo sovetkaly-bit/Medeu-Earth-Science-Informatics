@@ -1,0 +1,22 @@
+# Shared style sheet for all R40 cartographic figures (loaded by src/cartography.py)
+font.family: DejaVu Sans
+font.size: 7
+axes.titlesize: 7.5
+axes.titleweight: bold
+axes.labelsize: 7
+axes.linewidth: 0.6
+xtick.labelsize: 6
+ytick.labelsize: 6
+legend.fontsize: 6.5
+legend.frameon: True
+legend.framealpha: 0.95
+legend.edgecolor: 0.6
+figure.dpi: 100
+savefig.dpi: 300
+savefig.facecolor: white
+figure.facecolor: white
+pdf.fonttype: 42
+ps.fonttype: 42
+svg.fonttype: none
+image.interpolation: nearest
+lines.linewidth: 0.9
