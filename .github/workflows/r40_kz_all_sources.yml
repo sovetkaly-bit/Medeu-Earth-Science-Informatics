@@ -4,18 +4,26 @@ on:
     inputs:
       site:
         type: choice
-        description: Research territory
-        options: [all, shymbulak, medeu, kok_zhailau]
+        description: Kazakhstan territory (validation sites in CH/US always run unless skipped)
+        options: [all, medeu, shymbulak, kok_zhailau, kok_zhailau_osm]
         default: all
+      skip_fabdem:
+        type: boolean
+        description: Skip FABDEM attempt (large remote ZIP, CC BY-NC-SA)
+        default: false
+      skip_validation:
+        type: boolean
+        description: Skip validation sites (Kazakhstan descriptive products only)
+        default: false
 permissions:
-  contents: read
+  contents: write
 defaults:
   run:
     working-directory: research/R40_KZ
 jobs:
-  multisource:
+  r40:
     runs-on: ubuntu-latest
-    timeout-minutes: 110
+    timeout-minutes: 175
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,15 +33,38 @@ jobs:
           cache-dependency-path: research/R40_KZ/requirements.txt
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
-      - name: Run pipeline
+      - name: Offline self-tests (synthetic terrain)
+        run: python -m unittest discover -s tests -v
+      - name: Run R40 pipeline
         env:
           SITE: ${{ inputs.site }}
-        run: python src/run.py --site "$SITE"
-      - name: Upload results
+          SKIP_FABDEM: ${{ inputs.skip_fabdem }}
+          SKIP_VALIDATION: ${{ inputs.skip_validation }}
+        run: |
+          ARGS="--site $SITE"
+          if [ "$SKIP_FABDEM" = "true" ]; then ARGS="$ARGS --no-fabdem"; fi
+          if [ "$SKIP_VALIDATION" = "true" ]; then ARGS="$ARGS --no-validation"; fi
+          python -m src.run $ARGS 2>&1 | tee run_console.log
+      - name: Keep console log in results
+        if: always()
+        run: mkdir -p output && cp run_console.log output/run_console.log || true
+      - name: Upload single results archive
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: R40-Kazakhstan-results
           path: research/R40_KZ/output/
-          retention-days: 30
+          retention-days: 90
           if-no-files-found: warn
+      - name: Publish results to branch r40-results (readable without downloading the artifact)
+        if: always()
+        continue-on-error: true
+        run: |
+          rm -rf /tmp/res && mkdir /tmp/res && cp -r output/. /tmp/res/
+          cd /tmp/res
+          git init -q -b r40-results
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "R40 results: run ${{ github.run_id }} on ${{ github.sha }}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" r40-results
