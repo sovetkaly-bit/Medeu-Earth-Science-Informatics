@@ -1,0 +1,24 @@
+# Journal style sheet for the R40 figures (A4 print, figure width 180 mm, every text >= 7 pt at 100 % size)
+font.family: DejaVu Sans
+font.size: 8
+axes.titlesize: 9
+axes.titleweight: bold
+axes.labelsize: 8
+axes.linewidth: 0.8
+xtick.labelsize: 7.5
+ytick.labelsize: 7.5
+xtick.major.size: 3
+ytick.major.size: 3
+xtick.major.width: 0.7
+ytick.major.width: 0.7
+legend.fontsize: 8
+legend.frameon: False
+figure.dpi: 100
+savefig.dpi: 300
+savefig.facecolor: white
+figure.facecolor: white
+pdf.fonttype: 42
+ps.fonttype: 42
+svg.fonttype: none
+image.interpolation: nearest
+lines.linewidth: 1.0
