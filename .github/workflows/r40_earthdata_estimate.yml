@@ -1,0 +1,41 @@
+name: R40 Earthdata estimate (ICESat-2, GEDI, Sentinel-1/HyP3) - no processing
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+defaults:
+  run:
+    working-directory: research/R40_KZ
+jobs:
+  estimate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: research/R40_KZ/requirements-earthdata.txt
+      - run: python -m pip install -r requirements-earthdata.txt
+      - name: Estimate (reads token only from the secret EARTHDATA_TOKEN)
+        env:
+          EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
+          R40_OUT: output_earthdata
+        run: python -m src.estimate_earthdata 2>&1 | tee estimate_console.log
+      - name: Guard - fail if the token text appears in any output
+        if: always()
+        env:
+          EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
+        run: |
+          mkdir -p output_earthdata; cp estimate_console.log output_earthdata/ 2>/dev/null || true
+          if [ -n "$EARTHDATA_TOKEN" ] && grep -rF -- "$EARTHDATA_TOKEN" output_earthdata; then echo "TOKEN LEAK"; rm -rf output_earthdata; exit 1; fi
+      - name: Publish estimate to branch r40-earthdata-estimate
+        if: always()
+        continue-on-error: true
+        run: |
+          rm -rf /tmp/res && mkdir /tmp/res && cp -r output_earthdata/. /tmp/res/
+          cd /tmp/res && git init -q -b r40-earthdata-estimate
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -q -m "R40 Earthdata estimate: run ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" r40-earthdata-estimate
