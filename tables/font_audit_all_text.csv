@@ -1,0 +1,494 @@
+figure,text,fontsize_pt
+R40_Fig_A_study_area,KZ,8.5
+R40_Fig_A_study_area,CH,8.5
+R40_Fig_A_study_area,US,8.5
+R40_Fig_A_study_area,(a) World,9.0
+R40_Fig_A_study_area,Robinson,7.5
+R40_Fig_A_study_area,Almaty,8.0
+R40_Fig_A_study_area,KAZAKHSTAN,8.0
+R40_Fig_A_study_area,1e7,7.5
+R40_Fig_A_study_area,1e7,7.5
+R40_Fig_A_study_area,(b) Central Asia,9.0
+R40_Fig_A_study_area,Lambert azimuthal,7.5
+R40_Fig_A_study_area,Medeu,9.0
+R40_Fig_A_study_area,Shymbulak,9.0
+R40_Fig_A_study_area,Kok-Zhailau V1,9.0
+R40_Fig_A_study_area,Kok-Zhailau V2,9.0
+R40_Fig_A_study_area,76.9°E,7.5
+R40_Fig_A_study_area,77°E,7.5
+R40_Fig_A_study_area,77.1°E,7.5
+R40_Fig_A_study_area,43.1°N,7.5
+R40_Fig_A_study_area,43.15°N,7.5
+R40_Fig_A_study_area,43.2°N,7.5
+R40_Fig_A_study_area,43.25°N,7.5
+R40_Fig_A_study_area,0,8.0
+R40_Fig_A_study_area,5 km,8.0
+R40_Fig_A_study_area,N,9.0
+R40_Fig_A_study_area,"(c) Medeu, Shymbulak and Kok-Zhailau study windows",9.0
+R40_Fig_A_study_area,UTM 43N,7.5
+R40_Fig_A_study_area,"Elevation, m (Copernicus GLO-30 DSM)",8.0
+R40_Fig_A_study_area,Processing window,8.0
+R40_Fig_A_study_area,OSM polygon,8.0
+R40_Fig_A_study_area,Derived footprint,8.0
+R40_Fig_A_study_area,Site centre,8.0
+R40_Fig_A_suppl_validation_sites,9.75°E,7.5
+R40_Fig_A_suppl_validation_sites,9.8°E,7.5
+R40_Fig_A_suppl_validation_sites,9.85°E,7.5
+R40_Fig_A_suppl_validation_sites,46.8°N,7.5
+R40_Fig_A_suppl_validation_sites,46.85°N,7.5
+R40_Fig_A_suppl_validation_sites,0,8.0
+R40_Fig_A_suppl_validation_sites,2 km,8.0
+R40_Fig_A_suppl_validation_sites,N,9.0
+R40_Fig_A_suppl_validation_sites,(a) Davos-Parsenn,9.0
+R40_Fig_A_suppl_validation_sites,UTM 32N,7.5
+R40_Fig_A_suppl_validation_sites,7.75°E,7.5
+R40_Fig_A_suppl_validation_sites,7.8°E,7.5
+R40_Fig_A_suppl_validation_sites,45.95°N,7.5
+R40_Fig_A_suppl_validation_sites,46°N,7.5
+R40_Fig_A_suppl_validation_sites,0,8.0
+R40_Fig_A_suppl_validation_sites,2 km,8.0
+R40_Fig_A_suppl_validation_sites,N,9.0
+R40_Fig_A_suppl_validation_sites,(b) Zermatt-Gornergrat,9.0
+R40_Fig_A_suppl_validation_sites,UTM 32N,7.5
+R40_Fig_A_suppl_validation_sites,111.65°W,7.5
+R40_Fig_A_suppl_validation_sites,111.6°W,7.5
+R40_Fig_A_suppl_validation_sites,40.55°N,7.5
+R40_Fig_A_suppl_validation_sites,40.6°N,7.5
+R40_Fig_A_suppl_validation_sites,0,8.0
+R40_Fig_A_suppl_validation_sites,2 km,8.0
+R40_Fig_A_suppl_validation_sites,N,9.0
+R40_Fig_A_suppl_validation_sites,(c) Alta-Snowbird,9.0
+R40_Fig_A_suppl_validation_sites,UTM 12N,7.5
+R40_Fig_A_suppl_validation_sites,111.55°W,7.5
+R40_Fig_A_suppl_validation_sites,111.5°W,7.5
+R40_Fig_A_suppl_validation_sites,40.65°N,7.5
+R40_Fig_A_suppl_validation_sites,0,8.0
+R40_Fig_A_suppl_validation_sites,2 km,8.0
+R40_Fig_A_suppl_validation_sites,N,9.0
+R40_Fig_A_suppl_validation_sites,(d) Park City,9.0
+R40_Fig_A_suppl_validation_sites,UTM 12N,7.5
+R40_Fig_A_suppl_validation_sites,OSM polygon,8.0
+R40_Fig_A_suppl_validation_sites,Derived footprint,8.0
+R40_Fig_A_suppl_validation_sites,Site centre,8.0
+R40_Fig_B_decisions_15deg,77°E,7.5
+R40_Fig_B_decisions_15deg,77.05°E,7.5
+R40_Fig_B_decisions_15deg,77.1°E,7.5
+R40_Fig_B_decisions_15deg,43.15°N,7.5
+R40_Fig_B_decisions_15deg,43.2°N,7.5
+R40_Fig_B_decisions_15deg,0,8.0
+R40_Fig_B_decisions_15deg,2 km,8.0
+R40_Fig_B_decisions_15deg,N,9.0
+R40_Fig_B_decisions_15deg,BELOW 9.3 · ABOVE 82.7 · ABSTAIN 8.0 %,7.5
+R40_Fig_B_decisions_15deg,(a) Medeu,9.0
+R40_Fig_B_decisions_15deg,UTM 43N,7.5
+R40_Fig_B_decisions_15deg,77.05°E,7.5
+R40_Fig_B_decisions_15deg,77.1°E,7.5
+R40_Fig_B_decisions_15deg,43.1°N,7.5
+R40_Fig_B_decisions_15deg,43.15°N,7.5
+R40_Fig_B_decisions_15deg,0,8.0
+R40_Fig_B_decisions_15deg,2 km,8.0
+R40_Fig_B_decisions_15deg,N,9.0
+R40_Fig_B_decisions_15deg,BELOW 4.9 · ABOVE 89.1 · ABSTAIN 6.0 %,7.5
+R40_Fig_B_decisions_15deg,(b) Shymbulak,9.0
+R40_Fig_B_decisions_15deg,UTM 43N,7.5
+R40_Fig_B_decisions_15deg,77.05°E,7.5
+R40_Fig_B_decisions_15deg,77.1°E,7.5
+R40_Fig_B_decisions_15deg,43.1°N,7.5
+R40_Fig_B_decisions_15deg,0,8.0
+R40_Fig_B_decisions_15deg,1 km,8.0
+R40_Fig_B_decisions_15deg,N,9.0
+R40_Fig_B_decisions_15deg,BELOW 6.9 · ABOVE 87.1 · ABSTAIN 6.0 %,7.5
+R40_Fig_B_decisions_15deg,(c) Kok-Zhailau V1,9.0
+R40_Fig_B_decisions_15deg,UTM 43N,7.5
+R40_Fig_B_decisions_15deg,77°E,7.5
+R40_Fig_B_decisions_15deg,77.05°E,7.5
+R40_Fig_B_decisions_15deg,43.125°N,7.5
+R40_Fig_B_decisions_15deg,43.15°N,7.5
+R40_Fig_B_decisions_15deg,43.175°N,7.5
+R40_Fig_B_decisions_15deg,0,8.0
+R40_Fig_B_decisions_15deg,2 km,8.0
+R40_Fig_B_decisions_15deg,N,9.0
+R40_Fig_B_decisions_15deg,BELOW 8.8 · ABOVE 83.7 · ABSTAIN 7.6 %,7.5
+R40_Fig_B_decisions_15deg,(d) Kok-Zhailau V2,9.0
+R40_Fig_B_decisions_15deg,UTM 43N,7.5
+R40_Fig_B_decisions_15deg,BELOW,8.0
+R40_Fig_B_decisions_15deg,ABOVE,8.0
+R40_Fig_B_decisions_15deg,ABSTAIN,8.0
+R40_Fig_B_decisions_15deg,No decision,8.0
+R40_Fig_B_decisions_15deg,OSM polygon,8.0
+R40_Fig_B_decisions_15deg,Derived footprint,8.0
+R40_Fig_B_suppl_decisions_7.5deg,77°E,7.5
+R40_Fig_B_suppl_decisions_7.5deg,77.05°E,7.5
+R40_Fig_B_suppl_decisions_7.5deg,77.1°E,7.5
+R40_Fig_B_suppl_decisions_7.5deg,43.15°N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,43.2°N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,0,8.0
+R40_Fig_B_suppl_decisions_7.5deg,2 km,8.0
+R40_Fig_B_suppl_decisions_7.5deg,N,9.0
+R40_Fig_B_suppl_decisions_7.5deg,BELOW 2.7 · ABOVE 95.8 · ABSTAIN 1.5 %,7.5
+R40_Fig_B_suppl_decisions_7.5deg,(a) Medeu,9.0
+R40_Fig_B_suppl_decisions_7.5deg,UTM 43N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,77.05°E,7.5
+R40_Fig_B_suppl_decisions_7.5deg,77.1°E,7.5
+R40_Fig_B_suppl_decisions_7.5deg,43.1°N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,43.15°N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,0,8.0
+R40_Fig_B_suppl_decisions_7.5deg,2 km,8.0
+R40_Fig_B_suppl_decisions_7.5deg,N,9.0
+R40_Fig_B_suppl_decisions_7.5deg,BELOW 0.8 · ABOVE 98.3 · ABSTAIN 0.9 %,7.5
+R40_Fig_B_suppl_decisions_7.5deg,(b) Shymbulak,9.0
+R40_Fig_B_suppl_decisions_7.5deg,UTM 43N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,77.05°E,7.5
+R40_Fig_B_suppl_decisions_7.5deg,77.1°E,7.5
+R40_Fig_B_suppl_decisions_7.5deg,43.1°N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,0,8.0
+R40_Fig_B_suppl_decisions_7.5deg,1 km,8.0
+R40_Fig_B_suppl_decisions_7.5deg,N,9.0
+R40_Fig_B_suppl_decisions_7.5deg,BELOW 1.2 · ABOVE 97.8 · ABSTAIN 1.0 %,7.5
+R40_Fig_B_suppl_decisions_7.5deg,(c) Kok-Zhailau V1,9.0
+R40_Fig_B_suppl_decisions_7.5deg,UTM 43N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,77°E,7.5
+R40_Fig_B_suppl_decisions_7.5deg,77.05°E,7.5
+R40_Fig_B_suppl_decisions_7.5deg,43.125°N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,43.15°N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,43.175°N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,0,8.0
+R40_Fig_B_suppl_decisions_7.5deg,2 km,8.0
+R40_Fig_B_suppl_decisions_7.5deg,N,9.0
+R40_Fig_B_suppl_decisions_7.5deg,BELOW 1.9 · ABOVE 96.7 · ABSTAIN 1.5 %,7.5
+R40_Fig_B_suppl_decisions_7.5deg,(d) Kok-Zhailau V2,9.0
+R40_Fig_B_suppl_decisions_7.5deg,UTM 43N,7.5
+R40_Fig_B_suppl_decisions_7.5deg,BELOW,8.0
+R40_Fig_B_suppl_decisions_7.5deg,ABOVE,8.0
+R40_Fig_B_suppl_decisions_7.5deg,ABSTAIN,8.0
+R40_Fig_B_suppl_decisions_7.5deg,No decision,8.0
+R40_Fig_B_suppl_decisions_7.5deg,OSM polygon,8.0
+R40_Fig_B_suppl_decisions_7.5deg,Derived footprint,8.0
+R40_Fig_B_suppl_decisions_25deg,77°E,7.5
+R40_Fig_B_suppl_decisions_25deg,77.05°E,7.5
+R40_Fig_B_suppl_decisions_25deg,77.1°E,7.5
+R40_Fig_B_suppl_decisions_25deg,43.15°N,7.5
+R40_Fig_B_suppl_decisions_25deg,43.2°N,7.5
+R40_Fig_B_suppl_decisions_25deg,0,8.0
+R40_Fig_B_suppl_decisions_25deg,2 km,8.0
+R40_Fig_B_suppl_decisions_25deg,N,9.0
+R40_Fig_B_suppl_decisions_25deg,BELOW 31.7 · ABOVE 52.9 · ABSTAIN 15.4 %,7.5
+R40_Fig_B_suppl_decisions_25deg,(a) Medeu,9.0
+R40_Fig_B_suppl_decisions_25deg,UTM 43N,7.5
+R40_Fig_B_suppl_decisions_25deg,77.05°E,7.5
+R40_Fig_B_suppl_decisions_25deg,77.1°E,7.5
+R40_Fig_B_suppl_decisions_25deg,43.1°N,7.5
+R40_Fig_B_suppl_decisions_25deg,43.15°N,7.5
+R40_Fig_B_suppl_decisions_25deg,0,8.0
+R40_Fig_B_suppl_decisions_25deg,2 km,8.0
+R40_Fig_B_suppl_decisions_25deg,N,9.0
+R40_Fig_B_suppl_decisions_25deg,BELOW 20.3 · ABOVE 67.4 · ABSTAIN 12.3 %,7.5
+R40_Fig_B_suppl_decisions_25deg,(b) Shymbulak,9.0
+R40_Fig_B_suppl_decisions_25deg,UTM 43N,7.5
+R40_Fig_B_suppl_decisions_25deg,77.05°E,7.5
+R40_Fig_B_suppl_decisions_25deg,77.1°E,7.5
+R40_Fig_B_suppl_decisions_25deg,43.1°N,7.5
+R40_Fig_B_suppl_decisions_25deg,0,8.0
+R40_Fig_B_suppl_decisions_25deg,1 km,8.0
+R40_Fig_B_suppl_decisions_25deg,N,9.0
+R40_Fig_B_suppl_decisions_25deg,BELOW 22.9 · ABOVE 66.4 · ABSTAIN 10.7 %,7.5
+R40_Fig_B_suppl_decisions_25deg,(c) Kok-Zhailau V1,9.0
+R40_Fig_B_suppl_decisions_25deg,UTM 43N,7.5
+R40_Fig_B_suppl_decisions_25deg,77°E,7.5
+R40_Fig_B_suppl_decisions_25deg,77.05°E,7.5
+R40_Fig_B_suppl_decisions_25deg,43.125°N,7.5
+R40_Fig_B_suppl_decisions_25deg,43.15°N,7.5
+R40_Fig_B_suppl_decisions_25deg,43.175°N,7.5
+R40_Fig_B_suppl_decisions_25deg,0,8.0
+R40_Fig_B_suppl_decisions_25deg,2 km,8.0
+R40_Fig_B_suppl_decisions_25deg,N,9.0
+R40_Fig_B_suppl_decisions_25deg,BELOW 29.5 · ABOVE 55.7 · ABSTAIN 14.7 %,7.5
+R40_Fig_B_suppl_decisions_25deg,(d) Kok-Zhailau V2,9.0
+R40_Fig_B_suppl_decisions_25deg,UTM 43N,7.5
+R40_Fig_B_suppl_decisions_25deg,BELOW,8.0
+R40_Fig_B_suppl_decisions_25deg,ABOVE,8.0
+R40_Fig_B_suppl_decisions_25deg,ABSTAIN,8.0
+R40_Fig_B_suppl_decisions_25deg,No decision,8.0
+R40_Fig_B_suppl_decisions_25deg,OSM polygon,8.0
+R40_Fig_B_suppl_decisions_25deg,Derived footprint,8.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,77°E,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,77.05°E,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,77.1°E,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,43.15°N,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,43.2°N,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,0,8.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,2 km,8.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,N,9.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,mean -1.60° · MAE 2.95°,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,(a) Medeu,9.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,UTM 43N,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,77.05°E,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,77.1°E,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,43.1°N,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,43.15°N,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,0,8.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,2 km,8.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,N,9.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,mean -1.20° · MAE 3.20°,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,(b) Shymbulak,9.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,UTM 43N,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,77.05°E,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,77.1°E,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,43.1°N,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,0,8.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,1 km,8.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,N,9.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,mean -1.10° · MAE 3.00°,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,(c) Kok-Zhailau V1,9.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,UTM 43N,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,77°E,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,77.05°E,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,43.15°N,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,0,8.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,2 km,8.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,N,9.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,mean -1.56° · MAE 2.90°,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,(d) Kok-Zhailau V2,9.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,UTM 43N,7.5
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,"Slope difference NASADEM − Copernicus GLO-30, degr",8.0
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,No data in either DEM,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,46.8°N,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,46.85°N,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,MAE 1.3°,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,Copernicus − lidar,8.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,MAE 3.1°,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,NASADEM − lidar,8.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,MAE 2.6°,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,NASADEM − Copernicus,8.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,7.75°E,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,7.8°E,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,45.95°N,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,46°N,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,MAE 2.6°,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,7.75°E,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,7.8°E,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,MAE 4.2°,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,7.75°E,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,7.8°E,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,MAE 3.1°,7.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,"Slope difference, degrees",8.0
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,Davos-Parsenn UTM 32N,8.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,Zermatt-Gornergrat UTM 32N,8.5
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,No data,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,40.55°N,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,40.6°N,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,MAE 2.0°,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,Copernicus − lidar,8.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,MAE 3.5°,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,NASADEM − lidar,8.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,MAE 3.0°,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,NASADEM − Copernicus,8.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,111.55°W,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,111.5°W,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,40.65°N,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,MAE 1.4°,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,111.55°W,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,111.5°W,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,MAE 2.2°,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,111.55°W,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,111.5°W,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,0,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,2 km,8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,N,9.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,MAE 1.9°,7.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,"Slope difference, degrees",8.0
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,Alta-Snowbird UTM 12N,8.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,Park City UTM 12N,8.5
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,No data,8.0
+R40_Fig_D_profile_davos_parsenn,E,9.0
+R40_Fig_D_profile_davos_parsenn,W,9.0
+R40_Fig_D_profile_davos_parsenn,N,9.0
+R40_Fig_D_profile_davos_parsenn,S,9.0
+R40_Fig_D_profile_davos_parsenn,9.8°E,7.5
+R40_Fig_D_profile_davos_parsenn,9.82°E,7.5
+R40_Fig_D_profile_davos_parsenn,46.82°N,7.5
+R40_Fig_D_profile_davos_parsenn,46.84°N,7.5
+R40_Fig_D_profile_davos_parsenn,0,8.0
+R40_Fig_D_profile_davos_parsenn,500 m,8.0
+R40_Fig_D_profile_davos_parsenn,N,9.0
+R40_Fig_D_profile_davos_parsenn,(a) Davos-Parsenn,9.0
+R40_Fig_D_profile_davos_parsenn,UTM 32N,7.5
+R40_Fig_D_profile_davos_parsenn,"Elevation, m",8.0
+R40_Fig_D_profile_davos_parsenn,"(b) Transect W–E, 3 km",9.0
+R40_Fig_D_profile_davos_parsenn,"RMSE, m: Cop 1.3 · NAS 4.7",7.5
+R40_Fig_D_profile_davos_parsenn,"ΔZ, m",8.0
+R40_Fig_D_profile_davos_parsenn,"Elevation, m",8.0
+R40_Fig_D_profile_davos_parsenn,"(c) Transect S–N, 3 km",9.0
+R40_Fig_D_profile_davos_parsenn,"RMSE, m: Cop 6.1 · NAS 6.7",7.5
+R40_Fig_D_profile_davos_parsenn,"Distance from the site centre, m",8.0
+R40_Fig_D_profile_davos_parsenn,"ΔZ, m",8.0
+R40_Fig_D_profile_davos_parsenn,"Profile map: orange W–E, blue S–N. Lower panels: D",7.5
+R40_Fig_D_profile_davos_parsenn,"Lidar DTM, native 2 m",8.0
+R40_Fig_D_profile_davos_parsenn,"Lidar DTM, 30 m block mean",8.0
+R40_Fig_D_profile_davos_parsenn,Copernicus GLO-30,8.0
+R40_Fig_D_profile_davos_parsenn,NASADEM,8.0
+R40_Fig_D_profile_zermatt_gornergrat,E,9.0
+R40_Fig_D_profile_zermatt_gornergrat,W,9.0
+R40_Fig_D_profile_zermatt_gornergrat,N,9.0
+R40_Fig_D_profile_zermatt_gornergrat,S,9.0
+R40_Fig_D_profile_zermatt_gornergrat,7.74°E,7.5
+R40_Fig_D_profile_zermatt_gornergrat,7.76°E,7.5
+R40_Fig_D_profile_zermatt_gornergrat,7.78°E,7.5
+R40_Fig_D_profile_zermatt_gornergrat,45.98°N,7.5
+R40_Fig_D_profile_zermatt_gornergrat,46°N,7.5
+R40_Fig_D_profile_zermatt_gornergrat,0,8.0
+R40_Fig_D_profile_zermatt_gornergrat,500 m,8.0
+R40_Fig_D_profile_zermatt_gornergrat,N,9.0
+R40_Fig_D_profile_zermatt_gornergrat,(a) Zermatt-Gornergrat,9.0
+R40_Fig_D_profile_zermatt_gornergrat,UTM 32N,7.5
+R40_Fig_D_profile_zermatt_gornergrat,"Elevation, m",8.0
+R40_Fig_D_profile_zermatt_gornergrat,"(b) Transect W–E, 3 km",9.0
+R40_Fig_D_profile_zermatt_gornergrat,"RMSE, m: Cop 3.2 · NAS 3.0",7.5
+R40_Fig_D_profile_zermatt_gornergrat,"ΔZ, m",8.0
+R40_Fig_D_profile_zermatt_gornergrat,"Elevation, m",8.0
+R40_Fig_D_profile_zermatt_gornergrat,"(c) Transect S–N, 3 km",9.0
+R40_Fig_D_profile_zermatt_gornergrat,"RMSE, m: Cop 4.7 · NAS 17.2",7.5
+R40_Fig_D_profile_zermatt_gornergrat,"Distance from the site centre, m",8.0
+R40_Fig_D_profile_zermatt_gornergrat,"ΔZ, m",8.0
+R40_Fig_D_profile_zermatt_gornergrat,"Profile map: orange W–E, blue S–N. Lower panels: D",7.5
+R40_Fig_D_profile_zermatt_gornergrat,"Lidar DTM, native 2 m",8.0
+R40_Fig_D_profile_zermatt_gornergrat,"Lidar DTM, 30 m block mean",8.0
+R40_Fig_D_profile_zermatt_gornergrat,Copernicus GLO-30,8.0
+R40_Fig_D_profile_zermatt_gornergrat,NASADEM,8.0
+R40_Fig_D_profile_alta_snowbird,E,9.0
+R40_Fig_D_profile_alta_snowbird,W,9.0
+R40_Fig_D_profile_alta_snowbird,N,9.0
+R40_Fig_D_profile_alta_snowbird,S,9.0
+R40_Fig_D_profile_alta_snowbird,111.64°W,7.5
+R40_Fig_D_profile_alta_snowbird,111.62°W,7.5
+R40_Fig_D_profile_alta_snowbird,40.58°N,7.5
+R40_Fig_D_profile_alta_snowbird,0,8.0
+R40_Fig_D_profile_alta_snowbird,500 m,8.0
+R40_Fig_D_profile_alta_snowbird,N,9.0
+R40_Fig_D_profile_alta_snowbird,(a) Alta-Snowbird,9.0
+R40_Fig_D_profile_alta_snowbird,UTM 12N,7.5
+R40_Fig_D_profile_alta_snowbird,"Elevation, m",8.0
+R40_Fig_D_profile_alta_snowbird,"(b) Transect W–E, 3 km",9.0
+R40_Fig_D_profile_alta_snowbird,"RMSE, m: Cop 3.8 · NAS 4.3",7.5
+R40_Fig_D_profile_alta_snowbird,"ΔZ, m",8.0
+R40_Fig_D_profile_alta_snowbird,"Elevation, m",8.0
+R40_Fig_D_profile_alta_snowbird,"(c) Transect S–N, 3 km",9.0
+R40_Fig_D_profile_alta_snowbird,"RMSE, m: Cop 3.0 · NAS 5.7",7.5
+R40_Fig_D_profile_alta_snowbird,"Distance from the site centre, m",8.0
+R40_Fig_D_profile_alta_snowbird,"ΔZ, m",8.0
+R40_Fig_D_profile_alta_snowbird,"Profile map: orange W–E, blue S–N. Lower panels: D",7.5
+R40_Fig_D_profile_alta_snowbird,"Lidar DTM, native 10 m",8.0
+R40_Fig_D_profile_alta_snowbird,"Lidar DTM, 30 m block mean",8.0
+R40_Fig_D_profile_alta_snowbird,Copernicus GLO-30,8.0
+R40_Fig_D_profile_alta_snowbird,NASADEM,8.0
+R40_Fig_D_profile_park_city,E,9.0
+R40_Fig_D_profile_park_city,W,9.0
+R40_Fig_D_profile_park_city,N,9.0
+R40_Fig_D_profile_park_city,S,9.0
+R40_Fig_D_profile_park_city,111.52°W,7.5
+R40_Fig_D_profile_park_city,111.5°W,7.5
+R40_Fig_D_profile_park_city,40.64°N,7.5
+R40_Fig_D_profile_park_city,40.66°N,7.5
+R40_Fig_D_profile_park_city,0,8.0
+R40_Fig_D_profile_park_city,500 m,8.0
+R40_Fig_D_profile_park_city,N,9.0
+R40_Fig_D_profile_park_city,(a) Park City,9.0
+R40_Fig_D_profile_park_city,UTM 12N,7.5
+R40_Fig_D_profile_park_city,"Elevation, m",8.0
+R40_Fig_D_profile_park_city,"(b) Transect W–E, 3 km",9.0
+R40_Fig_D_profile_park_city,"RMSE, m: Cop 1.6 · NAS 3.0",7.5
+R40_Fig_D_profile_park_city,"ΔZ, m",8.0
+R40_Fig_D_profile_park_city,"Elevation, m",8.0
+R40_Fig_D_profile_park_city,"(c) Transect S–N, 3 km",9.0
+R40_Fig_D_profile_park_city,"RMSE, m: Cop 2.7 · NAS 4.5",7.5
+R40_Fig_D_profile_park_city,"Distance from the site centre, m",8.0
+R40_Fig_D_profile_park_city,"ΔZ, m",8.0
+R40_Fig_D_profile_park_city,"Profile map: orange W–E, blue S–N. Lower panels: D",7.5
+R40_Fig_D_profile_park_city,"Lidar DTM, native 10 m",8.0
+R40_Fig_D_profile_park_city,"Lidar DTM, 30 m block mean",8.0
+R40_Fig_D_profile_park_city,Copernicus GLO-30,8.0
+R40_Fig_D_profile_park_city,NASADEM,8.0
+R40_Fig_E_atl08_track_samples,77°E,7.5
+R40_Fig_E_atl08_track_samples,43.1°N,7.5
+R40_Fig_E_atl08_track_samples,43.2°N,7.5
+R40_Fig_E_atl08_track_samples,0,8.0
+R40_Fig_E_atl08_track_samples,5 km,8.0
+R40_Fig_E_atl08_track_samples,N,9.0
+R40_Fig_E_atl08_track_samples,UTM 43N,7.5
+R40_Fig_E_atl08_track_samples,"strict 1,484 · lenient 7,018",7.5
+R40_Fig_E_atl08_track_samples,(a) Kazakhstan,8.5
+R40_Fig_E_atl08_track_samples,9.8°E,7.5
+R40_Fig_E_atl08_track_samples,46.8°N,7.5
+R40_Fig_E_atl08_track_samples,46.85°N,7.5
+R40_Fig_E_atl08_track_samples,0,8.0
+R40_Fig_E_atl08_track_samples,2 km,8.0
+R40_Fig_E_atl08_track_samples,N,9.0
+R40_Fig_E_atl08_track_samples,UTM 32N,7.5
+R40_Fig_E_atl08_track_samples,"strict 281 · lenient 1,527",7.5
+R40_Fig_E_atl08_track_samples,(b) Davos-Parsenn,8.5
+R40_Fig_E_atl08_track_samples,7.8°E,7.5
+R40_Fig_E_atl08_track_samples,45.95°N,7.5
+R40_Fig_E_atl08_track_samples,46°N,7.5
+R40_Fig_E_atl08_track_samples,0,8.0
+R40_Fig_E_atl08_track_samples,2 km,8.0
+R40_Fig_E_atl08_track_samples,N,9.0
+R40_Fig_E_atl08_track_samples,UTM 32N,7.5
+R40_Fig_E_atl08_track_samples,"strict 356 · lenient 1,830",7.5
+R40_Fig_E_atl08_track_samples,(c) Zermatt-Gornergrat,8.5
+R40_Fig_E_atl08_track_samples,111.65°W,7.5
+R40_Fig_E_atl08_track_samples,111.6°W,7.5
+R40_Fig_E_atl08_track_samples,40.55°N,7.5
+R40_Fig_E_atl08_track_samples,40.6°N,7.5
+R40_Fig_E_atl08_track_samples,0,8.0
+R40_Fig_E_atl08_track_samples,2 km,8.0
+R40_Fig_E_atl08_track_samples,N,9.0
+R40_Fig_E_atl08_track_samples,UTM 12N,7.5
+R40_Fig_E_atl08_track_samples,strict 95 · lenient 751,7.5
+R40_Fig_E_atl08_track_samples,(d) Alta-Snowbird,8.5
+R40_Fig_E_atl08_track_samples,111.55°W,7.5
+R40_Fig_E_atl08_track_samples,111.5°W,7.5
+R40_Fig_E_atl08_track_samples,40.65°N,7.5
+R40_Fig_E_atl08_track_samples,0,8.0
+R40_Fig_E_atl08_track_samples,2 km,8.0
+R40_Fig_E_atl08_track_samples,N,9.0
+R40_Fig_E_atl08_track_samples,UTM 12N,7.5
+R40_Fig_E_atl08_track_samples,"strict 307 · lenient 1,501",7.5
+R40_Fig_E_atl08_track_samples,(e) Park City,8.5
+R40_Fig_E_atl08_track_samples,"Track samples only: a partial reference, not valid",8.0
+R40_Fig_E_atl08_track_samples,Strict (< 5 m),8.0
+R40_Fig_E_atl08_track_samples,Lenient only (5–15 m),8.0
+R40_Fig_E_atl08_track_samples,"Other, passed filters",8.0
+R40_Fig_E_atl08_track_samples,Rejected by filters,8.0

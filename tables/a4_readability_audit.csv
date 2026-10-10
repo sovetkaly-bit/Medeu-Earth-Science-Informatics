@@ -1,0 +1,14 @@
+figure,width_mm,height_mm,n_text_objects,min_font_pt,max_font_pt,min_font_ok_ge_7pt,fits_A4_text_block_with_caption,width_ok_180mm
+R40_Fig_A_study_area,180.1,197.5,32,7.5,9.0,YES,YES,YES
+R40_Fig_A_suppl_validation_sites,180.1,201.9,39,7.5,9.0,YES,YES,YES
+R40_Fig_B_decisions_15deg,180.1,214.6,47,7.5,9.0,YES,YES,YES
+R40_Fig_B_suppl_decisions_7.5deg,180.1,214.6,47,7.5,9.0,YES,YES,YES
+R40_Fig_B_suppl_decisions_25deg,180.1,214.6,47,7.5,9.0,YES,YES,YES
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,180.1,214.6,41,7.5,9.0,YES,YES,YES
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,180.1,144.7,41,7.5,9.0,YES,YES,YES
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,180.1,145.6,40,7.5,9.0,YES,YES,YES
+R40_Fig_D_profile_davos_parsenn,180.1,146.0,27,7.5,9.0,YES,YES,YES
+R40_Fig_D_profile_zermatt_gornergrat,180.1,146.0,28,7.5,9.0,YES,YES,YES
+R40_Fig_D_profile_alta_snowbird,180.1,146.0,26,7.5,9.0,YES,YES,YES
+R40_Fig_D_profile_park_city,180.1,146.0,27,7.5,9.0,YES,YES,YES
+R40_Fig_E_atl08_track_samples,180.1,145.7,51,7.5,9.0,YES,YES,YES

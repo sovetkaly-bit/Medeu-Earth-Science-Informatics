@@ -1,0 +1,8 @@
+table,status,n_differing_cells,max_abs_numeric_difference,meaning
+map_summary_figB.csv,IDENTICAL,0,0.0,recomputed by this edition (unchanged code) vs the table shipped in the first package
+verification_figB_vs_decisions_by_site.csv,IDENTICAL,0,0.0,recomputed by this edition (unchanged code) vs the table shipped in the first package
+atl08_filter_counts.csv,IDENTICAL,0,0.0,recomputed by this edition (unchanged code) vs the table shipped in the first package
+inter_dem_slope_difference_summary.csv,IDENTICAL,0,0.0,recomputed by this edition (unchanged code) vs the table shipped in the first package
+common_grid_coverage.csv,IDENTICAL,0,0.0,recomputed by this edition (unchanged code) vs the table shipped in the first package
+profile_summary.csv,IDENTICAL,0,0.0,profile statistics as drawn vs first package
+Figure B panel shares as drawn vs map_summary_figB.csv (context mask),IDENTICAL,0,,"tolerance 0.05 pp, identical pixel counts"

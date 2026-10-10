@@ -1,0 +1,38 @@
+figure,panel,site,quantity,crs,window_xmin,window_xmax,window_ymin,window_ymax,threshold_deg,n_valid_px,cell_m,BELOW_pct,ABOVE_pct,ABSTAIN_pct,contour_id,source_raster,n_common_px,mean_diff_deg,mae_deg,rmse_deg,n_in_view,n_lenient,n_strict
+A,c,medeu,processing window,EPSG:32643,660690.0,670950.0,4774890.0,4785690.0,,,,,,,,,,,,,,,
+A,c,shymbulak,processing window,EPSG:32643,665160.0,673980.0,4772580.0,4782660.0,,,,,,,,,,,,,,,
+A,c,kok_zhailau,processing window,EPSG:32643,664080.0,671820.0,4770180.0,4779180.0,,,,,,,,,,,,,,,
+A,c,kok_zhailau_osm,processing window,EPSG:32643,658980.0,667080.0,4774320.0,4782420.0,,,,,,,,,,,,,,,
+R40_Fig_B_decisions_15deg,a,medeu,,EPSG:32643,,,,,15,118944,30.0,9.260660478880817,82.74313962873285,7.996199892386333,"WINDOW:medeu:EPSG:32643:x0=660690,y1=4785690,342x360@30m",inputs/rasters/medeu/decision_combined_t15_risk2.tif,,,,,,,
+R40_Fig_B_decisions_15deg,b,shymbulak,,EPSG:32643,,,,,15,95040,30.0,4.938973063973064,89.09511784511784,5.965909090909091,"WINDOW:shymbulak:EPSG:32643:x0=665160,y1=4782660,294x336@30m",inputs/rasters/shymbulak/decision_combined_t15_risk2.tif,,,,,,,
+R40_Fig_B_decisions_15deg,c,kok_zhailau,,EPSG:32643,,,,,15,74088,30.0,6.91340028074722,87.09912536443149,5.987474354821294,"WINDOW:kok_zhailau:EPSG:32643:x0=664080,y1=4779180,258x300@30m",inputs/rasters/kok_zhailau/decision_combined_t15_risk2.tif,,,,,,,
+R40_Fig_B_decisions_15deg,d,kok_zhailau_osm,,EPSG:32643,,,,,15,69696,30.0,8.7508608815427,83.67338154269972,7.575757575757576,"WINDOW:kok_zhailau_osm:EPSG:32643:x0=658980,y1=4782420,270x270@30m",inputs/rasters/kok_zhailau_osm/decision_combined_t15_risk2.tif,,,,,,,
+R40_Fig_B_suppl_decisions_7.5deg,a,medeu,,EPSG:32643,,,,,7.5,118944,30.0,2.73742265267689,95.77532284100081,1.487254506322303,"WINDOW:medeu:EPSG:32643:x0=660690,y1=4785690,342x360@30m",inputs/rasters/medeu/decision_combined_t7.5_risk2.tif,,,,,,,
+R40_Fig_B_suppl_decisions_7.5deg,b,shymbulak,,EPSG:32643,,,,,7.5,95040,30.0,0.8312289562289563,98.29650673400674,0.8722643097643097,"WINDOW:shymbulak:EPSG:32643:x0=665160,y1=4782660,294x336@30m",inputs/rasters/shymbulak/decision_combined_t7.5_risk2.tif,,,,,,,
+R40_Fig_B_suppl_decisions_7.5deg,c,kok_zhailau,,EPSG:32643,,,,,7.5,74088,30.0,1.2323183241550588,97.80396285498327,0.9637188208616779,"WINDOW:kok_zhailau:EPSG:32643:x0=664080,y1=4779180,258x300@30m",inputs/rasters/kok_zhailau/decision_combined_t7.5_risk2.tif,,,,,,,
+R40_Fig_B_suppl_decisions_7.5deg,d,kok_zhailau_osm,,EPSG:32643,,,,,7.5,69696,30.0,1.8896349862258952,96.6583448117539,1.452020202020202,"WINDOW:kok_zhailau_osm:EPSG:32643:x0=658980,y1=4782420,270x270@30m",inputs/rasters/kok_zhailau_osm/decision_combined_t7.5_risk2.tif,,,,,,,
+R40_Fig_B_suppl_decisions_25deg,a,medeu,,EPSG:32643,,,,,25,118944,30.0,31.732580037664782,52.852602905569015,15.414817056766209,"WINDOW:medeu:EPSG:32643:x0=660690,y1=4785690,342x360@30m",inputs/rasters/medeu/decision_combined_t25_risk2.tif,,,,,,,
+R40_Fig_B_suppl_decisions_25deg,b,shymbulak,,EPSG:32643,,,,,25,95040,30.0,20.324074074074076,67.37794612794613,12.297979797979798,"WINDOW:shymbulak:EPSG:32643:x0=665160,y1=4782660,294x336@30m",inputs/rasters/shymbulak/decision_combined_t25_risk2.tif,,,,,,,
+R40_Fig_B_suppl_decisions_25deg,c,kok_zhailau,,EPSG:32643,,,,,25,74088,30.0,22.915991793542815,66.41561386459345,10.66839434186373,"WINDOW:kok_zhailau:EPSG:32643:x0=664080,y1=4779180,258x300@30m",inputs/rasters/kok_zhailau/decision_combined_t25_risk2.tif,,,,,,,
+R40_Fig_B_suppl_decisions_25deg,d,kok_zhailau_osm,,EPSG:32643,,,,,25,69696,30.0,29.518193296602384,55.73203627180901,14.749770431588614,"WINDOW:kok_zhailau_osm:EPSG:32643:x0=658980,y1=4782420,270x270@30m",inputs/rasters/kok_zhailau_osm/decision_combined_t25_risk2.tif,,,,,,,
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,a,medeu,slope difference,EPSG:32643,,,,,,,,,,,,,121720,-1.6027663323329226,2.945450790993798,3.8284497150519563,,,
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,b,shymbulak,slope difference,EPSG:32643,,,,,,,,,,,,,97528,-1.1996724060178536,3.1965240207021384,4.400993280157921,,,
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,c,kok_zhailau,slope difference,EPSG:32643,,,,,,,,,,,,,76288,-1.0993237330112606,2.9959769993223526,4.052042986804311,,,
+R40_Fig_C1_kazakhstan_inter_dem_slope_difference,d,kok_zhailau_osm,slope difference,EPSG:32643,,,,,,,,,,,,,71824,-1.5587226427339662,2.8964252079693664,3.753113274829921,,,
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,1a,davos_parsenn,slope difference,EPSG:32632,,,,,,,,,,,,,92416,-0.2430167841628638,1.3351627639839978,2.2725922049316805,,,
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,1b,davos_parsenn,slope difference,EPSG:32632,,,,,,,,,,,,,92416,-0.9955295152920524,3.066131700921841,4.183575628224976,,,
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,1c,davos_parsenn,slope difference,EPSG:32632,,,,,,,,,,,,,92416,-0.7525127313195543,2.598783913780094,3.511477477206004,,,
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,2a,zermatt_gornergrat,slope difference,EPSG:32632,,,,,,,,,,,,,94240,-1.0024122402143107,2.5977585163794408,4.512788193059875,,,
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,2b,zermatt_gornergrat,slope difference,EPSG:32632,,,,,,,,,,,,,94240,-1.974542288230147,4.201551850069573,6.1522036820071815,,,
+R40_Fig_C2_switzerland_dem_vs_lidar_slope_difference,2c,zermatt_gornergrat,slope difference,EPSG:32632,,,,,,,,,,,,,94240,-0.9721300479138495,3.067338260697084,4.3815691205775265,,,
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,1a,alta_snowbird,slope difference,EPSG:32612,,,,,,,,,,,,,92416,-0.40702943051230794,1.9557691189099011,3.0531447813121106,,,
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,1b,alta_snowbird,slope difference,EPSG:32612,,,,,,,,,,,,,92416,-1.3633348366304965,3.5424974266771185,4.9204231586267975,,,
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,1c,alta_snowbird,slope difference,EPSG:32612,,,,,,,,,,,,,92416,-0.9563054062478977,2.972234480341618,4.108502302938594,,,
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,2a,park_city,slope difference,EPSG:32612,,,,,,,,,,,,,92416,-0.18852267832305977,1.4461849385968744,2.1949111359947855,,,
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,2b,park_city,slope difference,EPSG:32612,,,,,,,,,,,,,92416,-0.8808876055738937,2.175208707017501,2.9899392227778314,,,
+R40_Fig_C2_usa_dem_vs_lidar_slope_difference,2c,park_city,slope difference,EPSG:32612,,,,,,,,,,,,,92416,-0.6923649273387097,1.8517483059975377,2.4880601875694404,,,
+E,a,kz_all,ATL08 segments in view,EPSG:32643,,,,,,,,,,,,,,,,,49162,7018,1484
+E,b,davos_parsenn,ATL08 segments in view,EPSG:32632,,,,,,,,,,,,,,,,,8691,1527,281
+E,c,zermatt_gornergrat,ATL08 segments in view,EPSG:32632,,,,,,,,,,,,,,,,,8151,1830,356
+E,d,alta_snowbird,ATL08 segments in view,EPSG:32612,,,,,,,,,,,,,,,,,7988,751,95
+E,e,park_city,ATL08 segments in view,EPSG:32612,,,,,,,,,,,,,,,,,8229,1501,307
