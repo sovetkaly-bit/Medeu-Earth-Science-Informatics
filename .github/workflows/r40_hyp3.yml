@@ -62,7 +62,7 @@ jobs:
         if: always()
         continue-on-error: true
         run: |
-          rm -rf /tmp/res && mkdir /tmp/res && cd output_hyp3 && find . -maxdepth 1 -type f \( -name '*.json' -o -name '*.log' \) -exec cp {} /tmp/res/ \;
+          rm -rf /tmp/res && mkdir /tmp/res && cd output_hyp3 && find . -maxdepth 1 -type f \( -name '*.json' -o -name '*.log' -o -name '*.csv' \) -exec cp {} /tmp/res/ \;
           cd /tmp/res && git init -q -b r40-hyp3
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A && git commit -q -m "R40 HyP3 ${{ inputs.mode }}: run ${{ github.run_id }}"

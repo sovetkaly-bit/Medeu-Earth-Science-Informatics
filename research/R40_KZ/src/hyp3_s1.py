@@ -55,6 +55,37 @@ def hyp3():
     return sdk.HyP3(token=os.environ["EARTHDATA_TOKEN"])
 
 
+def coherence_rows(d):
+    """Coherence statistics per slope class from the HyP3 products' own DEM (80 m); descriptive, not terrain validation."""
+    import zipfile, tempfile
+    import numpy as np
+    import rasterio
+    rows = []
+    for z in sorted(Path(d).glob("*.zip")):
+        with tempfile.TemporaryDirectory() as td, zipfile.ZipFile(z) as zf:
+            names = zf.namelist()
+            corr = next((n for n in names if n.endswith("_corr.tif")), None)
+            dem = next((n for n in names if n.endswith("_dem.tif")), None)
+            if not corr or not dem:
+                continue
+            zf.extract(corr, td); zf.extract(dem, td)
+            with rasterio.open(Path(td) / corr) as a, rasterio.open(Path(td) / dem) as b:
+                c = a.read(1).astype("float32")
+                h = b.read(1).astype("float32")
+                res = abs(a.transform.a)
+            gy, gx = np.gradient(np.where(h == b.nodata, np.nan, h) if b.nodata is not None else h, res)
+            sl = np.degrees(np.arctan(np.hypot(gx, gy)))
+            valid = (c > 0) & np.isfinite(sl)
+            name = z.name.split("_")[1] + "_" + z.name.split("_")[2]
+            for lo, hi in ((0, 7.5), (7.5, 15), (15, 25), (25, 90)):
+                m = valid & (sl >= lo) & (sl < hi)
+                rows.append({"pair": name, "slope_class": f"{lo}-{hi}", "n_px": int(m.sum()),
+                             "coh_mean": float(c[m].mean()) if m.any() else None,
+                             "coh_frac_gt_0.3": float((c[m] > 0.3).mean()) if m.any() else None,
+                             "share_zero_coh_px_of_all": float((c == 0).mean())})
+    return rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=["plan", "submit", "collect"], default="plan")
@@ -110,6 +141,10 @@ def main():
                     row["download_error"] = repr(e)[:200]
             rows.append(row)
         rep["jobs"] = rows
+        try:
+            C.write_csv(out / "hyp3_coherence_by_slope.csv", coherence_rows(d))
+        except Exception as e:  # noqa: BLE001
+            rep["coherence_error"] = repr(e)[:300]
         C.write_json(out / "hyp3_collect.json", rep)
         print(f"jobs={len(rows)} succeeded={sum(r['status'] == 'SUCCEEDED' for r in rows)}", flush=True)
 
