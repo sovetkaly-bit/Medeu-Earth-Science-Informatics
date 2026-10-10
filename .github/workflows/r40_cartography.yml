@@ -9,6 +9,7 @@ jobs:
     timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
+        with: { ref: r40-cartography }
       - uses: actions/checkout@v4
         with: { ref: r40-results, path: assets/r40-results, fetch-depth: 1 }
       - uses: actions/checkout@v4
