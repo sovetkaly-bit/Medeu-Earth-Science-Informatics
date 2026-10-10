@@ -82,10 +82,15 @@ def main():
         before = h.check_credits()
         n = min(len(pairs), a.max_jobs, a.budget // COST_INSAR_20x4)
         jobs = []
+        existing = {(j.name or "") for j in h.find_jobs(name=None)}
         for p in pairs[:n]:
             name = f"{PREFIX}-t{p['track']}-{p['ref_date']}-{p['sec_date']}"
-            j = h.submit_insar_job(p["ref"], p["sec"], name=name, looks="20x4", include_look_vectors=True, include_displacement_maps=False)
-            jobs.append({"job_id": j.job_id, "name": name, **p})
+            if name in existing:
+                jobs.append({"job_id": None, "name": name, "note": "already submitted earlier, skipped", **p})
+                continue
+            res = h.submit_insar_job(p["ref"], p["sec"], name=name, looks="20x4", include_look_vectors=True, include_displacement_maps=False)
+            jl = list(res) if hasattr(res, "__iter__") and not hasattr(res, "job_id") else [res]
+            jobs.append({"job_id": jl[0].job_id if jl else None, "name": name, **p})
         rep.update({"credits_before": before, "credits_after": h.check_credits(), "submitted": jobs})
         C.write_json(out / "hyp3_submitted.json", rep)
         print(f"submitted {len(jobs)} jobs; credits {before} -> {rep['credits_after']}", flush=True)
