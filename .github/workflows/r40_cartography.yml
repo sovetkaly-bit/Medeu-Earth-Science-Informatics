@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: read
 jobs:
   carto:
     runs-on: ubuntu-latest
@@ -28,6 +29,12 @@ jobs:
           json.dump(out, open("assets/commits.json", "w"), indent=2)
           print(out)
           PY
+      - name: Inventory of existing Actions artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/actions/artifacts?per_page=100" --paginate -q '.artifacts[] | {id,name,size_in_bytes,expired,created_at,expires_at,run_id: .workflow_run.id, head_branch: .workflow_run.head_branch}' | jq -s . > assets/actions_artifacts.json
+          jq length assets/actions_artifacts.json
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
