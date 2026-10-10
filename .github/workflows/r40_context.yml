@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install -r requirements.txt
-      - run: python -m unittest tests.test_timeseries
+      - run: python -m unittest discover -s tests -p "test_timeseries.py"
       - name: Hazards and quakes
         env:
           R40_OUT: output_context
