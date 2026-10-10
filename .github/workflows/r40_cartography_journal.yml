@@ -1,0 +1,101 @@
+name: R40 cartography journal edition
+on:
+  workflow_dispatch:
+    inputs:
+      source_run:
+        description: "Run id of the first cartography package (artifact R40_CARTOGRAPHY_SOURCE_PACKAGE)"
+        default: "38078170104"
+permissions:
+  contents: write
+  actions: read
+jobs:
+  journal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: r40-cartography }
+      - name: Download the first package (same artifact, no re-computation)
+        uses: actions/download-artifact@v4
+        with:
+          name: R40_CARTOGRAPHY_SOURCE_PACKAGE
+          path: pkg_in
+          run-id: ${{ inputs.source_run }}
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install
+        working-directory: research/R40_KZ
+        run: python -m pip install -r requirements.txt -r requirements-carto.txt
+      - name: Unit tests (cartography helpers)
+        working-directory: research/R40_KZ
+        run: python -m unittest tests.test_cartography tests.test_journal_lib
+      - name: Acquire overview DEM + build journal figures + zip parts
+        working-directory: research/R40_KZ
+        shell: bash
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/out"
+          python -m src.cartography_journal all --package "$GITHUB_WORKSPACE/pkg_in" --out "$GITHUB_WORKSPACE/out/R40_JOURNAL_EDITION" \
+            --parts "$GITHUB_WORKSPACE/out/parts" --scratch /tmp/prep 2>&1 | tee "$GITHUB_WORKSPACE/out/console.log"
+      - name: Verify outputs
+        shell: bash
+        run: |
+          E=out/R40_JOURNAL_EDITION
+          n=$(ls $E/figures/*.png | wc -l); echo "figures: $n"; test "$n" -ge 12
+          test -f $E/manifest_journal.csv && test -f $E/captions_journal.md && test -f $E/A4_proof_pages_100pct.pdf
+          python3 - <<'PY'
+          import csv, glob, os, sys
+          bad = [r for r in csv.DictReader(open("out/R40_JOURNAL_EDITION/tables/a4_readability_audit.csv")) if r["min_font_ok_ge_7pt"] != "YES"]
+          print("figures with text < 7 pt:", len(bad)); 
+          big = [(p, os.path.getsize(p)) for p in glob.glob("out/parts/*.zip") if os.path.getsize(p) > 20_000_000]
+          print("parts over 20 MB:", big)
+          cons = [r for r in csv.DictReader(open("out/R40_JOURNAL_EDITION/tables/consistency_vs_source_package.csv")) if r["status"] != "IDENTICAL"]
+          print("consistency differences:", cons)
+          sys.exit(1 if (bad or big) else 0)
+          PY
+      - name: Secret scan
+        run: |
+          if grep -rIl -E "(ghp_|github_pat_|eyJ[A-Za-z0-9_-]{30,}\.[A-Za-z0-9_-]{20,})" out/R40_JOURNAL_EDITION; then echo "possible token found"; exit 1; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: R40_JOURNAL_FIGURES_AND_SOURCE_PARTS
+          path: out/parts
+          compression-level: 0
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: R40_JOURNAL_EDITION_FOLDER
+          path: out/R40_JOURNAL_EDITION
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: R40_JOURNAL_LOGS
+          path: out/console.log
+          retention-days: 90
+      - name: Publish parts and previews to branch r40-cartography-sources
+        if: always()
+        continue-on-error: true
+        run: |
+          E=out/R40_JOURNAL_EDITION
+          rm -rf /tmp/pub && mkdir -p /tmp/pub/previews /tmp/pub/parts
+          cp out/parts/*.zip out/parts/PARTS_INDEX.csv /tmp/pub/parts/ 2>/dev/null || true
+          cp $E/README_JOURNAL.md $E/captions_journal.md $E/journal_exceptions_report.md $E/journal_exceptions_report.csv $E/manifest_journal.csv $E/A4_proof_pages_100pct.pdf /tmp/pub/ 2>/dev/null || true
+          cp -r $E/tables /tmp/pub/tables 2>/dev/null || true
+          cp out/console.log /tmp/pub/
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          Image.MAX_IMAGE_PIXELS = None
+          for p in Path("out/R40_JOURNAL_EDITION/figures").glob("*.png"):
+              im = Image.open(p); w = 1700; im = im.resize((w, int(im.height * w / im.width)))
+              im.save(Path("/tmp/pub/previews") / p.name, optimize=True)
+          PY
+          cd /tmp/pub && git init -q -b r40-cartography-sources
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -q -m "R40 journal figures and source parts of run ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" "HEAD:refs/heads/r40-cartography-sources"
