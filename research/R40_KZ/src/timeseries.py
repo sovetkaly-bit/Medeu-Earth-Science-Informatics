@@ -8,12 +8,7 @@ from __future__ import annotations
 import argparse, datetime as dt
 from concurrent.futures import ThreadPoolExecutor
 import numpy as np
-import rasterio
-from rasterio.windows import from_bounds
-from rasterio.transform import from_origin
-from pyproj import Transformer
 from . import common as C
-from . import sources as S
 
 BBOX = (76.85, 43.05, 77.20, 43.25)
 CRS = "EPSG:32643"
@@ -22,6 +17,7 @@ GOOD = (4, 5, 6, 7, 11)  # SCL classes treated as valid surface (cloud/shadow/ci
 
 
 def grid(res):
+    from pyproj import Transformer
     t = Transformer.from_crs(4326, CRS, always_xy=True)
     x0, y0 = t.transform(BBOX[0], BBOX[1])
     x1, y1 = t.transform(BBOX[2], BBOX[3])
@@ -56,6 +52,8 @@ class Acc:
 
 def scene_stats(item, bounds, shape):
     """Return (scl, red, nir) arrays on the common grid or None."""
+    import rasterio
+    from rasterio.windows import from_bounds
     h, w = shape
     out = {}
     for key, rs in (("SCL", 0), ("B04", 0), ("B08", 0)):
@@ -69,6 +67,9 @@ def scene_stats(item, bounds, shape):
 
 
 def main():
+    import rasterio
+    from rasterio.transform import from_origin
+    from . import sources as S
     ap = argparse.ArgumentParser()
     ap.add_argument("--start", default="2017-04-01")
     ap.add_argument("--end", default="2025-12-31")

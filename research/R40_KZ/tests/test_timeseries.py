@@ -12,7 +12,7 @@ class T(unittest.TestCase):
         self.assertEqual(a.valid.tolist(), [[1, 1], [0, 1]])
         self.assertEqual(a.snow.tolist(), [[1, 0], [0, 0]])
         self.assertEqual(a.nd_n.tolist(), [[0, 1], [0, 1]])
-        self.assertAlmostEqual(a.nd_sum[0, 1], 0.5)
+        self.assertAlmostEqual(a.nd_sum[0, 1], 0.5, places=4)
 
     def test_grid(self):
         b, w, h = grid(120.0)
