@@ -26,7 +26,8 @@ class TestIcesat(unittest.TestCase):
     def test_quality_and_nmad(self):
         p = {"h_te": np.array([1.0, 5e38, 3.0]), "h_te_unc": np.array([1.0, 1.0, 9.0]), "n_te_ph": np.array([50, 50, 50.0]),
              "cloud": np.array([0, 0, 0.0]), "night": np.array([1, 1, 1.0])}
-        self.assertEqual(I.quality_mask(p).tolist(), [True, False, False])
+        self.assertEqual(I.quality_mask(p, unc_max=5.0).tolist(), [True, False, False])
+        self.assertEqual(I.quality_mask(p, unc_max=15.0).tolist(), [True, False, True])
         self.assertAlmostEqual(I.nmad(np.array([0.0, 1.0, -1.0, 2.0, -2.0])), 1.4826 * 1.0)
 
     def test_smooth100_nan_edges(self):
