@@ -182,7 +182,7 @@ def north_arrow(ax, extent, gamma_deg, fs=4.3):
     ang = math.radians(-gamma_deg)
     dx, dy = ln * math.sin(ang), ln * math.cos(ang)
     from matplotlib.patches import Rectangle
-    ax.add_patch(Rectangle((xmax - 0.25 * W, cy - 0.075 * H), 0.24 * W, 0.2 * H + ln, fc="white", ec="none", alpha=0.7, zorder=8))
+    ax.add_patch(Rectangle((xmax - 0.165 * W, cy - 0.095 * H), 0.16 * W, 0.275 * H, fc="white", ec="none", alpha=0.72, zorder=8))
     ax.annotate("", xy=(cx + dx, cy + dy), xytext=(cx, cy), arrowprops=dict(arrowstyle="-|>", color="black", lw=1.0, mutation_scale=7), zorder=9)
     ax.text(cx + dx * 1.15, cy + dy * 1.15, "N", ha="center", va="bottom", fontsize=7, fontweight="bold", zorder=9)
     ax.text(xmax - 0.02 * W, cy - 0.02 * H, f"true N\ngrid conv.\n{gamma_deg:+.2f}°", fontsize=fs, ha="right", va="top", zorder=9, linespacing=1.1)

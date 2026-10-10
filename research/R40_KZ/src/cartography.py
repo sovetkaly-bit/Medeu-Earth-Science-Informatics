@@ -227,6 +227,16 @@ def acquire(assets, pkg, native=True, ne=True):
         except Exception:  # noqa: BLE001
             pass
     C.write_json(inp / "provenance" / "asset_commits.json", commits)
+    inv = assets / "actions_artifacts.json"
+    if inv.exists():
+        shutil.copy2(inv, inp / "provenance" / "actions_artifacts_inventory.json")
+        try:
+            arts = json.loads(inv.read_text(encoding="utf-8"))
+            C.log("cartography", "actions-artifacts", "INVENTORY", f"{len(arts)} artifacts, {sum(1 for a in arts if not a.get('expired'))} not expired")
+        except Exception as e:  # noqa: BLE001
+            exc("WARN", "acquire", "Actions artifact inventory unreadable", repr(e))
+    else:
+        exc("WARN", "acquire", "inventory of existing Actions artifacts not available in this run")
     # integrity table of the original run
     orig = {}
     sh = res / "sha256.txt"
@@ -368,6 +378,7 @@ class Ctx:
         self.ne: dict = {}
         self.inventory: list[dict] = []
         self.asset_commits: dict = {}
+        self.atl_dates: dict = {}
 
     def raster_path(self, key, name):
         return self.inp / "rasters" / key / name
@@ -502,6 +513,7 @@ def derived_rasters(ctx):
     max_overlap_diff = {k: 0.0 for k in prods}
     ov_n = {k: 0 for k in prods}
     ov_big = {k: 0 for k in prods}
+    ov_sum = {k: 0.0 for k in prods}
     for d in kz:
         c0 = int(round((d["x0"] - X0) / 30))
         r0 = int(round((Y1 - d["y1"]) / 30))
@@ -516,6 +528,7 @@ def derived_rasters(ctx):
                 dd_ = np.abs(dst[both] - src[both])
                 max_overlap_diff[pk] = max(max_overlap_diff[pk], float(dd_.max()))
                 ov_n[pk] += int(both.sum())
+                ov_sum[pk] += float(dd_.sum())
                 ov_big[pk] += int((dd_ > (0.5 if "elev" in pk else 0.1)).sum())
             fill = ~np.isfinite(dst) & np.isfinite(src)
             dst[fill] = src[fill]
@@ -533,13 +546,14 @@ def derived_rasters(ctx):
     ctx.man.add(cd / "window_coverage_count.tif", "aligned common analysis grid (coverage)", "derived", licence=LICENCE["own"], res="30", crs=cm["crs"])
     C.write_csv(ctx.out / "tables" / "common_grid_coverage.csv",
                 [dict(product=k, max_abs_difference_in_overlap=v, overlap_cells_compared=ov_n[k], overlap_cells_differing=ov_big[k],
-                      differing_threshold=("0.5 m" if "elev" in k else "0.1 deg"), pct_overlap_cells_differing=(100.0 * ov_big[k] / ov_n[k] if ov_n[k] else float("nan")), unit="m" if "elev" in k else "deg",
+                      differing_threshold=("0.5 m" if "elev" in k else "0.1 deg"), pct_overlap_cells_differing=(100.0 * ov_big[k] / ov_n[k] if ov_n[k] else float("nan")), mean_abs_difference_in_overlap=(ov_sum[k] / ov_n[k] if ov_n[k] else float("nan")), unit="m" if "elev" in k else "deg",
                       grid_crs=cm["crs"], x0=X0, y1=Y1, width=W, height=H, cell_m=30) for k, v in max_overlap_diff.items()])
     ctx.man.add(ctx.out / "tables" / "common_grid_coverage.csv", "table", "derived: overlap consistency of the aligned grid", licence=LICENCE["own"])
     ctx.common = dict(meta=cm, cop=mos["cop_elevation_m"], hs=L.hillshade(mos["cop_elevation_m"], 30), count=count, extent=extent_of(cm))
     if max(max_overlap_diff.values()) > 1e-3:
-        exc("WARN", "common grid", "overlapping windows differ slightly in the overlap (resampling/edge effects of each window); first-valid pixel used",
-            {k: f"max {max_overlap_diff[k]:.3f}; {100.0 * ov_big[k] / max(ov_n[k], 1):.2f}% of {ov_n[k]} overlap cells differ" for k in prods})
+        exc("WARN", "common grid", "overlapping windows differ slightly in the overlap; first-valid pixel used. Likely cause (not tested): each window was warped separately from the geographic source grid, "
+            "so sub-pixel coordinate approximation differs between windows; this is a property of the reused r40-results rasters, not of this package",
+            {k: f"max {max_overlap_diff[k]:.3f}, mean {ov_sum[k] / max(ov_n[k], 1):.3f}; {100.0 * ov_big[k] / max(ov_n[k], 1):.2f}% of {ov_n[k]} overlap cells differ" for k in prods})
 
 
 def vectors(ctx):
@@ -646,6 +660,9 @@ def atl08_layers(ctx):
         pair_len_n = int((lenient[a] & lenient[b]).sum())
         pair_mem[a] = True
         pair_mem[b] = True
+        import re as _re
+        dts = sorted({m.group(1) for g_ in set(pts["granule"]) for m in [_re.search(r"ATL08_(\d{8})", str(g_))] if m})
+        ctx.atl_dates[site] = (f"{dts[0][:4]}-{dts[0][4:6]}-{dts[0][6:]}" if dts else "unknown", f"{dts[-1][:4]}-{dts[-1][4:6]}-{dts[-1][6:]}" if dts else "unknown", len(dts))
         pts_by_site[site] = dict(x=x, y=y, lon=pts["lon"], lat=pts["lat"], common=common, lenient=lenient, strict=strict, epsg=epsg)
         cnt.append(dict(site=site, n_segments_in_bbox=int(len(x)), n_pass_common_filters=int(common.sum()), n_lenient_unc_lt_15m=int(lenient.sum()),
                         n_strict_unc_lt_5m=int(strict.sum()), pct_strict=float(100 * strict.sum() / max(len(x), 1)), n_adjacent_pairs_80_120m=int(len(a)),
@@ -683,7 +700,7 @@ def atl08_layers(ctx):
     src = "NASA ICESat-2 ATL08 v007 via NSIDC (segments copied from branch r40-icesat2; extraction by src/icesat2.py)"
     for p, role in ((gpkg, "ATL08 segment points (quality flags) and track lines"), (vd / "atl08_tracks.geojson", "ATL08 track lines with quality flag"),
                     (vd / "atl08_kz_usable_segments.geojson", "ATL08 usable (strict/lenient) segments, Kazakhstan")):
-        ctx.man.add(p, role, src, datum="ellipsoidal heights (no geoid applied)", dates="2018-10-01..2026-10-10 (granule dates in segment table)",
+        ctx.man.add(p, role, src, datum="ellipsoidal heights (no geoid applied)", dates=("granule dates " + "; ".join(f"{k}: {v[0]}..{v[1]} ({v[2]} dates)" for k, v in ctx.atl_dates.items())),
                     licence=LICENCE["atl08"], notes="track samples only; NOT full-map validation", crs="EPSG:4326", res="vector (100 m along-track segments)")
     C.write_csv(ctx.out / "tables" / "atl08_filter_counts.csv", cnt)
     ctx.man.add(ctx.out / "tables" / "atl08_filter_counts.csv", "table", "derived from inputs/atl08/*.csv", licence=LICENCE["atl08"])
@@ -912,6 +929,8 @@ def fig_A(ctx):
     axB.set_ylim(min(c[1] for c in cc), max(c[1] for c in cc))
     ring = [tl.transform(x, y) for x, y in [(KZ_BBOX[0], KZ_BBOX[1]), (KZ_BBOX[2], KZ_BBOX[1]), (KZ_BBOX[2], KZ_BBOX[3]), (KZ_BBOX[0], KZ_BBOX[3]), (KZ_BBOX[0], KZ_BBOX[1])]]
     axB.plot(*zip(*ring), color="#D55E00", lw=1.2)
+    rx, ry = tl.transform(77.025, 43.15)
+    axB.plot(rx, ry, "o", ms=11, mfc="none", mec="#D55E00", mew=1.2, zorder=6)
     ax_, ay_ = tl.transform(76.9454, 43.2380)
     axB.plot(ax_, ay_, "o", ms=3, color="k"); axB.annotate("Almaty (city centre)", (ax_, ay_), xytext=(-62, 8), textcoords="offset points", fontsize=5.5)
     for lo in range(45, 100, 10):
@@ -1047,6 +1066,19 @@ def fig_C(ctx):
         save_fig(ctx, fig, "FigC2_validation_dem_vs_lidar_slope_difference", cap)
 
 
+def ref_epoch(ctx, key):
+    import re as _re
+    try:
+        j = json.loads((ctx.inp / "provenance" / f"{key}_reference_native_provenance.json").read_text(encoding="utf-8"))
+        ids = j.get("items", [])
+        yrs = sorted({m.group(1) for i_ in ids for m in [_re.search(r"_(20\d\d|19\d\d)_", str(i_))] if m})
+        if yrs:
+            return f"swissALTI3D release year(s) {', '.join(yrs)} ({len(ids)} tiles)"
+        return f"{len(ids)} USGS 3DEP item(s); per-item dates in inputs/provenance/{key}_reference_native_provenance.json (3DEP seamless is a mosaic of lidar projects of different years)"
+    except Exception:  # noqa: BLE001
+        return "acquisition epoch: see provenance json (not recorded)"
+
+
 def fig_D(ctx):
     plt = L_plt()
     rows_s, rows_sum = [], []
@@ -1066,6 +1098,7 @@ def fig_D(ctx):
                f"Reference: {ref_name}, a bare-earth lidar DTM, shown at native resolution (black) and block-averaged to the 30 m cell (grey) - the SUPPORT-MATCHED reference used in the validation; candidate DEMs: "
                f"Copernicus GLO-30 DSM (EGM2008) and NASADEM DSM (EGM96), 30 m, bilinearly sampled along the line. Vertical datums are not harmonised, so absolute heights differ by a geoid offset of a few metres; "
                "the lower panels remove the median offset along each transect. DSMs include canopy/buildings while the reference is bare earth. No co-registration was applied. "
+               f"Reference epoch: {ref_epoch(ctx, key)}; Copernicus GLO-30 item date {prov_of(ctx, key, 'cop-dem-glo-30')[1]}; NASADEM item date {prov_of(ctx, key, 'nasadem')[1]}. "
                "Profile values: tables/profile_samples.csv; statistics: tables/profile_summary.csv. Map: exact metric scale bar, pyproj graticule, true-north arrow (grid convergence printed).")
         fh = 7.9
         bot = L.bottom_frac(cap, fh, 0.15)
@@ -1126,6 +1159,14 @@ def fig_D(ctx):
                                    cop_glo30_m=float(zc[j]), nasadem_m=float(zn[j])))
             ctx.inventory.append(dict(figure="D", panel=f"{key}:{kind}", site=key, quantity="elevation profile 3 km", crs=d["meta"]["crs"], cell_size_m=rf if native is not None else 30.0,
                                       n_valid_px=int(np.isfinite(z_nat).sum() if native is not None else ok.sum()), area_km2="", contour_id=f"PROFILE:{key}:{kind}:3000m", threshold_deg=""))
+        axs = fig.add_subplot(gs[2:, 0])
+        axs.axis("off")
+        sub = [r_ for r_ in rows_sum if r_["site"] == key]
+        txt = ["Profile statistics (DEM minus 30 m lidar reference,", "median offset removed along each 3 km transect)", "", f"{'transect':<9}{'DEM':<12}{'n':>5}{'RMSE, m':>9}{'offset, m':>10}"]
+        for r_ in sub:
+            txt.append(f"{r_['transect']:<9}{r_['dem']:<12}{r_['n_points']:>5}{r_['rmse_debiased_m']:>9.2f}{r_['median_offset_m']:>10.2f}")
+        txt += ["", "offset = median of (DEM - ref30): geoid/datum shift", "plus any real vertical bias (not separable here)."]
+        axs.text(0.0, 0.95, "\n".join(txt), family="DejaVu Sans Mono", fontsize=4.9, va="top", ha="left", transform=axs.transAxes)
         L.place_caption(fig, cap)
         save_fig(ctx, fig, f"FigD_profile_{key}", cap)
     if rows_s:
@@ -1170,7 +1211,8 @@ def fig_E(ctx, pts_by_site):
            ">= 30 terrain photons, ATM cloud flag <= 2; lenient = height uncertainty < 15 m; strict = < 5 m. Points exist only along the satellite ground tracks (point samples), so they must NOT be read as full-map validation of any slope map. "
            "The strict subset is 1-4 % of all segments in every area (table in panel f). Counts in panel titles refer to the displayed extent; full-bbox counts are in tables/atl08_filter_counts.csv. Heights are ellipsoidal and were not geoid-corrected here. "
            "Background: hillshade of Copernicus GLO-30 (30 m; grey = outside the packaged windows). Panel (a) covers 76.85-77.20°E, 43.05-43.25°N (UTM 43N); other panels are the lidar validation windows (own local UTM). "
-           "Exact metric scale bars, graticule, true-north arrows. Vector layers with quality flags: derived/vector/atl08_segments_and_tracks.gpkg.")
+           "Exact metric scale bars, graticule, true-north arrows. Vector layers with quality flags: derived/vector/atl08_segments_and_tracks.gpkg. "
+           + "Granule acquisition dates (from granule names): " + "; ".join(f"{('Kazakhstan' if k == 'kz_all' else SHORT[k])} {v[0]} to {v[1]} ({v[2]} dates)" for k, v in ctx.atl_dates.items()) + ".")
     fh = 7.3
     bot = L.bottom_frac(cap, fh, 0.45)
     fig = plt.figure(figsize=(7.5, fh))
@@ -1214,7 +1256,7 @@ def fig_E(ctx, pts_by_site):
         rows = list(_csv.DictReader(open(ctx.out / "tables" / "atl08_filter_counts.csv", encoding="utf-8")))
         lines = ["(f) Segments per area (full bbox)", "", f"{'area':<18}{'all':>7}{'common':>8}{'lenient':>8}{'strict':>7}{'pairs*':>7}"]
         for r_ in rows:
-            lines.append(f"{r_['site'][:17]:<18}{int(r_['n_segments_in_bbox']):>7,}{int(r_['n_pass_common_filters']):>8,}{int(r_['n_lenient_unc_lt_15m']):>8,}{int(r_['n_strict_unc_lt_5m']):>7,}{int(r_['n_pairs_both_strict']):>7,}")
+            lines.append(f"{('Kazakhstan' if r_['site'] == 'kz_all' else SHORT[r_['site']])[:17]:<18}{int(r_['n_segments_in_bbox']):>7,}{int(r_['n_pass_common_filters']):>8,}{int(r_['n_lenient_unc_lt_15m']):>8,}{int(r_['n_strict_unc_lt_5m']):>7,}{int(r_['n_pairs_both_strict']):>7,}")
         lines += ["", "*adjacent segment pairs (80-120 m),", " both strict (unc. < 5 m)"]
         axt.text(0.0, 0.98, "\n".join(lines), family="DejaVu Sans Mono", fontsize=4.9, va="top", ha="left", transform=axt.transAxes)
     except Exception as e:  # noqa: BLE001
