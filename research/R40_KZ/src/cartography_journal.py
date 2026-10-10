@@ -246,7 +246,7 @@ def fig_A(jx):
     wc = W - 0.5 - 0.95
     hc = wc * J.aspect(ext)
     top_h = 1.6
-    H = 0.1 + 0.3 + top_h + 0.5 + hc + 0.32 + 0.6
+    H = 0.1 + 0.3 + top_h + 0.5 + hc + 0.32 + 0.5
     pg = J.Page(plt, W, H)
     wa = (W - 0.12 - 0.12 - 0.3) / 2
     axA = pg.axes(0.12, 0.4, wa, top_h)
@@ -448,7 +448,7 @@ def fig_C(jx):
     keys = [k for k in K.KZ if k in ctx.sites]
     if keys:
         nm = "R40_Fig_C1_kazakhstan_inter_dem_slope_difference"
-        pg, rects, pw = grid_layout(plt, [J.aspect(ctx.sites[k]["extent"]) for k in keys], title_h=0.58, extra_bottom=0.95)
+        pg, rects, pw = grid_layout(plt, [J.aspect(ctx.sites[k]["extent"]) for k in keys], title_h=0.58, extra_bottom=1.2)
         for i, (k, (x, y, w, h)) in enumerate(zip(keys, rects)):
             d = ctx.sites[k]
             ax = pg.axes(x, y, w, h)
@@ -456,11 +456,11 @@ def fig_C(jx):
             J.panel_title(ax, chr(97 + i), K.SHORT[k], right=utm_label(d["epsg"]),
                           stats=f"mean {st.get('mean_diff_deg', float('nan')):+.2f}° · MAE {st.get('mae_deg', float('nan')):.2f}°")
         sm = plt.cm.ScalarMappable(norm=plt.Normalize(-vm, vm), cmap=cmap)
-        cb = pg.fig.colorbar(sm, cax=pg.fig.add_axes([0.25, 0.3 / pg.h, 0.5, 0.14 / pg.h]), orientation="horizontal")
+        cb = pg.fig.colorbar(sm, cax=pg.fig.add_axes([0.25, 0.7 / pg.h, 0.5, 0.14 / pg.h]), orientation="horizontal")
         cb.set_label("Slope difference NASADEM − Copernicus GLO-30, degrees", fontsize=J.FS_BASE)
         cb.ax.tick_params(labelsize=J.FS_SMALL)
         from matplotlib.patches import Patch
-        pg.fig.legend(handles=[Patch(fc=L.COL_NODATA, ec="k", lw=0.5, label="No data in either DEM")], loc="lower center", bbox_to_anchor=(0.5, 0.02 / pg.h), frameon=False, fontsize=J.FS_BASE)
+        pg.fig.legend(handles=[Patch(fc=L.COL_NODATA, ec="k", lw=0.5, label="No data in either DEM")], loc="lower center", bbox_to_anchor=(0.5, 0.05 / pg.h), frameon=False, fontsize=J.FS_BASE)
         short = ("Slope differences between two global DEMs (NASADEM minus Copernicus GLO-30) in the four Kazakhstan windows, on the common valid mask. "
                  "The map shows disagreement between DEMs, not accuracy: no lidar reference exists for Kazakhstan. Dashed line = derived footprint (exploratory).")
         tech = (f"Both DEMs are DSMs resampled bilinearly to the same 30 m UTM 43N grid; slopes by the Horn (1981) 3x3 method; common valid mask = pixels with a complete 3x3 neighbourhood in both DEMs. "
