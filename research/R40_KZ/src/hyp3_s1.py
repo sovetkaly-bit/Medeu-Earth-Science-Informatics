@@ -55,25 +55,43 @@ def hyp3():
     return sdk.HyP3(token=os.environ["EARTHDATA_TOKEN"])
 
 
+def _cop_on_grid(profile_like):
+    """Copernicus GLO-30 (Planetary Computer) reprojected onto the grid of a HyP3 raster."""
+    import numpy as np
+    import rasterio
+    from rasterio.warp import reproject, Resampling, transform_bounds
+    from . import sources as S
+    t, crs, w, h = profile_like
+    l, btm, r, tp = rasterio.transform.array_bounds(h, w, t)
+    bb = transform_bounds(crs, "EPSG:4326", l, btm, r, tp)
+    cl = S.pc_client()
+    items = S.pc_search(cl, "cop-dem-glo-30", bb, max_items=20)
+    out = np.full((h, w), np.nan, "float32")
+    for it in items:
+        with rasterio.open(it.assets["data"].href) as src:
+            tmp = np.full((h, w), np.nan, "float32")
+            reproject(rasterio.band(src, 1), tmp, dst_transform=t, dst_crs=crs, resampling=Resampling.bilinear, dst_nodata=np.nan)
+            out = np.where(np.isnan(out), tmp, out)
+    return out
+
+
 def coherence_rows(d):
-    """Coherence statistics per slope class from the HyP3 products' own DEM (80 m); descriptive, not terrain validation."""
+    """Coherence statistics per slope class (slope from Copernicus GLO-30 resampled to the product grid); descriptive only."""
     import zipfile, tempfile
     import numpy as np
     import rasterio
     rows = []
     for z in sorted(Path(d).glob("*.zip")):
         with tempfile.TemporaryDirectory() as td, zipfile.ZipFile(z) as zf:
-            names = zf.namelist()
-            corr = next((n for n in names if n.endswith("_corr.tif")), None)
-            dem = next((n for n in names if n.endswith("_dem.tif")), None)
-            if not corr or not dem:
+            corr = next((n for n in zf.namelist() if n.endswith("_corr.tif")), None)
+            if not corr:
                 continue
-            zf.extract(corr, td); zf.extract(dem, td)
-            with rasterio.open(Path(td) / corr) as a, rasterio.open(Path(td) / dem) as b:
+            zf.extract(corr, td)
+            with rasterio.open(Path(td) / corr) as a:
                 c = a.read(1).astype("float32")
-                h = b.read(1).astype("float32")
                 res = abs(a.transform.a)
-            gy, gx = np.gradient(np.where(h == b.nodata, np.nan, h) if b.nodata is not None else h, res)
+                h = _cop_on_grid((a.transform, a.crs, a.width, a.height))
+            gy, gx = np.gradient(h, res)
             sl = np.degrees(np.arctan(np.hypot(gx, gy)))
             valid = (c > 0) & np.isfinite(sl)
             name = z.name.split("_")[1] + "_" + z.name.split("_")[2]
