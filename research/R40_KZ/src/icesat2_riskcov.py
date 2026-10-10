@@ -14,6 +14,7 @@ from . import sources as S
 from . import terrain as T
 from . import experiment as E
 from . import icesat2 as I
+from . import decision as D
 from .run import window_bbox
 
 
@@ -68,6 +69,20 @@ def main():
         return
     results, models, taus = E.run_validation(val, cfg, out)
     C.write_csv(out / "tables" / "riskcov_model_validation_aurc.csv", results["aurc"])
+    # support-matched model: trained and applied on 90 m block means (comparable to the 100 m ATL08 along-track geometry)
+    models90, taus90 = {}, {}
+    rng90 = np.random.default_rng(17)
+    for t in th:
+        base = E._tables(val, t, predictors, primary=primary, support_m=90)
+        Xa = np.concatenate([D._X(base[k]) for k in base]); ya = np.concatenate([base[k]["err"] for k in base])
+        ii = D._subsample({"err": ya}, 150000, rng90)
+        models90[t] = D.fit_logit(Xa[ii], ya[ii])
+        pa = D.predict_logit(models90[t], Xa)
+        da = np.concatenate([-base[k]["dist"] for k in base])
+        for target in cfg["decision"]["target_risks"]:
+            taus90[(t, target, "combined")] = D.choose_tau(pa, ya, target, rng90)
+            taus90[(t, target, "distance")] = D.choose_tau(da, ya, target, rng90)
+    from types import SimpleNamespace
     areas = I.study_areas(cfg)
     rows, oper, curves = [], [], []
     rng = np.random.default_rng(0)
@@ -99,18 +114,27 @@ def main():
                 s_d = np.degrees(np.arctan((z_s[ib] - z_s[ia]) / dist))
                 blocks = (np.floor(x[ia] / 1000).astype(int) * 100000 + np.floor(y[ia] / 1000).astype(int))
                 for t in th:
+                    k3 = 3
+                    d90 = {n: T.block_mean(dems[n].astype("float64"), k3) for n in predictors}
+                    g90 = SimpleNamespace(x0=grid.x0, y1=grid.y1, res=90.0, w=d90[primary].shape[1], h=d90[primary].shape[0])
+                    r90 = E.apply_to_site(d90, 90.0, t, predictors, primary, models90[t], taus90[(t, head, "combined")], taus90[(t, head, "distance")])
+                    perr90 = r90["perr"]
+                    fin9 = np.isfinite(perr90).astype("float64")
+                    p9 = np.nan_to_num(perr90, nan=0.0).astype("float64")
+                    pe90 = 0.5 * (I.sample(p9, g90, x[ia], y[ia]) + I.sample(p9, g90, x[ib], y[ib]))
+                    v90 = (I.sample(fin9, g90, x[ia], y[ia]) > 0.999) & (I.sample(fin9, g90, x[ib], y[ib]) > 0.999)
                     r = E.apply_to_site(dems, 30.0, t, predictors, primary, models[t], taus[(t, head, "combined")], taus[(t, head, "distance")])
                     perr = r["perr"]
                     fin = np.isfinite(perr).astype("float64")
                     p0 = np.nan_to_num(perr, nan=0.0).astype("float64")
                     pe = 0.5 * (I.sample(p0, grid, x[ia], y[ia]) + I.sample(p0, grid, x[ib], y[ib]))
                     vfull = (I.sample(fin, grid, x[ia], y[ia]) > 0.999) & (I.sample(fin, grid, x[ib], y[ib]) > 0.999)
-                    ok = np.isfinite(s_d) & np.isfinite(s_atl) & np.isfinite(pe) & vfull
+                    ok = np.isfinite(s_d) & np.isfinite(s_atl) & np.isfinite(pe) & vfull & np.isfinite(pe90) & v90
                     if ok.sum() < 50:
                         continue
-                    sd, sa, pe_, bl = np.abs(s_d[ok]), np.abs(s_atl[ok]), pe[ok], blocks[ok]
+                    sd, sa, pe_, bl, pe9 = np.abs(s_d[ok]), np.abs(s_atl[ok]), pe[ok], blocks[ok], pe90[ok]
                     err = ((sd >= t) != (sa >= t)).astype(float)
-                    u = {"random": rng.random(len(err)), "distance": -np.abs(sd - t), "combined": pe_}
+                    u = {"random": rng.random(len(err)), "distance": -np.abs(sd - t), "combined_30m_model": pe_, "combined_90m_model": pe9}
                     bs = block_boot(u, err, bl)
                     base = bs["distance"][3]
                     for m in u:
@@ -121,7 +145,7 @@ def main():
                                "model_in_training_set": site in val}
                         rows.append(row)
                     for target in cfg["decision"]["target_risks"]:
-                        for m, tau, sc in (("combined", taus[(t, target, "combined")], pe_), ("distance", taus[(t, target, "distance")], -np.abs(sd - t))):
+                        for m, tau, sc in (("combined_30m_model", taus[(t, target, "combined")], pe_), ("combined_90m_model", taus90[(t, target, "combined")], pe9), ("distance", taus[(t, target, "distance")], -np.abs(sd - t))):
                             acc = sc <= tau
                             oper.append({"site": site, "quality": qlevel, "threshold_deg": t, "method": m, "target_risk_train": target, "tau_fixed_on_lidar_sites": float(tau),
                                          "coverage": float(acc.mean()), "selective_risk_vs_icesat2": float(err[acc].mean()) if acc.any() else None,
