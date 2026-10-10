@@ -1,0 +1,35 @@
+{
+  "site": "davos_parsenn",
+  "queried_at": "2026-10-10T14:07:54+00:00",
+  "osm_query": "[out:json][timeout:150];\n(\n  nwr[\"name\"~\"Parsenn|Weissfluh\",i](46.71300,9.63800,46.95300,9.97400);\n  nwr[\"name:ru\"~\"Parsenn|Weissfluh\",i](46.71300,9.63800,46.95300,9.97400);\n  nwr[\"name:en\"~\"Parsenn|Weissfluh\",i](46.71300,9.63800,46.95300,9.97400);\n  nwr[\"name:kk\"~\"Parsenn|Weissfluh\",i](46.71300,9.63800,46.95300,9.97400);\n  nwr[\"landuse\"=\"winter_sports\"](46.71300,9.63800,46.95300,9.97400);\n  nwr[\"aerialway\"](46.71300,9.63800,46.95300,9.97400);\n  nwr[\"piste:type\"](46.71300,9.63800,46.95300,9.97400);\n  nwr[\"tourism\"~\"resort|attraction|viewpoint|alpine_hut|hotel|camp_site|theme_park\"](46.71300,9.63800,46.95300,9.97400);\n  nwr[\"leisure\"~\"sports_centre|ice_rink|stadium|pitch|resort|park|nature_reserve\"](46.71300,9.63800,46.95300,9.97400);\n  nwr[\"boundary\"~\"protected_area|national_park\"](46.71300,9.63800,46.95300,9.97400);\n);\nout geom tags;",
+  "bbox_s_w_n_e": [
+    46.713,
+    9.638,
+    46.952999999999996,
+    9.973999999999998
+  ],
+  "config_center_lonlat": [
+    9.806,
+    46.833
+  ],
+  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+  "n_elements": 2130,
+  "n_candidates": 2071,
+  "selection_rule": "named OSM polygon, area within bounds; priority winter_sports/resort < protected area/park < sports/tourism < natural/place; ties by distance to configured centre",
+  "chosen": {
+    "osm": "way/601299396",
+    "name": "Parsenn",
+    "named_match": true,
+    "geom_type": "Polygon",
+    "prio": 0,
+    "tags": {
+      "landuse": "winter_sports"
+    },
+    "dist_to_config_center_km": 2.822,
+    "area_km2": 43.2246
+  },
+  "footprint_note": "DERIVED from mapped aerialway/piste/tourism/leisure features within 4.0 km of the configured centre, buffered 250 m then eroded 200 m; NOT an official boundary",
+  "footprint_area_km2": 12.0537,
+  "n_footprint_features": 393,
+  "status": "OSM_POLYGON_NAMED_MATCH"
+}

@@ -1,0 +1,2514 @@
+{
+  "candidates": [
+    {
+      "osm": "way/601299396",
+      "name": "Parsenn",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 2.822,
+      "area_km2": 43.2246
+    },
+    {
+      "osm": "node/6260561119",
+      "name": "Weissfluhjoch",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak"
+      },
+      "dist_to_config_center_km": 0.081
+    },
+    {
+      "osm": "node/286674799",
+      "name": "Weissfluhjoch",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.016
+    },
+    {
+      "osm": "way/255948399",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.048
+    },
+    {
+      "osm": "node/5922222492",
+      "name": "Weissfluhjoch",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 0.055
+    },
+    {
+      "osm": "node/211050622",
+      "name": "Weissfluhjoch (Obersäss)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.067
+    },
+    {
+      "osm": "node/211050580",
+      "name": "Weissfluhjoch (Totalp)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.08
+    },
+    {
+      "osm": "node/211050586",
+      "name": "Weissfluhjoch (Weissfluhgipf.)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.089
+    },
+    {
+      "osm": "node/321774094",
+      "name": "Weissfluhjoch (Parsennhütte)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.101
+    },
+    {
+      "osm": "node/13672922259",
+      "name": "Startplatz Davos Weissfluhjoch",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.146
+    },
+    {
+      "osm": "node/321749022",
+      "name": "Weissfluhjoch (Parsenn Sessel)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.157
+    },
+    {
+      "osm": "way/960761682",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.193
+    },
+    {
+      "osm": "way/960761681",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.363
+    },
+    {
+      "osm": "way/255945092",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.628
+    },
+    {
+      "osm": "node/211050593",
+      "name": "Weissfluhgipfel",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.759
+    },
+    {
+      "osm": "way/255945121",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.847
+    },
+    {
+      "osm": "node/8887913085",
+      "name": "Parsennsee",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 0.879
+    },
+    {
+      "osm": "node/4170137294",
+      "name": "Weissfluhgipfel",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.902
+    },
+    {
+      "osm": "way/255945098",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.981
+    },
+    {
+      "osm": "way/29257592",
+      "name": "Weissfluhjoch - Kreuzweg",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 1.005
+    },
+    {
+      "osm": "node/13672922260",
+      "name": "Startplatz Davos Weissfluhgipfel",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.006
+    },
+    {
+      "osm": "way/29256538",
+      "name": "Parsenn Rapid",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "chair_lift"
+      },
+      "dist_to_config_center_km": 1.024
+    },
+    {
+      "osm": "way/20011888",
+      "name": "Weissfluhjoch - Parsennhütte",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 1.137
+    },
+    {
+      "osm": "way/29258980",
+      "name": "Parsennhüttenbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "cable_car"
+      },
+      "dist_to_config_center_km": 1.269
+    },
+    {
+      "osm": "way/854901845",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.422
+    },
+    {
+      "osm": "way/960705340",
+      "name": "Parsennfurggaweg",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.807
+    },
+    {
+      "osm": "node/5920459592",
+      "name": "Parsennfurgga",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 1.813
+    },
+    {
+      "osm": "node/211050918",
+      "name": "Parsennfurgga",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "natural": "saddle"
+      },
+      "dist_to_config_center_km": 1.819
+    },
+    {
+      "osm": "node/1210116002",
+      "name": "Parsennfurgga",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 1.832
+    },
+    {
+      "osm": "way/960705342",
+      "name": "Parsennfurggaweg",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.835
+    },
+    {
+      "osm": "node/4004671656",
+      "name": "Parsennfurka",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 1.858
+    },
+    {
+      "osm": "way/29260988",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.017
+    },
+    {
+      "osm": "way/29260987",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.022
+    },
+    {
+      "osm": "way/854901848",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.034
+    },
+    {
+      "osm": "way/1416234789",
+      "name": "Parsennfurggaweg",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.09
+    },
+    {
+      "osm": "way/255948393",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.285
+    },
+    {
+      "osm": "node/3426031967",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 2.315
+    },
+    {
+      "osm": "node/279886512",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "isolated_dwelling"
+      },
+      "dist_to_config_center_km": 2.352
+    },
+    {
+      "osm": "node/1372130679",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 2.414
+    },
+    {
+      "osm": "node/8887328265",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 2.428
+    },
+    {
+      "osm": "node/13927959446",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.433
+    },
+    {
+      "osm": "node/321774091",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 2.443
+    },
+    {
+      "osm": "way/255948392",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.518
+    },
+    {
+      "osm": "way/117012116",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.557
+    },
+    {
+      "osm": "way/255948395",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.595
+    },
+    {
+      "osm": "way/117012117",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.629
+    },
+    {
+      "osm": "node/1204351530",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 2.64
+    },
+    {
+      "osm": "node/3337126678",
+      "name": "Gruobenalp (Talst. Parsennf.)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 2.663
+    },
+    {
+      "osm": "way/29258637",
+      "name": "Parsennhütte - Gruobenalp",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 2.715
+    },
+    {
+      "osm": "way/397690976",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.863
+    },
+    {
+      "osm": "way/37011370",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.879
+    },
+    {
+      "osm": "way/397690971",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.118
+    },
+    {
+      "osm": "way/397690975",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.239
+    },
+    {
+      "osm": "way/37011371",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.414
+    },
+    {
+      "osm": "node/364788962",
+      "name": "Parsennmäder",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 3.569
+    },
+    {
+      "osm": "way/26178712",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.582
+    },
+    {
+      "osm": "way/29258922",
+      "name": "Parsennmäder",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "t-bar"
+      },
+      "dist_to_config_center_km": 3.673
+    },
+    {
+      "osm": "node/6184879767",
+      "name": "Parsenn Sports in Davos",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.684
+    },
+    {
+      "osm": "node/286674751",
+      "name": "Davos Dorf (Parsennbahn)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.689
+    },
+    {
+      "osm": "node/12890379459",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.697
+    },
+    {
+      "osm": "node/436602825",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.705
+    },
+    {
+      "osm": "node/436602827",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.713
+    },
+    {
+      "osm": "way/1392139527",
+      "name": "Neubau Casa Parsenn",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.718,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "node/6184879773",
+      "name": "Parsenn Gada",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.728
+    },
+    {
+      "osm": "way/116881152",
+      "name": "Sport Hotel Parsenn",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 3.742,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/37089827",
+      "name": "Parsennstrasse",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.864
+    },
+    {
+      "osm": "way/37090165",
+      "name": "Parsennbahn-Parkplatz",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.874,
+      "area_km2": 0.0117
+    },
+    {
+      "osm": "node/3339513365",
+      "name": "Parsenn-Drogerie Küblis",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 9.393
+    },
+    {
+      "osm": "way/601300156",
+      "name": "Schatzalp/Strela (Davos Klosters)",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 3.128,
+      "area_km2": 2.1152
+    },
+    {
+      "osm": "way/601300464",
+      "name": "Bündalift – Davos",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 4.32,
+      "area_km2": 0.0868
+    },
+    {
+      "osm": "way/1226670623",
+      "name": "Fideriser Heuberge",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 6.804,
+      "area_km2": 1.35
+    },
+    {
+      "osm": "way/601300766",
+      "name": "Skilift Selfranga",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 6.915,
+      "area_km2": 0.277
+    },
+    {
+      "osm": "way/601299778",
+      "name": "Jakobshorn",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 7.38,
+      "area_km2": 14.1809
+    },
+    {
+      "osm": "way/601299503",
+      "name": "Pischa",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 8.467,
+      "area_km2": 3.9492
+    },
+    {
+      "osm": "way/601298991",
+      "name": "Madrisa",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 9.998,
+      "area_km2": 12.5049
+    },
+    {
+      "osm": "way/601300983",
+      "name": "Rinerhorn",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 10.141,
+      "area_km2": 7.1648
+    },
+    {
+      "osm": "way/1226538939",
+      "name": "Hochwang – Goldgruben",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 11.734,
+      "area_km2": 3.5335
+    },
+    {
+      "osm": "way/1227309907",
+      "name": "Pany",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 11.81,
+      "area_km2": 0.7479
+    },
+    {
+      "osm": "way/539422692",
+      "name": "Gargellen",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 15.942,
+      "area_km2": 4.7956
+    },
+    {
+      "osm": "way/1226535179",
+      "name": "Grüsch Danusa",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 18.858,
+      "area_km2": 5.3705
+    },
+    {
+      "osm": "way/601135365",
+      "name": "Arosa Lenzerheide",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 19.542,
+      "area_km2": 67.7605
+    },
+    {
+      "osm": "way/37386642",
+      "name": "Theodulpark",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 3.733,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/37389727",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 3.752,
+      "area_km2": 0.0054
+    },
+    {
+      "osm": "way/538810150",
+      "name": "Pausenplatz",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 3.945,
+      "area_km2": 0.0036
+    },
+    {
+      "osm": "way/1387006104",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 3.958,
+      "area_km2": 0.0016
+    },
+    {
+      "osm": "way/33293244",
+      "name": "Kirchner-Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 3.995,
+      "area_km2": 0.0036
+    },
+    {
+      "osm": "way/116881156",
+      "name": "Kurpark",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 4.104,
+      "area_km2": 0.0509
+    },
+    {
+      "osm": "way/1388934860",
+      "name": "Beeli-Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 4.504,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/457695288",
+      "name": "Bubenbrunnenpark",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 4.581,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/367201321",
+      "name": "Silvrettapark",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 6.914,
+      "area_km2": 0.0079
+    },
+    {
+      "osm": "way/1436663754",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 8.921,
+      "area_km2": 0.0013
+    },
+    {
+      "osm": "node/5434599122",
+      "name": "Naturschutzgebiet Schwarzsee",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "nature_reserve"
+      },
+      "dist_to_config_center_km": 10.473
+    },
+    {
+      "osm": "way/217011646",
+      "name": "",
+      "named_match": false,
+      "geom_type": "LineString",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area",
+        "protect_class": "5"
+      },
+      "dist_to_config_center_km": 13.762
+    },
+    {
+      "osm": "way/1127973253",
+      "name": "Ruhezone Vergaldatal",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area",
+        "leisure": "nature_reserve",
+        "protect_class": "14"
+      },
+      "dist_to_config_center_km": 16.134,
+      "area_km2": 19.4772
+    },
+    {
+      "osm": "way/217011130",
+      "name": "",
+      "named_match": false,
+      "geom_type": "LineString",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area",
+        "protect_class": "5"
+      },
+      "dist_to_config_center_km": 17.971
+    },
+    {
+      "osm": "way/122850809",
+      "name": "Thomas-Mann-Platz",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 3.472,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/117012226",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 3.513,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "node/14028990616",
+      "name": "Sommerrodelbahn Schatzalp",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 3.539
+    },
+    {
+      "osm": "node/417650386",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "theme_park"
+      },
+      "dist_to_config_center_km": 3.55
+    },
+    {
+      "osm": "way/110997738",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 3.663,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/1387006105",
+      "name": "Basketballplatz Bünda",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "basketball;soccer"
+      },
+      "dist_to_config_center_km": 3.987,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/1387006106",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "athletics"
+      },
+      "dist_to_config_center_km": 3.996,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/8747477629",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 4.028
+    },
+    {
+      "osm": "node/8747477630",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 4.031
+    },
+    {
+      "osm": "node/1863725862",
+      "name": "Gotschnagrat Nord",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "free_flying"
+      },
+      "dist_to_config_center_km": 4.082
+    },
+    {
+      "osm": "way/110590688",
+      "name": "Fussballfeld Bünda",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 4.087,
+      "area_km2": 0.0067
+    },
+    {
+      "osm": "node/8518492990",
+      "name": "Eichhörnliplatz",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 4.175
+    },
+    {
+      "osm": "way/262580839",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "basketball;handball;soccer;badminton"
+      },
+      "dist_to_config_center_km": 4.213,
+      "area_km2": 0.0023
+    },
+    {
+      "osm": "way/37221742",
+      "name": "Sportzentrum",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "stadium",
+        "sport": "athletics;bandy;skating"
+      },
+      "dist_to_config_center_km": 4.261,
+      "area_km2": 0.0136
+    },
+    {
+      "osm": "way/1304525522",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 4.261,
+      "area_km2": 0.0064
+    },
+    {
+      "osm": "node/8417652747",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 4.289
+    },
+    {
+      "osm": "way/1412896104",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 4.329,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "node/9521892446",
+      "name": "Swiss Ski",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "nordic"
+      },
+      "dist_to_config_center_km": 4.391
+    },
+    {
+      "osm": "node/5434599028",
+      "name": "Walserdorf Sapün",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 4.412
+    },
+    {
+      "osm": "way/117012275",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 4.473,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "node/2280534413",
+      "name": "Adventure Park Färich",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "Bike_Park, ropes_course",
+        "tourism": "theme_park"
+      },
+      "dist_to_config_center_km": 4.489
+    },
+    {
+      "osm": "node/11057190936",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "chess"
+      },
+      "dist_to_config_center_km": 4.593
+    },
+    {
+      "osm": "way/117138629",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 4.629,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "node/3198310469",
+      "name": "SmartGym",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 4.63
+    },
+    {
+      "osm": "node/10748148282",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 4.65
+    },
+    {
+      "osm": "way/122816763",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 4.852,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "node/5434599027",
+      "name": "Tritt",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 5.034
+    },
+    {
+      "osm": "way/110598080",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "padel;pickleball"
+      },
+      "dist_to_config_center_km": 5.396,
+      "area_km2": 0.001
+    },
+    {
+      "osm": "way/110598059",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 5.408,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/127946913",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "paddle_tennis"
+      },
+      "dist_to_config_center_km": 5.437,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/110598076",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 5.444,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/1457779440",
+      "name": "Gnieppe",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "free_flying"
+      },
+      "dist_to_config_center_km": 5.849,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "node/5434598635",
+      "name": "Medergen Walserdorf",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 5.982
+    },
+    {
+      "osm": "node/10154964635",
+      "name": "Felsentor",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 6.076
+    },
+    {
+      "osm": "way/123113268",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "shooting"
+      },
+      "dist_to_config_center_km": 6.27,
+      "area_km2": 0.0015
+    },
+    {
+      "osm": "way/1333714560",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "shooting"
+      },
+      "dist_to_config_center_km": 6.821,
+      "area_km2": 0.0053
+    },
+    {
+      "osm": "way/1443669081",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "equestrian"
+      },
+      "dist_to_config_center_km": 6.882,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/107127106",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 6.913,
+      "area_km2": 0.0013
+    },
+    {
+      "osm": "way/1443669094",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "multi"
+      },
+      "dist_to_config_center_km": 6.914,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "node/8417652756",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 6.918
+    },
+    {
+      "osm": "node/10748103412",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 6.922
+    },
+    {
+      "osm": "way/203378405",
+      "name": "Schiessstand Gulfia",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "shooting"
+      },
+      "dist_to_config_center_km": 6.926,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/1444658746",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "equestrian"
+      },
+      "dist_to_config_center_km": 6.927,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/107127231",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 6.98,
+      "area_km2": 0.0019
+    },
+    {
+      "osm": "way/794365120",
+      "name": "Arena Klosters",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 7.023,
+      "area_km2": 0.0027
+    },
+    {
+      "osm": "way/107127247",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 7.03,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/107127198",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 7.056,
+      "area_km2": 0.0019
+    },
+    {
+      "osm": "node/325726978",
+      "name": "Arena Klosters",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 7.068
+    },
+    {
+      "osm": "node/8417652759",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 7.092
+    },
+    {
+      "osm": "way/794711774",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 7.093,
+      "area_km2": 0.001
+    },
+    {
+      "osm": "way/107127236",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 7.103,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "node/8417652757",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 7.117
+    },
+    {
+      "osm": "node/8417652758",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 7.119
+    },
+    {
+      "osm": "way/1455963223",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "multi"
+      },
+      "dist_to_config_center_km": 7.136,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/1457434325",
+      "name": "Strandbad Klosters",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "swimming"
+      },
+      "dist_to_config_center_km": 7.151,
+      "area_km2": 0.0071
+    },
+    {
+      "osm": "node/9116901392",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 7.164
+    },
+    {
+      "osm": "way/121653254",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 7.169,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/1303842230",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "shooting"
+      },
+      "dist_to_config_center_km": 7.367,
+      "area_km2": 0.0017
+    },
+    {
+      "osm": "way/206359795",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 7.447,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/206359796",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 7.45,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "node/12924580397",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 7.526
+    },
+    {
+      "osm": "node/7098540922",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 7.556
+    },
+    {
+      "osm": "way/796001351",
+      "name": "Paddock",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "equestrian"
+      },
+      "dist_to_config_center_km": 7.583,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/1445969725",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "equestrian"
+      },
+      "dist_to_config_center_km": 7.586,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/203381723",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "multi"
+      },
+      "dist_to_config_center_km": 7.629,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "node/3064544853",
+      "name": "Barfusspfad",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 7.636
+    },
+    {
+      "osm": "way/1449614080",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "equestrian"
+      },
+      "dist_to_config_center_km": 7.668,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/208468228",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 7.697,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/260743133",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 7.697,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "node/5432585921",
+      "name": "Langwieser Viadukt",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 7.883
+    },
+    {
+      "osm": "way/1456451416",
+      "name": "Bikepark",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 8.486,
+      "area_km2": 0.0017
+    },
+    {
+      "osm": "way/1435853333",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "multi"
+      },
+      "dist_to_config_center_km": 8.672,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/8417652755",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 8.675
+    },
+    {
+      "osm": "way/211955632",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 8.704,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/401846869",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer;netball"
+      },
+      "dist_to_config_center_km": 8.818,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "node/6779070385",
+      "name": "Madrisa Land",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "theme_park"
+      },
+      "dist_to_config_center_km": 8.824
+    },
+    {
+      "osm": "way/1436649258",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "equestrian"
+      },
+      "dist_to_config_center_km": 8.84,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/1303826711",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "shooting"
+      },
+      "dist_to_config_center_km": 8.849,
+      "area_km2": 0.0036
+    },
+    {
+      "osm": "way/1436649259",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "equestrian"
+      },
+      "dist_to_config_center_km": 8.861,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/401837708",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 9.124,
+      "area_km2": 0.0024
+    },
+    {
+      "osm": "way/401837711",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "multi"
+      },
+      "dist_to_config_center_km": 9.213,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/1303826733",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "shooting"
+      },
+      "dist_to_config_center_km": 9.253,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "node/6824066063",
+      "name": "Kletterhalle Rätikon",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "climbing"
+      },
+      "dist_to_config_center_km": 9.304
+    },
+    {
+      "osm": "node/8931238386",
+      "name": "RinerLodge",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 10.108
+    },
+    {
+      "osm": "node/7779486872",
+      "name": "Schwimmbad Tobel",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "swimming"
+      },
+      "dist_to_config_center_km": 10.265
+    },
+    {
+      "osm": "node/8417652753",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 10.285
+    },
+    {
+      "osm": "way/304604645",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "shooting"
+      },
+      "dist_to_config_center_km": 10.286,
+      "area_km2": 0.0048
+    },
+    {
+      "osm": "node/8417652754",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 10.294
+    },
+    {
+      "osm": "node/6518024278",
+      "name": "Peister Esche",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "natural": "tree",
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 10.3
+    },
+    {
+      "osm": "node/5471955021",
+      "name": "Sagen-Buch",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 10.357
+    },
+    {
+      "osm": "way/211968584",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 10.564,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/599970607",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 10.652,
+      "area_km2": 0.0011
+    },
+    {
+      "osm": "node/5434598521",
+      "name": "Seilpark",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 10.657
+    },
+    {
+      "osm": "way/218044436",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "multi"
+      },
+      "dist_to_config_center_km": 10.82,
+      "area_km2": 0.0009
+    },
+    {
+      "osm": "node/5434598623",
+      "name": "Planetenweg",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 11.01
+    },
+    {
+      "osm": "way/38590157",
+      "name": "Sport-Center",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "stadium",
+        "sport": "ice_hockey;curling;ice_skating;soccer"
+      },
+      "dist_to_config_center_km": 11.012,
+      "area_km2": 0.0057
+    },
+    {
+      "osm": "way/1460320097",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "boules"
+      },
+      "dist_to_config_center_km": 11.017,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "way/396478056",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 11.038,
+      "area_km2": 0.0009
+    },
+    {
+      "osm": "node/5434598621",
+      "name": "Pumptrack",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 11.054
+    },
+    {
+      "osm": "node/11146656556",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "chess"
+      },
+      "dist_to_config_center_km": 11.079
+    },
+    {
+      "osm": "node/5434598523",
+      "name": "Eichhörnliweg",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 11.116
+    },
+    {
+      "osm": "way/1533450248",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 11.156,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/1533450247",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 11.164,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/13436181089",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 11.178
+    },
+    {
+      "osm": "way/1533450241",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "shooting"
+      },
+      "dist_to_config_center_km": 11.282,
+      "area_km2": 0.0003
+    }
+  ],
+  "named_nodes": [
+    {
+      "osm": "node/211050580",
+      "name": "Weissfluhjoch (Totalp)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.08
+    },
+    {
+      "osm": "node/211050586",
+      "name": "Weissfluhjoch (Weissfluhgipf.)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.089
+    },
+    {
+      "osm": "node/211050593",
+      "name": "Weissfluhgipfel",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.759
+    },
+    {
+      "osm": "node/211050622",
+      "name": "Weissfluhjoch (Obersäss)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.067
+    },
+    {
+      "osm": "node/211050918",
+      "name": "Parsennfurgga",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "natural": "saddle"
+      },
+      "dist_to_config_center_km": 1.819
+    },
+    {
+      "osm": "node/279886512",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "isolated_dwelling"
+      },
+      "dist_to_config_center_km": 2.352
+    },
+    {
+      "osm": "node/286674751",
+      "name": "Davos Dorf (Parsennbahn)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.689
+    },
+    {
+      "osm": "node/286674799",
+      "name": "Weissfluhjoch",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.016
+    },
+    {
+      "osm": "node/321749022",
+      "name": "Weissfluhjoch (Parsenn Sessel)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.157
+    },
+    {
+      "osm": "node/321774091",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 2.443
+    },
+    {
+      "osm": "node/321774094",
+      "name": "Weissfluhjoch (Parsennhütte)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.101
+    },
+    {
+      "osm": "node/364788962",
+      "name": "Parsennmäder",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 3.569
+    },
+    {
+      "osm": "node/436602825",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.705
+    },
+    {
+      "osm": "node/436602827",
+      "name": "Parsennbahn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.713
+    },
+    {
+      "osm": "node/1204351530",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 2.64
+    },
+    {
+      "osm": "node/1210116002",
+      "name": "Parsennfurgga",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 1.832
+    },
+    {
+      "osm": "node/1372130679",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 2.414
+    },
+    {
+      "osm": "node/3337126678",
+      "name": "Gruobenalp (Talst. Parsennf.)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 2.663
+    },
+    {
+      "osm": "node/3339513365",
+      "name": "Parsenn-Drogerie Küblis",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 9.393
+    },
+    {
+      "osm": "node/3426031967",
+      "name": "Parsennhütte",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 2.315
+    }
+  ]
+}

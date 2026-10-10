@@ -1,0 +1,80 @@
+time,site,source,status,details,count
+2026-10-10T14:02:45+00:00,all,planetary-computer,CATALOG_OK,https://planetarycomputer.microsoft.com/api/stac/v1,
+2026-10-10T14:03:49+00:00,all,KazEOSat-1/2,MANUAL_LICENSE_REQUIRED,no public anonymous catalogue of KazEOSat scenes found; official request draft in KAZEOSAT_REQUEST_RU.md,
+2026-10-10T14:04:51+00:00,medeu,boundary,OSM_POLYGON_NAMED_MATCH,"candidates=1432, footprint_km2=9.585",
+2026-10-10T14:04:58+00:00,medeu,cop-dem-glo-30,RASTER_READY,123120 valid px from 2/2 tiles,
+2026-10-10T14:05:02+00:00,medeu,nasadem,RASTER_READY,123120 valid px from 2/2 tiles,
+2026-10-10T14:05:06+00:00,medeu,alos-dem,RASTER_READY,123120 valid px from 2/2 tiles,
+2026-10-10T14:05:10+00:00,medeu,FABDEM,RASTER_READY,100328 px [],
+2026-10-10T14:05:12+00:00,medeu,sentinel-2-l2a,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:05:15+00:00,medeu,landsat-c2-l2,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:05:18+00:00,medeu,sentinel-1-grd,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:05:19+00:00,medeu,sentinel-1-rtc,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:05:21+00:00,medeu,CDSE-S2,FOUND,independent catalogue cross-check,5
+2026-10-10T14:05:26+00:00,medeu,sentinel-2-l2a,NDVI_READY,"S2C_MSIL2A_20260827T054631_R048_T43TFH_20260827T091314: 123120 clear px, cloud(scene)=0.492729",
+2026-10-10T14:05:29+00:00,medeu,landsat-c2-l2,NDVI_READY,"LC09_L2SP_150030_20260910_02_T1: 121121 clear px, cloud(scene)=0.23",
+2026-10-10T14:05:29+00:00,medeu,timing,ACQUIRE_DONE,99 s,
+2026-10-10T14:05:40+00:00,shymbulak,boundary,OSM_POLYGON_NAMED_MATCH,"candidates=854, footprint_km2=2.3651",
+2026-10-10T14:05:44+00:00,shymbulak,cop-dem-glo-30,RASTER_READY,98784 valid px from 1/1 tiles,
+2026-10-10T14:05:46+00:00,shymbulak,nasadem,RASTER_READY,98784 valid px from 1/1 tiles,
+2026-10-10T14:05:48+00:00,shymbulak,alos-dem,RASTER_READY,98784 valid px from 1/1 tiles,
+2026-10-10T14:05:48+00:00,shymbulak,FABDEM,RASTER_READY,98784 px [],
+2026-10-10T14:05:50+00:00,shymbulak,sentinel-2-l2a,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:05:52+00:00,shymbulak,landsat-c2-l2,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:05:52+00:00,shymbulak,sentinel-1-grd,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:05:53+00:00,shymbulak,sentinel-1-rtc,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:05:56+00:00,shymbulak,CDSE-S2,FOUND,independent catalogue cross-check,5
+2026-10-10T14:05:59+00:00,shymbulak,sentinel-2-l2a,NDVI_READY,"S2C_MSIL2A_20260827T054631_R048_T43TFH_20260827T091314: 97028 clear px, cloud(scene)=0.492729",
+2026-10-10T14:06:01+00:00,shymbulak,landsat-c2-l2,NDVI_READY,"LC09_L2SP_150030_20260910_02_T1: 61849 clear px, cloud(scene)=0.23",
+2026-10-10T14:06:01+00:00,shymbulak,timing,ACQUIRE_DONE,32 s,
+2026-10-10T14:06:08+00:00,kok_zhailau,boundary,FUNCTIONAL_FOOTPRINT_ONLY,"candidates=624, footprint_km2=0.6151",
+2026-10-10T14:06:13+00:00,kok_zhailau,cop-dem-glo-30,RASTER_READY,77400 valid px from 1/1 tiles,
+2026-10-10T14:06:14+00:00,kok_zhailau,nasadem,RASTER_READY,77400 valid px from 1/1 tiles,
+2026-10-10T14:06:16+00:00,kok_zhailau,alos-dem,RASTER_READY,77400 valid px from 1/1 tiles,
+2026-10-10T14:06:18+00:00,kok_zhailau,FABDEM,RASTER_READY,77400 px [],
+2026-10-10T14:06:20+00:00,kok_zhailau,sentinel-2-l2a,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:06:21+00:00,kok_zhailau,landsat-c2-l2,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:06:22+00:00,kok_zhailau,sentinel-1-grd,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:06:23+00:00,kok_zhailau,sentinel-1-rtc,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:06:24+00:00,kok_zhailau,CDSE-S2,FOUND,independent catalogue cross-check,5
+2026-10-10T14:06:27+00:00,kok_zhailau,sentinel-2-l2a,NDVI_READY,"S2C_MSIL2A_20260827T054631_R048_T43TFH_20260827T091314: 75263 clear px, cloud(scene)=0.492729",
+2026-10-10T14:06:29+00:00,kok_zhailau,landsat-c2-l2,NDVI_READY,"LC09_L2SP_150030_20260910_02_T1: 58528 clear px, cloud(scene)=0.23",
+2026-10-10T14:06:29+00:00,kok_zhailau,timing,ACQUIRE_DONE,28 s,
+2026-10-10T14:07:32+00:00,kok_zhailau_osm,boundary,FUNCTIONAL_FOOTPRINT_ONLY,"candidates=1524, footprint_km2=0.3143",
+2026-10-10T14:07:37+00:00,kok_zhailau_osm,cop-dem-glo-30,RASTER_READY,72900 valid px from 2/2 tiles,
+2026-10-10T14:07:39+00:00,kok_zhailau_osm,nasadem,RASTER_READY,72900 valid px from 2/2 tiles,
+2026-10-10T14:07:41+00:00,kok_zhailau_osm,alos-dem,RASTER_READY,72900 valid px from 2/2 tiles,
+2026-10-10T14:07:41+00:00,kok_zhailau_osm,FABDEM,RASTER_READY,39998 px [],
+2026-10-10T14:07:43+00:00,kok_zhailau_osm,sentinel-2-l2a,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:07:44+00:00,kok_zhailau_osm,landsat-c2-l2,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:07:45+00:00,kok_zhailau_osm,sentinel-1-grd,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:07:46+00:00,kok_zhailau_osm,sentinel-1-rtc,FOUND,2024-06-01/2026-09-30,40
+2026-10-10T14:07:49+00:00,kok_zhailau_osm,CDSE-S2,FOUND,independent catalogue cross-check,5
+2026-10-10T14:07:52+00:00,kok_zhailau_osm,sentinel-2-l2a,NDVI_READY,"S2C_MSIL2A_20260827T054631_R048_T43TFH_20260827T091314: 72900 clear px, cloud(scene)=0.492729",
+2026-10-10T14:07:54+00:00,kok_zhailau_osm,landsat-c2-l2,NDVI_READY,"LC09_L2SP_150030_20260910_02_T1: 72896 clear px, cloud(scene)=0.23",
+2026-10-10T14:07:54+00:00,kok_zhailau_osm,timing,ACQUIRE_DONE,85 s,
+2026-10-10T14:08:00+00:00,davos_parsenn,boundary,OSM_POLYGON_NAMED_MATCH,"candidates=2071, footprint_km2=12.0537",
+2026-10-10T14:08:05+00:00,davos_parsenn,cop-dem-glo-30,RASTER_READY,93636 valid px from 1/1 tiles,
+2026-10-10T14:08:08+00:00,davos_parsenn,nasadem,RASTER_READY,93636 valid px from 1/1 tiles,
+2026-10-10T14:08:11+00:00,davos_parsenn,alos-dem,RASTER_READY,93636 valid px from 1/1 tiles,
+2026-10-10T14:11:34+00:00,davos_parsenn,swissALTI3D,REFERENCE_READY,"21068100 px, 121/121 tiles",
+2026-10-10T14:11:34+00:00,davos_parsenn,timing,ACQUIRE_DONE,220 s,
+2026-10-10T14:11:42+00:00,zermatt_gornergrat,boundary,OSM_POLYGON_NAMED_MATCH,"candidates=2070, footprint_km2=15.0833",
+2026-10-10T14:11:48+00:00,zermatt_gornergrat,cop-dem-glo-30,RASTER_READY,95472 valid px from 2/2 tiles,
+2026-10-10T14:11:51+00:00,zermatt_gornergrat,nasadem,RASTER_READY,95472 valid px from 2/2 tiles,
+2026-10-10T14:11:54+00:00,zermatt_gornergrat,alos-dem,RASTER_READY,95472 valid px from 2/2 tiles,
+2026-10-10T14:14:05+00:00,zermatt_gornergrat,swissALTI3D,REFERENCE_READY,"21481200 px, 110/110 tiles",
+2026-10-10T14:14:05+00:00,zermatt_gornergrat,timing,ACQUIRE_DONE,152 s,
+2026-10-10T14:14:45+00:00,alta_snowbird,boundary,OSM_POLYGON_NAMED_MATCH,"candidates=3643, footprint_km2=19.5322",
+2026-10-10T14:14:51+00:00,alta_snowbird,cop-dem-glo-30,RASTER_READY,93636 valid px from 1/1 tiles,
+2026-10-10T14:14:54+00:00,alta_snowbird,nasadem,RASTER_READY,93636 valid px from 1/1 tiles,
+2026-10-10T14:14:57+00:00,alta_snowbird,alos-dem,RASTER_READY,93636 valid px from 1/1 tiles,
+2026-10-10T14:15:01+00:00,alta_snowbird,3dep-seamless,REFERENCE_READY,842724 px,
+2026-10-10T14:15:01+00:00,alta_snowbird,timing,ACQUIRE_DONE,56 s,
+2026-10-10T14:18:27+00:00,park_city,boundary,OSM_POLYGON_NAMED_MATCH,"candidates=3929, footprint_km2=54.2675",
+2026-10-10T14:18:30+00:00,park_city,cop-dem-glo-30,RASTER_READY,93636 valid px from 1/1 tiles,
+2026-10-10T14:18:31+00:00,park_city,nasadem,RASTER_READY,93636 valid px from 1/1 tiles,
+2026-10-10T14:18:33+00:00,park_city,alos-dem,RASTER_READY,93636 valid px from 1/1 tiles,
+2026-10-10T14:18:36+00:00,park_city,3dep-seamless,REFERENCE_READY,842724 px,
+2026-10-10T14:18:36+00:00,park_city,timing,ACQUIRE_DONE,215 s,
+2026-10-10T14:24:30+00:00,validation,R40-experiment,VALIDATION_DONE,"sites=['alta_snowbird', 'davos_parsenn', 'park_city', 'zermatt_gornergrat']",

@@ -1,0 +1,39 @@
+{
+  "site": "alta_snowbird",
+  "queried_at": "2026-10-10T14:14:05+00:00",
+  "osm_query": "[out:json][timeout:150];\n(\n  nwr[\"name\"~\"Alta|Snowbird\",i](40.46000,-111.80800,40.70000,-111.47200);\n  nwr[\"name:ru\"~\"Alta|Snowbird\",i](40.46000,-111.80800,40.70000,-111.47200);\n  nwr[\"name:en\"~\"Alta|Snowbird\",i](40.46000,-111.80800,40.70000,-111.47200);\n  nwr[\"name:kk\"~\"Alta|Snowbird\",i](40.46000,-111.80800,40.70000,-111.47200);\n  nwr[\"landuse\"=\"winter_sports\"](40.46000,-111.80800,40.70000,-111.47200);\n  nwr[\"aerialway\"](40.46000,-111.80800,40.70000,-111.47200);\n  nwr[\"piste:type\"](40.46000,-111.80800,40.70000,-111.47200);\n  nwr[\"tourism\"~\"resort|attraction|viewpoint|alpine_hut|hotel|camp_site|theme_park\"](40.46000,-111.80800,40.70000,-111.47200);\n  nwr[\"leisure\"~\"sports_centre|ice_rink|stadium|pitch|resort|park|nature_reserve\"](40.46000,-111.80800,40.70000,-111.47200);\n  nwr[\"boundary\"~\"protected_area|national_park\"](40.46000,-111.80800,40.70000,-111.47200);\n);\nout geom tags;",
+  "bbox_s_w_n_e": [
+    40.46,
+    -111.808,
+    40.699999999999996,
+    -111.472
+  ],
+  "config_center_lonlat": [
+    -111.64,
+    40.58
+  ],
+  "overpass_errors": [
+    "round0 https://overpass-api.de/api/interpreter: HTTPError('504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter')",
+    "round0 https://overpass.kumi.systems/api/interpreter: HTTPError('500 Server Error: Internal Server Error for url: https://overpass.kumi.systems/api/interpreter')"
+  ],
+  "overpass_endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "n_elements": 3704,
+  "n_candidates": 3643,
+  "selection_rule": "named OSM polygon, area within bounds; priority winter_sports/resort < protected area/park < sports/tourism < natural/place; ties by distance to configured centre",
+  "chosen": {
+    "osm": "way/1023308077",
+    "name": "Alta Ski Area",
+    "named_match": true,
+    "geom_type": "Polygon",
+    "prio": 0,
+    "tags": {
+      "landuse": "winter_sports"
+    },
+    "dist_to_config_center_km": 1.448,
+    "area_km2": 12.1745
+  },
+  "footprint_note": "DERIVED from mapped aerialway/piste/tourism/leisure features within 4.0 km of the configured centre, buffered 250 m then eroded 200 m; NOT an official boundary",
+  "footprint_area_km2": 19.5322,
+  "n_footprint_features": 758,
+  "status": "OSM_POLYGON_NAMED_MATCH"
+}

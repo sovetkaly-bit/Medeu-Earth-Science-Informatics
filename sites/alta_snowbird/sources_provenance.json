@@ -1,0 +1,145 @@
+{
+  "cop-dem-glo-30": {
+    "status": "OK",
+    "items": [
+      "Copernicus_DSM_COG_10_N40_00_W112_00_DEM"
+    ],
+    "hrefs": [
+      "https://elevationeuwest.blob.core.windows.net/copernicus-dem/COP30_hh/Copernicus_DSM_COG_10_N40_00_W112_00_DEM.tif"
+    ],
+    "tiles_read": 1,
+    "failures": [],
+    "valid_pixels": 93636,
+    "datetimes": [
+      "2021-04-22 00:00:00+00:00"
+    ],
+    "meta": {
+      "asset": "data",
+      "label": "Copernicus GLO-30 (DSM, EGM2008)",
+      "datum": "EGM2008 orthometric",
+      "license": "Copernicus (free, attribution)",
+      "publish_raster": true
+    },
+    "collection": {
+      "id": "cop-dem-glo-30",
+      "title": "Copernicus DEM GLO-30",
+      "license": "proprietary",
+      "description": "The Copernicus DEM is a digital surface model (DSM), which represents the surface of the Earth including buildings, infrastructure, and vegetation. This DSM is based on radar satellite data acquired during the TanDEM-X Mission, which was funded by a public-private partnership between the German Aerospace Centre (DLR) and Airbus Defence and Space.\n\nCopernicus DEM is available at both 30-meter and 90-meter resolution; this dataset has a horizontal resolution of approximately 30 meters.\n\nSee the [Product Handbook](https://object.cloud.sdsc.edu/v1/AUTH_opentopography/www/metadata/Copernicus_metadata.pdf) for more information.\n\nSee the dataset page on OpenTopography: <https://doi.org/10.5069/G9028PQB>\n\n",
+      "extra": {
+        "msft:short_description": "Copernicus DEM 30 is a near-global digital surface model (DSM) with a horizontal resolution of approximately 30 meters, derived from radar satellite data acquired during the TanDEM-X mission."
+      },
+      "providers": [
+        "European Space Agency",
+        "Sinergise",
+        "OpenTopography",
+        "Microsoft"
+      ]
+    },
+    "resampling": "bilinear to 30 m UTM grid (cell centres)"
+  },
+  "nasadem": {
+    "status": "OK",
+    "items": [
+      "NASADEM_HGT_n40w112"
+    ],
+    "hrefs": [
+      "https://nasademeuwest.blob.core.windows.net/nasadem-cog/v001/NASADEM_HGT_n40w112.tif"
+    ],
+    "tiles_read": 1,
+    "failures": [],
+    "valid_pixels": 93636,
+    "datetimes": [
+      "2000-02-20 00:00:00+00:00"
+    ],
+    "meta": {
+      "asset": "elevation",
+      "label": "NASADEM (SRTM reprocessed, DSM)",
+      "datum": "EGM96 orthometric",
+      "license": "NASA public domain",
+      "publish_raster": true
+    },
+    "collection": {
+      "id": "nasadem",
+      "title": "NASADEM HGT v001",
+      "license": "proprietary",
+      "description": "[NASADEM](https://earthdata.nasa.gov/esds/competitive-programs/measures/nasadem) provides global topographic data at 1 arc-second (~30m) horizontal resolution, derived primarily from data captured via the [Shuttle Radar Topography Mission](https://www2.jpl.nasa.gov/srtm/) (SRTM).\n\n",
+      "extra": {
+        "msft:short_description": "Global topographic data at 1 arc-second (~30m) horizontal resolution, derived primarily from data captured via the Shuttle Radar Topography Mission"
+      },
+      "providers": [
+        "NASA",
+        "JPL",
+        "USGS",
+        "OpenTopography",
+        "Microsoft"
+      ]
+    },
+    "resampling": "bilinear to 30 m UTM grid (cell centres)"
+  },
+  "alos-dem": {
+    "status": "OK",
+    "items": [
+      "ALPSMLC30_N040W112_DSM"
+    ],
+    "hrefs": [
+      "https://ai4edataeuwest.blob.core.windows.net/alos-dem/AW3D30_global/ALPSMLC30_N040W112_DSM.tif"
+    ],
+    "tiles_read": 1,
+    "failures": [],
+    "valid_pixels": 93636,
+    "datetimes": [
+      "2016-12-07 00:00:00+00:00"
+    ],
+    "meta": {
+      "asset": "data",
+      "label": "ALOS World 3D 30 m (PC 'alos-dem', see metadata)",
+      "datum": "EGM96 orthometric",
+      "license": "JAXA AW3D30 terms (citation required)",
+      "publish_raster": false
+    },
+    "collection": {
+      "id": "alos-dem",
+      "title": "ALOS World 3D-30m",
+      "license": "proprietary",
+      "description": "The \"ALOS World 3D-30m\" (AW3D30) dataset is a 30 meter resolution global digital surface model (DSM), developed by the Japan Aerospace Exploration Agency (JAXA). AWD30 was constructed from the Panchromatic Remote-sensing Instrument for Stereo Mapping (PRISM) on board Advanced Land Observing Satellite (ALOS), operated from 2006 to 2011.\n\nSee the [Product Description](https://www.eorc.jaxa.jp/ALOS/en/aw3d30/aw3d30v3.2_product_e_e1.2.pdf) for more details.\n",
+      "extra": {
+        "msft:short_description": "ALOS World 3D is a global digital surface model (DSM) with a horizontal resolution of approximately 30 meters, constructed from the Panchromatic Remote-sensing Instrument for Stereo Mapping (PRISM) on board Advanced Land Observing Satellite (ALOS)."
+      },
+      "providers": [
+        "Japan Aerospace Exploration Agency",
+        "OpenTopography",
+        "Microsoft"
+      ]
+    },
+    "resampling": "bilinear to 30 m UTM grid (cell centres)"
+  },
+  "reference_dtm": {
+    "collection": {
+      "id": "3dep-seamless",
+      "title": "USGS 3DEP Seamless DEMs",
+      "license": "PDDL-1.0",
+      "description": "U.S.-wide digital elevation data at horizontal resolutions ranging from one to sixty meters.\n\nThe [USGS 3D Elevation Program (3DEP) Datasets](https://www.usgs.gov/core-science-systems/ngp/3dep) from the [National Map](https://www.usgs.gov/core-science-systems/national-geospatial-program/national-map) are the primary elevation data product produced and distributed by the USGS. The 3DEP program provides raster elevation data for the conterminous United States, Alaska, Hawaii, and the island territories, at a variety of spatial resolutions.  The seamless DEM layers produced by the 3DEP program are updated frequently to integrate newly available, improved elevation source data.  \n\nDEM layers are available nationally at grid spacings of 1 arc-second (approximately 30 meters) for the conterminous United States, and at approximately 1, 3, and 9 meters for parts of the United States. Most seamless DEM data for Alaska is available at a resolution of approximately 60 meters, where only lower resolution source data exist.\n",
+      "extra": {
+        "msft:short_description": "U.S.-wide digital elevation data at horizontal resolutions ranging from one to sixty meters"
+      },
+      "providers": [
+        "USGS",
+        "Microsoft"
+      ]
+    },
+    "n_items_all": 2,
+    "n_items_10m": 1,
+    "status": "OK",
+    "items": [
+      "n41w112-13"
+    ],
+    "hrefs": [
+      "https://ai4edataeuwest.blob.core.windows.net/3dep/Elevation/13/TIFF/n41w112/USGS_13_n41w112.tif"
+    ],
+    "failures": [],
+    "valid_pixels": 842724,
+    "datum": "NAVD88 (heights), source lidar-derived bare earth where available",
+    "license": "USGS public domain",
+    "resampling": "bilinear to fine UTM grid"
+  }
+}

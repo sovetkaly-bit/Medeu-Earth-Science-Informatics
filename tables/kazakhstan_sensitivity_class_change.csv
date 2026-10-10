@@ -1,0 +1,211 @@
+threshold_deg,comparison,n,class_change_pct,site,mask
+7.5,algorithm horn vs zevenbergen-thorne,121720,0.5586592178770949,medeu,context
+7.5,algorithm horn vs evans,121720,0.1782780151166612,medeu,context
+7.5,support 30 m vs 60 m (same DEM),120328,2.564656605278904,medeu,context
+7.5,support 30 m vs 90 m (same DEM),118944,3.6647497982243746,medeu,context
+7.5,DEM alos-dem vs cop-dem-glo-30,121720,1.6258626355570163,medeu,context
+7.5,DEM alos-dem vs nasadem,121720,2.509858692080184,medeu,context
+7.5,DEM cop-dem-glo-30 vs nasadem,121720,2.029247453171213,medeu,context
+15,algorithm horn vs zevenbergen-thorne,121720,1.3999342753861321,medeu,context
+15,algorithm horn vs evans,121720,0.48718370029576075,medeu,context
+15,support 30 m vs 60 m (same DEM),120328,7.829432883451898,medeu,context
+15,support 30 m vs 90 m (same DEM),118944,12.976694915254235,medeu,context
+15,DEM alos-dem vs cop-dem-glo-30,121720,3.7331580676963525,medeu,context
+15,DEM alos-dem vs nasadem,121720,6.61764705882353,medeu,context
+15,DEM cop-dem-glo-30 vs nasadem,121720,5.853598422609267,medeu,context
+25,algorithm horn vs zevenbergen-thorne,121720,2.6158396319421624,medeu,context
+25,algorithm horn vs evans,121720,0.9341110745974367,medeu,context
+25,support 30 m vs 60 m (same DEM),120328,12.799182235223721,medeu,context
+25,support 30 m vs 90 m (same DEM),118944,21.10657115953726,medeu,context
+25,DEM alos-dem vs cop-dem-glo-30,121720,6.829608938547486,medeu,context
+25,DEM alos-dem vs nasadem,121720,12.900098586920802,medeu,context
+25,DEM cop-dem-glo-30 vs nasadem,121720,11.737594479132435,medeu,context
+7.5,algorithm horn vs zevenbergen-thorne,49,10.204081632653061,medeu,territory_osm_polygon
+7.5,algorithm horn vs evans,49,2.0408163265306123,medeu,territory_osm_polygon
+7.5,support 30 m vs 60 m (same DEM),49,18.367346938775512,medeu,territory_osm_polygon
+7.5,support 30 m vs 90 m (same DEM),49,24.489795918367346,medeu,territory_osm_polygon
+7.5,DEM alos-dem vs cop-dem-glo-30,49,18.367346938775512,medeu,territory_osm_polygon
+7.5,DEM alos-dem vs nasadem,49,16.3265306122449,medeu,territory_osm_polygon
+7.5,DEM cop-dem-glo-30 vs nasadem,49,22.448979591836736,medeu,territory_osm_polygon
+15,algorithm horn vs zevenbergen-thorne,49,2.0408163265306123,medeu,territory_osm_polygon
+15,algorithm horn vs evans,49,0.0,medeu,territory_osm_polygon
+15,support 30 m vs 60 m (same DEM),49,16.3265306122449,medeu,territory_osm_polygon
+15,support 30 m vs 90 m (same DEM),49,20.408163265306122,medeu,territory_osm_polygon
+15,DEM alos-dem vs cop-dem-glo-30,49,4.081632653061225,medeu,territory_osm_polygon
+15,DEM alos-dem vs nasadem,49,8.16326530612245,medeu,territory_osm_polygon
+15,DEM cop-dem-glo-30 vs nasadem,49,8.16326530612245,medeu,territory_osm_polygon
+25,algorithm horn vs zevenbergen-thorne,49,2.0408163265306123,medeu,territory_osm_polygon
+25,algorithm horn vs evans,49,2.0408163265306123,medeu,territory_osm_polygon
+25,support 30 m vs 60 m (same DEM),49,4.081632653061225,medeu,territory_osm_polygon
+25,support 30 m vs 90 m (same DEM),49,6.122448979591836,medeu,territory_osm_polygon
+25,DEM alos-dem vs cop-dem-glo-30,49,0.0,medeu,territory_osm_polygon
+25,DEM alos-dem vs nasadem,49,0.0,medeu,territory_osm_polygon
+25,DEM cop-dem-glo-30 vs nasadem,49,0.0,medeu,territory_osm_polygon
+7.5,algorithm horn vs zevenbergen-thorne,10665,1.3783403656821378,medeu,functional_footprint_derived
+7.5,algorithm horn vs evans,10665,0.5063291139240507,medeu,functional_footprint_derived
+7.5,support 30 m vs 60 m (same DEM),10665,6.394749179559306,medeu,functional_footprint_derived
+7.5,support 30 m vs 90 m (same DEM),10665,9.892170651664323,medeu,functional_footprint_derived
+7.5,DEM alos-dem vs cop-dem-glo-30,10665,5.213314580403188,medeu,functional_footprint_derived
+7.5,DEM alos-dem vs nasadem,10665,7.182372245663385,medeu,functional_footprint_derived
+7.5,DEM cop-dem-glo-30 vs nasadem,10665,5.40084388185654,medeu,functional_footprint_derived
+15,algorithm horn vs zevenbergen-thorne,10665,2.203469292076887,medeu,functional_footprint_derived
+15,algorithm horn vs evans,10665,0.6844819503047351,medeu,functional_footprint_derived
+15,support 30 m vs 60 m (same DEM),10665,13.014533520862633,medeu,functional_footprint_derived
+15,support 30 m vs 90 m (same DEM),10665,20.215658696671355,medeu,functional_footprint_derived
+15,DEM alos-dem vs cop-dem-glo-30,10665,6.422878574777309,medeu,functional_footprint_derived
+15,DEM alos-dem vs nasadem,10665,10.857946554149086,medeu,functional_footprint_derived
+15,DEM cop-dem-glo-30 vs nasadem,10665,9.760900140646976,medeu,functional_footprint_derived
+25,algorithm horn vs zevenbergen-thorne,10665,2.5785278949835915,medeu,functional_footprint_derived
+25,algorithm horn vs evans,10665,0.9188935771214253,medeu,functional_footprint_derived
+25,support 30 m vs 60 m (same DEM),10665,11.157993436474449,medeu,functional_footprint_derived
+25,support 30 m vs 90 m (same DEM),10665,17.318330989217063,medeu,functional_footprint_derived
+25,DEM alos-dem vs cop-dem-glo-30,10665,8.10126582278481,medeu,functional_footprint_derived
+25,DEM alos-dem vs nasadem,10665,12.226910454758556,medeu,functional_footprint_derived
+25,DEM cop-dem-glo-30 vs nasadem,10665,10.464135021097047,medeu,functional_footprint_derived
+7.5,algorithm horn vs zevenbergen-thorne,97528,0.3137560495447461,shymbulak,context
+7.5,algorithm horn vs evans,97528,0.10150931014682964,shymbulak,context
+7.5,support 30 m vs 60 m (same DEM),96280,1.408392189447445,shymbulak,context
+7.5,support 30 m vs 90 m (same DEM),95040,1.949705387205387,shymbulak,context
+7.5,DEM alos-dem vs cop-dem-glo-30,97528,0.8366827987859896,shymbulak,context
+7.5,DEM alos-dem vs nasadem,97528,1.3944713313099828,shymbulak,context
+7.5,DEM cop-dem-glo-30 vs nasadem,97528,1.2816832089246164,shymbulak,context
+15,algorithm horn vs zevenbergen-thorne,97528,0.9751045853498482,shymbulak,context
+15,algorithm horn vs evans,97528,0.3322122877532606,shymbulak,context
+15,support 30 m vs 60 m (same DEM),96280,5.090361445783133,shymbulak,context
+15,support 30 m vs 90 m (same DEM),95040,8.32175925925926,shymbulak,context
+15,DEM alos-dem vs cop-dem-glo-30,97528,2.6669264211303423,shymbulak,context
+15,DEM alos-dem vs nasadem,97528,4.756582724961037,shymbulak,context
+15,DEM cop-dem-glo-30 vs nasadem,97528,4.361824296612255,shymbulak,context
+25,algorithm horn vs zevenbergen-thorne,97528,1.8230661963743746,shymbulak,context
+25,algorithm horn vs evans,97528,0.6695513083422197,shymbulak,context
+25,support 30 m vs 60 m (same DEM),96280,9.788117989198172,shymbulak,context
+25,support 30 m vs 90 m (same DEM),95040,17.024410774410775,shymbulak,context
+25,DEM alos-dem vs cop-dem-glo-30,97528,5.465097202854565,shymbulak,context
+25,DEM alos-dem vs nasadem,97528,10.601058157657288,shymbulak,context
+25,DEM cop-dem-glo-30 vs nasadem,97528,10.05762447707325,shymbulak,context
+7.5,algorithm horn vs zevenbergen-thorne,2419,0.5374121537825548,shymbulak,territory_osm_polygon
+7.5,algorithm horn vs evans,2419,0.0826787928896238,shymbulak,territory_osm_polygon
+7.5,support 30 m vs 60 m (same DEM),2419,2.6870607689127737,shymbulak,territory_osm_polygon
+7.5,support 30 m vs 90 m (same DEM),2419,4.216618437370815,shymbulak,territory_osm_polygon
+7.5,DEM alos-dem vs cop-dem-glo-30,2419,1.9842910293509715,shymbulak,territory_osm_polygon
+7.5,DEM alos-dem vs nasadem,2419,3.596527490698636,shymbulak,territory_osm_polygon
+7.5,DEM cop-dem-glo-30 vs nasadem,2419,4.092600248036379,shymbulak,territory_osm_polygon
+15,algorithm horn vs zevenbergen-thorne,2419,2.149648615130219,shymbulak,territory_osm_polygon
+15,algorithm horn vs evans,2419,1.1161637040099215,shymbulak,territory_osm_polygon
+15,support 30 m vs 60 m (same DEM),2419,11.161637040099215,shymbulak,territory_osm_polygon
+15,support 30 m vs 90 m (same DEM),2419,15.708970649028526,shymbulak,territory_osm_polygon
+15,DEM alos-dem vs cop-dem-glo-30,2419,5.208763952046301,shymbulak,territory_osm_polygon
+15,DEM alos-dem vs nasadem,2419,10.334849111202976,shymbulak,territory_osm_polygon
+15,DEM cop-dem-glo-30 vs nasadem,2419,10.252170318313352,shymbulak,territory_osm_polygon
+25,algorithm horn vs zevenbergen-thorne,2419,2.8524183546920217,shymbulak,territory_osm_polygon
+25,algorithm horn vs evans,2419,0.8267879288962381,shymbulak,territory_osm_polygon
+25,support 30 m vs 60 m (same DEM),2419,12.277800744109136,shymbulak,territory_osm_polygon
+25,support 30 m vs 90 m (same DEM),2419,18.68540719305498,shymbulak,territory_osm_polygon
+25,DEM alos-dem vs cop-dem-glo-30,2419,6.572964034725093,shymbulak,territory_osm_polygon
+25,DEM alos-dem vs nasadem,2419,13.311285655229433,shymbulak,territory_osm_polygon
+25,DEM cop-dem-glo-30 vs nasadem,2419,11.864406779661017,shymbulak,territory_osm_polygon
+7.5,algorithm horn vs zevenbergen-thorne,2620,0.9923664122137404,shymbulak,functional_footprint_derived
+7.5,algorithm horn vs evans,2620,0.22900763358778628,shymbulak,functional_footprint_derived
+7.5,support 30 m vs 60 m (same DEM),2620,3.2442748091603053,shymbulak,functional_footprint_derived
+7.5,support 30 m vs 90 m (same DEM),2620,5.267175572519084,shymbulak,functional_footprint_derived
+7.5,DEM alos-dem vs cop-dem-glo-30,2620,2.1755725190839694,shymbulak,functional_footprint_derived
+7.5,DEM alos-dem vs nasadem,2620,4.122137404580153,shymbulak,functional_footprint_derived
+7.5,DEM cop-dem-glo-30 vs nasadem,2620,4.236641221374046,shymbulak,functional_footprint_derived
+15,algorithm horn vs zevenbergen-thorne,2620,2.1374045801526718,shymbulak,functional_footprint_derived
+15,algorithm horn vs evans,2620,1.1068702290076335,shymbulak,functional_footprint_derived
+15,support 30 m vs 60 m (same DEM),2620,10.305343511450381,shymbulak,functional_footprint_derived
+15,support 30 m vs 90 m (same DEM),2620,16.18320610687023,shymbulak,functional_footprint_derived
+15,DEM alos-dem vs cop-dem-glo-30,2620,4.923664122137405,shymbulak,functional_footprint_derived
+15,DEM alos-dem vs nasadem,2620,10.343511450381678,shymbulak,functional_footprint_derived
+15,DEM cop-dem-glo-30 vs nasadem,2620,10.15267175572519,shymbulak,functional_footprint_derived
+25,algorithm horn vs zevenbergen-thorne,2620,2.633587786259542,shymbulak,functional_footprint_derived
+25,algorithm horn vs evans,2620,0.8778625954198473,shymbulak,functional_footprint_derived
+25,support 30 m vs 60 m (same DEM),2620,12.213740458015266,shymbulak,functional_footprint_derived
+25,support 30 m vs 90 m (same DEM),2620,18.015267175572518,shymbulak,functional_footprint_derived
+25,DEM alos-dem vs cop-dem-glo-30,2620,6.030534351145038,shymbulak,functional_footprint_derived
+25,DEM alos-dem vs nasadem,2620,12.213740458015266,shymbulak,functional_footprint_derived
+25,DEM cop-dem-glo-30 vs nasadem,2620,11.068702290076336,shymbulak,functional_footprint_derived
+7.5,algorithm horn vs zevenbergen-thorne,76288,0.3709626677852349,kok_zhailau,context
+7.5,algorithm horn vs evans,76288,0.10224412751677853,kok_zhailau,context
+7.5,support 30 m vs 60 m (same DEM),75184,1.727761225792722,kok_zhailau,context
+7.5,support 30 m vs 90 m (same DEM),74088,2.499730050750459,kok_zhailau,context
+7.5,DEM alos-dem vs cop-dem-glo-30,76288,0.7235738255033557,kok_zhailau,context
+7.5,DEM alos-dem vs nasadem,76288,1.6214869966442953,kok_zhailau,context
+7.5,DEM cop-dem-glo-30 vs nasadem,76288,1.4746749161073827,kok_zhailau,context
+15,algorithm horn vs zevenbergen-thorne,76288,0.8966023489932886,kok_zhailau,context
+15,algorithm horn vs evans,76288,0.3381921140939597,kok_zhailau,context
+15,support 30 m vs 60 m (same DEM),75184,5.087518620983188,kok_zhailau,context
+15,support 30 m vs 90 m (same DEM),74088,8.048536875067487,kok_zhailau,context
+15,DEM alos-dem vs cop-dem-glo-30,76288,2.2506816275167787,kok_zhailau,context
+15,DEM alos-dem vs nasadem,76288,4.842177013422819,kok_zhailau,context
+15,DEM cop-dem-glo-30 vs nasadem,76288,4.447619546979865,kok_zhailau,context
+25,algorithm horn vs zevenbergen-thorne,76288,1.4956480704697988,kok_zhailau,context
+25,algorithm horn vs evans,76288,0.5505453020134228,kok_zhailau,context
+25,support 30 m vs 60 m (same DEM),75184,8.636145988508193,kok_zhailau,context
+25,support 30 m vs 90 m (same DEM),74088,14.547565057769141,kok_zhailau,context
+25,DEM alos-dem vs cop-dem-glo-30,76288,4.243131291946309,kok_zhailau,context
+25,DEM alos-dem vs nasadem,76288,9.584731543624162,kok_zhailau,context
+25,DEM cop-dem-glo-30 vs nasadem,76288,8.909658137583893,kok_zhailau,context
+7.5,algorithm horn vs zevenbergen-thorne,683,1.171303074670571,kok_zhailau,functional_footprint_derived
+7.5,algorithm horn vs evans,683,0.29282576866764276,kok_zhailau,functional_footprint_derived
+7.5,support 30 m vs 60 m (same DEM),683,3.6603221083455346,kok_zhailau,functional_footprint_derived
+7.5,support 30 m vs 90 m (same DEM),683,6.002928257686676,kok_zhailau,functional_footprint_derived
+7.5,DEM alos-dem vs cop-dem-glo-30,683,3.074670571010249,kok_zhailau,functional_footprint_derived
+7.5,DEM alos-dem vs nasadem,683,6.44216691068814,kok_zhailau,functional_footprint_derived
+7.5,DEM cop-dem-glo-30 vs nasadem,683,6.588579795021962,kok_zhailau,functional_footprint_derived
+15,algorithm horn vs zevenbergen-thorne,683,2.9282576866764276,kok_zhailau,functional_footprint_derived
+15,algorithm horn vs evans,683,1.3177159590043925,kok_zhailau,functional_footprint_derived
+15,support 30 m vs 60 m (same DEM),683,10.834553440702782,kok_zhailau,functional_footprint_derived
+15,support 30 m vs 90 m (same DEM),683,15.519765739385067,kok_zhailau,functional_footprint_derived
+15,DEM alos-dem vs cop-dem-glo-30,683,5.710102489019034,kok_zhailau,functional_footprint_derived
+15,DEM alos-dem vs nasadem,683,13.323572474377746,kok_zhailau,functional_footprint_derived
+15,DEM cop-dem-glo-30 vs nasadem,683,10.834553440702782,kok_zhailau,functional_footprint_derived
+25,algorithm horn vs zevenbergen-thorne,683,2.4890190336749636,kok_zhailau,functional_footprint_derived
+25,algorithm horn vs evans,683,0.8784773060029283,kok_zhailau,functional_footprint_derived
+25,support 30 m vs 60 m (same DEM),683,19.619326500732065,kok_zhailau,functional_footprint_derived
+25,support 30 m vs 90 m (same DEM),683,23.865300146412885,kok_zhailau,functional_footprint_derived
+25,DEM alos-dem vs cop-dem-glo-30,683,5.124450951683748,kok_zhailau,functional_footprint_derived
+25,DEM alos-dem vs nasadem,683,15.080527086383603,kok_zhailau,functional_footprint_derived
+25,DEM cop-dem-glo-30 vs nasadem,683,13.469985358711567,kok_zhailau,functional_footprint_derived
+7.5,algorithm horn vs zevenbergen-thorne,71824,0.5638783693472934,kok_zhailau_osm,context
+7.5,algorithm horn vs evans,71824,0.21023613276899086,kok_zhailau_osm,context
+7.5,support 30 m vs 60 m (same DEM),70756,2.497314715359828,kok_zhailau_osm,context
+7.5,support 30 m vs 90 m (same DEM),69696,3.558310376492195,kok_zhailau_osm,context
+7.5,DEM alos-dem vs cop-dem-glo-30,71824,1.4465916685230564,kok_zhailau_osm,context
+7.5,DEM alos-dem vs nasadem,71824,2.2805747382490535,kok_zhailau_osm,context
+7.5,DEM cop-dem-glo-30 vs nasadem,71824,1.9673089775005568,kok_zhailau_osm,context
+15,algorithm horn vs zevenbergen-thorne,71824,1.3449543328135443,kok_zhailau_osm,context
+15,algorithm horn vs evans,71824,0.4678102027177545,kok_zhailau_osm,context
+15,support 30 m vs 60 m (same DEM),70756,7.258748374696139,kok_zhailau_osm,context
+15,support 30 m vs 90 m (same DEM),69696,12.022210743801654,kok_zhailau_osm,context
+15,DEM alos-dem vs cop-dem-glo-30,71824,3.636667409222544,kok_zhailau_osm,context
+15,DEM alos-dem vs nasadem,71824,6.247215415460014,kok_zhailau_osm,context
+15,DEM cop-dem-glo-30 vs nasadem,71824,5.475885497883716,kok_zhailau_osm,context
+25,algorithm horn vs zevenbergen-thorne,71824,2.486633994208064,kok_zhailau_osm,context
+25,algorithm horn vs evans,71824,0.878536422365783,kok_zhailau_osm,context
+25,support 30 m vs 60 m (same DEM),70756,12.229351574424783,kok_zhailau_osm,context
+25,support 30 m vs 90 m (same DEM),69696,20.632460973370065,kok_zhailau_osm,context
+25,DEM alos-dem vs cop-dem-glo-30,71824,6.868177767877033,kok_zhailau_osm,context
+25,DEM alos-dem vs nasadem,71824,12.29811762085097,kok_zhailau_osm,context
+25,DEM cop-dem-glo-30 vs nasadem,71824,11.024170193807084,kok_zhailau_osm,context
+7.5,algorithm horn vs zevenbergen-thorne,348,3.1609195402298855,kok_zhailau_osm,functional_footprint_derived
+7.5,algorithm horn vs evans,348,1.1494252873563218,kok_zhailau_osm,functional_footprint_derived
+7.5,support 30 m vs 60 m (same DEM),348,8.908045977011495,kok_zhailau_osm,functional_footprint_derived
+7.5,support 30 m vs 90 m (same DEM),348,16.666666666666664,kok_zhailau_osm,functional_footprint_derived
+7.5,DEM alos-dem vs cop-dem-glo-30,348,5.459770114942529,kok_zhailau_osm,functional_footprint_derived
+7.5,DEM alos-dem vs nasadem,348,10.057471264367816,kok_zhailau_osm,functional_footprint_derived
+7.5,DEM cop-dem-glo-30 vs nasadem,348,8.620689655172415,kok_zhailau_osm,functional_footprint_derived
+15,algorithm horn vs zevenbergen-thorne,348,2.8735632183908044,kok_zhailau_osm,functional_footprint_derived
+15,algorithm horn vs evans,348,1.4367816091954022,kok_zhailau_osm,functional_footprint_derived
+15,support 30 m vs 60 m (same DEM),348,20.402298850574713,kok_zhailau_osm,functional_footprint_derived
+15,support 30 m vs 90 m (same DEM),348,29.310344827586203,kok_zhailau_osm,functional_footprint_derived
+15,DEM alos-dem vs cop-dem-glo-30,348,10.632183908045976,kok_zhailau_osm,functional_footprint_derived
+15,DEM alos-dem vs nasadem,348,19.25287356321839,kok_zhailau_osm,functional_footprint_derived
+15,DEM cop-dem-glo-30 vs nasadem,348,13.793103448275861,kok_zhailau_osm,functional_footprint_derived
+25,algorithm horn vs zevenbergen-thorne,348,1.4367816091954022,kok_zhailau_osm,functional_footprint_derived
+25,algorithm horn vs evans,348,0.8620689655172413,kok_zhailau_osm,functional_footprint_derived
+25,support 30 m vs 60 m (same DEM),348,7.758620689655173,kok_zhailau_osm,functional_footprint_derived
+25,support 30 m vs 90 m (same DEM),348,9.195402298850574,kok_zhailau_osm,functional_footprint_derived
+25,DEM alos-dem vs cop-dem-glo-30,348,7.471264367816093,kok_zhailau_osm,functional_footprint_derived
+25,DEM alos-dem vs nasadem,348,10.057471264367816,kok_zhailau_osm,functional_footprint_derived
+25,DEM cop-dem-glo-30 vs nasadem,348,8.908045977011495,kok_zhailau_osm,functional_footprint_derived

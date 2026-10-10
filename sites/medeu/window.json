@@ -1,0 +1,17 @@
+{
+  "grid": {
+    "crs": "EPSG:32643",
+    "x0": 660690,
+    "y1": 4785690,
+    "width": 342,
+    "height": 360,
+    "res_m": 30
+  },
+  "bbox_wgs84": [
+    76.972945100872,
+    43.105455373056046,
+    77.10629773945674,
+    43.208894970765876
+  ],
+  "note": "processing window only; NOT a territory boundary"
+}

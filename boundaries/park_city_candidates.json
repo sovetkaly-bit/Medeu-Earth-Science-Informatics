@@ -1,0 +1,2283 @@
+{
+  "candidates": [
+    {
+      "osm": "way/918681867",
+      "name": "Park City Mountain Resort",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports",
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 3.733,
+      "area_km2": 39.123
+    },
+    {
+      "osm": "node/355685310",
+      "name": "Park City Mountain Resort",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "skiing"
+      },
+      "dist_to_config_center_km": 0.246
+    },
+    {
+      "osm": "way/400381328",
+      "name": "Park City Ice Arena and Sports Complex",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "skating"
+      },
+      "dist_to_config_center_km": 4.895,
+      "area_km2": 0.0037
+    },
+    {
+      "osm": "way/492826009",
+      "name": "Park City Sports Complex at Quinn's Junction",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 4.904,
+      "area_km2": 0.1549
+    },
+    {
+      "osm": "node/2632777263",
+      "name": "Canyons Village",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 5.535
+    },
+    {
+      "osm": "way/1088045626",
+      "name": "Park City Gun Club",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "shooting"
+      },
+      "dist_to_config_center_km": 5.946,
+      "area_km2": 0.0014
+    },
+    {
+      "osm": "way/1225053389",
+      "name": "Park City Aquatic Center",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "swimming"
+      },
+      "dist_to_config_center_km": 10.881,
+      "area_km2": 0.0023
+    },
+    {
+      "osm": "node/6194182684",
+      "name": "Corner Sports Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.305
+    },
+    {
+      "osm": "node/9898526113",
+      "name": "Park City Mountain Resort",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.431
+    },
+    {
+      "osm": "way/256077790",
+      "name": "The Crescent Ridge by Park City Lodging",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.546,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/475154030",
+      "name": "Park City Library",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.587
+    },
+    {
+      "osm": "way/357044451",
+      "name": "Park City Library parking",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.615,
+      "area_km2": 0.003
+    },
+    {
+      "osm": "node/11244913924",
+      "name": "Park City Scape",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "artwork"
+      },
+      "dist_to_config_center_km": 0.693
+    },
+    {
+      "osm": "node/4495292138",
+      "name": "Park City Sport",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.069
+    },
+    {
+      "osm": "node/11163665781",
+      "name": "Park City Tattoo Collective",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.093
+    },
+    {
+      "osm": "node/11163680866",
+      "name": "kw Park City: Keller Williams Real Estate",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.098
+    },
+    {
+      "osm": "node/150946269",
+      "name": "Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "town"
+      },
+      "dist_to_config_center_km": 1.104
+    },
+    {
+      "osm": "way/27311412",
+      "name": "DoubleTree by Hilton Park City – The Yarrow",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 1.145,
+      "area_km2": 0.0085
+    },
+    {
+      "osm": "node/2417084706",
+      "name": "Park City Chinese and Thai",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.212
+    },
+    {
+      "osm": "node/5895325585",
+      "name": "Escape Room Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "leisure": "escape_game"
+      },
+      "dist_to_config_center_km": 1.224
+    },
+    {
+      "osm": "node/356683413",
+      "name": "Park City Baptist Church",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.233
+    },
+    {
+      "osm": "node/13203999932",
+      "name": "Park City Souvenir Co",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.234
+    },
+    {
+      "osm": "way/227960353",
+      "name": "Historic Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "landuse": "retail"
+      },
+      "dist_to_config_center_km": 1.257,
+      "area_km2": 0.1356
+    },
+    {
+      "osm": "way/227960345",
+      "name": "Park City Fine Art",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "gallery"
+      },
+      "dist_to_config_center_km": 1.268,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/6190495736",
+      "name": "Kearns Boulevard & Park City Cemetery",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.295
+    },
+    {
+      "osm": "node/11961683342",
+      "name": "Park City Mercantile",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.295
+    },
+    {
+      "osm": "way/227960352",
+      "name": "Park City Museum",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "museum"
+      },
+      "dist_to_config_center_km": 1.321,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "node/2366146739",
+      "name": "Artworks Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "gallery"
+      },
+      "dist_to_config_center_km": 1.343
+    },
+    {
+      "osm": "way/224295749",
+      "name": "Hotel Park City, Autograph Collection",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 1.368,
+      "area_km2": 0.0041
+    },
+    {
+      "osm": "way/227960760",
+      "name": "Park City Post Office",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.369,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/233404467",
+      "name": "Park City Market",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.381,
+      "area_km2": 0.0053
+    },
+    {
+      "osm": "node/1203940357",
+      "name": "Park City Jewelers",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.402
+    },
+    {
+      "osm": "node/11265367955",
+      "name": "Park City Mountain Resort",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 1.406
+    },
+    {
+      "osm": "way/227963396",
+      "name": "Park City Community Church",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.411,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/661013608",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.415
+    },
+    {
+      "osm": "node/11397416226",
+      "name": "Matthew Magnotta - Park City Real Estate Team",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.416
+    },
+    {
+      "osm": "node/1203931079",
+      "name": "Park City Desserts & Coffee",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.431
+    },
+    {
+      "osm": "node/356685330",
+      "name": "KPCW-FM (Park City)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.434
+    },
+    {
+      "osm": "node/366385787",
+      "name": "Park City City Hall",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.436
+    },
+    {
+      "osm": "way/31773067",
+      "name": "Park City Cemetery",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "landuse": "cemetery"
+      },
+      "dist_to_config_center_km": 1.466,
+      "area_km2": 0.0388
+    },
+    {
+      "osm": "node/6186752131",
+      "name": "Motherlode Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.5
+    },
+    {
+      "osm": "way/1146983013",
+      "name": "Park City Plaza",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "landuse": "retail"
+      },
+      "dist_to_config_center_km": 1.523,
+      "area_km2": 0.0128
+    },
+    {
+      "osm": "node/473947763",
+      "name": "Park City Main Post Office",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.569
+    },
+    {
+      "osm": "way/123344341",
+      "name": "Park City Main Post Office",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.571,
+      "area_km2": 0.0015
+    },
+    {
+      "osm": "node/12139108605",
+      "name": "Park City Chiropractic and Massage Clinic",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.655
+    },
+    {
+      "osm": "node/12138958296",
+      "name": "Park City Title Company",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.661
+    },
+    {
+      "osm": "node/12138958297",
+      "name": "Chiropractic Works of Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.664
+    },
+    {
+      "osm": "node/12139108606",
+      "name": "Trailtalk Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.677
+    },
+    {
+      "osm": "way/1310637799",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 1.709
+    },
+    {
+      "osm": "node/12136243112",
+      "name": "Park City Dental Associates",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.718
+    },
+    {
+      "osm": "node/5122448921",
+      "name": "tupelo Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.754
+    },
+    {
+      "osm": "way/1310637798",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 1.788
+    },
+    {
+      "osm": "node/13731234779",
+      "name": "SkyRun Vacation Rentals Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.802
+    },
+    {
+      "osm": "way/267256418",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.821
+    },
+    {
+      "osm": "way/224291551",
+      "name": "Sheraton Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 1.876,
+      "area_km2": 0.0049
+    },
+    {
+      "osm": "way/233402906",
+      "name": "Park City Peaks Hotel",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 1.912,
+      "area_km2": 0.0033
+    },
+    {
+      "osm": "node/6187929260",
+      "name": "Park City Peaks Hotel",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.917
+    },
+    {
+      "osm": "way/1370875283",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 1.923
+    },
+    {
+      "osm": "way/1370875280",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.003
+    },
+    {
+      "osm": "way/1370875284",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 2.066
+    },
+    {
+      "osm": "way/1103204219",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.068
+    },
+    {
+      "osm": "way/1370875279",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.075
+    },
+    {
+      "osm": "way/1103204220",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.081
+    },
+    {
+      "osm": "way/1370875285",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 2.102
+    },
+    {
+      "osm": "way/1370875286",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 2.138
+    },
+    {
+      "osm": "way/1370875288",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.147
+    },
+    {
+      "osm": "way/1370875298",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 2.205
+    },
+    {
+      "osm": "way/267256425",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.239
+    },
+    {
+      "osm": "way/40264012",
+      "name": "Park City High School",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.24,
+      "area_km2": 0.1299
+    },
+    {
+      "osm": "way/1370875299",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 2.27
+    },
+    {
+      "osm": "way/1370875291",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.332
+    },
+    {
+      "osm": "way/1370875290",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.341
+    },
+    {
+      "osm": "way/1370875295",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 2.382
+    },
+    {
+      "osm": "way/1370875219",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.437
+    },
+    {
+      "osm": "way/1370875296",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 2.495
+    },
+    {
+      "osm": "way/267256416",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.523
+    },
+    {
+      "osm": "way/1103954348",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.525
+    },
+    {
+      "osm": "way/1225053390",
+      "name": "Park City Learning Center",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.537,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/1370875305",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 2.579
+    },
+    {
+      "osm": "way/267256415",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.604
+    },
+    {
+      "osm": "way/1370875236",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.673
+    },
+    {
+      "osm": "way/1370875306",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 2.673
+    },
+    {
+      "osm": "way/1370875294",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.712
+    },
+    {
+      "osm": "way/1370875235",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.73
+    },
+    {
+      "osm": "node/368982212",
+      "name": "Park City Ski Area Heliport",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.754
+    },
+    {
+      "osm": "way/268488529",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.794
+    },
+    {
+      "osm": "way/267256419",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "hike;fatbike"
+      },
+      "dist_to_config_center_km": 2.838
+    },
+    {
+      "osm": "way/259750761",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.911
+    },
+    {
+      "osm": "node/485565787",
+      "name": "Park City Consolidated",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "landuse": "quarry"
+      },
+      "dist_to_config_center_km": 3.15
+    },
+    {
+      "osm": "way/259750760",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.164
+    },
+    {
+      "osm": "way/356165757",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.373
+    },
+    {
+      "osm": "way/356165759",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.409
+    },
+    {
+      "osm": "way/39659303",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.421
+    },
+    {
+      "osm": "way/356165760",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.425
+    },
+    {
+      "osm": "way/106622717",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.446
+    },
+    {
+      "osm": "node/356685365",
+      "name": "KPCW-FM (Park City)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.838
+    },
+    {
+      "osm": "node/12091147114",
+      "name": "McLeod Creek near Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.674
+    },
+    {
+      "osm": "way/1110158020",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.752
+    },
+    {
+      "osm": "way/1110158021",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.806
+    },
+    {
+      "osm": "way/256665227",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.923
+    },
+    {
+      "osm": "way/1110158016",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "nordic"
+      },
+      "dist_to_config_center_km": 5.029
+    },
+    {
+      "osm": "way/1110158017",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "nordic"
+      },
+      "dist_to_config_center_km": 5.037
+    },
+    {
+      "osm": "way/1230139761",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "nordic"
+      },
+      "dist_to_config_center_km": 5.04
+    },
+    {
+      "osm": "way/1443262714",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.082
+    },
+    {
+      "osm": "way/1443262712",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.097
+    },
+    {
+      "osm": "way/1443262713",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.122
+    },
+    {
+      "osm": "way/1443262711",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.149
+    },
+    {
+      "osm": "way/1168146179",
+      "name": "Park City Film Studios",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "landuse": "commercial"
+      },
+      "dist_to_config_center_km": 5.163,
+      "area_km2": 0.0439
+    },
+    {
+      "osm": "node/6191611518",
+      "name": "The Canyons Transit Hub",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.186
+    },
+    {
+      "osm": "way/988789984",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "nordic"
+      },
+      "dist_to_config_center_km": 5.203
+    },
+    {
+      "osm": "way/237879568",
+      "name": "Park City Station #36",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.223,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/32920381",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.24
+    },
+    {
+      "osm": "way/354694876",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.279
+    },
+    {
+      "osm": "way/1110186709",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.282
+    },
+    {
+      "osm": "way/354694881",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.285,
+      "area_km2": 0.0011
+    },
+    {
+      "osm": "way/1042244869",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.287
+    },
+    {
+      "osm": "way/1110186708",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.29
+    },
+    {
+      "osm": "way/354694875",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.293
+    },
+    {
+      "osm": "way/1042244870",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.294
+    },
+    {
+      "osm": "way/1042244871",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.319
+    },
+    {
+      "osm": "way/354694877",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.327
+    },
+    {
+      "osm": "way/251221966",
+      "name": "Westgate Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 5.329,
+      "area_km2": 0.0046
+    },
+    {
+      "osm": "node/3603116950",
+      "name": "Bistro at Canyons",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.359
+    },
+    {
+      "osm": "way/354694874",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.373
+    },
+    {
+      "osm": "way/237753610",
+      "name": "Hyatt Centric Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 5.385,
+      "area_km2": 0.0025
+    },
+    {
+      "osm": "way/1042244873",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.414
+    },
+    {
+      "osm": "way/1488004656",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.434
+    },
+    {
+      "osm": "way/1042244872",
+      "name": "The Canyons Resort Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.443
+    },
+    {
+      "osm": "way/890896662",
+      "name": "YOTELPAD Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 5.448,
+      "area_km2": 0.0017
+    },
+    {
+      "osm": "way/890896661",
+      "name": "Lift Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "apartment"
+      },
+      "dist_to_config_center_km": 5.457,
+      "area_km2": 0.0027
+    },
+    {
+      "osm": "way/459593183",
+      "name": "Park City Hospital",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.458,
+      "area_km2": 0.079
+    },
+    {
+      "osm": "way/354905132",
+      "name": "Club Wyndham Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 5.62,
+      "area_km2": 0.0045
+    },
+    {
+      "osm": "node/4220431911",
+      "name": "Canyons Golf Course",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "leisure": "golf_course"
+      },
+      "dist_to_config_center_km": 5.627
+    },
+    {
+      "osm": "way/237879601",
+      "name": "Waldorf Astoria Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 5.64,
+      "area_km2": 0.0061
+    },
+    {
+      "osm": "way/422446058",
+      "name": "Canyons Golf Course",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "leisure": "golf_course"
+      },
+      "dist_to_config_center_km": 5.649,
+      "area_km2": 0.4248
+    },
+    {
+      "osm": "way/237879592",
+      "name": "WorldMark Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 5.652,
+      "area_km2": 0.0026
+    },
+    {
+      "osm": "way/530651097",
+      "name": "Hyatt Place Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 5.784,
+      "area_km2": 0.0045
+    },
+    {
+      "osm": "node/2863142236",
+      "name": "Park City Nursery",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.888
+    },
+    {
+      "osm": "way/237879554",
+      "name": "Park City Community Church",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.926,
+      "area_km2": 0.0015
+    },
+    {
+      "osm": "way/1093049332",
+      "name": "Beethoven Festival Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.947,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/1015369450",
+      "name": "Park City Trail",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 6.036
+    },
+    {
+      "osm": "way/1072116486",
+      "name": "Canyons Downhill",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 6.239
+    },
+    {
+      "osm": "way/37222222",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 6.606
+    },
+    {
+      "osm": "way/1103204213",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 6.615
+    },
+    {
+      "osm": "way/37222224",
+      "name": "Park City Parkway",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 6.708
+    },
+    {
+      "osm": "node/12091147113",
+      "name": "East Canyon Creek below I-80 Rest Stop near Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 8.237
+    },
+    {
+      "osm": "node/5282856225",
+      "name": "Park City Information",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 8.54
+    },
+    {
+      "osm": "node/420784692",
+      "name": "Park City Coffee Roaster",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 8.629
+    },
+    {
+      "osm": "node/4296789376",
+      "name": "Park City Bread and Bagel",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 8.669
+    },
+    {
+      "osm": "node/8397204880",
+      "name": "Utah Department of Motor Vehicles - Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 8.74
+    },
+    {
+      "osm": "node/2354386695",
+      "name": "Park City Pizza Company",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 8.792
+    },
+    {
+      "osm": "way/299135565",
+      "name": "AC Hotel by Marriott Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 9.239,
+      "area_km2": 0.0016
+    },
+    {
+      "osm": "way/1209637997",
+      "name": "Park City Chain Up Area",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 9.321,
+      "area_km2": 0.0144
+    },
+    {
+      "osm": "node/6053497237",
+      "name": "Park City Souvenir",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 9.399
+    },
+    {
+      "osm": "node/12417484075",
+      "name": "University of Utah AirMed Park City Base",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 9.459
+    },
+    {
+      "osm": "way/1088031313",
+      "name": "Athletic Republic Park City",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "leisure": "fitness_centre"
+      },
+      "dist_to_config_center_km": 12.325,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/682241434",
+      "name": "Deer Valley Resort",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports",
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 5.22,
+      "area_km2": 28.589
+    },
+    {
+      "osm": "node/12059589230",
+      "name": "Solitude Mountain Resort",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 7.645
+    },
+    {
+      "osm": "way/1266097009",
+      "name": "Utah Olympic Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 7.96,
+      "area_km2": 1.6262
+    },
+    {
+      "osm": "way/1341930155",
+      "name": "Tude Dude's Terrain Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 8.396,
+      "area_km2": 0.0035
+    },
+    {
+      "osm": "way/182573699",
+      "name": "Brighton Resort",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 8.473,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/682230007",
+      "name": "Brighton Resort",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports",
+        "leisure": "sports_centre;resort"
+      },
+      "dist_to_config_center_km": 8.567,
+      "area_km2": 3.5418
+    },
+    {
+      "osm": "way/682230006",
+      "name": "Solitude Mountain Resort",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports",
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 8.978,
+      "area_km2": 6.3695
+    },
+    {
+      "osm": "way/1023308077",
+      "name": "Alta Ski Area",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 12.217,
+      "area_km2": 12.1745
+    },
+    {
+      "osm": "way/1420810952",
+      "name": "Grit Moto Ranch & Adventures",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 12.276,
+      "area_km2": 0.1288
+    },
+    {
+      "osm": "way/837687072",
+      "name": "Woodward",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports",
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 12.949,
+      "area_km2": 0.5074
+    },
+    {
+      "osm": "way/1023308078",
+      "name": "Snowbird",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 15.231,
+      "area_km2": 12.2185
+    },
+    {
+      "osm": "way/357044459",
+      "name": "Library Field",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 0.556,
+      "area_km2": 0.0075
+    },
+    {
+      "osm": "way/357044453",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 0.67,
+      "area_km2": 0.0017
+    },
+    {
+      "osm": "way/465671353",
+      "name": "City Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 0.73,
+      "area_km2": 0.05
+    },
+    {
+      "osm": "way/1215834068",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 0.923,
+      "area_km2": 0.0016
+    },
+    {
+      "osm": "way/452784750",
+      "name": "Tidy Town Award Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 0.953,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/6190950113",
+      "name": "Shoe Tree Park",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 1.134
+    },
+    {
+      "osm": "way/452781435",
+      "name": "Miners Plaza",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 1.407,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/1215882548",
+      "name": "Old Town Neighborhood Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 1.752,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/465672433",
+      "name": "Creekside Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 1.881,
+      "area_km2": 0.0243
+    },
+    {
+      "osm": "way/465673546",
+      "name": "Rotary Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 2.248,
+      "area_km2": 0.0103
+    },
+    {
+      "osm": "way/465675446",
+      "name": "Racquet Club Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 2.523,
+      "area_km2": 0.0306
+    },
+    {
+      "osm": "way/1213661092",
+      "name": "Deer Valley Meadow",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 2.684,
+      "area_km2": 0.1276
+    },
+    {
+      "osm": "way/465670360",
+      "name": "Prospector Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 2.935,
+      "area_km2": 0.0083
+    },
+    {
+      "osm": "node/4029475774",
+      "name": "Quinn's Recreation Complex",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 4.76
+    },
+    {
+      "osm": "way/486666342",
+      "name": "Matt Knoop Memorial Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 5.207,
+      "area_km2": 0.0757
+    },
+    {
+      "osm": "way/97601985",
+      "name": "Willow Creek Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 5.415,
+      "area_km2": 0.0265
+    },
+    {
+      "osm": "way/729179728",
+      "name": "Day Care childrens park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 5.498,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/987542324",
+      "name": "Cloud Rim Camp Safety Exclusion Zone",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area"
+      },
+      "dist_to_config_center_km": 5.902,
+      "area_km2": 0.1548
+    },
+    {
+      "osm": "way/987537555",
+      "name": "Camp Cloud Rim",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area",
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.148,
+      "area_km2": 0.3883
+    },
+    {
+      "osm": "way/857273306",
+      "name": "Spring Creek Trailhead",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 8.931,
+      "area_km2": 0.0026
+    },
+    {
+      "osm": "way/1342949795",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 8.945,
+      "area_km2": 0.0088
+    },
+    {
+      "osm": "way/1274216869",
+      "name": "Overland Trailhead Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 9.221,
+      "area_km2": 0.0274
+    },
+    {
+      "osm": "way/37002727",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 9.413,
+      "area_km2": 0.002
+    },
+    {
+      "osm": "way/469334312",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 11.038,
+      "area_km2": 0.0087
+    },
+    {
+      "osm": "way/469334079",
+      "name": "Elk Meadows Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 11.233,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/1343001587",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 11.949,
+      "area_km2": 0.0301
+    },
+    {
+      "osm": "node/11424103430",
+      "name": "Cutthroat Trailhead",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.091
+    },
+    {
+      "osm": "way/405537500",
+      "name": "Jeremy Tennis Court",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.887,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/1011977671",
+      "name": "Park At Valais",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.628,
+      "area_km2": 0.1255
+    },
+    {
+      "osm": "node/356676259",
+      "name": "Snowbird Recreation Area",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.427
+    },
+    {
+      "osm": "way/491025712",
+      "name": "Cove Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.167,
+      "area_km2": 0.0065
+    },
+    {
+      "osm": "way/562371230",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "ice_rink"
+      },
+      "dist_to_config_center_km": 0.317,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/256077864",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 0.483,
+      "area_km2": 0.0003
+    }
+  ],
+  "named_nodes": [
+    {
+      "osm": "node/150946269",
+      "name": "Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "town"
+      },
+      "dist_to_config_center_km": 1.104
+    },
+    {
+      "osm": "node/355685310",
+      "name": "Park City Mountain Resort",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "skiing"
+      },
+      "dist_to_config_center_km": 0.246
+    },
+    {
+      "osm": "node/356683413",
+      "name": "Park City Baptist Church",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.233
+    },
+    {
+      "osm": "node/356685330",
+      "name": "KPCW-FM (Park City)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.434
+    },
+    {
+      "osm": "node/356685365",
+      "name": "KPCW-FM (Park City)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.838
+    },
+    {
+      "osm": "node/366385787",
+      "name": "Park City City Hall",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.436
+    },
+    {
+      "osm": "node/368982212",
+      "name": "Park City Ski Area Heliport",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.754
+    },
+    {
+      "osm": "node/420784692",
+      "name": "Park City Coffee Roaster",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 8.629
+    },
+    {
+      "osm": "node/473947763",
+      "name": "Park City Main Post Office",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.569
+    },
+    {
+      "osm": "node/475154030",
+      "name": "Park City Library",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.587
+    },
+    {
+      "osm": "node/485565787",
+      "name": "Park City Consolidated",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "landuse": "quarry"
+      },
+      "dist_to_config_center_km": 3.15
+    },
+    {
+      "osm": "node/1203931079",
+      "name": "Park City Desserts & Coffee",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.431
+    },
+    {
+      "osm": "node/1203940357",
+      "name": "Park City Jewelers",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.402
+    },
+    {
+      "osm": "node/2354386695",
+      "name": "Park City Pizza Company",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 8.792
+    },
+    {
+      "osm": "node/2366146739",
+      "name": "Artworks Park City",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "gallery"
+      },
+      "dist_to_config_center_km": 1.343
+    },
+    {
+      "osm": "node/2417084706",
+      "name": "Park City Chinese and Thai",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.212
+    },
+    {
+      "osm": "node/2632777263",
+      "name": "Canyons Village",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 5.535
+    },
+    {
+      "osm": "node/2863142236",
+      "name": "Park City Nursery",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.888
+    },
+    {
+      "osm": "node/3603116950",
+      "name": "Bistro at Canyons",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.359
+    },
+    {
+      "osm": "node/4220431911",
+      "name": "Canyons Golf Course",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "leisure": "golf_course"
+      },
+      "dist_to_config_center_km": 5.627
+    }
+  ]
+}

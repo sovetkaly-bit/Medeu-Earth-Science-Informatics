@@ -1,0 +1,125 @@
+{
+  "cop-dem-glo-30": {
+    "status": "OK",
+    "items": [
+      "Copernicus_DSM_COG_10_N43_00_E077_00_DEM"
+    ],
+    "hrefs": [
+      "https://elevationeuwest.blob.core.windows.net/copernicus-dem/COP30_hh/Copernicus_DSM_COG_10_N43_00_E077_00_DEM.tif"
+    ],
+    "tiles_read": 1,
+    "failures": [],
+    "valid_pixels": 98784,
+    "datetimes": [
+      "2021-04-22 00:00:00+00:00"
+    ],
+    "meta": {
+      "asset": "data",
+      "label": "Copernicus GLO-30 (DSM, EGM2008)",
+      "datum": "EGM2008 orthometric",
+      "license": "Copernicus (free, attribution)",
+      "publish_raster": true
+    },
+    "collection": {
+      "id": "cop-dem-glo-30",
+      "title": "Copernicus DEM GLO-30",
+      "license": "proprietary",
+      "description": "The Copernicus DEM is a digital surface model (DSM), which represents the surface of the Earth including buildings, infrastructure, and vegetation. This DSM is based on radar satellite data acquired during the TanDEM-X Mission, which was funded by a public-private partnership between the German Aerospace Centre (DLR) and Airbus Defence and Space.\n\nCopernicus DEM is available at both 30-meter and 90-meter resolution; this dataset has a horizontal resolution of approximately 30 meters.\n\nSee the [Product Handbook](https://object.cloud.sdsc.edu/v1/AUTH_opentopography/www/metadata/Copernicus_metadata.pdf) for more information.\n\nSee the dataset page on OpenTopography: <https://doi.org/10.5069/G9028PQB>\n\n",
+      "extra": {
+        "msft:short_description": "Copernicus DEM 30 is a near-global digital surface model (DSM) with a horizontal resolution of approximately 30 meters, derived from radar satellite data acquired during the TanDEM-X mission."
+      },
+      "providers": [
+        "European Space Agency",
+        "Sinergise",
+        "OpenTopography",
+        "Microsoft"
+      ]
+    },
+    "resampling": "bilinear to 30 m UTM grid (cell centres)"
+  },
+  "nasadem": {
+    "status": "OK",
+    "items": [
+      "NASADEM_HGT_n43e077"
+    ],
+    "hrefs": [
+      "https://nasademeuwest.blob.core.windows.net/nasadem-cog/v001/NASADEM_HGT_n43e077.tif"
+    ],
+    "tiles_read": 1,
+    "failures": [],
+    "valid_pixels": 98784,
+    "datetimes": [
+      "2000-02-20 00:00:00+00:00"
+    ],
+    "meta": {
+      "asset": "elevation",
+      "label": "NASADEM (SRTM reprocessed, DSM)",
+      "datum": "EGM96 orthometric",
+      "license": "NASA public domain",
+      "publish_raster": true
+    },
+    "collection": {
+      "id": "nasadem",
+      "title": "NASADEM HGT v001",
+      "license": "proprietary",
+      "description": "[NASADEM](https://earthdata.nasa.gov/esds/competitive-programs/measures/nasadem) provides global topographic data at 1 arc-second (~30m) horizontal resolution, derived primarily from data captured via the [Shuttle Radar Topography Mission](https://www2.jpl.nasa.gov/srtm/) (SRTM).\n\n",
+      "extra": {
+        "msft:short_description": "Global topographic data at 1 arc-second (~30m) horizontal resolution, derived primarily from data captured via the Shuttle Radar Topography Mission"
+      },
+      "providers": [
+        "NASA",
+        "JPL",
+        "USGS",
+        "OpenTopography",
+        "Microsoft"
+      ]
+    },
+    "resampling": "bilinear to 30 m UTM grid (cell centres)"
+  },
+  "alos-dem": {
+    "status": "OK",
+    "items": [
+      "ALPSMLC30_N043E077_DSM"
+    ],
+    "hrefs": [
+      "https://ai4edataeuwest.blob.core.windows.net/alos-dem/AW3D30_global/ALPSMLC30_N043E077_DSM.tif"
+    ],
+    "tiles_read": 1,
+    "failures": [],
+    "valid_pixels": 98784,
+    "datetimes": [
+      "2016-12-07 00:00:00+00:00"
+    ],
+    "meta": {
+      "asset": "data",
+      "label": "ALOS World 3D 30 m (PC 'alos-dem', see metadata)",
+      "datum": "EGM96 orthometric",
+      "license": "JAXA AW3D30 terms (citation required)",
+      "publish_raster": false
+    },
+    "collection": {
+      "id": "alos-dem",
+      "title": "ALOS World 3D-30m",
+      "license": "proprietary",
+      "description": "The \"ALOS World 3D-30m\" (AW3D30) dataset is a 30 meter resolution global digital surface model (DSM), developed by the Japan Aerospace Exploration Agency (JAXA). AWD30 was constructed from the Panchromatic Remote-sensing Instrument for Stereo Mapping (PRISM) on board Advanced Land Observing Satellite (ALOS), operated from 2006 to 2011.\n\nSee the [Product Description](https://www.eorc.jaxa.jp/ALOS/en/aw3d30/aw3d30v3.2_product_e_e1.2.pdf) for more details.\n",
+      "extra": {
+        "msft:short_description": "ALOS World 3D is a global digital surface model (DSM) with a horizontal resolution of approximately 30 meters, constructed from the Panchromatic Remote-sensing Instrument for Stereo Mapping (PRISM) on board Advanced Land Observing Satellite (ALOS)."
+      },
+      "providers": [
+        "Japan Aerospace Exploration Agency",
+        "OpenTopography",
+        "Microsoft"
+      ]
+    },
+    "resampling": "bilinear to 30 m UTM grid (cell centres)"
+  },
+  "fabdem": {
+    "status": "OK",
+    "url": "https://data.bris.ac.uk/datasets/s5hqmjcdj8yo2ibzi9b4ew3sn/N40E070-N50E080_FABDEM_V1-2.zip",
+    "member": "N43E077_FABDEM_V1-2.tif",
+    "failures": [],
+    "valid_pixels": 98784,
+    "license": "CC BY-NC-SA 4.0 (Hawker et al. 2022) - raster NOT redistributed here",
+    "datum": "EGM2008"
+  }
+}

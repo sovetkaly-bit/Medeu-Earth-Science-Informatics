@@ -1,0 +1,45 @@
+{
+  "site": "park_city",
+  "queried_at": "2026-10-10T14:15:01+00:00",
+  "osm_query": "[out:json][timeout:150];\n(\n  nwr[\"name\"~\"Park City|Canyons\",i](40.53000,-111.67800,40.77000,-111.34200);\n  nwr[\"name:ru\"~\"Park City|Canyons\",i](40.53000,-111.67800,40.77000,-111.34200);\n  nwr[\"name:en\"~\"Park City|Canyons\",i](40.53000,-111.67800,40.77000,-111.34200);\n  nwr[\"name:kk\"~\"Park City|Canyons\",i](40.53000,-111.67800,40.77000,-111.34200);\n  nwr[\"landuse\"=\"winter_sports\"](40.53000,-111.67800,40.77000,-111.34200);\n  nwr[\"aerialway\"](40.53000,-111.67800,40.77000,-111.34200);\n  nwr[\"piste:type\"](40.53000,-111.67800,40.77000,-111.34200);\n  nwr[\"tourism\"~\"resort|attraction|viewpoint|alpine_hut|hotel|camp_site|theme_park\"](40.53000,-111.67800,40.77000,-111.34200);\n  nwr[\"leisure\"~\"sports_centre|ice_rink|stadium|pitch|resort|park|nature_reserve\"](40.53000,-111.67800,40.77000,-111.34200);\n  nwr[\"boundary\"~\"protected_area|national_park\"](40.53000,-111.67800,40.77000,-111.34200);\n);\nout geom tags;",
+  "bbox_s_w_n_e": [
+    40.53,
+    -111.67800000000001,
+    40.769999999999996,
+    -111.342
+  ],
+  "config_center_lonlat": [
+    -111.51,
+    40.65
+  ],
+  "overpass_errors": [
+    "round0 https://overpass-api.de/api/interpreter: HTTPError('504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter')",
+    "round0 https://overpass.kumi.systems/api/interpreter: HTTPError('500 Server Error: Internal Server Error for url: https://overpass.kumi.systems/api/interpreter')",
+    "round0 https://maps.mail.ru/osm/tools/overpass/api/interpreter: HTTPError('504 Server Error: Gateway Time-out for url: https://maps.mail.ru/osm/tools/overpass/api/interpreter')",
+    "round1 https://overpass-api.de/api/interpreter: HTTPError('504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter')",
+    "round1 https://overpass.kumi.systems/api/interpreter: HTTPError('500 Server Error: Internal Server Error for url: https://overpass.kumi.systems/api/interpreter')",
+    "round1 https://maps.mail.ru/osm/tools/overpass/api/interpreter: HTTPError('504 Server Error: Gateway Timeout for url: https://maps.mail.ru/osm/tools/overpass/api/interpreter')",
+    "round2 https://overpass-api.de/api/interpreter: HTTPError('504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter')"
+  ],
+  "overpass_endpoint": "https://overpass.kumi.systems/api/interpreter",
+  "n_elements": 3974,
+  "n_candidates": 3929,
+  "selection_rule": "named OSM polygon, area within bounds; priority winter_sports/resort < protected area/park < sports/tourism < natural/place; ties by distance to configured centre",
+  "chosen": {
+    "osm": "way/918681867",
+    "name": "Park City Mountain Resort",
+    "named_match": true,
+    "geom_type": "Polygon",
+    "prio": 0,
+    "tags": {
+      "landuse": "winter_sports",
+      "leisure": "resort"
+    },
+    "dist_to_config_center_km": 3.733,
+    "area_km2": 39.123
+  },
+  "footprint_note": "DERIVED from mapped aerialway/piste/tourism/leisure features within 4.0 km of the configured centre, buffered 250 m then eroded 200 m; NOT an official boundary",
+  "footprint_area_km2": 54.2675,
+  "n_footprint_features": 971,
+  "status": "OSM_POLYGON_NAMED_MATCH"
+}

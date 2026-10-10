@@ -1,0 +1,122 @@
+{
+  "project": "R40-KZ-2026-10",
+  "finished_utc": "2026-10-10T14:24:39+00:00",
+  "runtime_s": 1315,
+  "thresholds_deg": [
+    7.5,
+    15,
+    25
+  ],
+  "primary_dem": "cop-dem-glo-30",
+  "predictor_dems": [
+    "cop-dem-glo-30",
+    "nasadem",
+    "alos-dem"
+  ],
+  "sites": {
+    "medeu": {
+      "group": "kazakhstan",
+      "boundary_status": "OSM_POLYGON_NAMED_MATCH",
+      "dems": [
+        "alos-dem",
+        "cop-dem-glo-30",
+        "fabdem",
+        "nasadem"
+      ],
+      "reference_dtm": false
+    },
+    "shymbulak": {
+      "group": "kazakhstan",
+      "boundary_status": "OSM_POLYGON_NAMED_MATCH",
+      "dems": [
+        "alos-dem",
+        "cop-dem-glo-30",
+        "fabdem",
+        "nasadem"
+      ],
+      "reference_dtm": false
+    },
+    "kok_zhailau": {
+      "group": "kazakhstan",
+      "boundary_status": "FUNCTIONAL_FOOTPRINT_ONLY",
+      "dems": [
+        "alos-dem",
+        "cop-dem-glo-30",
+        "fabdem",
+        "nasadem"
+      ],
+      "reference_dtm": false
+    },
+    "kok_zhailau_osm": {
+      "group": "kazakhstan",
+      "boundary_status": "FUNCTIONAL_FOOTPRINT_ONLY",
+      "dems": [
+        "alos-dem",
+        "cop-dem-glo-30",
+        "fabdem",
+        "nasadem"
+      ],
+      "reference_dtm": false
+    },
+    "davos_parsenn": {
+      "group": "validation",
+      "boundary_status": "OSM_POLYGON_NAMED_MATCH",
+      "dems": [
+        "alos-dem",
+        "cop-dem-glo-30",
+        "nasadem"
+      ],
+      "reference_dtm": true
+    },
+    "zermatt_gornergrat": {
+      "group": "validation",
+      "boundary_status": "OSM_POLYGON_NAMED_MATCH",
+      "dems": [
+        "alos-dem",
+        "cop-dem-glo-30",
+        "nasadem"
+      ],
+      "reference_dtm": true
+    },
+    "alta_snowbird": {
+      "group": "validation",
+      "boundary_status": "OSM_POLYGON_NAMED_MATCH",
+      "dems": [
+        "alos-dem",
+        "cop-dem-glo-30",
+        "nasadem"
+      ],
+      "reference_dtm": true
+    },
+    "park_city": {
+      "group": "validation",
+      "boundary_status": "OSM_POLYGON_NAMED_MATCH",
+      "dems": [
+        "alos-dem",
+        "cop-dem-glo-30",
+        "nasadem"
+      ],
+      "reference_dtm": true
+    }
+  },
+  "validation": {
+    "validation_sites_used": [
+      "alta_snowbird",
+      "davos_parsenn",
+      "park_city",
+      "zermatt_gornergrat"
+    ],
+    "validation_sites_requested": [
+      "davos_parsenn",
+      "zermatt_gornergrat",
+      "alta_snowbird",
+      "park_city"
+    ]
+  },
+  "reference_dtm_available_for_kazakhstan": false,
+  "kazakhstan_error_is_measured": false,
+  "n_ok_events": 69,
+  "n_problem_events": 1,
+  "policy": "No restricted imagery fetched or distributed; ALOS/FABDEM rasters not redistributed (statistics only).",
+  "python": "3.11.17"
+}

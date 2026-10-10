@@ -1,0 +1,85 @@
+site,group,mask,threshold_deg,target_risk_train,method,n_px,BELOW_pct,ABOVE_pct,ABSTAIN_pct,note
+medeu,kazakhstan,context,7.5,0.02,combined,118944,2.73742265267689,95.77532284100081,1.487254506322303,model transferred; error NOT measured at this site
+medeu,kazakhstan,context,7.5,0.02,distance_only,118944,3.2183212267958035,95.43903013182674,1.342648641377455,model transferred; error NOT measured at this site
+medeu,kazakhstan,territory_osm_polygon,7.5,0.02,combined,49,34.69387755102041,55.10204081632652,10.204081632653061,model transferred; error NOT measured at this site
+medeu,kazakhstan,territory_osm_polygon,7.5,0.02,distance_only,49,34.69387755102041,48.97959183673469,16.3265306122449,model transferred; error NOT measured at this site
+medeu,kazakhstan,functional_footprint_derived,7.5,0.02,combined,10665,9.545241443975621,86.16033755274262,4.294421003281763,model transferred; error NOT measured at this site
+medeu,kazakhstan,functional_footprint_derived,7.5,0.02,distance_only,10665,11.242381622128457,85.3820909517112,3.375527426160337,model transferred; error NOT measured at this site
+medeu,kazakhstan,context,15,0.02,combined,118944,9.260660478880817,82.74313962873285,7.996199892386333,model transferred; error NOT measured at this site
+medeu,kazakhstan,context,15,0.02,distance_only,118944,9.935768092547754,81.52323782620392,8.540994081248318,model transferred; error NOT measured at this site
+medeu,kazakhstan,territory_osm_polygon,15,0.02,combined,49,73.46938775510205,16.3265306122449,10.204081632653061,model transferred; error NOT measured at this site
+medeu,kazakhstan,territory_osm_polygon,15,0.02,distance_only,49,73.46938775510205,16.3265306122449,10.204081632653061,model transferred; error NOT measured at this site
+medeu,kazakhstan,functional_footprint_derived,15,0.02,combined,10665,24.62259728082513,61.18143459915611,14.195968120018755,model transferred; error NOT measured at this site
+medeu,kazakhstan,functional_footprint_derived,15,0.02,distance_only,10665,25.86966713548992,59.71870604781997,14.411626816690108,model transferred; error NOT measured at this site
+medeu,kazakhstan,context,25,0.02,combined,118944,31.732580037664782,52.852602905569015,15.414817056766209,model transferred; error NOT measured at this site
+medeu,kazakhstan,context,25,0.02,distance_only,118944,31.53668953457089,49.118072370191015,19.345238095238095,model transferred; error NOT measured at this site
+medeu,kazakhstan,territory_osm_polygon,25,0.02,combined,49,95.91836734693877,0.0,4.081632653061225,model transferred; error NOT measured at this site
+medeu,kazakhstan,territory_osm_polygon,25,0.02,distance_only,49,95.91836734693877,0.0,4.081632653061225,model transferred; error NOT measured at this site
+medeu,kazakhstan,functional_footprint_derived,25,0.02,combined,10665,57.25269573370839,26.14158462259728,16.60571964369433,model transferred; error NOT measured at this site
+medeu,kazakhstan,functional_footprint_derived,25,0.02,distance_only,10665,57.89029535864979,23.47866854195968,18.63103609939053,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,context,7.5,0.02,combined,95040,0.8312289562289563,98.29650673400674,0.8722643097643097,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,context,7.5,0.02,distance_only,95040,1.1858164983164983,98.11763468013469,0.6965488215488216,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,territory_osm_polygon,7.5,0.02,combined,2419,2.0256304257957836,95.824720959074,2.149648615130219,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,territory_osm_polygon,7.5,0.02,distance_only,2419,3.059115336916081,95.16329061595701,1.7775940471269118,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,functional_footprint_derived,7.5,0.02,combined,2620,2.709923664122137,94.88549618320612,2.404580152671756,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,functional_footprint_derived,7.5,0.02,distance_only,2620,3.816793893129771,94.16030534351145,2.0229007633587788,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,context,15,0.02,combined,95040,4.938973063973064,89.09511784511784,5.965909090909091,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,context,15,0.02,distance_only,95040,5.644991582491583,88.27020202020202,6.084806397306397,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,territory_osm_polygon,15,0.02,combined,2419,13.642000826787928,73.2534105002067,13.104588673005374,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,territory_osm_polygon,15,0.02,distance_only,2419,13.269946258784621,68.04464654816039,18.68540719305498,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,functional_footprint_derived,15,0.02,combined,2620,15.0,72.44274809160305,12.557251908396946,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,functional_footprint_derived,15,0.02,distance_only,2620,14.465648854961833,67.86259541984732,17.67175572519084,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,context,25,0.02,combined,95040,20.324074074074076,67.37794612794613,12.297979797979798,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,context,25,0.02,distance_only,95040,20.788089225589225,64.26136363636363,14.950547138047138,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,territory_osm_polygon,25,0.02,combined,2419,59.652749069863575,21.992558908639932,18.354692021496486,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,territory_osm_polygon,25,0.02,distance_only,2419,57.83381562629185,17.073170731707318,25.093013642000827,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,functional_footprint_derived,25,0.02,combined,2620,59.656488549618324,23.62595419847328,16.717557251908396,model transferred; error NOT measured at this site
+shymbulak,kazakhstan,functional_footprint_derived,25,0.02,distance_only,2620,57.595419847328245,19.580152671755723,22.824427480916032,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,context,7.5,0.02,combined,74088,1.2323183241550588,97.80396285498327,0.9637188208616779,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,context,7.5,0.02,distance_only,74088,1.5184645286686105,97.48542274052478,0.9961127308066083,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,functional_footprint_derived,7.5,0.02,combined,683,2.781844802342606,93.26500732064422,3.953147877013177,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,functional_footprint_derived,7.5,0.02,distance_only,683,4.099560761346998,92.3865300146413,3.513909224011713,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,context,15,0.02,combined,74088,6.91340028074722,87.09912536443149,5.987474354821294,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,context,15,0.02,distance_only,74088,7.300777453838678,85.89515171147825,6.804070834683079,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,functional_footprint_derived,15,0.02,combined,683,23.718887262079065,58.85797950219619,17.423133235724745,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,functional_footprint_derived,15,0.02,distance_only,683,20.790629575402637,53.294289897510986,25.91508052708638,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,context,25,0.02,combined,74088,22.915991793542815,66.41561386459345,10.66839434186373,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,context,25,0.02,distance_only,74088,23.01722276212072,63.42187668718281,13.56090055069647,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,functional_footprint_derived,25,0.02,combined,683,64.56808199121524,19.1800878477306,16.251830161054173,model transferred; error NOT measured at this site
+kok_zhailau,kazakhstan,functional_footprint_derived,25,0.02,distance_only,683,64.42166910688141,16.251830161054173,19.32650073206442,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,context,7.5,0.02,combined,69696,1.8896349862258952,96.6583448117539,1.452020202020202,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,context,7.5,0.02,distance_only,69696,2.2698576675849402,96.26520890725436,1.4649334251606978,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,functional_footprint_derived,7.5,0.02,combined,348,5.747126436781609,87.93103448275862,6.321839080459771,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,functional_footprint_derived,7.5,0.02,distance_only,348,6.896551724137931,84.19540229885058,8.908045977011495,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,context,15,0.02,combined,69696,8.7508608815427,83.67338154269972,7.575757575757576,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,context,15,0.02,distance_only,69696,9.489784205693297,82.62023645546373,7.889979338842975,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,functional_footprint_derived,15,0.02,combined,348,41.37931034482759,37.93103448275862,20.689655172413794,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,functional_footprint_derived,15,0.02,distance_only,348,43.39080459770115,39.36781609195402,17.24137931034483,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,context,25,0.02,combined,69696,29.518193296602384,55.73203627180901,14.749770431588614,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,context,25,0.02,distance_only,69696,29.674586776859503,51.779155188246094,18.546258034894397,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,functional_footprint_derived,25,0.02,combined,348,79.59770114942529,4.597701149425287,15.804597701149426,model transferred; error NOT measured at this site
+kok_zhailau_osm,kazakhstan,functional_footprint_derived,25,0.02,distance_only,348,79.59770114942529,6.0344827586206895,14.367816091954023,model transferred; error NOT measured at this site
+davos_parsenn,validation,context,7.5,0.02,combined,90000,6.214444444444444,91.68888888888888,2.0966666666666667,in-sample (site contributed to model training)
+davos_parsenn,validation,context,7.5,0.02,distance_only,90000,6.7333333333333325,90.98444444444445,2.2822222222222224,in-sample (site contributed to model training)
+davos_parsenn,validation,context,15,0.02,combined,90000,19.184444444444445,70.37,10.445555555555556,in-sample (site contributed to model training)
+davos_parsenn,validation,context,15,0.02,distance_only,90000,19.12222222222222,67.21777777777777,13.66,in-sample (site contributed to model training)
+davos_parsenn,validation,context,25,0.02,combined,90000,51.00444444444444,34.275555555555556,14.719999999999999,in-sample (site contributed to model training)
+davos_parsenn,validation,context,25,0.02,distance_only,90000,49.56444444444445,29.996666666666666,20.43888888888889,in-sample (site contributed to model training)
+zermatt_gornergrat,validation,context,7.5,0.02,combined,91800,8.674291938997822,87.84313725490196,3.482570806100218,in-sample (site contributed to model training)
+zermatt_gornergrat,validation,context,7.5,0.02,distance_only,91800,9.53921568627451,87.04139433551198,3.4193899782135078,in-sample (site contributed to model training)
+zermatt_gornergrat,validation,context,15,0.02,combined,91800,22.716775599128542,67.21786492374727,10.065359477124183,in-sample (site contributed to model training)
+zermatt_gornergrat,validation,context,15,0.02,distance_only,91800,23.619825708061,65.0958605664488,11.284313725490195,in-sample (site contributed to model training)
+zermatt_gornergrat,validation,context,25,0.02,combined,91800,48.11764705882353,39.20152505446623,12.680827886710238,in-sample (site contributed to model training)
+zermatt_gornergrat,validation,context,25,0.02,distance_only,91800,48.12636165577342,36.34204793028322,15.531590413943356,in-sample (site contributed to model training)
+alta_snowbird,validation,context,7.5,0.02,combined,90000,3.0766666666666667,95.15777777777778,1.7655555555555555,in-sample (site contributed to model training)
+alta_snowbird,validation,context,7.5,0.02,distance_only,90000,3.5900000000000003,94.66666666666667,1.7433333333333332,in-sample (site contributed to model training)
+alta_snowbird,validation,context,15,0.02,combined,90000,13.154444444444444,77.79555555555555,9.049999999999999,in-sample (site contributed to model training)
+alta_snowbird,validation,context,15,0.02,distance_only,90000,13.311111111111112,75.46111111111111,11.227777777777778,in-sample (site contributed to model training)
+alta_snowbird,validation,context,25,0.02,combined,90000,40.105555555555554,46.68222222222222,13.212222222222222,in-sample (site contributed to model training)
+alta_snowbird,validation,context,25,0.02,distance_only,90000,39.163333333333334,43.01111111111111,17.825555555555557,in-sample (site contributed to model training)
+park_city,validation,context,7.5,0.02,combined,90000,21.796666666666667,75.13,3.0733333333333333,in-sample (site contributed to model training)
+park_city,validation,context,7.5,0.02,distance_only,90000,21.785555555555554,73.81333333333333,4.401111111111112,in-sample (site contributed to model training)
+park_city,validation,context,15,0.02,combined,90000,41.79777777777778,46.721111111111114,11.481111111111112,in-sample (site contributed to model training)
+park_city,validation,context,15,0.02,distance_only,90000,40.41888888888889,42.68666666666667,16.894444444444446,in-sample (site contributed to model training)
+park_city,validation,context,25,0.02,combined,90000,78.23777777777778,11.172222222222222,10.59,in-sample (site contributed to model training)
+park_city,validation,context,25,0.02,distance_only,90000,75.55111111111111,8.154444444444445,16.294444444444444,in-sample (site contributed to model training)

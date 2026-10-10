@@ -1,0 +1,35 @@
+{
+  "site": "shymbulak",
+  "queried_at": "2026-10-10T14:05:29+00:00",
+  "osm_query": "[out:json][timeout:150];\n(\n  nwr[\"name\"~\"Шымбулак|Чимбулак|Шымбұлақ|Shymbulak|Chimbulak|Shimbulak|Shymbulaq\",i](43.00830,76.91340,43.24830,77.24940);\n  nwr[\"name:ru\"~\"Шымбулак|Чимбулак|Шымбұлақ|Shymbulak|Chimbulak|Shimbulak|Shymbulaq\",i](43.00830,76.91340,43.24830,77.24940);\n  nwr[\"name:en\"~\"Шымбулак|Чимбулак|Шымбұлақ|Shymbulak|Chimbulak|Shimbulak|Shymbulaq\",i](43.00830,76.91340,43.24830,77.24940);\n  nwr[\"name:kk\"~\"Шымбулак|Чимбулак|Шымбұлақ|Shymbulak|Chimbulak|Shimbulak|Shymbulaq\",i](43.00830,76.91340,43.24830,77.24940);\n  nwr[\"landuse\"=\"winter_sports\"](43.00830,76.91340,43.24830,77.24940);\n  nwr[\"aerialway\"](43.00830,76.91340,43.24830,77.24940);\n  nwr[\"piste:type\"](43.00830,76.91340,43.24830,77.24940);\n  nwr[\"tourism\"~\"resort|attraction|viewpoint|alpine_hut|hotel|camp_site|theme_park\"](43.00830,76.91340,43.24830,77.24940);\n  nwr[\"leisure\"~\"sports_centre|ice_rink|stadium|pitch|resort|park|nature_reserve\"](43.00830,76.91340,43.24830,77.24940);\n  nwr[\"boundary\"~\"protected_area|national_park\"](43.00830,76.91340,43.24830,77.24940);\n);\nout geom tags;",
+  "bbox_s_w_n_e": [
+    43.008300000000006,
+    76.9134,
+    43.2483,
+    77.24940000000001
+  ],
+  "config_center_lonlat": [
+    77.0814,
+    43.1283
+  ],
+  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+  "n_elements": 873,
+  "n_candidates": 854,
+  "selection_rule": "named OSM polygon, area within bounds; priority winter_sports/resort < protected area/park < sports/tourism < natural/place; ties by distance to configured centre",
+  "chosen": {
+    "osm": "way/1254871130",
+    "name": "Шымбұлақ",
+    "named_match": true,
+    "geom_type": "Polygon",
+    "prio": 0,
+    "tags": {
+      "landuse": "winter_sports"
+    },
+    "dist_to_config_center_km": 1.414,
+    "area_km2": 2.1798
+  },
+  "footprint_note": "DERIVED from mapped aerialway/piste/tourism/leisure features within 3.5 km of the configured centre, buffered 250 m then eroded 200 m; NOT an official boundary",
+  "footprint_area_km2": 2.3651,
+  "n_footprint_features": 118,
+  "status": "OSM_POLYGON_NAMED_MATCH"
+}

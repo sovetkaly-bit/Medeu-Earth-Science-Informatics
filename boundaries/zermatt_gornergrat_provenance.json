@@ -1,0 +1,35 @@
+{
+  "site": "zermatt_gornergrat",
+  "queried_at": "2026-10-10T14:11:34+00:00",
+  "osm_query": "[out:json][timeout:150];\n(\n  nwr[\"name\"~\"Gornergrat|Rothorn|Zermatt\",i](45.87000,7.59200,46.11000,7.92800);\n  nwr[\"name:ru\"~\"Gornergrat|Rothorn|Zermatt\",i](45.87000,7.59200,46.11000,7.92800);\n  nwr[\"name:en\"~\"Gornergrat|Rothorn|Zermatt\",i](45.87000,7.59200,46.11000,7.92800);\n  nwr[\"name:kk\"~\"Gornergrat|Rothorn|Zermatt\",i](45.87000,7.59200,46.11000,7.92800);\n  nwr[\"landuse\"=\"winter_sports\"](45.87000,7.59200,46.11000,7.92800);\n  nwr[\"aerialway\"](45.87000,7.59200,46.11000,7.92800);\n  nwr[\"piste:type\"](45.87000,7.59200,46.11000,7.92800);\n  nwr[\"tourism\"~\"resort|attraction|viewpoint|alpine_hut|hotel|camp_site|theme_park\"](45.87000,7.59200,46.11000,7.92800);\n  nwr[\"leisure\"~\"sports_centre|ice_rink|stadium|pitch|resort|park|nature_reserve\"](45.87000,7.59200,46.11000,7.92800);\n  nwr[\"boundary\"~\"protected_area|national_park\"](45.87000,7.59200,46.11000,7.92800);\n);\nout geom tags;",
+  "bbox_s_w_n_e": [
+    45.870000000000005,
+    7.592,
+    46.11,
+    7.928
+  ],
+  "config_center_lonlat": [
+    7.76,
+    45.99
+  ],
+  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+  "n_elements": 2106,
+  "n_candidates": 2070,
+  "selection_rule": "named OSM polygon, area within bounds; priority winter_sports/resort < protected area/park < sports/tourism < natural/place; ties by distance to configured centre",
+  "chosen": {
+    "osm": "way/540681046",
+    "name": "Zermatt - Breuil-Cervinia",
+    "named_match": true,
+    "geom_type": "Polygon",
+    "prio": 0,
+    "tags": {
+      "landuse": "winter_sports"
+    },
+    "dist_to_config_center_km": 3.72,
+    "area_km2": 71.7555
+  },
+  "footprint_note": "DERIVED from mapped aerialway/piste/tourism/leisure features within 4.0 km of the configured centre, buffered 250 m then eroded 200 m; NOT an official boundary",
+  "footprint_area_km2": 15.0833,
+  "n_footprint_features": 564,
+  "status": "OSM_POLYGON_NAMED_MATCH"
+}

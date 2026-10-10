@@ -1,0 +1,2472 @@
+{
+  "candidates": [
+    {
+      "osm": "way/171504564",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 0.11,
+      "area_km2": 0.0428
+    },
+    {
+      "osm": "node/11659592117",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak"
+      },
+      "dist_to_config_center_km": 3.401
+    },
+    {
+      "osm": "way/171504550",
+      "name": "Медеу Мұз Айдыны",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "sport": "bandy;ice_skating"
+      },
+      "dist_to_config_center_km": 0.052,
+      "area_km2": 0.025
+    },
+    {
+      "osm": "node/4665038995",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 0.094
+    },
+    {
+      "osm": "node/1825231852",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.186
+    },
+    {
+      "osm": "node/10180680817",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.191
+    },
+    {
+      "osm": "node/4665144598",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "suburb"
+      },
+      "dist_to_config_center_km": 0.205
+    },
+    {
+      "osm": "node/10134664450",
+      "name": "King Medeo Plov",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.281
+    },
+    {
+      "osm": "way/1324047244",
+      "name": "«Медеу» сүзгі станциясы",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "landuse": "industrial"
+      },
+      "dist_to_config_center_km": 0.409,
+      "area_km2": 0.0163
+    },
+    {
+      "osm": "way/1103834515",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.526,
+      "area_km2": 0.0034
+    },
+    {
+      "osm": "node/12196452563",
+      "name": "Канатная дорога Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.737
+    },
+    {
+      "osm": "node/12976309117",
+      "name": "Канатная дорога Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.743
+    },
+    {
+      "osm": "way/195138908",
+      "name": "Cable car station (lower)",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.793,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/1824895725",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.795
+    },
+    {
+      "osm": "node/13110767538",
+      "name": "Канатная дорога Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.806
+    },
+    {
+      "osm": "node/5198111778",
+      "name": "Канатная дорога Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.809
+    },
+    {
+      "osm": "node/10973353605",
+      "name": "Касса по продаже билетов на канатную дорогу Медеу-Шымбулак",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.822
+    },
+    {
+      "osm": "way/255190123",
+      "name": "Медеу бөгеті",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.886
+    },
+    {
+      "osm": "way/1411755250",
+      "name": "Medeu Mart",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.947,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "node/12196452717",
+      "name": "\"Медеу\" Спорт кешені",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 1.063
+    },
+    {
+      "osm": "node/12047194857",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.115
+    },
+    {
+      "osm": "way/171467770",
+      "name": "Медеу - Шымбұлақ аспалы жолы",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "gondola"
+      },
+      "dist_to_config_center_km": 1.495
+    },
+    {
+      "osm": "way/1324066198",
+      "name": "Медеу-Бутаковка",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.005
+    },
+    {
+      "osm": "way/1302658293",
+      "name": "На гору Медеу из Саркырама",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.37
+    },
+    {
+      "osm": "way/1254309726",
+      "name": "На гору Медеу",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.774
+    },
+    {
+      "osm": "way/271542725",
+      "name": "Медеу-Бутаковка",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.056
+    },
+    {
+      "osm": "way/1387829080",
+      "name": "Медеу-Бутаковка",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.518
+    },
+    {
+      "osm": "way/1387829079",
+      "name": "Медеу-Бутаковка",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.532
+    },
+    {
+      "osm": "node/11180431283",
+      "name": "Ой карагай 6,7 км. 2h15 min. Медео 9,6 km. 3h 12 min.  Турбаза пионер  4,8 km.  1h. 36 min",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 6.376
+    },
+    {
+      "osm": "node/11180461618",
+      "name": "Медео 9.9 km. 3 h 15 min. Ой карагай 6,1 km. 2 h. 5 min.",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 6.74
+    },
+    {
+      "osm": "way/1208247548",
+      "name": "Медеу көшесі",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 7.211
+    },
+    {
+      "osm": "way/231106132",
+      "name": "Медеуское кладбище",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "landuse": "cemetery"
+      },
+      "dist_to_config_center_km": 7.739,
+      "area_km2": 0.0142
+    },
+    {
+      "osm": "way/24041573",
+      "name": "Медеу көшесі",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 7.813
+    },
+    {
+      "osm": "way/836678219",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 8.266,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/288740409",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 8.272,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/238257662",
+      "name": "1-ші көше (Медеу)",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 11.083
+    },
+    {
+      "osm": "way/780437115",
+      "name": "2-ші көше (Медеу)",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 11.087
+    },
+    {
+      "osm": "way/51350391",
+      "name": "Citizen Service Center, Medeu district",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 12.845,
+      "area_km2": 0.0017
+    },
+    {
+      "osm": "way/27054584",
+      "name": "Медеу ауданының БМСК",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 13.213,
+      "area_km2": 0.0015
+    },
+    {
+      "osm": "node/12770361103",
+      "name": "Медеу ауданы әкімінің аппараты",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 13.412
+    },
+    {
+      "osm": "way/489771499",
+      "name": "Медеу аудандық АХАТ бөлімі",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 13.649,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "node/13982184401",
+      "name": "УПРАВЛЕНИЕ ПОЛИЦИИ МЕДЕУСКОГО РАЙОНА ДЕПАРТАМЕНТА ПОЛИЦИИ ГОРОДА АЛМАТЫ",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 14.062
+    },
+    {
+      "osm": "way/238000301",
+      "name": "Медеу ауданының №76 полиция бөлімі",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 14.206,
+      "area_km2": 0.0009
+    },
+    {
+      "osm": "way/1463752051",
+      "name": "Алматы қаласы Медеу ауданының прокуратурасы",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 14.332,
+      "area_km2": 0.0021
+    },
+    {
+      "osm": "node/1488338936",
+      "name": "Налоговый Комитет Медеуского района г. Алматы",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 14.485
+    },
+    {
+      "osm": "node/12713744422",
+      "name": "Сервисный центр полиции Медеуского района",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 14.753
+    },
+    {
+      "osm": "way/50651586",
+      "name": "Алматы қаласының Медеу аудандық соты",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 14.963,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "node/9567807117",
+      "name": "Медеу ауданының №80 полиция бөлімшесі",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 15.458
+    },
+    {
+      "osm": "way/1491867083",
+      "name": "Qazaq Auyl",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 0.563,
+      "area_km2": 0.0113
+    },
+    {
+      "osm": "way/1340544031",
+      "name": "Горное солнце",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 2.555,
+      "area_km2": 0.0457
+    },
+    {
+      "osm": "way/1254871130",
+      "name": "Шымбұлақ",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 5.04,
+      "area_km2": 2.1798
+    },
+    {
+      "osm": "node/4796667717",
+      "name": "Elik Sai ski area",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 6.399
+    },
+    {
+      "osm": "way/1099479412",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 6.893,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "node/5401213247",
+      "name": "Pioneer ski area",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 6.96
+    },
+    {
+      "osm": "node/10065738944",
+      "name": "Тау-Самал",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 6.964
+    },
+    {
+      "osm": "way/1318443234",
+      "name": "Eco Park Aspan",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 6.973,
+      "area_km2": 0.0061
+    },
+    {
+      "osm": "way/1236094266",
+      "name": "Санаторий Ак-Кайын",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 7.046,
+      "area_km2": 0.0674
+    },
+    {
+      "osm": "way/1318590147",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 8.878,
+      "area_km2": 0.0062
+    },
+    {
+      "osm": "way/1318590122",
+      "name": "7 Холмов",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 9.507,
+      "area_km2": 0.0116
+    },
+    {
+      "osm": "way/247698380",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 9.508,
+      "area_km2": 0.0069
+    },
+    {
+      "osm": "way/1462762294",
+      "name": "Қазақстан Шипажайы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 9.552,
+      "area_km2": 0.0545
+    },
+    {
+      "osm": "way/1318590121",
+      "name": "Tobe Ecopark",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 9.691,
+      "area_km2": 0.0146
+    },
+    {
+      "osm": "way/1124786559",
+      "name": "Oi-Qaragai",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 10.344,
+      "area_km2": 1.0023
+    },
+    {
+      "osm": "way/1523612917",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 10.422,
+      "area_km2": 0.0097
+    },
+    {
+      "osm": "way/1237542621",
+      "name": "Эдельвейс",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 10.775,
+      "area_km2": 0.0091
+    },
+    {
+      "osm": "way/543213146",
+      "name": "Коктем",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 10.868,
+      "area_km2": 0.0296
+    },
+    {
+      "osm": "way/1153250063",
+      "name": "Юный Домостроитель",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 13.931,
+      "area_km2": 0.0389
+    },
+    {
+      "osm": "way/1086488009",
+      "name": "Маралсай",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 14.586,
+      "area_km2": 0.1036
+    },
+    {
+      "osm": "node/6796761009",
+      "name": "Талғар әулие",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 18.299
+    },
+    {
+      "osm": "way/1382803376",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 2.123,
+      "area_km2": 6.794
+    },
+    {
+      "osm": "way/1431515697",
+      "name": "Емен тоғайы саябағы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 8.555,
+      "area_km2": 0.0207
+    },
+    {
+      "osm": "way/1553269899",
+      "name": "Жаңғақ тоғайы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 9.672,
+      "area_km2": 0.0152
+    },
+    {
+      "osm": "way/1463436168",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 10.175,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/424788732",
+      "name": "Oi-Qaragai",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park",
+        "place": "allotments",
+        "tourism": "chalet"
+      },
+      "dist_to_config_center_km": 10.302,
+      "area_km2": 0.0561
+    },
+    {
+      "osm": "way/1463871456",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 10.622,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/1296886349",
+      "name": "Көк-Төбе Саябағы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 10.739,
+      "area_km2": 1.0636
+    },
+    {
+      "osm": "way/1464879694",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 11.125,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/676737398",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 11.448,
+      "area_km2": 0.1413
+    },
+    {
+      "osm": "way/1464900974",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 11.931,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/896369193",
+      "name": "Halyk Bank Square",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 11.985,
+      "area_km2": 0.0136
+    },
+    {
+      "osm": "way/1415090529",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.209,
+      "area_km2": 0.0076
+    },
+    {
+      "osm": "way/1320412258",
+      "name": "Журналиcтер сквері",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.252,
+      "area_km2": 0.0104
+    },
+    {
+      "osm": "way/773099701",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.254,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/1259590311",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.323,
+      "area_km2": 0.0017
+    },
+    {
+      "osm": "way/1445846622",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.388,
+      "area_km2": 0.0343
+    },
+    {
+      "osm": "way/239666312",
+      "name": "Есентай саябағы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.524,
+      "area_km2": 0.0119
+    },
+    {
+      "osm": "way/1457532724",
+      "name": "Тұңғыш Президент Қорының Саябағы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.557,
+      "area_km2": 0.0412
+    },
+    {
+      "osm": "way/1420967949",
+      "name": "Көк-Төбе Саябағы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.574,
+      "area_km2": 0.0202
+    },
+    {
+      "osm": "way/54664671",
+      "name": "Шоқан Уәлиханов саябағы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.128,
+      "area_km2": 0.0027
+    },
+    {
+      "osm": "way/253347153",
+      "name": "ҰОС ескерткіші",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.188,
+      "area_km2": 0.0063
+    },
+    {
+      "osm": "way/1456005746",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.436,
+      "area_km2": 0.049
+    },
+    {
+      "osm": "way/307056816",
+      "name": "Бас Ботаникалық Бақ",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.492,
+      "area_km2": 1.0429
+    },
+    {
+      "osm": "way/196386507",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park",
+        "natural": "wood"
+      },
+      "dist_to_config_center_km": 13.493,
+      "area_km2": 0.0011
+    },
+    {
+      "osm": "way/198491429",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.552,
+      "area_km2": 0.0048
+    },
+    {
+      "osm": "way/1455789693",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.552,
+      "area_km2": 0.0009
+    },
+    {
+      "osm": "way/124150096",
+      "name": "Алаң Жас Қанат",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.606,
+      "area_km2": 0.0273
+    },
+    {
+      "osm": "way/232715414",
+      "name": "Орталық Демалыс және Мәдениет Саябағы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.611,
+      "area_km2": 0.5142
+    },
+    {
+      "osm": "way/256426441",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.611,
+      "area_km2": 0.0032
+    },
+    {
+      "osm": "way/1423485203",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.655,
+      "area_km2": 0.0111
+    },
+    {
+      "osm": "way/1554690967",
+      "name": "Геологтар саяжолы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.676,
+      "area_km2": 0.011
+    },
+    {
+      "osm": "way/222570197",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.745,
+      "area_km2": 0.0096
+    },
+    {
+      "osm": "way/1458336153",
+      "name": "Д. Қонаев саябағы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.794,
+      "area_km2": 0.0067
+    },
+    {
+      "osm": "way/222570186",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.826,
+      "area_km2": 0.0027
+    },
+    {
+      "osm": "way/771261811",
+      "name": "Оңтүстік Саябақ",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.899,
+      "area_km2": 0.1701
+    },
+    {
+      "osm": "way/1455478184",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.915,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/1455138999",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.924,
+      "area_km2": 0.0013
+    },
+    {
+      "osm": "way/542202370",
+      "name": "Парк ICT",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.931,
+      "area_km2": 0.0013
+    },
+    {
+      "osm": "way/208493040",
+      "name": "28 гвардия-панфиловшылар атын. саябақ",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.113,
+      "area_km2": 0.1903
+    },
+    {
+      "osm": "way/1458336082",
+      "name": "Астана алаңындағы саябақ",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.194,
+      "area_km2": 0.0465
+    },
+    {
+      "osm": "way/380359994",
+      "name": "\"Атакент\" Қазақстан Іскерлік Ынтымақтастық Орталығы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.244,
+      "area_km2": 0.33
+    },
+    {
+      "osm": "way/51268848",
+      "name": "Қарағайлы саябағы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.276,
+      "area_km2": 0.0167
+    },
+    {
+      "osm": "way/1195051977",
+      "name": "Сквер имени Шухова",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.354,
+      "area_km2": 0.0291
+    },
+    {
+      "osm": "way/263743562",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.451,
+      "area_km2": 0.0049
+    },
+    {
+      "osm": "node/4527531156",
+      "name": "Астана алаңы",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.458
+    },
+    {
+      "osm": "way/22733973",
+      "name": "Солтүстік саябақ",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.51,
+      "area_km2": 0.0421
+    },
+    {
+      "osm": "way/22734262",
+      "name": "Байтұрсынұлы атындағы саябақ",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.583,
+      "area_km2": 0.0193
+    },
+    {
+      "osm": "way/347970781",
+      "name": "Мұқағали Мақатаев атындағы саябақ",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.265,
+      "area_km2": 0.0072
+    },
+    {
+      "osm": "way/219004393",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area",
+        "leisure": "garden"
+      },
+      "dist_to_config_center_km": 15.28,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/160779809",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.292,
+      "area_km2": 0.0099
+    },
+    {
+      "osm": "way/1275977091",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.299,
+      "area_km2": 0.0038
+    },
+    {
+      "osm": "way/160780649",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.382,
+      "area_km2": 0.0041
+    },
+    {
+      "osm": "way/160780646",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.439,
+      "area_km2": 0.001
+    },
+    {
+      "osm": "way/23979758",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.44,
+      "area_km2": 0.0198
+    },
+    {
+      "osm": "way/247361527",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.577,
+      "area_km2": 0.0015
+    },
+    {
+      "osm": "way/1086605738",
+      "name": "Аллея спасателей",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.618,
+      "area_km2": 0.0101
+    },
+    {
+      "osm": "way/38566721",
+      "name": "Ганди Саябағы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.268,
+      "area_km2": 0.0581
+    },
+    {
+      "osm": "way/38566738",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.49,
+      "area_km2": 0.0191
+    },
+    {
+      "osm": "way/1295810231",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.574,
+      "area_km2": 0.0027
+    },
+    {
+      "osm": "way/732248768",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.614,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/216728657",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area",
+        "natural": "grassland"
+      },
+      "dist_to_config_center_km": 16.902,
+      "area_km2": 0.001
+    },
+    {
+      "osm": "way/326479963",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.98,
+      "area_km2": 0.0408
+    },
+    {
+      "osm": "way/216728655",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area",
+        "landuse": "grass"
+      },
+      "dist_to_config_center_km": 17.005,
+      "area_km2": 0.0022
+    },
+    {
+      "osm": "way/216728649",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area",
+        "landuse": "grass"
+      },
+      "dist_to_config_center_km": 17.057,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/1453886186",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "ice_rink",
+        "sport": "ice_skating"
+      },
+      "dist_to_config_center_km": 0.06,
+      "area_km2": 0.012
+    },
+    {
+      "osm": "way/1092016922",
+      "name": "Грибы",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 0.205,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "node/4316746295",
+      "name": "Селезащитная дамба",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 0.848
+    },
+    {
+      "osm": "way/1411755228",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 1.022,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "node/13063490230",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 1.117
+    },
+    {
+      "osm": "node/12047283673",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 1.485
+    },
+    {
+      "osm": "way/472331789",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 1.793,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/1338001028",
+      "name": "Ranch",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 1.949,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/1340549127",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "basketball"
+      },
+      "dist_to_config_center_km": 2.028,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/1254558313",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 2.079,
+      "area_km2": 0.003
+    },
+    {
+      "osm": "node/10892460105",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 2.147
+    },
+    {
+      "osm": "way/755945125",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "chess"
+      },
+      "dist_to_config_center_km": 2.24,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "node/9892882213",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 2.243
+    },
+    {
+      "osm": "node/12864783201",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 2.296
+    },
+    {
+      "osm": "node/9968287117",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 2.965
+    },
+    {
+      "osm": "node/13063564129",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 3.015
+    },
+    {
+      "osm": "node/13690578478",
+      "name": "Кімасар",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 3.453
+    },
+    {
+      "osm": "way/1349739742",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 3.524,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/14121738849",
+      "name": "\"Тарелка\" поляна",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 3.535
+    },
+    {
+      "osm": "node/5712780321",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 3.559
+    },
+    {
+      "osm": "way/171508693",
+      "name": "Shymbulak",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 3.728,
+      "area_km2": 0.0377
+    },
+    {
+      "osm": "node/12196241004",
+      "name": "Тауыс аялдамасы",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 3.881
+    },
+    {
+      "osm": "node/13063604846",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 3.988
+    },
+    {
+      "osm": "node/4339984191",
+      "name": "Куйгенсай жоғарғы сарқырамасы",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 4.147
+    },
+    {
+      "osm": "node/6638267297",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.19
+    },
+    {
+      "osm": "node/13357181334",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.204
+    },
+    {
+      "osm": "node/4396410393",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.249
+    },
+    {
+      "osm": "node/9888790178",
+      "name": "Энтузиастардың шырағы",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.527
+    },
+    {
+      "osm": "node/4999671223",
+      "name": "Батарейка",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 4.554
+    },
+    {
+      "osm": "node/11054595010",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.637
+    },
+    {
+      "osm": "node/14178001633",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.682
+    },
+    {
+      "osm": "way/1450219029",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 4.72,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "node/6638544392",
+      "name": "Көк Жайлау",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.728
+    },
+    {
+      "osm": "node/7895724785",
+      "name": "Вертолётка",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.728
+    },
+    {
+      "osm": "node/13131338317",
+      "name": "Көк Жайлау",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 4.734
+    },
+    {
+      "osm": "node/1843570839",
+      "name": "Бутаковский сарқырамасы",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 4.804
+    },
+    {
+      "osm": "node/12899004821",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.826
+    },
+    {
+      "osm": "way/1323202652",
+      "name": "Горный Клуб \"Аскар-Тау\"",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 5.119,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "way/1323202653",
+      "name": "Альпинистская база \"Тау Намыс\"",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 5.122,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "node/10951332884",
+      "name": "Жоғарғы Бутаковский сарқырамасы",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 5.131
+    },
+    {
+      "osm": "way/460143138",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 5.226,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/255904837",
+      "name": "Синий домик",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 5.247,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/7347415328",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 5.291
+    },
+    {
+      "osm": "way/1384574901",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 5.321,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "node/4541761389",
+      "name": "Қара сарқырама",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 5.924
+    },
+    {
+      "osm": "node/13136621939",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 5.988
+    },
+    {
+      "osm": "way/1178621599",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 6.222,
+      "area_km2": 0.001
+    },
+    {
+      "osm": "node/11180430219",
+      "name": "Колокольчик",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 6.285
+    },
+    {
+      "osm": "node/6726714787",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.296
+    },
+    {
+      "osm": "node/4796738057",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "volleyball"
+      },
+      "dist_to_config_center_km": 6.344
+    },
+    {
+      "osm": "node/12218088648",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "free_flying"
+      },
+      "dist_to_config_center_km": 6.484
+    },
+    {
+      "osm": "way/1238762451",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.621,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "node/12864167477",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.761
+    },
+    {
+      "osm": "way/1178621595",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 6.815,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "node/8044440214",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.854
+    },
+    {
+      "osm": "way/1099479426",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 6.869,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/1156404505",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "basketball"
+      },
+      "dist_to_config_center_km": 6.911,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/1156404504",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "volleyball"
+      },
+      "dist_to_config_center_km": 6.918,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/2192602576",
+      "name": "Табаган",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "swimming"
+      },
+      "dist_to_config_center_km": 6.97
+    },
+    {
+      "osm": "node/12201356242",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 7.014
+    },
+    {
+      "osm": "node/12864177133",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 7.125
+    },
+    {
+      "osm": "way/472300496",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 7.146,
+      "area_km2": 0.002
+    },
+    {
+      "osm": "node/12155622164",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 7.148
+    },
+    {
+      "osm": "way/472300497",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 7.163,
+      "area_km2": 0.0013
+    },
+    {
+      "osm": "node/8044442317",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 7.205
+    },
+    {
+      "osm": "node/12313929506",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 7.427
+    },
+    {
+      "osm": "way/1419893444",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 7.56,
+      "area_km2": 0.0003
+    }
+  ],
+  "named_nodes": [
+    {
+      "osm": "node/1488338936",
+      "name": "Налоговый Комитет Медеуского района г. Алматы",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 14.485
+    },
+    {
+      "osm": "node/1824895725",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.795
+    },
+    {
+      "osm": "node/1825231852",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.186
+    },
+    {
+      "osm": "node/4665038995",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 0.094
+    },
+    {
+      "osm": "node/4665144598",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "suburb"
+      },
+      "dist_to_config_center_km": 0.205
+    },
+    {
+      "osm": "node/5198111778",
+      "name": "Канатная дорога Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.809
+    },
+    {
+      "osm": "node/9567807117",
+      "name": "Медеу ауданының №80 полиция бөлімшесі",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 15.458
+    },
+    {
+      "osm": "node/10134664450",
+      "name": "King Medeo Plov",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.281
+    },
+    {
+      "osm": "node/10180680817",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.191
+    },
+    {
+      "osm": "node/10973353605",
+      "name": "Касса по продаже билетов на канатную дорогу Медеу-Шымбулак",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.822
+    },
+    {
+      "osm": "node/11180431283",
+      "name": "Ой карагай 6,7 км. 2h15 min. Медео 9,6 km. 3h 12 min.  Турбаза пионер  4,8 km.  1h. 36 min",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 6.376
+    },
+    {
+      "osm": "node/11180461618",
+      "name": "Медео 9.9 km. 3 h 15 min. Ой карагай 6,1 km. 2 h. 5 min.",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 6.74
+    },
+    {
+      "osm": "node/11659592117",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak"
+      },
+      "dist_to_config_center_km": 3.401
+    },
+    {
+      "osm": "node/12047194857",
+      "name": "Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.115
+    },
+    {
+      "osm": "node/12196452563",
+      "name": "Канатная дорога Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.737
+    },
+    {
+      "osm": "node/12196452717",
+      "name": "\"Медеу\" Спорт кешені",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 1.063
+    },
+    {
+      "osm": "node/12713744422",
+      "name": "Сервисный центр полиции Медеуского района",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 14.753
+    },
+    {
+      "osm": "node/12770361103",
+      "name": "Медеу ауданы әкімінің аппараты",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 13.412
+    },
+    {
+      "osm": "node/12976309117",
+      "name": "Канатная дорога Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.743
+    },
+    {
+      "osm": "node/13110767538",
+      "name": "Канатная дорога Медеу",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.806
+    }
+  ]
+}

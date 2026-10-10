@@ -1,0 +1,2427 @@
+{
+  "candidates": [
+    {
+      "osm": "way/540681046",
+      "name": "Zermatt - Breuil-Cervinia",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 3.72,
+      "area_km2": 71.7555
+    },
+    {
+      "osm": "way/569323858",
+      "name": "Camping Zermatt",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.089,
+      "area_km2": 0.0031
+    },
+    {
+      "osm": "node/240062008",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "place": "locality"
+      },
+      "dist_to_config_center_km": 1.945
+    },
+    {
+      "osm": "node/8925949718",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak"
+      },
+      "dist_to_config_center_km": 2.072
+    },
+    {
+      "osm": "node/11537289295",
+      "name": "Unterrothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak"
+      },
+      "dist_to_config_center_km": 4.493
+    },
+    {
+      "osm": "node/393192181",
+      "name": "Oberrothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak"
+      },
+      "dist_to_config_center_km": 5.84
+    },
+    {
+      "osm": "node/364956853",
+      "name": "Zinalrothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak"
+      },
+      "dist_to_config_center_km": 9.919
+    },
+    {
+      "osm": "node/6359240332",
+      "name": "L'Epaule du Rothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak"
+      },
+      "dist_to_config_center_km": 10.452
+    },
+    {
+      "osm": "way/22941635",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 0.446
+    },
+    {
+      "osm": "node/9662684042",
+      "name": "k kiosk Zermatt Riffelberg",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.505
+    },
+    {
+      "osm": "way/332911416",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 0.531
+    },
+    {
+      "osm": "way/332911417",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 0.575
+    },
+    {
+      "osm": "way/30833429",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 1.566
+    },
+    {
+      "osm": "node/9662661866",
+      "name": "Billetverkauf Bahnhof Gornergrat",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.875
+    },
+    {
+      "osm": "way/296195270",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.875,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/8920029097",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.88
+    },
+    {
+      "osm": "node/313518319",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.881
+    },
+    {
+      "osm": "way/841046957",
+      "name": "Kapelle Gornergrat",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.943,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "way/964352456",
+      "name": "Observatorium Gornergrat",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.956,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/964352457",
+      "name": "Observatorium Gornergrat",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.966,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/296194840",
+      "name": "Kulmhotel Gornergrat",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 1.97,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "node/434306780",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "dist_to_config_center_km": 2.048
+    },
+    {
+      "osm": "way/964884240",
+      "name": "Gornergrat - Hohtälli",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.559
+    },
+    {
+      "osm": "way/22338264",
+      "name": "Zermatt - Furi",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "cable_car"
+      },
+      "dist_to_config_center_km": 2.658
+    },
+    {
+      "osm": "node/13374565844",
+      "name": "Vitaparcours Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "leisure": "fitness_station",
+        "sport": "fitness"
+      },
+      "dist_to_config_center_km": 2.818
+    },
+    {
+      "osm": "way/184632154",
+      "name": "Gornergrat - Hohtälli",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.85
+    },
+    {
+      "osm": "way/295840126",
+      "name": "Jugendherberge Zermatt – Anbau",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.004,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/13055830459",
+      "name": "Jugendherberge Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hostel"
+      },
+      "dist_to_config_center_km": 3.018
+    },
+    {
+      "osm": "way/207858196",
+      "name": "Jugendherberge Zermatt – Anbau",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.028,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "node/240287130",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 3.049
+    },
+    {
+      "osm": "node/240240207",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 3.05
+    },
+    {
+      "osm": "node/5466925776",
+      "name": "Zermatt Paradies",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "guest_house"
+      },
+      "dist_to_config_center_km": 3.08
+    },
+    {
+      "osm": "node/5466573164",
+      "name": "Top Of Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.243
+    },
+    {
+      "osm": "node/5466573154",
+      "name": "Myzermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "guest_house"
+      },
+      "dist_to_config_center_km": 3.276
+    },
+    {
+      "osm": "node/2432262820",
+      "name": "Bellerive Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 3.288
+    },
+    {
+      "osm": "way/22330086",
+      "name": "Zermatt–Sunnegga funicular",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "funicular"
+      },
+      "dist_to_config_center_km": 3.299
+    },
+    {
+      "osm": "node/5466573153",
+      "name": "Bike Shop Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.31
+    },
+    {
+      "osm": "node/5466573152",
+      "name": "Slalom Sport Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.315
+    },
+    {
+      "osm": "node/2432262821",
+      "name": "Old Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.335
+    },
+    {
+      "osm": "node/13938312058",
+      "name": "Kulturweg Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 3.41
+    },
+    {
+      "osm": "node/7556486035",
+      "name": "webcam Zermatterhof",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.427
+    },
+    {
+      "osm": "way/249623664",
+      "name": "Gemeindeverwaltung Zermatt",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.427,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "node/5464793538",
+      "name": "Apartments Julen Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "guest_house"
+      },
+      "dist_to_config_center_km": 3.449
+    },
+    {
+      "osm": "node/5477626383",
+      "name": "Zermatt Kirche",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 3.464
+    },
+    {
+      "osm": "node/7847243904",
+      "name": "Zermatt Line",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.464
+    },
+    {
+      "osm": "node/5480234272",
+      "name": "Zum alten Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.466
+    },
+    {
+      "osm": "node/11084058926",
+      "name": "Zermatt Kitchen",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.489
+    },
+    {
+      "osm": "way/30952475",
+      "name": "Grand hotel Zermatterhof",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 3.49,
+      "area_km2": 0.0014
+    },
+    {
+      "osm": "node/5480144052",
+      "name": "Hotel Sonne Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 3.554
+    },
+    {
+      "osm": "node/5480144051",
+      "name": "Matterhorn Sport Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.556
+    },
+    {
+      "osm": "node/80387968",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "town"
+      },
+      "dist_to_config_center_km": 3.566
+    },
+    {
+      "osm": "node/2562063996",
+      "name": "Snowboat - Zermatt Yacht Club",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.571
+    },
+    {
+      "osm": "node/13068415771",
+      "name": "Ärztezentrum Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.604
+    },
+    {
+      "osm": "node/5464299960",
+      "name": "Zermatt Cervino Paradise",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "guest_house"
+      },
+      "dist_to_config_center_km": 3.696
+    },
+    {
+      "osm": "way/664659782",
+      "name": "Sunnegga Trail Zermatt",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.696
+    },
+    {
+      "osm": "node/5475862598",
+      "name": "Amavita Apotheke Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.699
+    },
+    {
+      "osm": "node/5464299951",
+      "name": "Taxi Schaller Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.74
+    },
+    {
+      "osm": "node/5475488806",
+      "name": "Hotel Gornergrat Dorf",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 3.823
+    },
+    {
+      "osm": "way/664632080",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.848,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "node/240999126",
+      "name": "Zermatt GGB",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.85
+    },
+    {
+      "osm": "node/5475488799",
+      "name": "Golden India Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.855
+    },
+    {
+      "osm": "node/5475488800",
+      "name": "Zermatt Homes",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.858
+    },
+    {
+      "osm": "node/3156994659",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 3.861
+    },
+    {
+      "osm": "node/2409583081",
+      "name": "Zermatt Tourismus",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 3.863
+    },
+    {
+      "osm": "node/13306669016",
+      "name": "Zermatt GGB",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.872
+    },
+    {
+      "osm": "way/30952470",
+      "name": "Bahnhof Zermatt Gornergratbahn",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.877,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "node/9662684095",
+      "name": "Billetverkauf Gornergratbahn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.88
+    },
+    {
+      "osm": "node/5475129032",
+      "name": "Sunstar Hotel Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 3.895
+    },
+    {
+      "osm": "node/5478095811",
+      "name": "Pizza Delivery Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.907
+    },
+    {
+      "osm": "node/8378874677",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.92
+    },
+    {
+      "osm": "node/8378874678",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.923
+    },
+    {
+      "osm": "node/8378874679",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.929
+    },
+    {
+      "osm": "node/8378874680",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.934
+    },
+    {
+      "osm": "node/8378874681",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.94
+    },
+    {
+      "osm": "node/240052938",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.95
+    },
+    {
+      "osm": "node/11185678792",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.957
+    },
+    {
+      "osm": "way/664632079",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.96,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/959726639",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.966,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "node/846567863",
+      "name": "Edelweiss Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 3.967
+    },
+    {
+      "osm": "way/295849005",
+      "name": "Fleurs de Zermatt",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 3.994,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "node/11765104138",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 4.0
+    },
+    {
+      "osm": "way/295848973",
+      "name": "Zermatt Ski Chalets",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.045,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "node/5475447389",
+      "name": "Zermatt Matterhorn Brauerei",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.062
+    },
+    {
+      "osm": "node/11001552136",
+      "name": "Camping Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.067
+    },
+    {
+      "osm": "way/22330669",
+      "name": "Blauherd - Rothorn",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "cable_car"
+      },
+      "dist_to_config_center_km": 4.067
+    },
+    {
+      "osm": "node/11001562428",
+      "name": "Camping Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.069
+    },
+    {
+      "osm": "node/11001542882",
+      "name": "Camping Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.072
+    },
+    {
+      "osm": "node/10250294932",
+      "name": "Feuerwehr Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.192
+    },
+    {
+      "osm": "way/905730813",
+      "name": "Sunnegga Trail Zermatt",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.248
+    },
+    {
+      "osm": "node/1996663049",
+      "name": "Zermatt Spiss",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.312
+    },
+    {
+      "osm": "node/11471939569",
+      "name": "Fitness Viking Zermatt GmbH",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "leisure": "fitness_centre"
+      },
+      "dist_to_config_center_km": 4.319
+    },
+    {
+      "osm": "way/309606075",
+      "name": "Air Zermatt",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.385,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "node/9633228983",
+      "name": "Foto-Spot Rothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "dist_to_config_center_km": 4.511
+    },
+    {
+      "osm": "node/241069444",
+      "name": "Rothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.52
+    },
+    {
+      "osm": "node/3400307817",
+      "name": "Rothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 4.54
+    },
+    {
+      "osm": "way/217957562",
+      "name": "Rothorn VS",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 4.54
+    },
+    {
+      "osm": "node/8404662658",
+      "name": "Rothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 4.547
+    },
+    {
+      "osm": "way/1299855812",
+      "name": "Zermatterstrasse",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 6.62
+    },
+    {
+      "osm": "way/132624495",
+      "name": "Zermatterstrasse",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 6.812
+    },
+    {
+      "osm": "way/490140948",
+      "name": "Zermatterstrasse",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 7.285
+    },
+    {
+      "osm": "way/1193743416",
+      "name": "Zermatterstrasse",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 7.964
+    },
+    {
+      "osm": "way/1294080584",
+      "name": "Rothornhütte",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "alpine_hut"
+      },
+      "dist_to_config_center_km": 8.085,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/309606111",
+      "name": "Rothorngletscher",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "natural": "glacier"
+      },
+      "dist_to_config_center_km": 8.384,
+      "area_km2": 0.6223
+    },
+    {
+      "osm": "node/4040977895",
+      "name": "Zermatters",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 8.741
+    },
+    {
+      "osm": "node/12040719437",
+      "name": "Ober Rothornjoch",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "natural": "saddle"
+      },
+      "dist_to_config_center_km": 9.683
+    },
+    {
+      "osm": "node/3024753264",
+      "name": "Nordisches Skisprungzentrum Zermattertal",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "sport": "ski_jumping"
+      },
+      "dist_to_config_center_km": 10.424
+    },
+    {
+      "osm": "way/1044369309",
+      "name": "Stomping Grounds (summer snowpark)",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports",
+        "sport": "skiing"
+      },
+      "dist_to_config_center_km": 12.518,
+      "area_km2": 0.0658
+    },
+    {
+      "osm": "way/601135025",
+      "name": "Macugnaga - Belvedere",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 13.764,
+      "area_km2": 1.8992
+    },
+    {
+      "osm": "way/45409596",
+      "name": "Monterosa Ski",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 15.651,
+      "area_km2": 16.2079
+    },
+    {
+      "osm": "way/45408941",
+      "name": "Saas Fee",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 15.761,
+      "area_km2": 15.854
+    },
+    {
+      "osm": "way/399119993",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 3.15,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/567533791",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 3.441,
+      "area_km2": 0.0014
+    },
+    {
+      "osm": "way/1152716737",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 11.762,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/347337474",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 11.765,
+      "area_km2": 0.0009
+    },
+    {
+      "osm": "way/1424840229",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.056,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/1210713688",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.713,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/1016426058",
+      "name": "Plat de la Lée",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "nature_reserve"
+      },
+      "dist_to_config_center_km": 17.359,
+      "area_km2": 0.2711
+    },
+    {
+      "osm": "way/502850383",
+      "name": "Giardino botanico",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 17.368,
+      "area_km2": 0.0013
+    },
+    {
+      "osm": "node/13479390068",
+      "name": "Golden Spot",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 1.824
+    },
+    {
+      "osm": "way/295869258",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 2.077,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/1266342306",
+      "name": "Gletschergarten",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 2.321,
+      "area_km2": 0.003
+    },
+    {
+      "osm": "node/7810230085",
+      "name": "Eingang Gourmet Gorner Schlucht",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 2.655
+    },
+    {
+      "osm": "way/669950399",
+      "name": "Ricola Kräutergarten",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "garden",
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 2.738,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/207853909",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 2.881,
+      "area_km2": 0.0022
+    },
+    {
+      "osm": "node/9662684132",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 3.012
+    },
+    {
+      "osm": "way/153168146",
+      "name": "Triftbach Halle",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "multi"
+      },
+      "dist_to_config_center_km": 3.453,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/1382266820",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 3.669,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/1382266819",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 3.684,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/153168148",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 3.69,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/569358510",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 3.701,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/1382266818",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 3.702,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/569358511",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 3.712,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/1244518989",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "chess"
+      },
+      "dist_to_config_center_km": 3.715,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "way/569358512",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 3.723,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/310284041",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 3.735,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/440492081",
+      "name": "Alphubel",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 8.367,
+      "area_km2": 0.0137
+    },
+    {
+      "osm": "way/1101682251",
+      "name": "Skatepark",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "skateboard"
+      },
+      "dist_to_config_center_km": 8.511,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/1101682250",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 8.534,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/440558315",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 8.541,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/554362063",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 9.424,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/554362062",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 9.433,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/60132185",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 9.576,
+      "area_km2": 0.0016
+    },
+    {
+      "osm": "way/1083886937",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 9.894,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "node/6154138363",
+      "name": "Schalisee Skilift",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "trampoline;volleyball;swimming"
+      },
+      "dist_to_config_center_km": 9.917
+    },
+    {
+      "osm": "way/487190671",
+      "name": "Attermenzen",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 10.77,
+      "area_km2": 0.0188
+    },
+    {
+      "osm": "way/165329493",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 11.431,
+      "area_km2": 0.0064
+    },
+    {
+      "osm": "way/1450192103",
+      "name": "Alphubel",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "free_flying"
+      },
+      "dist_to_config_center_km": 11.46,
+      "area_km2": 0.0017
+    },
+    {
+      "osm": "way/166438457",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 11.64,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/166438459",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 11.67,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/166437988",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 11.753,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/347339048",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch"
+      },
+      "dist_to_config_center_km": 11.854,
+      "area_km2": 0.0064
+    },
+    {
+      "osm": "way/167032946",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 11.937,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/167035139",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 12.088,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/1315007816",
+      "name": "Allalinhorn",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "free_flying"
+      },
+      "dist_to_config_center_km": 12.124,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/167032947",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "ice_rink",
+        "piste:type": "ice_skate"
+      },
+      "dist_to_config_center_km": 12.129,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/167032948",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "padel"
+      },
+      "dist_to_config_center_km": 12.142,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/167032949",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "padel"
+      },
+      "dist_to_config_center_km": 12.155,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "node/4117454497",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+      },
+      "dist_to_config_center_km": 12.22
+    },
+    {
+      "osm": "way/1315007815",
+      "name": "Allalingrat",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "free_flying"
+      },
+      "dist_to_config_center_km": 12.632,
+      "area_km2": 0.0025
+    },
+    {
+      "osm": "node/6622272385",
+      "name": "Charles Kuonen Hängebrücke",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 12.8
+    },
+    {
+      "osm": "node/6300866377",
+      "name": "Zona Ex Pista Bob del Lago Blu",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 13.266
+    },
+    {
+      "osm": "node/11809029382",
+      "name": "Eisgrotte Allalin",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 13.508
+    },
+    {
+      "osm": "node/1414692874",
+      "name": "Eispavillon",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 13.564
+    },
+    {
+      "osm": "way/1198590871",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+      },
+      "dist_to_config_center_km": 14.264,
+      "area_km2": 0.0016
+    },
+    {
+      "osm": "node/11118916882",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "volleyball"
+      },
+      "dist_to_config_center_km": 14.289
+    },
+    {
+      "osm": "way/173348177",
+      "name": "Ruderi Bivacco Georges Carrel",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 14.464,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "node/7858338331",
+      "name": "Singlin - settore 6",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "climbing"
+      },
+      "dist_to_config_center_km": 15.01
+    },
+    {
+      "osm": "node/7840225117",
+      "name": "Singlin - Settore 1",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "climbing"
+      },
+      "dist_to_config_center_km": 15.022
+    },
+    {
+      "osm": "node/7860986566",
+      "name": "Singlin - settore 7",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "climbing"
+      },
+      "dist_to_config_center_km": 15.185
+    },
+    {
+      "osm": "node/3010470716",
+      "name": "Incisione P.E. 1972",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 15.311
+    },
+    {
+      "osm": "node/1363917572",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 15.649
+    },
+    {
+      "osm": "way/168502857",
+      "name": "Campo Tennis",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 16.515,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/168502859",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "bowls"
+      },
+      "dist_to_config_center_km": 16.59,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "node/7728561836",
+      "name": "rifugi monterosa campground",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 17.522
+    },
+    {
+      "osm": "way/968747341",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "skateboard"
+      },
+      "dist_to_config_center_km": 17.88,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/274456018",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "multi"
+      },
+      "dist_to_config_center_km": 17.89,
+      "area_km2": 0.0051
+    },
+    {
+      "osm": "way/274456019",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis;ice_skating"
+      },
+      "dist_to_config_center_km": 17.909,
+      "area_km2": 0.0036
+    },
+    {
+      "osm": "way/572712060",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 17.949,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/572712061",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 17.951,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/572712062",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "basketball"
+      },
+      "dist_to_config_center_km": 17.953,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "node/1414399158",
+      "name": "Feeblitz Rodelbobbahn",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 18.175
+    },
+    {
+      "osm": "way/992222245",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 18.211,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/560378463",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "multi"
+      },
+      "dist_to_config_center_km": 18.251,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/371577282",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 18.268,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/992222244",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "boules"
+      },
+      "dist_to_config_center_km": 18.355,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "node/4011231158",
+      "name": "Mont de Molar Ovest",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak",
+        "tourism": "viewpoint"
+      },
+      "dist_to_config_center_km": 15.506
+    },
+    {
+      "osm": "way/28542021",
+      "name": "Iglupiste",
+      "named_match": false,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 0.191
+    },
+    {
+      "osm": "node/3400293509",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "pylon"
+      },
+      "dist_to_config_center_km": 0.207
+    },
+    {
+      "osm": "node/3400293510",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "pylon"
+      },
+      "dist_to_config_center_km": 0.207
+    },
+    {
+      "osm": "way/101847662",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 0.256,
+      "area_km2": 0.0343
+    },
+    {
+      "osm": "node/3400293508",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "pylon"
+      },
+      "dist_to_config_center_km": 0.27
+    },
+    {
+      "osm": "node/9274620431",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "pylon"
+      },
+      "dist_to_config_center_km": 0.281
+    },
+    {
+      "osm": "node/3400293511",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "pylon"
+      },
+      "dist_to_config_center_km": 0.304
+    },
+    {
+      "osm": "way/28542022",
+      "name": "Rotenboden",
+      "named_match": false,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 0.305
+    },
+    {
+      "osm": "node/342765056",
+      "name": "Igludorf",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 0.314
+    },
+    {
+      "osm": "node/3400293507",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "pylon"
+      },
+      "dist_to_config_center_km": 0.317
+    },
+    {
+      "osm": "way/22338265",
+      "name": "Gifthittli",
+      "named_match": false,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "chair_lift"
+      },
+      "dist_to_config_center_km": 0.387
+    },
+    {
+      "osm": "way/30833432",
+      "name": "Gifthittli",
+      "named_match": false,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 0.39
+    },
+    {
+      "osm": "way/1448193236",
+      "name": "",
+      "named_match": false,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "sled"
+      },
+      "dist_to_config_center_km": 0.408
+    },
+    {
+      "osm": "node/3400293512",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "pylon"
+      },
+      "dist_to_config_center_km": 0.436
+    }
+  ],
+  "named_nodes": [
+    {
+      "osm": "node/80387968",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "town"
+      },
+      "dist_to_config_center_km": 3.566
+    },
+    {
+      "osm": "node/240052938",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.95
+    },
+    {
+      "osm": "node/240062008",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "place": "locality"
+      },
+      "dist_to_config_center_km": 1.945
+    },
+    {
+      "osm": "node/240240207",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 3.05
+    },
+    {
+      "osm": "node/240287130",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 3.049
+    },
+    {
+      "osm": "node/240999126",
+      "name": "Zermatt GGB",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.85
+    },
+    {
+      "osm": "node/241069444",
+      "name": "Rothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.52
+    },
+    {
+      "osm": "node/313518319",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.881
+    },
+    {
+      "osm": "node/364956853",
+      "name": "Zinalrothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak"
+      },
+      "dist_to_config_center_km": 9.919
+    },
+    {
+      "osm": "node/393192181",
+      "name": "Oberrothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "natural": "peak"
+      },
+      "dist_to_config_center_km": 5.84
+    },
+    {
+      "osm": "node/434306780",
+      "name": "Gornergrat",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "dist_to_config_center_km": 2.048
+    },
+    {
+      "osm": "node/846567863",
+      "name": "Edelweiss Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 3.967
+    },
+    {
+      "osm": "node/1996663049",
+      "name": "Zermatt Spiss",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.312
+    },
+    {
+      "osm": "node/2409583081",
+      "name": "Zermatt Tourismus",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 3.863
+    },
+    {
+      "osm": "node/2432262820",
+      "name": "Bellerive Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 3.288
+    },
+    {
+      "osm": "node/2432262821",
+      "name": "Old Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.335
+    },
+    {
+      "osm": "node/2562063996",
+      "name": "Snowboat - Zermatt Yacht Club",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.571
+    },
+    {
+      "osm": "node/3024753264",
+      "name": "Nordisches Skisprungzentrum Zermattertal",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "sport": "ski_jumping"
+      },
+      "dist_to_config_center_km": 10.424
+    },
+    {
+      "osm": "node/3156994659",
+      "name": "Zermatt",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "tourism": "information"
+      },
+      "dist_to_config_center_km": 3.861
+    },
+    {
+      "osm": "node/3400307817",
+      "name": "Rothorn",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 4.54
+    }
+  ]
+}

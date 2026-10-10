@@ -1,0 +1,2429 @@
+{
+  "candidates": [
+    {
+      "osm": "way/1023308077",
+      "name": "Alta Ski Area",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 1.448,
+      "area_km2": 12.1745
+    },
+    {
+      "osm": "way/1023308078",
+      "name": "Snowbird",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 1.859,
+      "area_km2": 12.2185
+    },
+    {
+      "osm": "node/356676259",
+      "name": "Snowbird Recreation Area",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 2.125
+    },
+    {
+      "osm": "node/2632729163",
+      "name": "Alta Ski Area",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 0.924
+    },
+    {
+      "osm": "node/2632757226",
+      "name": "Snowbird Ski & Summer Resort",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 1.43
+    },
+    {
+      "osm": "node/150937306",
+      "name": "Snowbird",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "place": "locality"
+      },
+      "dist_to_config_center_km": 1.466
+    },
+    {
+      "osm": "way/776844940",
+      "name": "Black Jack Snowbird Return",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 0.639
+    },
+    {
+      "osm": "way/256044499",
+      "name": "Alta by-Pass Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.956
+    },
+    {
+      "osm": "node/2632754008",
+      "name": "Alta Lodge Tow",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.974
+    },
+    {
+      "osm": "way/1232053877",
+      "name": "Alta Entry Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.976
+    },
+    {
+      "osm": "way/256044498",
+      "name": "Alta by-Pass Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.985
+    },
+    {
+      "osm": "node/356677148",
+      "name": "Alta City Cemetery",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.996
+    },
+    {
+      "osm": "way/10126787",
+      "name": "Alta Entry Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.025
+    },
+    {
+      "osm": "way/1420298045",
+      "name": "Snowbird Ski Resort Heliport",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.026,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "way/1343299970",
+      "name": "Snowbird Ski Resort Heliport",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.031,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "way/10140584",
+      "name": "Alta by-Pass Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.037
+    },
+    {
+      "osm": "way/257809595",
+      "name": "Alta Lodge Tow",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "rope_tow"
+      },
+      "dist_to_config_center_km": 1.048
+    },
+    {
+      "osm": "way/206198100",
+      "name": "Alta by-Pass Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.106
+    },
+    {
+      "osm": "node/8886460788",
+      "name": "Alta Lodge (Up)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.154
+    },
+    {
+      "osm": "way/967124132",
+      "name": "Snowbird Coaster",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "aerialway": "zip_line"
+      },
+      "dist_to_config_center_km": 1.163
+    },
+    {
+      "osm": "node/8573395649",
+      "name": "Alta Lodge (Down)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.168
+    },
+    {
+      "osm": "node/150934247",
+      "name": "Alta",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "village"
+      },
+      "dist_to_config_center_km": 1.224
+    },
+    {
+      "osm": "way/206198098",
+      "name": "Alta by-Pass Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.294
+    },
+    {
+      "osm": "way/730037295",
+      "name": "Alta Community Center",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.34,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/6838953518",
+      "name": "Alta Reading Room",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.342
+    },
+    {
+      "osm": "way/256023700",
+      "name": "Snowbird Center",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.457,
+      "area_km2": 0.0027
+    },
+    {
+      "osm": "node/8551588711",
+      "name": "Snowbird Center",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.499
+    },
+    {
+      "osm": "way/328593661",
+      "name": "Snowbird Entry #1 Road",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.54,
+      "area_km2": 0.0038
+    },
+    {
+      "osm": "node/9171753460",
+      "name": "Alta Ski Shop",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.541
+    },
+    {
+      "osm": "node/3354230791",
+      "name": "Alta Java",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.553
+    },
+    {
+      "osm": "way/152251469",
+      "name": "The Lodge at Snowbird",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 1.616,
+      "area_km2": 0.0025
+    },
+    {
+      "osm": "way/256025695",
+      "name": "Snowbird / Alta Access",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.644,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "way/973195471",
+      "name": "Alta Toll Booth",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.677,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "way/206197544",
+      "name": "Inn at Snowbird",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "tourism": "hotel"
+      },
+      "dist_to_config_center_km": 1.719,
+      "area_km2": 0.0009
+    },
+    {
+      "osm": "way/10126653",
+      "name": "Snowbird Access 2 Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.767
+    },
+    {
+      "osm": "way/1232056086",
+      "name": "Snowbird Entry #1 Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.967
+    },
+    {
+      "osm": "way/684690166",
+      "name": "Snowbird Entry #2 Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.969
+    },
+    {
+      "osm": "way/1304887947",
+      "name": "Snowbird Observation Point",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.043,
+      "area_km2": 0.0
+    },
+    {
+      "osm": "way/1232056089",
+      "name": "Snowbird Entry #1 Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.338
+    },
+    {
+      "osm": "way/992351113",
+      "name": "White Pine-Snowbird Link Trail",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.413
+    },
+    {
+      "osm": "way/10137768",
+      "name": "Snowbird Entry #1 Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.477
+    },
+    {
+      "osm": "way/1396735904",
+      "name": "White Pine-Snowbird Link Trail",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 2.592
+    },
+    {
+      "osm": "way/445128092",
+      "name": "White Pine-Snowbird Link Trail",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.007
+    },
+    {
+      "osm": "way/776844957",
+      "name": "Altar Bowl",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 3.135
+    },
+    {
+      "osm": "way/1189739481",
+      "name": "Alta-Brighton Trail",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 3.356
+    },
+    {
+      "osm": "way/945637603",
+      "name": "Alta Tunnel",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.005,
+      "area_km2": 0.0065
+    },
+    {
+      "osm": "way/195017809",
+      "name": "Alta-Brighton Trail",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.159
+    },
+    {
+      "osm": "way/1180252499",
+      "name": "Alta-Brighton Trail",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.297
+    },
+    {
+      "osm": "way/195017807",
+      "name": "Alta-Brighton Trail",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 4.711
+    },
+    {
+      "osm": "way/965315552",
+      "name": "Alta Dry Fork",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.106
+    },
+    {
+      "osm": "way/618391943",
+      "name": "Altabird",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {
+        "piste:type": "downhill"
+      },
+      "dist_to_config_center_km": 5.107
+    },
+    {
+      "osm": "way/10203582",
+      "name": "Alta Dry Fork Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.632
+    },
+    {
+      "osm": "way/10210924",
+      "name": "Alta Dry Fork Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 5.957
+    },
+    {
+      "osm": "way/1412628220",
+      "name": "Alta Dry Fork",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 6.072
+    },
+    {
+      "osm": "way/1412628221",
+      "name": "Alta Dry Fork",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 6.075
+    },
+    {
+      "osm": "way/10130526",
+      "name": "Alta Approach Road",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 12.349
+    },
+    {
+      "osm": "way/1338666681",
+      "name": "Alta Ridge Circle",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 12.926
+    },
+    {
+      "osm": "way/37858083",
+      "name": "Alta Ridge Circle",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 12.99
+    },
+    {
+      "osm": "way/10148692",
+      "name": "Altawood Lane",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 13.784
+    },
+    {
+      "osm": "way/10146128",
+      "name": "Alta Hills Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 13.824
+    },
+    {
+      "osm": "node/150947933",
+      "name": "Altawood",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "neighbourhood"
+      },
+      "dist_to_config_center_km": 13.842
+    },
+    {
+      "osm": "way/1037243014",
+      "name": "Alta Hills",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {
+        "place": "neighbourhood"
+      },
+      "dist_to_config_center_km": 13.887,
+      "area_km2": 0.1178
+    },
+    {
+      "osm": "way/10136985",
+      "name": "Altawood Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 13.922
+    },
+    {
+      "osm": "way/10132471",
+      "name": "Alta Hills Circle",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 13.956
+    },
+    {
+      "osm": "node/150958831",
+      "name": "Altawood Subdivision Number 3",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "neighbourhood"
+      },
+      "dist_to_config_center_km": 13.96
+    },
+    {
+      "osm": "way/243508725",
+      "name": "Snowbird Ski & Summer Resort",
+      "named_match": true,
+      "geom_type": "Polygon",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 15.057,
+      "area_km2": 0.0029
+    },
+    {
+      "osm": "way/1011613442",
+      "name": "Altamont Drive",
+      "named_match": true,
+      "geom_type": "LineString",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 15.094
+    },
+    {
+      "osm": "way/682230006",
+      "name": "Solitude Mountain Resort",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports",
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 4.724,
+      "area_km2": 6.3695
+    },
+    {
+      "osm": "way/182573699",
+      "name": "Brighton Resort",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 5.177,
+      "area_km2": 0.0012
+    },
+    {
+      "osm": "way/682230007",
+      "name": "Brighton Resort",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports",
+        "leisure": "sports_centre;resort"
+      },
+      "dist_to_config_center_km": 5.443,
+      "area_km2": 3.5418
+    },
+    {
+      "osm": "way/1341930155",
+      "name": "Tude Dude's Terrain Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 5.499,
+      "area_km2": 0.0035
+    },
+    {
+      "osm": "node/12059589230",
+      "name": "Solitude Mountain Resort",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 0,
+      "tags": {
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 6.08
+    },
+    {
+      "osm": "way/918681867",
+      "name": "Park City Mountain Resort",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports",
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 10.926,
+      "area_km2": 39.123
+    },
+    {
+      "osm": "way/682241434",
+      "name": "Deer Valley Resort",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports",
+        "leisure": "resort"
+      },
+      "dist_to_config_center_km": 14.424,
+      "area_km2": 28.589
+    },
+    {
+      "osm": "way/1243205363",
+      "name": "Soldier Hollow",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 0,
+      "tags": {
+        "landuse": "winter_sports"
+      },
+      "dist_to_config_center_km": 16.532,
+      "area_km2": 1.1205
+    },
+    {
+      "osm": "way/987537555",
+      "name": "Camp Cloud Rim",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area",
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 8.701,
+      "area_km2": 0.3883
+    },
+    {
+      "osm": "way/987542324",
+      "name": "Cloud Rim Camp Safety Exclusion Zone",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area"
+      },
+      "dist_to_config_center_km": 8.757,
+      "area_km2": 0.1548
+    },
+    {
+      "osm": "node/356672817",
+      "name": "Glacio Park",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 12.075
+    },
+    {
+      "osm": "way/1558163650",
+      "name": "Ferguson Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.184,
+      "area_km2": 0.0318
+    },
+    {
+      "osm": "way/1484307553",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.199,
+      "area_km2": 0.0081
+    },
+    {
+      "osm": "way/471879890",
+      "name": "Golden Hills Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.384,
+      "area_km2": 0.023
+    },
+    {
+      "osm": "way/729179728",
+      "name": "Day Care childrens park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.645,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/465673546",
+      "name": "Rotary Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.908,
+      "area_km2": 0.0103
+    },
+    {
+      "osm": "way/357044459",
+      "name": "Library Field",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 13.992,
+      "area_km2": 0.0075
+    },
+    {
+      "osm": "way/1215882548",
+      "name": "Old Town Neighborhood Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.04,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/452781435",
+      "name": "Miners Plaza",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.068,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/357044453",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.101,
+      "area_km2": 0.0017
+    },
+    {
+      "osm": "way/1215834068",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.115,
+      "area_km2": 0.0016
+    },
+    {
+      "osm": "way/452784750",
+      "name": "Tidy Town Award Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.14,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/425206784",
+      "name": "Quail Hollow Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.169,
+      "area_km2": 0.1918
+    },
+    {
+      "osm": "way/465671353",
+      "name": "City Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.193,
+      "area_km2": 0.05
+    },
+    {
+      "osm": "node/6190950113",
+      "name": "Shoe Tree Park",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.236
+    },
+    {
+      "osm": "way/465672433",
+      "name": "Creekside Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.524,
+      "area_km2": 0.0243
+    },
+    {
+      "osm": "way/78766150",
+      "name": "Bywater Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.607,
+      "area_km2": 0.0437
+    },
+    {
+      "osm": "way/486666342",
+      "name": "Matt Knoop Memorial Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 14.857,
+      "area_km2": 0.0757
+    },
+    {
+      "osm": "node/356680264",
+      "name": "Wasatch Mountain State Park",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.298
+    },
+    {
+      "osm": "way/1213661092",
+      "name": "Deer Valley Meadow",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.32,
+      "area_km2": 0.1276
+    },
+    {
+      "osm": "way/33418119",
+      "name": "Lambert Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "boundary": "protected_area"
+      },
+      "dist_to_config_center_km": 15.337,
+      "area_km2": 1.0164
+    },
+    {
+      "osm": "way/465675446",
+      "name": "Racquet Club Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.507,
+      "area_km2": 0.0306
+    },
+    {
+      "osm": "way/97601985",
+      "name": "Willow Creek Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.72,
+      "area_km2": 0.0247
+    },
+    {
+      "osm": "way/491027415",
+      "name": "Centennial Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 15.947,
+      "area_km2": 0.0086
+    },
+    {
+      "osm": "way/1125480278",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.025,
+      "area_km2": 0.0073
+    },
+    {
+      "osm": "way/852523599",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.142,
+      "area_km2": 0.0079
+    },
+    {
+      "osm": "way/553841493",
+      "name": "Soldier Hollow Resort",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.267,
+      "area_km2": 0.0262
+    },
+    {
+      "osm": "way/465670360",
+      "name": "Prospector Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.38,
+      "area_km2": 0.0083
+    },
+    {
+      "osm": "way/491638889",
+      "name": "Fortuna Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.663,
+      "area_km2": 0.0061
+    },
+    {
+      "osm": "way/591882451",
+      "name": "Moyle Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 16.728,
+      "area_km2": 0.0217
+    },
+    {
+      "osm": "way/224686322",
+      "name": "Olympus Hills Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 17.52,
+      "area_km2": 0.1271
+    },
+    {
+      "osm": "way/546865300",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 17.953,
+      "area_km2": 0.0065
+    },
+    {
+      "osm": "way/503503656",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 17.976,
+      "area_km2": 0.0194
+    },
+    {
+      "osm": "way/503677593",
+      "name": "Upper District Mill Creek Park",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 18.071,
+      "area_km2": 0.0118
+    },
+    {
+      "osm": "way/1072811794",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 1.06,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/1562614874",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 1.772,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/1562614873",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 1.787,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "node/2965465157",
+      "name": "Chad's Gap",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "sport": "ski_jumping",
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 2.39
+    },
+    {
+      "osm": "node/9029359709",
+      "name": "Brighton LDS Girls Camp",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.804
+    },
+    {
+      "osm": "way/1330017409",
+      "name": "Group Site D",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 4.942,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/159684850",
+      "name": "Tanners Flat Campground",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 5.064,
+      "area_km2": 0.0874
+    },
+    {
+      "osm": "way/1276238012",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 5.101,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/611032701",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 5.219,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/967124168",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 5.623,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/1329985827",
+      "name": "Group Site 24",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 5.657,
+      "area_km2": 0.0008
+    },
+    {
+      "osm": "way/159613719",
+      "name": "Redman Campground",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 5.721,
+      "area_km2": 0.3148
+    },
+    {
+      "osm": "node/7732366066",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 5.932
+    },
+    {
+      "osm": "node/7732417529",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 5.972
+    },
+    {
+      "osm": "node/2632717877",
+      "name": "Solitude Mountain Resort",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre",
+        "sport": "skiing"
+      },
+      "dist_to_config_center_km": 5.979
+    },
+    {
+      "osm": "node/14176191896",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.027
+    },
+    {
+      "osm": "node/7732418305",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.044
+    },
+    {
+      "osm": "node/7732399710",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.183
+    },
+    {
+      "osm": "node/7741742232",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.212
+    },
+    {
+      "osm": "node/7732383697",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.255
+    },
+    {
+      "osm": "node/7741753183",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.331
+    },
+    {
+      "osm": "way/159614555",
+      "name": "Spruces Campground",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.711,
+      "area_km2": 0.3565
+    },
+    {
+      "osm": "way/992596398",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "baseball"
+      },
+      "dist_to_config_center_km": 6.73,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/993540212",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "baseball"
+      },
+      "dist_to_config_center_km": 6.753,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/834901935",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 6.757,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/834901936",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 6.786,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/992596430",
+      "name": "GRP6",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.789,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/992596400",
+      "name": "GRP1",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.799,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/992596429",
+      "name": "GRP5",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 6.802,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/834901934",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 6.831,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/14176255120",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 7.17
+    },
+    {
+      "osm": "way/966549312",
+      "name": "Ponderosa Grove Group Campsite",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 7.241,
+      "area_km2": 0.0004
+    },
+    {
+      "osm": "way/224913151",
+      "name": "Jordan Pines Campground",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 7.244,
+      "area_km2": 0.0786
+    },
+    {
+      "osm": "way/1290148002",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 7.273,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "node/5883086226",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "firepit",
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 7.337
+    },
+    {
+      "osm": "node/5883086227",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "firepit",
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 7.46
+    },
+    {
+      "osm": "node/5883086228",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "firepit",
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 7.512
+    },
+    {
+      "osm": "way/1481645215",
+      "name": "Handshaker",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 9.927,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/969596520",
+      "name": "Handshaker",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 9.959,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/1481645216",
+      "name": "Handshaker",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 9.959,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/969596519",
+      "name": "Stonemason",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 10.044,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/1552703034",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "softball"
+      },
+      "dist_to_config_center_km": 10.073,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/969596518",
+      "name": "Sandwagon",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 10.105,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/1329743852",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 10.192,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/966544213",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+      },
+      "dist_to_config_center_km": 10.699,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "node/2354339859",
+      "name": "Lower Bells Canyon Waterfall",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 11.231
+    },
+    {
+      "osm": "way/1117301136",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "archery"
+      },
+      "dist_to_config_center_km": 11.357,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/1117301137",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "archery"
+      },
+      "dist_to_config_center_km": 11.367,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/1117301138",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "archery"
+      },
+      "dist_to_config_center_km": 11.373,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/1117301139",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "archery"
+      },
+      "dist_to_config_center_km": 11.427,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "node/12067429606",
+      "name": "Group Site (207)",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 12.057
+    },
+    {
+      "osm": "way/572693397",
+      "name": "Little Deer Creek Campground",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 12.167,
+      "area_km2": 0.0477
+    },
+    {
+      "osm": "node/9080784239",
+      "name": "Harvest Group Site",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 12.358
+    },
+    {
+      "osm": "node/5897010186",
+      "name": "Silver King Mill",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "attraction"
+      },
+      "dist_to_config_center_km": 12.359
+    },
+    {
+      "osm": "node/7771595707",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 12.587
+    },
+    {
+      "osm": "node/11092574580",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 12.687
+    },
+    {
+      "osm": "node/7771587707",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 12.837
+    },
+    {
+      "osm": "way/1446799368",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 12.882,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "node/7771585804",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 12.937
+    },
+    {
+      "osm": "way/1425279144",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "pickleball"
+      },
+      "dist_to_config_center_km": 12.995,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/1288158294",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.011,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/1288158286",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.026,
+      "area_km2": 0.0007
+    },
+    {
+      "osm": "way/1302058938",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.029,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "node/7771595706",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 13.055
+    },
+    {
+      "osm": "way/1446799343",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "basketball"
+      },
+      "dist_to_config_center_km": 13.112,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/1059732544",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.173,
+      "area_km2": 0.0005
+    },
+    {
+      "osm": "way/1302058942",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "pickleball"
+      },
+      "dist_to_config_center_km": 13.209,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/434016563",
+      "name": "Oak Hollow Campground",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 13.21,
+      "area_km2": 0.0481
+    },
+    {
+      "osm": "way/1302058943",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "basketball"
+      },
+      "dist_to_config_center_km": 13.235,
+      "area_km2": 0.0002
+    },
+    {
+      "osm": "way/1383909567",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "pickleball"
+      },
+      "dist_to_config_center_km": 13.236,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "node/7771595705",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 13.279
+    },
+    {
+      "osm": "way/434016566",
+      "name": "Mahogony Campground",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 13.288,
+      "area_km2": 0.0286
+    },
+    {
+      "osm": "way/1302058944",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.306,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/1425279611",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "pickleball"
+      },
+      "dist_to_config_center_km": 13.352,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/1425279612",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "pickleball"
+      },
+      "dist_to_config_center_km": 13.356,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/261399601",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.374,
+      "area_km2": 0.0006
+    },
+    {
+      "osm": "way/1425279810",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.422,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/1425278943",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "pickleball"
+      },
+      "dist_to_config_center_km": 13.55,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/1425278944",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "pickleball"
+      },
+      "dist_to_config_center_km": 13.55,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/1425278942",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "pickleball"
+      },
+      "dist_to_config_center_km": 13.552,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/1425278994",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "pickleball"
+      },
+      "dist_to_config_center_km": 13.58,
+      "area_km2": 0.0001
+    },
+    {
+      "osm": "way/434016569",
+      "name": "Cottonwood Campground",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 13.605,
+      "area_km2": 0.0644
+    },
+    {
+      "osm": "node/2632777263",
+      "name": "Canyons Village",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 13.616
+    },
+    {
+      "osm": "node/7771595700",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "tourism": "camp_site"
+      },
+      "dist_to_config_center_km": 13.617
+    },
+    {
+      "osm": "way/251098924",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.638,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/256077858",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.687,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/256077864",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.701,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/256870054",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.703,
+      "area_km2": 0.0003
+    },
+    {
+      "osm": "way/256870052",
+      "name": "",
+      "named_match": false,
+      "geom_type": "Polygon",
+      "prio": 2,
+      "tags": {
+        "leisure": "pitch",
+        "sport": "tennis"
+      },
+      "dist_to_config_center_km": 13.707,
+      "area_km2": 0.0009
+    }
+  ],
+  "named_nodes": [
+    {
+      "osm": "node/150934247",
+      "name": "Alta",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "village"
+      },
+      "dist_to_config_center_km": 1.224
+    },
+    {
+      "osm": "node/150937306",
+      "name": "Snowbird",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 3,
+      "tags": {
+        "place": "locality"
+      },
+      "dist_to_config_center_km": 1.466
+    },
+    {
+      "osm": "node/150947933",
+      "name": "Altawood",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "neighbourhood"
+      },
+      "dist_to_config_center_km": 13.842
+    },
+    {
+      "osm": "node/150958831",
+      "name": "Altawood Subdivision Number 3",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "place": "neighbourhood"
+      },
+      "dist_to_config_center_km": 13.96
+    },
+    {
+      "osm": "node/356676259",
+      "name": "Snowbird Recreation Area",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 1,
+      "tags": {
+        "leisure": "park"
+      },
+      "dist_to_config_center_km": 2.125
+    },
+    {
+      "osm": "node/356677148",
+      "name": "Alta City Cemetery",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 0.996
+    },
+    {
+      "osm": "node/2632729163",
+      "name": "Alta Ski Area",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 0.924
+    },
+    {
+      "osm": "node/2632754008",
+      "name": "Alta Lodge Tow",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {
+        "aerialway": "station"
+      },
+      "dist_to_config_center_km": 0.974
+    },
+    {
+      "osm": "node/2632757226",
+      "name": "Snowbird Ski & Summer Resort",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 2,
+      "tags": {
+        "leisure": "sports_centre"
+      },
+      "dist_to_config_center_km": 1.43
+    },
+    {
+      "osm": "node/3354230791",
+      "name": "Alta Java",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.553
+    },
+    {
+      "osm": "node/6838953518",
+      "name": "Alta Reading Room",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.342
+    },
+    {
+      "osm": "node/8551588711",
+      "name": "Snowbird Center",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.499
+    },
+    {
+      "osm": "node/8573395649",
+      "name": "Alta Lodge (Down)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.168
+    },
+    {
+      "osm": "node/8886460788",
+      "name": "Alta Lodge (Up)",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.154
+    },
+    {
+      "osm": "node/9171753460",
+      "name": "Alta Ski Shop",
+      "named_match": true,
+      "geom_type": "Point",
+      "prio": 9,
+      "tags": {},
+      "dist_to_config_center_km": 1.541
+    }
+  ]
+}

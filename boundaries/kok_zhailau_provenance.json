@@ -1,0 +1,51 @@
+{
+  "site": "kok_zhailau",
+  "queried_at": "2026-10-10T14:06:01+00:00",
+  "osm_query": "[out:json][timeout:150];\n(\n  nwr[\"name\"~\"Ко[кк].?Жайл|Көк.?Жайл|Kok.?Zhail|Kok.?Jail|Kok.?Zhayl|Kokzhailau\",i](42.98500,76.88700,43.22500,77.22300);\n  nwr[\"name:ru\"~\"Ко[кк].?Жайл|Көк.?Жайл|Kok.?Zhail|Kok.?Jail|Kok.?Zhayl|Kokzhailau\",i](42.98500,76.88700,43.22500,77.22300);\n  nwr[\"name:en\"~\"Ко[кк].?Жайл|Көк.?Жайл|Kok.?Zhail|Kok.?Jail|Kok.?Zhayl|Kokzhailau\",i](42.98500,76.88700,43.22500,77.22300);\n  nwr[\"name:kk\"~\"Ко[кк].?Жайл|Көк.?Жайл|Kok.?Zhail|Kok.?Jail|Kok.?Zhayl|Kokzhailau\",i](42.98500,76.88700,43.22500,77.22300);\n  nwr[\"landuse\"=\"winter_sports\"](42.98500,76.88700,43.22500,77.22300);\n  nwr[\"aerialway\"](42.98500,76.88700,43.22500,77.22300);\n  nwr[\"piste:type\"](42.98500,76.88700,43.22500,77.22300);\n  nwr[\"tourism\"~\"resort|attraction|viewpoint|alpine_hut|hotel|camp_site|theme_park\"](42.98500,76.88700,43.22500,77.22300);\n  nwr[\"leisure\"~\"sports_centre|ice_rink|stadium|pitch|resort|park|nature_reserve\"](42.98500,76.88700,43.22500,77.22300);\n  nwr[\"boundary\"~\"protected_area|national_park\"](42.98500,76.88700,43.22500,77.22300);\n);\nout geom tags;",
+  "bbox_s_w_n_e": [
+    42.985,
+    76.887,
+    43.224999999999994,
+    77.22300000000001
+  ],
+  "config_center_lonlat": [
+    77.055,
+    43.105
+  ],
+  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+  "n_elements": 641,
+  "n_candidates": 624,
+  "footprint_note": "DERIVED from mapped aerialway/piste/tourism/leisure features within 3.5 km of the configured centre, buffered 250 m then eroded 200 m; NOT an official boundary",
+  "footprint_area_km2": 0.6151,
+  "n_footprint_features": 54,
+  "status": "FUNCTIONAL_FOOTPRINT_ONLY",
+  "nominatim_fallback": [
+    {
+      "osm": "way/1236186565",
+      "display_name": "Көк Жайлау, Медеу ауданы, Алматы, Қазақстан",
+      "category": "natural",
+      "type": "valley",
+      "geom_type": "LineString",
+      "lat": "43.1398022",
+      "lon": "76.9960365"
+    },
+    {
+      "osm": "node/13131338317",
+      "display_name": "Көк Жайлау, 3 ағайындыға жазғы соқпақ, Медеу ауданы, Алматы, Қазақстан",
+      "category": "tourism",
+      "type": "attraction",
+      "geom_type": "Point",
+      "lat": "43.1424400",
+      "lon": "77.0040524"
+    },
+    {
+      "osm": "node/6638544392",
+      "display_name": "Көк Жайлау, 3 ағайындыға жазғы соқпақ, Медеу ауданы, Алматы, Қазақстан",
+      "category": "tourism",
+      "type": "camp_site",
+      "geom_type": "Point",
+      "lat": "43.1428204",
+      "lon": "77.0039425"
+    }
+  ]
+}

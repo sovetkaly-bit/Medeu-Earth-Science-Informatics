@@ -1,0 +1,57 @@
+{
+  "site": "kok_zhailau_osm",
+  "queried_at": "2026-10-10T14:06:29+00:00",
+  "osm_query": "[out:json][timeout:150];\n(\n  nwr[\"name\"~\"Ко[кк].?Жайл|Көк.?Жайл|Kok.?Zhail|Kok.?Jail|Kok.?Zhayl|Kokzhailau\",i](43.02280,76.83590,43.26280,77.17190);\n  nwr[\"name:ru\"~\"Ко[кк].?Жайл|Көк.?Жайл|Kok.?Zhail|Kok.?Jail|Kok.?Zhayl|Kokzhailau\",i](43.02280,76.83590,43.26280,77.17190);\n  nwr[\"name:en\"~\"Ко[кк].?Жайл|Көк.?Жайл|Kok.?Zhail|Kok.?Jail|Kok.?Zhayl|Kokzhailau\",i](43.02280,76.83590,43.26280,77.17190);\n  nwr[\"name:kk\"~\"Ко[кк].?Жайл|Көк.?Жайл|Kok.?Zhail|Kok.?Jail|Kok.?Zhayl|Kokzhailau\",i](43.02280,76.83590,43.26280,77.17190);\n  nwr[\"landuse\"=\"winter_sports\"](43.02280,76.83590,43.26280,77.17190);\n  nwr[\"aerialway\"](43.02280,76.83590,43.26280,77.17190);\n  nwr[\"piste:type\"](43.02280,76.83590,43.26280,77.17190);\n  nwr[\"tourism\"~\"resort|attraction|viewpoint|alpine_hut|hotel|camp_site|theme_park\"](43.02280,76.83590,43.26280,77.17190);\n  nwr[\"leisure\"~\"sports_centre|ice_rink|stadium|pitch|resort|park|nature_reserve\"](43.02280,76.83590,43.26280,77.17190);\n  nwr[\"boundary\"~\"protected_area|national_park\"](43.02280,76.83590,43.26280,77.17190);\n);\nout geom tags;",
+  "bbox_s_w_n_e": [
+    43.022800000000004,
+    76.8359,
+    43.2628,
+    77.17190000000001
+  ],
+  "config_center_lonlat": [
+    77.0039,
+    43.1428
+  ],
+  "overpass_errors": [
+    "round0 https://overpass-api.de/api/interpreter: HTTPError('504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter')",
+    "round0 https://overpass.kumi.systems/api/interpreter: HTTPError('500 Server Error: Internal Server Error for url: https://overpass.kumi.systems/api/interpreter')",
+    "round0 https://maps.mail.ru/osm/tools/overpass/api/interpreter: HTTPError('504 Server Error: Gateway Time-out for url: https://maps.mail.ru/osm/tools/overpass/api/interpreter')",
+    "round1 https://overpass-api.de/api/interpreter: HTTPError('504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter')"
+  ],
+  "overpass_endpoint": "https://overpass.kumi.systems/api/interpreter",
+  "n_elements": 1550,
+  "n_candidates": 1524,
+  "footprint_note": "DERIVED from mapped aerialway/piste/tourism/leisure features within 3.5 km of the configured centre, buffered 250 m then eroded 200 m; NOT an official boundary",
+  "footprint_area_km2": 0.3143,
+  "n_footprint_features": 26,
+  "status": "FUNCTIONAL_FOOTPRINT_ONLY",
+  "nominatim_fallback": [
+    {
+      "osm": "way/1236186565",
+      "display_name": "Көк Жайлау, Медеу ауданы, Алматы, Қазақстан",
+      "category": "natural",
+      "type": "valley",
+      "geom_type": "LineString",
+      "lat": "43.1398022",
+      "lon": "76.9960365"
+    },
+    {
+      "osm": "node/13131338317",
+      "display_name": "Көк Жайлау, 3 ағайындыға жазғы соқпақ, Медеу ауданы, Алматы, Қазақстан",
+      "category": "tourism",
+      "type": "attraction",
+      "geom_type": "Point",
+      "lat": "43.1424400",
+      "lon": "77.0040524"
+    },
+    {
+      "osm": "node/6638544392",
+      "display_name": "Көк Жайлау, 3 ағайындыға жазғы соқпақ, Медеу ауданы, Алматы, Қазақстан",
+      "category": "tourism",
+      "type": "camp_site",
+      "geom_type": "Point",
+      "lat": "43.1428204",
+      "lon": "77.0039425"
+    }
+  ]
+}

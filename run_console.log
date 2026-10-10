@@ -1,0 +1,90 @@
+[all] planetary-computer: CATALOG_OK https://planetarycomputer.microsoft.com/api/stac/v1
+[all] KazEOSat-1/2: MANUAL_LICENSE_REQUIRED no public anonymous catalogue of KazEOSat scenes found; official request draft in KAZEOSAT_REQUEST_RU.md
+[medeu] boundary: OSM_POLYGON_NAMED_MATCH candidates=1432, footprint_km2=9.585
+[medeu] cop-dem-glo-30: RASTER_READY 123120 valid px from 2/2 tiles
+[medeu] nasadem: RASTER_READY 123120 valid px from 2/2 tiles
+[medeu] alos-dem: RASTER_READY 123120 valid px from 2/2 tiles
+[medeu] FABDEM: RASTER_READY 100328 px []
+[medeu] sentinel-2-l2a: FOUND 2024-06-01/2026-09-30
+[medeu] landsat-c2-l2: FOUND 2024-06-01/2026-09-30
+[medeu] sentinel-1-grd: FOUND 2024-06-01/2026-09-30
+[medeu] sentinel-1-rtc: FOUND 2024-06-01/2026-09-30
+[medeu] CDSE-S2: FOUND independent catalogue cross-check
+[medeu] sentinel-2-l2a: NDVI_READY S2C_MSIL2A_20260827T054631_R048_T43TFH_20260827T091314: 123120 clear px, cloud(scene)=0.492729
+[medeu] landsat-c2-l2: NDVI_READY LC09_L2SP_150030_20260910_02_T1: 121121 clear px, cloud(scene)=0.23
+[medeu] timing: ACQUIRE_DONE 99 s
+[shymbulak] boundary: OSM_POLYGON_NAMED_MATCH candidates=854, footprint_km2=2.3651
+[shymbulak] cop-dem-glo-30: RASTER_READY 98784 valid px from 1/1 tiles
+[shymbulak] nasadem: RASTER_READY 98784 valid px from 1/1 tiles
+[shymbulak] alos-dem: RASTER_READY 98784 valid px from 1/1 tiles
+[shymbulak] FABDEM: RASTER_READY 98784 px []
+[shymbulak] sentinel-2-l2a: FOUND 2024-06-01/2026-09-30
+[shymbulak] landsat-c2-l2: FOUND 2024-06-01/2026-09-30
+[shymbulak] sentinel-1-grd: FOUND 2024-06-01/2026-09-30
+[shymbulak] sentinel-1-rtc: FOUND 2024-06-01/2026-09-30
+[shymbulak] CDSE-S2: FOUND independent catalogue cross-check
+[shymbulak] sentinel-2-l2a: NDVI_READY S2C_MSIL2A_20260827T054631_R048_T43TFH_20260827T091314: 97028 clear px, cloud(scene)=0.492729
+[shymbulak] landsat-c2-l2: NDVI_READY LC09_L2SP_150030_20260910_02_T1: 61849 clear px, cloud(scene)=0.23
+[shymbulak] timing: ACQUIRE_DONE 32 s
+[kok_zhailau] boundary: FUNCTIONAL_FOOTPRINT_ONLY candidates=624, footprint_km2=0.6151
+[kok_zhailau] cop-dem-glo-30: RASTER_READY 77400 valid px from 1/1 tiles
+[kok_zhailau] nasadem: RASTER_READY 77400 valid px from 1/1 tiles
+[kok_zhailau] alos-dem: RASTER_READY 77400 valid px from 1/1 tiles
+[kok_zhailau] FABDEM: RASTER_READY 77400 px []
+[kok_zhailau] sentinel-2-l2a: FOUND 2024-06-01/2026-09-30
+[kok_zhailau] landsat-c2-l2: FOUND 2024-06-01/2026-09-30
+[kok_zhailau] sentinel-1-grd: FOUND 2024-06-01/2026-09-30
+[kok_zhailau] sentinel-1-rtc: FOUND 2024-06-01/2026-09-30
+[kok_zhailau] CDSE-S2: FOUND independent catalogue cross-check
+[kok_zhailau] sentinel-2-l2a: NDVI_READY S2C_MSIL2A_20260827T054631_R048_T43TFH_20260827T091314: 75263 clear px, cloud(scene)=0.492729
+[kok_zhailau] landsat-c2-l2: NDVI_READY LC09_L2SP_150030_20260910_02_T1: 58528 clear px, cloud(scene)=0.23
+[kok_zhailau] timing: ACQUIRE_DONE 28 s
+[kok_zhailau_osm] boundary: FUNCTIONAL_FOOTPRINT_ONLY candidates=1524, footprint_km2=0.3143
+[kok_zhailau_osm] cop-dem-glo-30: RASTER_READY 72900 valid px from 2/2 tiles
+[kok_zhailau_osm] nasadem: RASTER_READY 72900 valid px from 2/2 tiles
+[kok_zhailau_osm] alos-dem: RASTER_READY 72900 valid px from 2/2 tiles
+[kok_zhailau_osm] FABDEM: RASTER_READY 39998 px []
+[kok_zhailau_osm] sentinel-2-l2a: FOUND 2024-06-01/2026-09-30
+[kok_zhailau_osm] landsat-c2-l2: FOUND 2024-06-01/2026-09-30
+[kok_zhailau_osm] sentinel-1-grd: FOUND 2024-06-01/2026-09-30
+[kok_zhailau_osm] sentinel-1-rtc: FOUND 2024-06-01/2026-09-30
+[kok_zhailau_osm] CDSE-S2: FOUND independent catalogue cross-check
+[kok_zhailau_osm] sentinel-2-l2a: NDVI_READY S2C_MSIL2A_20260827T054631_R048_T43TFH_20260827T091314: 72900 clear px, cloud(scene)=0.492729
+[kok_zhailau_osm] landsat-c2-l2: NDVI_READY LC09_L2SP_150030_20260910_02_T1: 72896 clear px, cloud(scene)=0.23
+[kok_zhailau_osm] timing: ACQUIRE_DONE 85 s
+[davos_parsenn] boundary: OSM_POLYGON_NAMED_MATCH candidates=2071, footprint_km2=12.0537
+[davos_parsenn] cop-dem-glo-30: RASTER_READY 93636 valid px from 1/1 tiles
+[davos_parsenn] nasadem: RASTER_READY 93636 valid px from 1/1 tiles
+[davos_parsenn] alos-dem: RASTER_READY 93636 valid px from 1/1 tiles
+[davos_parsenn] swissALTI3D: REFERENCE_READY 21068100 px, 121/121 tiles
+[davos_parsenn] timing: ACQUIRE_DONE 220 s
+[zermatt_gornergrat] boundary: OSM_POLYGON_NAMED_MATCH candidates=2070, footprint_km2=15.0833
+[zermatt_gornergrat] cop-dem-glo-30: RASTER_READY 95472 valid px from 2/2 tiles
+[zermatt_gornergrat] nasadem: RASTER_READY 95472 valid px from 2/2 tiles
+[zermatt_gornergrat] alos-dem: RASTER_READY 95472 valid px from 2/2 tiles
+[zermatt_gornergrat] swissALTI3D: REFERENCE_READY 21481200 px, 110/110 tiles
+[zermatt_gornergrat] timing: ACQUIRE_DONE 152 s
+[alta_snowbird] boundary: OSM_POLYGON_NAMED_MATCH candidates=3643, footprint_km2=19.5322
+[alta_snowbird] cop-dem-glo-30: RASTER_READY 93636 valid px from 1/1 tiles
+[alta_snowbird] nasadem: RASTER_READY 93636 valid px from 1/1 tiles
+[alta_snowbird] alos-dem: RASTER_READY 93636 valid px from 1/1 tiles
+[alta_snowbird] 3dep-seamless: REFERENCE_READY 842724 px
+[alta_snowbird] timing: ACQUIRE_DONE 56 s
+[park_city] boundary: OSM_POLYGON_NAMED_MATCH candidates=3929, footprint_km2=54.2675
+[park_city] cop-dem-glo-30: RASTER_READY 93636 valid px from 1/1 tiles
+[park_city] nasadem: RASTER_READY 93636 valid px from 1/1 tiles
+[park_city] alos-dem: RASTER_READY 93636 valid px from 1/1 tiles
+[park_city] 3dep-seamless: REFERENCE_READY 842724 px
+[park_city] timing: ACQUIRE_DONE 215 s
+/home/runner/work/Medeu-Earth-Science-Informatics/Medeu-Earth-Science-Informatics/research/R40_KZ/src/run.py:28: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  return shp_transform(Transformer.from_crs(4326, epsg, always_xy=True).transform, g) if g is not None else None
+/home/runner/work/Medeu-Earth-Science-Informatics/Medeu-Earth-Science-Informatics/research/R40_KZ/src/run.py:28: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  return shp_transform(Transformer.from_crs(4326, epsg, always_xy=True).transform, g) if g is not None else None
+/home/runner/work/Medeu-Earth-Science-Informatics/Medeu-Earth-Science-Informatics/research/R40_KZ/src/run.py:28: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  return shp_transform(Transformer.from_crs(4326, epsg, always_xy=True).transform, g) if g is not None else None
+/home/runner/work/Medeu-Earth-Science-Informatics/Medeu-Earth-Science-Informatics/research/R40_KZ/src/run.py:28: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  return shp_transform(Transformer.from_crs(4326, epsg, always_xy=True).transform, g) if g is not None else None
+/home/runner/work/Medeu-Earth-Science-Informatics/Medeu-Earth-Science-Informatics/research/R40_KZ/src/run.py:28: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  return shp_transform(Transformer.from_crs(4326, epsg, always_xy=True).transform, g) if g is not None else None
+[validation] R40-experiment: VALIDATION_DONE sites=['alta_snowbird', 'davos_parsenn', 'park_city', 'zermatt_gornergrat']
+DONE
