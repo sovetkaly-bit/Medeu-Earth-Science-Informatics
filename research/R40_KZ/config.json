@@ -1,17 +1,52 @@
 {
-  "run_label": "R40-Kazakhstan-multisource-2026-10",
-  "sites": {
-    "shymbulak": {"lon": 77.08142, "lat": 43.12827, "radius_km": 3.0, "point_is_boundary": false},
-    "medeu": {"lon": 77.0584, "lat": 43.1577, "radius_km": 3.0, "point_is_boundary": false},
-    "kok_zhailau": {"lon": 77.055, "lat": 43.105, "radius_km": 3.0, "point_is_boundary": false}
+  "run_label": "R40-KZ-2026-10",
+  "grid_res_m": 30,
+  "thresholds_deg": [7.5, 15, 25],
+  "primary_dem": "cop-dem-glo-30",
+  "predictor_dems": ["cop-dem-glo-30", "nasadem", "alos-dem"],
+  "optical_dates": "2024-06-01/2026-09-30",
+  "enable_fabdem": true,
+  "decision": {"n_boot": 200, "target_risks": [0.05, 0.10, 0.20], "headline_target_risk": 0.10},
+  "kazakhstan": {
+    "medeu": {
+      "name_ru": "Медеу", "country": "KZ", "center": [77.0584, 43.1577], "window_radius_km": 3.0,
+      "osm_name_regex": "Медеу|Медео|Medeu|Medeo|Medeo Skating", "nominatim_query": "Медеу Алматы",
+      "polygon_area_km2": [0.02, 150], "footprint_radius_km": 2.5,
+      "role": "central applied case"
+    },
+    "shymbulak": {
+      "name_ru": "Шымбулак", "country": "KZ", "center": [77.0814, 43.1283], "window_radius_km": 3.0,
+      "osm_name_regex": "Шымбулак|Чимбулак|Шымбұлақ|Shymbulak|Chimbulak|Shimbulak|Shymbulaq", "nominatim_query": "Шымбулак Алматы",
+      "polygon_area_km2": [0.05, 150], "footprint_radius_km": 3.5,
+      "role": "central applied case"
+    },
+    "kok_zhailau": {
+      "name_ru": "Кок-Жайлау", "country": "KZ", "center": [77.055, 43.105], "window_radius_km": 3.0,
+      "osm_name_regex": "Ко[кк].?Жайл|Көк.?Жайл|Kok.?Zhail|Kok.?Jail|Kok.?Zhayl|Kokzhailau", "nominatim_query": "Кок-Жайлау Алматы",
+      "polygon_area_km2": [0.05, 200], "footprint_radius_km": 3.5,
+      "role": "central applied case"
+    }
   },
-  "stac_catalog": "https://planetarycomputer.microsoft.com/api/stac/v1",
-  "cdse_catalog": "https://stac.dataspace.copernicus.eu/v1",
-  "collections": ["cop-dem-glo-30", "alos-dem", "nasadem", "sentinel-2-l2a", "landsat-c2-l2", "sentinel-1-grd"],
-  "optical_dates": "2024-01-01/2026-09-30",
-  "max_items_per_collection": 5,
-  "max_scenes_per_collection": 1,
-  "grid_crs": "EPSG:32643",
-  "grid_resolution_m": 30,
-  "slope_thresholds_deg": [7.5,15,25]
+  "validation": {
+    "davos_parsenn": {
+      "name": "Davos Klosters - Parsenn (CH)", "country": "CH", "center": [9.806, 46.833], "window_radius_km": 4.5,
+      "osm_name_regex": "Parsenn|Weissfluh", "polygon_area_km2": [0.1, 200], "footprint_radius_km": 4.0,
+      "reference": "swissalti3d", "ref_res_m": 2
+    },
+    "zermatt_gornergrat": {
+      "name": "Zermatt - Gornergrat/Rothorn (CH)", "country": "CH", "center": [7.760, 45.990], "window_radius_km": 4.5,
+      "osm_name_regex": "Gornergrat|Rothorn|Zermatt", "polygon_area_km2": [0.1, 200], "footprint_radius_km": 4.0,
+      "reference": "swissalti3d", "ref_res_m": 2
+    },
+    "alta_snowbird": {
+      "name": "Alta - Snowbird, Wasatch (US)", "country": "US", "center": [-111.640, 40.580], "window_radius_km": 4.5,
+      "osm_name_regex": "Alta|Snowbird", "polygon_area_km2": [0.1, 200], "footprint_radius_km": 4.0,
+      "reference": "3dep", "ref_res_m": 10
+    },
+    "park_city": {
+      "name": "Park City Mountain, Wasatch (US)", "country": "US", "center": [-111.510, 40.650], "window_radius_km": 4.5,
+      "osm_name_regex": "Park City|Canyons", "polygon_area_km2": [0.1, 200], "footprint_radius_km": 4.0,
+      "reference": "3dep", "ref_res_m": 10
+    }
+  }
 }
