@@ -135,7 +135,7 @@ def compare_csv(a, b, tol=1e-9):
         return "DIFFERENT_SHAPE", f"{len(x)}x{len(x.columns)} vs {len(y)}x{len(y.columns)}", ""
     nd, mx = 0, 0.0
     for c in x.columns:
-        if np.issubdtype(x[c].dtype, np.number) and np.issubdtype(y[c].dtype, np.number):
+        if pd.api.types.is_numeric_dtype(x[c]) and pd.api.types.is_numeric_dtype(y[c]):
             dd = np.abs(x[c].to_numpy(float) - y[c].to_numpy(float))
             dd = np.where(np.isnan(dd), 0.0, dd)
             nd += int((dd > tol).sum())
