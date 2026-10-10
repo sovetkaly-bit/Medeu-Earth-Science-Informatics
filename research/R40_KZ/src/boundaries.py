@@ -103,13 +103,18 @@ def fetch_site(site, cfg_site):
     q, bbox = _query(cfg_site)
     prov = {"site": site, "queried_at": C.now(), "osm_query": q, "bbox_s_w_n_e": bbox, "config_center_lonlat": [lon0, lat0]}
     elements, used = None, None
-    for url in OVERPASS:
-        try:
-            r = C.http_json(url, data={"data": q}, timeout=170, retries=2)
-            elements, used = r.get("elements", []), url
+    import time
+    for rnd in range(3):
+        for url in OVERPASS:
+            try:
+                r = C.http_json(url, data={"data": q}, timeout=170, retries=1)
+                elements, used = r.get("elements", []), url
+                break
+            except Exception as e:  # noqa: BLE001
+                prov.setdefault("overpass_errors", []).append(f"round{rnd} {url}: {e!r}"[:300])
+        if elements is not None:
             break
-        except Exception as e:  # noqa: BLE001
-            prov.setdefault("overpass_errors", []).append(f"{url}: {e!r}"[:300])
+        time.sleep(30 * (rnd + 1))
     if elements is None:
         prov["status"] = "OVERPASS_UNAVAILABLE"
         return {"territory": None, "footprint": None, "status": "OVERPASS_UNAVAILABLE", "prov": prov, "candidates": []}
