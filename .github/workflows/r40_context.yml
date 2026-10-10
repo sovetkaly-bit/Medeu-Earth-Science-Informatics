@@ -1,0 +1,50 @@
+name: R40 free context layers (Sentinel-2 snow/NDVI time series, quakes, OSM hazards)
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        default: "2017-04-01"
+      end:
+        default: "2025-12-31"
+      max_scenes:
+        default: "1500"
+permissions:
+  contents: write
+defaults:
+  run:
+    working-directory: research/R40_KZ
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest tests.test_timeseries
+      - name: Hazards and quakes
+        env:
+          R40_OUT: output_context
+        run: python -m src.hazards 2>&1 | tee hazards_console.log
+      - name: Sentinel-2 time series
+        env:
+          R40_OUT: output_context
+        run: python -m src.timeseries --start "${{ inputs.start }}" --end "${{ inputs.end }}" --max-scenes "${{ inputs.max_scenes }}" 2>&1 | tee s2_console.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: R40-context
+          path: research/R40_KZ/output_context/
+          retention-days: 90
+      - name: Publish small results to branch r40-context
+        if: always()
+        continue-on-error: true
+        run: |
+          rm -rf /tmp/res && mkdir /tmp/res && cd output_context && find . -maxdepth 1 -type f \( -name '*.json' -o -name '*.csv' -o -name '*.tif' \) ! -name 'osm_context_raw.json' -exec cp {} /tmp/res/ \;
+          cp ../*_console.log /tmp/res/ 2>/dev/null || true
+          cd /tmp/res && git init -q -b r40-context
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -q -m "R40 context layers: run ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" "HEAD:refs/heads/r40-context"
