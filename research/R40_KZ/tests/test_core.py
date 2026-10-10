@@ -95,6 +95,25 @@ class TestDecision(unittest.TestCase):
         fb = np.full(b["shape"], np.nan); fb[b["mask"]] = b["dist"]
         np.testing.assert_allclose(fa[common], fb[common])
 
+    def test_support_stress_non_divisible_shapes(self):
+        for sup in (60, 90):
+            tabs = self.build(support_m=sup)
+            self.assertTrue(all(len(t["err"]) > 100 for t in tabs.values()), sup)
+
+    def test_apply_to_site_and_vote_method(self):
+        tabs = self.build()
+        p = D.cv_scores(tabs, "loso")
+        pool = D.pool(tabs)
+        mdl = D.fit_logit(D._X(pool), pool["err"])
+        v = self.tables["s0"]
+        r = D.__dict__.get("apply") or None
+        from src import experiment as E
+        res = E.apply_to_site(v["z"], 30.0, 15.0, sorted(v["z"]), "cop-dem-glo-30", mdl, 0.5, -1.0)
+        self.assertIsNotNone(res)
+        self.assertTrue(set(np.unique(res["dec_combined"])) <= {0, 1, 2, 255})
+        u = D.scores_for(pool, np.concatenate([p[s] for s in tabs]))
+        self.assertIn("dem_slope_spread", u)
+
     def test_logit_recovers_signal(self):
         rng = np.random.default_rng(0)
         X = rng.standard_normal((5000, 3))

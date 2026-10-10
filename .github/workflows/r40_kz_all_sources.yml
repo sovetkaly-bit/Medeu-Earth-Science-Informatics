@@ -5,7 +5,7 @@ on:
       site:
         type: choice
         description: Kazakhstan territory (validation sites in CH/US always run unless skipped)
-        options: [all, medeu, shymbulak, kok_zhailau]
+        options: [all, medeu, shymbulak, kok_zhailau, kok_zhailau_osm]
         default: all
       skip_fabdem:
         type: boolean

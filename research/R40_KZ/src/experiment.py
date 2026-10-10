@@ -182,9 +182,9 @@ def apply_to_site(zdict, grid_res, t, predictors, primary, model, tau_c, tau_d, 
         return None
     f = T.decision_features(zs, primary, grid_res, t)
     ok = np.ones(f["dist"].shape, bool)
-    for k in D.FEATURES + ["pred"]:
+    for k in D.FEATURES:
         ok &= np.isfinite(f[k])
-    X = np.stack([f[k][ok] for k in D.FEATURES], axis=1)
+    X = D.design({k: f[k][ok].astype("float64") for k in D.FEATURES})
     perr = np.full(f["dist"].shape, np.nan, "float32")
     perr[ok] = D.predict_logit(model, X)
     pred = f["pred"]

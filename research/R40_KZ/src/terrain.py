@@ -81,10 +81,16 @@ def local_std(x, size=3):
 
 
 def coarse_slope(z, res, k, method="horn"):
-    """Slope at k-times coarser support, returned on the original grid (nearest)."""
-    zc = block_mean(z, k)
-    sc = slope_deg(zc, res * k, method)
-    return upsample(sc, k)
+    """Slope at k-times coarser support, returned on the original grid (nearest). Pads with NaN if needed."""
+    H, W = z.shape
+    Hp, Wp = -(-H // k) * k, -(-W // k) * k
+    zp = np.full((Hp, Wp), np.nan) if (Hp, Wp) != (H, W) else None
+    if zp is not None:
+        zp[:H, :W] = z
+    else:
+        zp = np.asarray(z, dtype="float64")
+    sc = slope_deg(block_mean(zp, k), res * k, method)
+    return upsample(sc, k)[:H, :W]
 
 
 def classes(s, t):

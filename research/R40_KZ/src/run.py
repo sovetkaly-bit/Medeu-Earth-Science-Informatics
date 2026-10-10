@@ -95,7 +95,7 @@ def acquire(group, key, s, cfg, client, out, args):
         rec["z"].update(z)
     else:
         C.log(key, "planetary-computer", "CATALOG_UNAVAILABLE", "no client")
-    if cfg.get("enable_fabdem") and not args.no_fabdem:
+    if cfg.get("enable_fabdem") and not args.no_fabdem and group in cfg.get("fabdem_groups", ["kazakhstan"]):
         fz, finfo = S.fetch_fabdem(key, lon, lat, grid)
         prov["fabdem"] = finfo
         if fz is not None:
@@ -191,7 +191,7 @@ def main():
             fm = mask_of(foot_utm, grid)
             if tm is not None:
                 masks["territory_osm_polygon"] = tm
-            elif fm is not None:
+            if fm is not None:
                 masks["functional_footprint_derived"] = fm
         d["masks"] = masks
         slopes = {}
@@ -298,7 +298,7 @@ def main():
             try:
                 if decisions_c:
                     R.site_figure(out / "figures" / f"{key}_decisions.png", key, cfg["kazakhstan"][key]["name_ru"], grid, s_primary, decisions_c, [t for t in th if t in decisions_c],
-                                  d["terr_utm"], d["foot_utm"] if d["territory"] is None else None, head)
+                                  d["terr_utm"], d["foot_utm"], head)
                 for mname, m in d["masks"].items():
                     for r_ in E.sensitivity_flips(z, predictors, primary, th, m):
                         r_.update(site=key, mask=mname)

@@ -9,9 +9,19 @@ import numpy as np
 from scipy import ndimage as ndi
 from . import terrain as T
 
-METHODS = ["random", "distance", "norm_margin", "dem_disagreement", "local_variability",
+METHODS = ["random", "distance", "norm_margin", "dem_disagreement", "dem_slope_spread", "local_variability",
            "scale_stability", "combined"]
-FEATURES = ["dist", "dem_disagreement_std", "local_slope_std", "scale_instab", "tri", "vote_split", "scale_flip"]
+# decision-time features stored per pixel (none uses reference data)
+FEATURES = ["dist", "dem_disagreement_std", "vote_split", "local_slope_std", "scale_instab", "scale_flip", "tri", "slope", "pred"]
+
+
+def design(f):
+    """Design matrix for the combined abstention model (non-linear transforms of decision-time features)."""
+    d, sd, v = f["dist"], f["dem_disagreement_std"], f["vote_split"]
+    side = f["pred"]
+    cols = [d, d ** 2, np.log(d + 0.1), sd, np.log1p(sd), v, d * v, d / (sd + 0.25), f["local_slope_std"], f["scale_instab"],
+            f["scale_flip"], f["tri"], np.log1p(f["tri"]), f["slope"], side, side * d]
+    return np.stack(cols, axis=1)
 BLOCK_M = 1000.0  # spatial block size for CV / bootstrap
 
 
@@ -59,12 +69,12 @@ def build_table(site, z30, ref_fine, rf, t, primary="cop-dem-glo-30", support_m=
     ref = reference_fields(ref_fine, rf, res, t, algorithm)
     y = ref["y_A"] if ref_mode == "A" else ref["y_B"]
     ok = np.isfinite(y)
-    for key in FEATURES + ["pred"]:
+    for key in FEATURES:
         ok &= np.isfinite(f[key])
     H, W = y.shape
     rr, cc = np.nonzero(ok)
     blk_px = max(int(BLOCK_M / res), 1)
-    tab = {key: f[key][ok].astype("float64") for key in FEATURES + ["pred", "slope"]}
+    tab = {key: f[key][ok].astype("float64") for key in FEATURES}
     tab["y"] = y[ok].astype("float64")
     tab["err"] = (tab["pred"] != tab["y"]).astype("float64")
     tab["block"] = (rr // blk_px) * 100000 + (cc // blk_px)
@@ -142,7 +152,7 @@ def predict_logit(m, X):
 
 
 def _X(tab):
-    return np.stack([tab[f] for f in FEATURES], axis=1)
+    return design(tab)
 
 
 def _subsample(tab, n, rng):
@@ -200,7 +210,8 @@ def scores_for(tab, p_combined, rng=None):
         "random": rng.random(len(tab["err"])),
         "distance": -tab["dist"],
         "norm_margin": -tab["dist"] / (tab["dem_disagreement_std"] + 0.25),
-        "dem_disagreement": tab["dem_disagreement_std"] + 0.5 * tab["vote_split"],
+        "dem_disagreement": tab["vote_split"] * 100.0 + tab["dem_disagreement_std"],  # class-vote split first, slope spread breaks ties
+        "dem_slope_spread": tab["dem_disagreement_std"],
         "local_variability": tab["local_slope_std"],
         "scale_stability": tab["scale_instab"],
     }
@@ -211,7 +222,7 @@ def scores_for(tab, p_combined, rng=None):
 
 def pool(tables, sites=None):
     sites = sites or list(tables)
-    keys = FEATURES + ["pred", "y", "err", "slope", "ref_slope"]
+    keys = FEATURES + ["y", "err", "ref_slope"]
     d = {k: np.concatenate([tables[s][k] for s in sites]) for k in keys}
     d["block"] = np.concatenate([tables[s]["block"] + 10**9 * (i + 1) for i, s in enumerate(sites)])
     return d

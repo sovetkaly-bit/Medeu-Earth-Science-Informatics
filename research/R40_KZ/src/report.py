@@ -1,5 +1,6 @@
 """Figures and markdown rendering for R40."""
 from __future__ import annotations
+from pathlib import Path
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
@@ -9,7 +10,7 @@ from matplotlib.patches import Patch
 from shapely.geometry import mapping
 from . import common as C
 
-OKABE = {"random": "#999999", "distance": "#0072B2", "norm_margin": "#56B4E9", "dem_disagreement": "#E69F00",
+OKABE = {"random": "#999999", "distance": "#0072B2", "norm_margin": "#56B4E9", "dem_disagreement": "#E69F00", "dem_slope_spread": "#F0E442",
          "local_variability": "#009E73", "scale_stability": "#CC79A7", "combined": "#D55E00"}
 DEC_COLORS = ["#4C78A8", "#E45756", "#BDBDBD"]  # BELOW, ABOVE, ABSTAIN
 DEC_LABELS = ["BELOW", "ABOVE", "ABSTAIN"]
@@ -73,6 +74,7 @@ def site_figure(path, key, title, grid, slope, decisions, thresholds, territory_
         _outline(ax, footprint_utm, "#7f3c8d", 1.0, "--")
         ax.set_xticks([]); ax.set_yticks([])
     axes[-1].legend(handles=[Patch(color=c, label=l) for c, l in zip(DEC_COLORS, DEC_LABELS)], loc="lower right", fontsize=8, framealpha=0.9)
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(path, dpi=150)
     plt.close(fig)
 
@@ -88,6 +90,7 @@ def rc_figure(path, rc_rows, thresholds):
         ax.set_title(f"risk–coverage, порог {t}° (LOSO, независимые территории)", fontsize=9)
         ax.grid(alpha=0.25)
     axes[0][-1].legend(fontsize=7)
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(path, dpi=150)
     plt.close(fig)
 
@@ -104,6 +107,7 @@ def calib_figure(path, calib_rows, thresholds):
         ax.set_xlabel("предсказанная вероятность ошибки"); ax.set_ylabel("наблюдаемая доля ошибок")
         ax.set_title(f"калибровка, порог {t}°", fontsize=9)
         ax.grid(alpha=0.25)
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(path, dpi=150)
     plt.close(fig)
 
@@ -125,6 +129,7 @@ def comparison_figure(path, shares_rows):
         bottom += v
     ax.set_xticks(range(len(rows))); ax.set_xticklabels(labels, fontsize=7)
     ax.set_ylabel("доля площади окна, %"); ax.legend(fontsize=8, ncol=4, loc="upper center", bbox_to_anchor=(0.5, 1.12))
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(path, dpi=150)
     plt.close(fig)
 

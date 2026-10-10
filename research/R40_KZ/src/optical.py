@@ -33,8 +33,7 @@ def discover(client, site, bbox, dates, outdir, max_items=40):
             found[coll] = []
     # independent cross-check of Sentinel-2 availability in Copernicus Data Space
     try:
-        j = C.http_json(f"{CDSE}/collections/sentinel-2-l2a/items", params={"bbox": ",".join(f"{v:.5f}" for v in bbox), "limit": 5,
-                                                                              "datetime": dates.replace("/", "/") if "/" in dates else None})
+        j = C.http_json(f"{CDSE}/collections/sentinel-2-l2a/items", params={"bbox": ",".join(f"{v:.5f}" for v in bbox), "limit": 5})
         feats = j.get("features", [])
         C.write_json(outdir / "catalog" / "cdse_sentinel_2_crosscheck.json",
                      [{"id": z.get("id"), "datetime": z.get("properties", {}).get("datetime"),
