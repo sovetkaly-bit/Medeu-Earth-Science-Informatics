@@ -108,8 +108,11 @@ def load_points(path):
     return cols
 
 
-def quality_mask(p, night_only=False):
-    ok = (p["h_te"] < FILL) & (p["h_te_unc"] < FILL) & np.isfinite(p["h_te"]) & (p["n_te_ph"] >= 30) & (p["h_te_unc"] < 5.0)
+QUALITY_LEVELS = {"strict_unc5m": 5.0, "lenient_unc15m": 15.0}  # fixed before looking at any DEM error
+
+
+def quality_mask(p, night_only=False, unc_max=15.0):
+    ok = (p["h_te"] < FILL) & (p["h_te_unc"] < FILL) & np.isfinite(p["h_te"]) & (p["n_te_ph"] >= 30) & (p["h_te_unc"] < unc_max)
     ok &= (~np.isfinite(p["cloud"])) | (p["cloud"] <= 2)
     if night_only:
         ok &= p["night"] == 1
@@ -175,9 +178,9 @@ def analyze(cfg, out, sites=None):
         try:
             p = load_points(f)
             n_all = len(p["lat"])
-            qm = quality_mask(p)
-            cnt_rows.append({"site": site, "segments": n_all, "after_quality_filter": int(qm.sum()),
-                             "night_only": int(quality_mask(p, True).sum())})
+            qm = quality_mask(p, unc_max=max(QUALITY_LEVELS.values()))
+            cnt_rows.append({"site": site, "segments": n_all, **{f"pass_{k}": int(quality_mask(p, unc_max=v).sum()) for k, v in QUALITY_LEVELS.items()},
+                             "median_h_te_uncertainty_m": float(np.nanmedian(p["h_te_unc"][p["h_te_unc"] < FILL]))})
             q = {k: v[qm] for k, v in p.items()}
             lon0, lat0 = (bbox[0] + bbox[2]) / 2, (bbox[1] + bbox[3]) / 2
             epsg = C.utm_epsg(lon0, lat0)
@@ -202,36 +205,39 @@ def analyze(cfg, out, sites=None):
             ia, ib, dist = track_pairs(q, x, y)
             zs = {k: sample(smooth100(v.astype("float64")), grid, x, y) for k, v in dems.items()}
             h = q["h_te"]
-            for k, z in zs.items():
-                m = np.isfinite(z) & np.isfinite(h)
-                if m.sum() < 30:
-                    continue
-                dz = (z - h)[m]
-                elev_rows.append({"site": site, "dem": k, "n": int(m.sum()), "offset_median_m_incl_datum": float(np.median(dz)),
-                                  "NMAD_m": nmad(dz), "RMSE_debiased_m": float(np.sqrt(np.mean((dz - np.median(dz)) ** 2))),
-                                  "p95_abs_debiased_m": float(np.percentile(np.abs(dz - np.median(dz)), 95))})
-            s_atl = np.degrees(np.arctan((h[ib] - h[ia]) / dist))
-            for k, z in zs.items():
-                s_d = np.degrees(np.arctan((z[ib] - z[ia]) / dist))
-                m = np.isfinite(s_d) & np.isfinite(s_atl)
-                if m.sum() < 30:
-                    continue
-                e = np.abs(s_d[m]) - np.abs(s_atl[m])
-                row = {"site": site, "dem": k, "n_pairs": int(m.sum()), "abs_slope_bias_deg": float(e.mean()), "abs_slope_MAE_deg": float(np.abs(e).mean()),
-                       "abs_slope_RMSE_deg": float(np.sqrt((e ** 2).mean())), "abs_slope_NMAD_deg": nmad(e)}
-                for t in ths:
-                    cd, ca = np.abs(s_d[m]) >= t, np.abs(s_atl[m]) >= t
-                    row[f"class_disagreement_pct_t{t}"] = float(100 * np.mean(cd != ca))
-                    err = (cd != ca).astype(float)
-                    u = -np.abs(np.abs(s_d[m]) - t)
-                    blocks = (np.arange(m.sum()) // 10)
-                    row[f"AURC_distance_rule_t{t}"] = aurc_from(u, err, rng)
-                    row[f"error_full_cov_t{t}"] = float(err.mean())
-                    o = np.lexsort((rng.random(len(u)), u))
-                    risk = np.cumsum(err[o]) / np.arange(1, len(o) + 1)
-                    for c in (0.9, 0.7):
-                        row[f"risk@{c}_t{t}"] = float(risk[int(np.ceil(c * len(risk))) - 1])
-                slope_rows.append(row)
+            unc = q["h_te_unc"]
+            s_atl_all = np.degrees(np.arctan((h[ib] - h[ia]) / dist))
+            for qlevel, umax in QUALITY_LEVELS.items():
+                pm = unc < umax
+                for k, z in zs.items():
+                    m = np.isfinite(z) & np.isfinite(h) & pm
+                    if m.sum() < 30:
+                        continue
+                    dz = (z - h)[m]
+                    elev_rows.append({"site": site, "quality": qlevel, "dem": k, "n": int(m.sum()), "offset_median_m_incl_datum": float(np.median(dz)),
+                                      "NMAD_m": nmad(dz), "RMSE_debiased_m": float(np.sqrt(np.mean((dz - np.median(dz)) ** 2))),
+                                      "p95_abs_debiased_m": float(np.percentile(np.abs(dz - np.median(dz)), 95))})
+                pair_ok = pm[ia] & pm[ib]
+                for k, z in zs.items():
+                    s_d = np.degrees(np.arctan((z[ib] - z[ia]) / dist))
+                    m = np.isfinite(s_d) & np.isfinite(s_atl_all) & pair_ok
+                    if m.sum() < 30:
+                        continue
+                    s_atl = s_atl_all[m]
+                    e = np.abs(s_d[m]) - np.abs(s_atl)
+                    row = {"site": site, "quality": qlevel, "dem": k, "n_pairs": int(m.sum()), "abs_slope_bias_deg": float(e.mean()),
+                           "abs_slope_MAE_deg": float(np.abs(e).mean()), "abs_slope_RMSE_deg": float(np.sqrt((e ** 2).mean())), "abs_slope_NMAD_deg": nmad(e)}
+                    for t in ths:
+                        cd, ca = np.abs(s_d[m]) >= t, np.abs(s_atl) >= t
+                        err = (cd != ca).astype(float)
+                        u = -np.abs(np.abs(s_d[m]) - t)
+                        o = np.lexsort((rng.random(len(u)), u))
+                        risk = np.cumsum(err[o]) / np.arange(1, len(o) + 1)
+                        row[f"class_disagreement_pct_t{t}"] = float(100 * err.mean())
+                        row[f"AURC_distance_rule_t{t}"] = float(risk.mean())
+                        for c in (0.9, 0.7):
+                            row[f"risk@{c}_t{t}"] = float(risk[int(np.ceil(c * len(risk))) - 1])
+                    slope_rows.append(row)
             pts_out.append({"site": site, "n_pairs": int(len(ia)), "median_spacing_m": float(np.median(dist)) if len(dist) else None})
             C.log(site, "ICESat2-analyze", "ANALYZED", f"{len(h)} pts, {len(ia)} track pairs, DEMs={sorted(zs)}")
         except Exception as e:  # noqa: BLE001
