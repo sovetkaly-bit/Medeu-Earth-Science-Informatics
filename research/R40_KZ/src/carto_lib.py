@@ -156,40 +156,41 @@ def style_map_axes(ax, extent):
         s.set_linewidth(0.7)
 
 
-def scale_bar(ax, extent, epsg_label, length_m=None):
+def scale_bar(ax, extent, epsg_label, length_m=None, fs=5.5):
     from matplotlib.patches import Rectangle
     xmin, xmax, ymin, ymax = extent
     W, H = xmax - xmin, ymax - ymin
-    L = length_m or nice_length(W)
-    x0, y0 = xmin + 0.04 * W, ymin + 0.045 * H
+    L = length_m or nice_length(W, 0.22)
+    x0, y0 = xmin + 0.045 * W, ymin + 0.07 * H
     h = 0.012 * H
-    ax.add_patch(Rectangle((x0 - 0.01 * W, y0 - 0.02 * H), L + 0.02 * W, 0.075 * H + h, fc="white", ec="none", alpha=0.85, zorder=8))
+    bw = max(L * 1.25, 0.36 * W)
+    ax.add_patch(Rectangle((x0 - 0.02 * W, y0 - 0.055 * H), bw, 0.135 * H, fc="white", ec="none", alpha=0.88, zorder=8))
     for i, c in enumerate(("black", "white")):
         ax.add_patch(Rectangle((x0 + i * L / 2, y0), L / 2, h, fc=c, ec="black", lw=0.5, zorder=9))
-    ax.text(x0, y0 + 1.6 * h, "0", fontsize=5.5, ha="center", va="bottom", zorder=9)
-    ax.text(x0 + L, y0 + 1.6 * h, length_label(L), fontsize=5.5, ha="center", va="bottom", zorder=9)
-    ax.text(x0 + L / 2, y0 - 0.6 * h, f"metric, {epsg_label}", fontsize=4.5, ha="center", va="top", zorder=9)
+    ax.text(x0, y0 + 1.5 * h, "0", fontsize=fs, ha="center", va="bottom", zorder=9)
+    ax.text(x0 + L, y0 + 1.5 * h, length_label(L), fontsize=fs, ha="center", va="bottom", zorder=9)
+    ax.text(x0, y0 - 0.5 * h, f"metric scale, {epsg_label}", fontsize=fs - 1.0, ha="left", va="top", zorder=9)
     return L
 
 
-def north_arrow(ax, extent, gamma_deg):
+def north_arrow(ax, extent, gamma_deg, fs=4.3):
     """Arrow pointing to TRUE north; grid north is vertical, so true north is rotated by -gamma."""
     xmin, xmax, ymin, ymax = extent
     W, H = xmax - xmin, ymax - ymin
-    cx, cy = xmax - 0.07 * W, ymax - 0.16 * H
+    cx, cy = xmax - 0.075 * W, ymax - 0.20 * H
     ln = 0.10 * H
     ang = math.radians(-gamma_deg)
     dx, dy = ln * math.sin(ang), ln * math.cos(ang)
+    from matplotlib.patches import Rectangle
+    ax.add_patch(Rectangle((xmax - 0.25 * W, cy - 0.075 * H), 0.24 * W, 0.2 * H + ln, fc="white", ec="none", alpha=0.7, zorder=8))
     ax.annotate("", xy=(cx + dx, cy + dy), xytext=(cx, cy), arrowprops=dict(arrowstyle="-|>", color="black", lw=1.0, mutation_scale=7), zorder=9)
-    ax.text(cx + dx * 1.18, cy + dy * 1.18, "N", ha="center", va="bottom", fontsize=7, fontweight="bold", zorder=9,
-            bbox=dict(fc="white", ec="none", alpha=0.7, pad=0.6))
-    ax.text(cx, cy - 0.02 * H, f"true N; grid conv. {gamma_deg:+.2f}°", fontsize=4.3, ha="center", va="top", zorder=9,
-            bbox=dict(fc="white", ec="none", alpha=0.7, pad=0.4))
+    ax.text(cx + dx * 1.15, cy + dy * 1.15, "N", ha="center", va="bottom", fontsize=7, fontweight="bold", zorder=9)
+    ax.text(xmax - 0.02 * W, cy - 0.02 * H, f"true N\ngrid conv.\n{gamma_deg:+.2f}°", fontsize=fs, ha="right", va="top", zorder=9, linespacing=1.1)
 
 
-def _nice_deg_step(span_deg):
+def _nice_deg_step(span_deg, n_max=4.5):
     for s in (0.005, 0.01, 0.02, 0.025, 0.05, 0.1, 0.2, 0.25, 0.5, 1, 2, 5, 10, 15, 30):
-        if span_deg / s <= 4.5:
+        if span_deg / s <= n_max:
             return s
     return 30
 
@@ -206,7 +207,7 @@ def fmt_lat(v):
     return f"{_trim(v)}°{'N' if v >= 0 else 'S'}"
 
 
-def graticule_utm(ax, epsg, extent):
+def graticule_utm(ax, epsg, extent, n_max=4.5, fs=4.8):
     """Meridians/parallels from pyproj, clipped to the map frame, labelled where they leave the frame."""
     from pyproj import Transformer
     from shapely.geometry import LineString, box
@@ -218,7 +219,7 @@ def graticule_utm(ax, epsg, extent):
     perim = [(x, ymin) for x in px] + [(x, ymax) for x in px] + [(xmin, y) for y in py] + [(xmax, y) for y in py]
     lons, lats = zip(*[to_ll.transform(x, y) for x, y in perim])
     lo0, lo1, la0, la1 = min(lons), max(lons), min(lats), max(lats)
-    step_lon, step_lat = _nice_deg_step(lo1 - lo0), _nice_deg_step(la1 - la0)
+    step_lon, step_lat = _nice_deg_step(lo1 - lo0, n_max), _nice_deg_step(la1 - la0, n_max)
     frame = box(xmin, ymin, xmax, ymax)
     bottom = LineString([(xmin, ymin), (xmax, ymin)])
     left = LineString([(xmin, ymin), (xmin, ymax)])
@@ -232,7 +233,7 @@ def graticule_utm(ax, epsg, extent):
                 ax.plot(*part.xy, color="0.25", lw=0.35, ls=(0, (1, 2)), zorder=7)
         hit = LineString(pts).intersection(bottom)
         if not hit.is_empty and hit.geom_type == "Point":
-            ax.text(hit.x, ymin, fmt_lon(lon), fontsize=4.8, ha="center", va="top", rotation=0, clip_on=False, color="0.15")
+            ax.text(hit.x, ymin, fmt_lon(lon), fontsize=fs, ha="center", va="top", rotation=0, clip_on=False, color="0.15")
     for lat in np.arange(math.ceil(la0 / step_lat) * step_lat, la1 + 1e-9, step_lat):
         pts = [to_xy.transform(lo, lat) for lo in np.linspace(lo0 - 0.02, lo1 + 0.02, 60)]
         ln = LineString(pts).intersection(frame)
@@ -243,7 +244,7 @@ def graticule_utm(ax, epsg, extent):
                 ax.plot(*part.xy, color="0.25", lw=0.35, ls=(0, (1, 2)), zorder=7)
         hit = LineString(pts).intersection(left)
         if not hit.is_empty and hit.geom_type == "Point":
-            ax.text(xmin, hit.y, fmt_lat(lat), fontsize=4.8, ha="right", va="center", rotation=90, clip_on=False, color="0.15")
+            ax.text(xmin, hit.y, fmt_lat(lat), fontsize=fs, ha="right", va="center", rotation=90, clip_on=False, color="0.15")
 
 
 def plot_geom(ax, g, **kw):
@@ -266,3 +267,20 @@ def plot_geom(ax, g, **kw):
 
 def wrap_caption(text, width=150):
     return "\n".join(textwrap.fill(p, width=width) for p in text.split("\n"))
+
+
+CAP_FS = 5.3
+
+
+def cap_height_in(text, width=165, fs=CAP_FS):
+    n = len(wrap_caption(text, width).split("\n"))
+    return n * fs * 1.3 / 72.0 + 0.18
+
+
+def place_caption(fig, text, width=165, fs=CAP_FS):
+    h = fig.get_size_inches()[1]
+    fig.text(0.02, 0.09 / h, wrap_caption(text, width), fontsize=fs, ha="left", va="bottom", linespacing=1.25)
+
+
+def bottom_frac(text, fig_h, extra_in=0.0):
+    return (cap_height_in(text) + extra_in) / fig_h

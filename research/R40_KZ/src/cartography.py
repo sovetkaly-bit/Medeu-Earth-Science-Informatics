@@ -96,12 +96,16 @@ def extent_of(meta):
 
 
 def project(g, epsg, inverse=False):
+    import shapely
     from pyproj import Transformer
-    from shapely.ops import transform as shp_transform
     if g is None:
         return None
     tr = Transformer.from_crs(epsg, 4326, always_xy=True) if inverse else Transformer.from_crs(4326, epsg, always_xy=True)
-    return shp_transform(tr.transform, g)
+
+    def _t(coords):
+        x, y = tr.transform(coords[:, 0], coords[:, 1])
+        return np.column_stack([x, y])
+    return shapely.transform(g, _t)
 
 
 def rasterize_mask(g_utm, meta):
@@ -362,6 +366,8 @@ class Ctx:
         self.verif_rows: list[dict] = []
         self.figures: list[str] = []
         self.ne: dict = {}
+        self.inventory: list[dict] = []
+        self.asset_commits: dict = {}
 
     def raster_path(self, key, name):
         return self.inp / "rasters" / key / name
@@ -494,6 +500,8 @@ def derived_rasters(ctx):
     count = np.zeros((H, W), "uint8")
     mos = {k: np.full((H, W), np.nan, "float32") for k in prods}
     max_overlap_diff = {k: 0.0 for k in prods}
+    ov_n = {k: 0 for k in prods}
+    ov_big = {k: 0 for k in prods}
     for d in kz:
         c0 = int(round((d["x0"] - X0) / 30))
         r0 = int(round((Y1 - d["y1"]) / 30))
@@ -505,7 +513,10 @@ def derived_rasters(ctx):
             dst = mos[pk][r0:r0 + h, c0:c0 + w]
             both = np.isfinite(dst) & np.isfinite(src)
             if both.any():
-                max_overlap_diff[pk] = max(max_overlap_diff[pk], float(np.max(np.abs(dst[both] - src[both]))))
+                dd_ = np.abs(dst[both] - src[both])
+                max_overlap_diff[pk] = max(max_overlap_diff[pk], float(dd_.max()))
+                ov_n[pk] += int(both.sum())
+                ov_big[pk] += int((dd_ > (0.5 if "elev" in pk else 0.1)).sum())
             fill = ~np.isfinite(dst) & np.isfinite(src)
             dst[fill] = src[fill]
     cd = out / "common_grid_kz"
@@ -521,12 +532,14 @@ def derived_rasters(ctx):
     write_tif(cd / "window_coverage_count.tif", count, cm, dtype="uint8", descr="number of study windows covering each cell with valid elevation")
     ctx.man.add(cd / "window_coverage_count.tif", "aligned common analysis grid (coverage)", "derived", licence=LICENCE["own"], res="30", crs=cm["crs"])
     C.write_csv(ctx.out / "tables" / "common_grid_coverage.csv",
-                [dict(product=k, max_abs_difference_in_overlap=v, unit="m" if "elev" in k else "deg",
+                [dict(product=k, max_abs_difference_in_overlap=v, overlap_cells_compared=ov_n[k], overlap_cells_differing=ov_big[k],
+                      differing_threshold=("0.5 m" if "elev" in k else "0.1 deg"), pct_overlap_cells_differing=(100.0 * ov_big[k] / ov_n[k] if ov_n[k] else float("nan")), unit="m" if "elev" in k else "deg",
                       grid_crs=cm["crs"], x0=X0, y1=Y1, width=W, height=H, cell_m=30) for k, v in max_overlap_diff.items()])
     ctx.man.add(ctx.out / "tables" / "common_grid_coverage.csv", "table", "derived: overlap consistency of the aligned grid", licence=LICENCE["own"])
     ctx.common = dict(meta=cm, cop=mos["cop_elevation_m"], hs=L.hillshade(mos["cop_elevation_m"], 30), count=count, extent=extent_of(cm))
     if max(max_overlap_diff.values()) > 1e-3:
-        exc("WARN", "common grid", "overlapping windows are not identical in the overlap (edge effects of slope); first-valid used", max_overlap_diff)
+        exc("WARN", "common grid", "overlapping windows differ slightly in the overlap (resampling/edge effects of each window); first-valid pixel used",
+            {k: f"max {max_overlap_diff[k]:.3f}; {100.0 * ov_big[k] / max(ov_n[k], 1):.2f}% of {ov_n[k]} overlap cells differ" for k in prods})
 
 
 def vectors(ctx):
@@ -724,6 +737,10 @@ def figure_b_tables(ctx):
         ctx.man.add(ctx.out / "tables" / n, "table", "derived from decision rasters + inputs/tables/decisions_by_site.csv", licence=LICENCE["own"])
     ctx.summary_rows = rows
     ctx.verif_rows = ver
+    for r_ in rows:
+        ctx.inventory.append(dict(figure=r_["figure"], panel=SHORT[r_["site"]], site=r_["site"], quantity=f"decision shares ({r_['mask']})", crs=r_["crs"], cell_size_m=r_["cell_size_m"],
+                                  n_valid_px=r_["n_px_valid_decision"], area_km2=r_["area_km2_valid_plane_utm"], contour_id=r_["contour_id"], threshold_deg=r_["threshold_deg"],
+                                  BELOW_pct=r_["BELOW_pct"], ABOVE_pct=r_["ABOVE_pct"], ABSTAIN_pct=r_["ABSTAIN_pct"], class_disagreement_cop_vs_nasadem_pct=r_["class_disagreement_cop_vs_nasadem_pct"]))
     nbad = sum(1 for v in ver if v.get("status") not in ("OK",))
     C.log("verify", "figB", "DONE", f"{len(ver)} comparisons, {nbad} flagged")
     return rows, ver
@@ -737,7 +754,8 @@ def inter_dem_table(ctx):
             pairs += [("cop_minus_lidar_ref", d["cop_slope"], d["ref_slope"]), ("nasadem_minus_lidar_ref", d["nas_slope"], d["ref_slope"])]
         for name, a, b in pairs:
             st = L.slope_diff_stats(a, b)
-            row = dict(site=key, group=d["group"], pair=name, **st)
+            row = dict(site=key, group=d["group"], pair=name, crs=d["meta"]["crs"], cell_size_m=d["res"], contour_id=contour_id(d, "context"),
+                       area_km2_common_plane_utm=st.get("common_px", 0) * d["res"] ** 2 / 1e6, **st)
             for t in THRESH:
                 dis, n = L.class_disagreement(a, b, t)
                 row[f"class_disagreement_t{t}_pct"] = dis
@@ -773,26 +791,26 @@ def site_base(ax, d, extent=None, alpha=1.0):
     L.style_map_axes(ax, ext)
 
 
-def map_furniture(ax, d_or_epsg, extent, center_lonlat, label_epsg=None):
+def map_furniture(ax, d_or_epsg, extent, center_lonlat, small=False):
     epsg = d_or_epsg if isinstance(d_or_epsg, int) else d_or_epsg["epsg"]
-    L.graticule_utm(ax, epsg, extent)
-    L.scale_bar(ax, extent, f"EPSG:{epsg}")
+    L.graticule_utm(ax, epsg, extent, n_max=3.2 if small else 4.5, fs=4.2 if small else 4.8)
+    L.scale_bar(ax, extent, f"EPSG:{epsg}", fs=4.6 if small else 5.5)
     gamma = L.meridian_convergence_deg(center_lonlat[0], center_lonlat[1], L.utm_central_meridian(epsg))
-    L.north_arrow(ax, extent, gamma)
+    L.north_arrow(ax, extent, gamma, fs=3.8 if small else 4.3)
 
 
 def draw_polys(ax, d, lw=1.0):
     L.plot_geom(ax, d["terr_utm"], color="#00205B", lw=lw + 0.3, ls="-", zorder=6)
-    L.plot_geom(ax, d["foot_utm"], color="#CC79A7", lw=lw, ls=(0, (4, 2)), zorder=6)
+    L.plot_geom(ax, d["foot_utm"], color="#E0218A", lw=lw + 0.2, ls=(0, (4, 2)), zorder=6)
 
 
-def legend_decisions(fig, y=0.205):
+def legend_decisions(fig, y=0.1):
     from matplotlib.patches import Patch
     from matplotlib.lines import Line2D
     h = [Patch(fc=L.to_rgba_list(L.COL_BELOW, .78), ec="k", lw=.4, label="BELOW threshold"), Patch(fc=L.to_rgba_list(L.COL_ABOVE, .78), ec="k", lw=.4, label="ABOVE threshold"),
          Patch(fc=L.to_rgba_list(L.COL_ABSTAIN, .78), ec="k", lw=.4, label="ABSTAIN"), Patch(fc=L.COL_NODATA, ec="k", lw=.4, label="No data / no decision (255)"),
          Line2D([], [], color="#00205B", lw=1.3, label="OSM named polygon (exploratory, not an official border)"),
-         Line2D([], [], color="#CC79A7", lw=1.0, ls=(0, (4, 2)), label="Derived functional footprint (not an official border)")]
+         Line2D([], [], color="#E0218A", lw=1.2, ls=(0, (4, 2)), label="Derived functional footprint (not an official border)")]
     fig.legend(handles=h, loc="lower center", bbox_to_anchor=(0.5, y), ncol=3, fontsize=6, frameon=True)
 
 
@@ -801,8 +819,20 @@ def fig_B(ctx, t):
     keys = [k for k in KZ if k in ctx.sites]
     if not keys:
         return
-    fig = plt.figure(figsize=(7.5, 8.6))
-    gs = fig.add_gridspec(2, 2, left=0.05, right=0.985, top=0.93, bottom=0.30, hspace=0.30, wspace=0.12)
+    nm = {7.5: "FigB_supp_t7.5", 15: "FigB_decisions_t15", 25: "FigB_supp_t25"}[t]
+    cap = (f"Figure B{'' if t == 15 else ' (supplement)'}. Threshold decisions at {t:g}° slope for the Kazakhstan study windows, exactly as classified in the packaged rasters "
+           f"decision_combined_t{t:g}_risk2.tif (codes 0 BELOW, 1 ABOVE, 2 ABSTAIN, 255 no decision) produced by the combined (ridge-logistic) abstention rule with the training-risk target 0.02; "
+           "the rule was trained on lidar-validated sites in Switzerland and the USA and is TRANSFERRED here, so error is not measured at these sites. "
+           f"Background: hillshade of {dem_source_line(ctx)}. Panels (c) and (d) are two alternative Kok-Zhailau study windows (provisional configured centre vs centre taken from OSM-named objects), "
+           "kept separate on purpose. Class colours are drawn at 78 % opacity over the hillshade; grey = no decision (nodata). Outlines: dark-blue = OSM-mapped named polygon (exploratory), "
+           "pink dashed = functional footprint derived from mapped aerialways/pistes/tourism/leisure features (NOT an official boundary); no outline is shown where none exists. "
+           "Maps are drawn in the metric UTM 43N CRS (EPSG:32643); scale bars are exact lengths in that projection; graticule from pyproj; the arrow points to true north (grid convergence printed). "
+           "Pixel-to-polygon assignment: pixel centre inside polygon (rasterio rasterize, all_touched=False), masks packaged as mask_*.tif. "
+           "Per-mask counts, areas, cell size, shares and contour identifiers: tables/map_summary_figB.csv; check against tables/decisions_by_site.csv: tables/verification_figB_vs_decisions_by_site.csv.")
+    fh = 7.9
+    bot = bottom_frac(cap, fh, 0.42)
+    fig = plt.figure(figsize=(7.5, fh))
+    gs = fig.add_gridspec(2, 2, left=0.05, right=0.985, top=0.925, bottom=bot + 0.02, hspace=0.26, wspace=0.12)
     for i, key in enumerate(keys):
         d = ctx.sites[key]
         ax = fig.add_subplot(gs[i // 2, i % 2])
@@ -812,18 +842,8 @@ def fig_B(ctx, t):
         map_furniture(ax, d, d["extent"], d["center"])
         sh = L.class_shares(d["dec"][t])
         ax.set_title(f"({chr(97 + i)}) {SHORT[key]} - {t:g}°\nn={sh['n_px']:,} px, 30 m; BELOW {sh['BELOW_pct']:.1f} | ABOVE {sh['ABOVE_pct']:.1f} | ABSTAIN {sh['ABSTAIN_pct']:.1f} %", fontsize=6.5)
-    legend_decisions(fig, y=0.215)
-    nm = {7.5: "FigB_supp_t7.5", 15: "FigB_decisions_t15", 25: "FigB_supp_t25"}[t]
-    cap = (f"Figure B{'' if t == 15 else ' (supplement)'}. Threshold decisions at {t:g}° slope for the Kazakhstan study windows, exactly as classified in the packaged rasters "
-           f"decision_combined_t{t:g}_risk2.tif (codes 0 BELOW, 1 ABOVE, 2 ABSTAIN, 255 no decision) produced by the combined (ridge-logistic) abstention rule with the training-risk target 0.02; "
-           "the rule was trained on lidar-validated sites in Switzerland and the USA and is TRANSFERRED here, so error is not measured at these sites. "
-           f"Background: hillshade of {dem_source_line(ctx)}. Panels (c) and (d) are two alternative Kok-Zhailau study windows (provisional configured centre vs centre taken from OSM-named objects), "
-           "kept separate on purpose. Class colours are drawn at 78 % opacity over the hillshade; grey = no decision. Outlines: dark-blue = OSM-mapped named polygon (exploratory), "
-           "pink dashed = functional footprint derived from mapped aerialways/pistes/tourism/leisure features (NOT an official boundary); no outline is shown where none exists. "
-           "Maps are drawn in the metric UTM 43N CRS (EPSG:32643); scale bars are exact lengths in that projection; graticule from pyproj; the arrow points to true north (grid convergence printed). "
-           "Pixel-to-polygon assignment: pixel centre inside polygon (rasterio rasterize, all_touched=False), masks packaged as mask_*.tif. "
-           "Per-mask counts and shares: tables/map_summary_figB.csv; check against tables/decisions_by_site.csv: tables/verification_figB_vs_decisions_by_site.csv.")
-    fig.text(0.02, 0.012, L.wrap_caption(cap, 150), fontsize=5.3, ha="left", va="bottom")
+    legend_decisions(fig, y=(L.cap_height_in(cap) + 0.05) / fh)
+    L.place_caption(fig, cap)
     save_fig(ctx, fig, nm, cap)
 
 
@@ -838,11 +858,7 @@ def L_plt():
 def fig_A(ctx):
     import geopandas as gpd
     from pyproj import Transformer, CRS
-    from shapely.geometry import box
     plt = L_plt()
-    fig = plt.figure(figsize=(7.5, 6.6))
-    gs = fig.add_gridspec(2, 2, width_ratios=[1.5, 1], left=0.04, right=0.985, top=0.94, bottom=0.27, hspace=0.12, wspace=0.10)
-    axC, axA, axB = fig.add_subplot(gs[:, 0]), fig.add_subplot(gs[0, 1]), fig.add_subplot(gs[1, 1])
     ne_missing = False
     ne110 = ne50 = None
     try:
@@ -851,9 +867,19 @@ def fig_A(ctx):
     except Exception as e:  # noqa: BLE001
         ne_missing = True
         exc("ERROR", "Figure A", "Natural Earth base layers unreadable: country outlines are NOT drawn (not replaced by invented geometry)", repr(e))
-    pts = {"Kazakhstan: Medeu, Shymbulak, Kok-Zhailau": (77.05, 43.13, "*", "#D55E00"), "Switzerland: Davos, Zermatt": (8.8, 46.4, "^", "#0072B2"),
-           "USA: Alta-Snowbird, Park City": (-111.6, 40.62, "^", "#0072B2")}
-    # (a) global, Robinson
+    cap = ("Figure A. Location of the study and validation regions. (a) World overview; (b) Central Asia with the enlarged Kazakhstan window; (c) enlarged window 76.85-77.20°E, 43.05-43.25°N in "
+           f"UTM zone 43N (EPSG:32643). Base layers (a, b): Natural Earth 1:110m / 1:50m admin-0 countries (public domain). Relief in (c): hillshade (azimuth 315°, altitude 45°) of {dem_source_line(ctx)}; "
+           "grey = outside the packaged 30 m windows (no data), no relief is simulated there. Coloured rectangles are PROCESSING WINDOWS (analysis extents), not resort territories; solid lines are named OSM polygons "
+           "where one exists (Medeu: a 0.043 km² sports-centre polygon; Shymbulak: a winter-sports polygon); dashed lines are footprints derived from mapped aerialways/pistes/tourism/leisure features within 2.5-3.5 km of the configured centre "
+           "(buffer 250 m, erosion 200 m); they are exploratory and are NOT official borders. Kok-Zhailau is shown as two alternative windows: V1 (configured centre, provisional) and V2 (centre from OSM-named objects, ~5.9 km west). "
+           "Panels a-b have no scale bar because distances are distorted at those scales; panel c has an exact metric scale bar, pyproj graticule and a true-north arrow rotated by the UTM grid convergence.")
+    fh = 5.9
+    bot = bottom_frac(cap, fh, 0.55)
+    fig = plt.figure(figsize=(7.5, fh))
+    gs = fig.add_gridspec(2, 2, width_ratios=[1.5, 1], left=0.04, right=0.985, top=0.93, bottom=bot + 0.02, hspace=0.14, wspace=0.08)
+    axC, axA, axB = fig.add_subplot(gs[:, 0]), fig.add_subplot(gs[0, 1]), fig.add_subplot(gs[1, 1])
+    pts = {"KZ": ("Kazakhstan: Medeu, Shymbulak, Kok-Zhailau", 77.05, 43.13, "*", "#D55E00", (6, 4)), "CH": ("Switzerland: Davos, Zermatt", 8.8, 46.4, "^", "#0072B2", (-4, -11)),
+           "US": ("USA: Alta-Snowbird, Park City", -111.6, 40.62, "^", "#0072B2", (-4, -11))}
     rob = CRS.from_proj4("+proj=robin +lon_0=0 +datum=WGS84")
     tr = Transformer.from_crs(4326, rob, always_xy=True)
     if ne110 is not None:
@@ -865,16 +891,16 @@ def fig_A(ctx):
         axA.plot(*zip(*[tr.transform(lo, la) for la in np.linspace(-85, 85, 60)]), color="0.5", lw=0.3, ls=(0, (1, 2)))
     for la in range(-60, 61, 30):
         axA.plot(*zip(*[tr.transform(lo, la) for lo in np.linspace(-180, 180, 120)]), color="0.5", lw=0.3, ls=(0, (1, 2)))
-    for nm, (lo, la, mk, col) in pts.items():
+    for k, (nm, lo, la, mk, col, off) in pts.items():
         x, y = tr.transform(lo, la)
-        axA.plot(x, y, mk, ms=6 if mk == "*" else 4.5, color=col, mec="k", mew=0.4, zorder=5)
+        axA.plot(x, y, mk, ms=7 if mk == "*" else 5, color=col, mec="k", mew=0.4, zorder=5)
+        axA.annotate(k, (x, y), xytext=off, textcoords="offset points", fontsize=5.5, fontweight="bold")
     axA.set_aspect("equal")
-    axA.set_xticks([]); axA.set_yticks([])
+    axA.set_xticks([]); axA.set_yticks([]); axA.set_xlabel(""); axA.set_ylabel("")
     axA.set_title("(a) Study and validation regions", fontsize=7)
     axA.text(0.02, 0.02, "Robinson (lon_0=0°); no scale bar (distance distorted)", transform=axA.transAxes, fontsize=4.5)
     if ne_missing:
         axA.text(0.5, 0.5, "BASE MAP NOT AVAILABLE\n(Natural Earth download failed)", transform=axA.transAxes, ha="center", fontsize=6, color="darkred")
-    # (b) Central Asia, LAEA
     laea = CRS.from_proj4("+proj=laea +lat_0=45 +lon_0=70 +datum=WGS84")
     tl = Transformer.from_crs(4326, laea, always_xy=True)
     if ne50 is not None:
@@ -887,17 +913,16 @@ def fig_A(ctx):
     ring = [tl.transform(x, y) for x, y in [(KZ_BBOX[0], KZ_BBOX[1]), (KZ_BBOX[2], KZ_BBOX[1]), (KZ_BBOX[2], KZ_BBOX[3]), (KZ_BBOX[0], KZ_BBOX[3]), (KZ_BBOX[0], KZ_BBOX[1])]]
     axB.plot(*zip(*ring), color="#D55E00", lw=1.2)
     ax_, ay_ = tl.transform(76.9454, 43.2380)
-    axB.plot(ax_, ay_, "o", ms=3, color="k"); axB.annotate("Almaty (city centre)", (ax_, ay_), xytext=(6, -10), textcoords="offset points", fontsize=5.5)
+    axB.plot(ax_, ay_, "o", ms=3, color="k"); axB.annotate("Almaty (city centre)", (ax_, ay_), xytext=(-62, 8), textcoords="offset points", fontsize=5.5)
     for lo in range(45, 100, 10):
         axB.plot(*zip(*[tl.transform(lo, la) for la in np.linspace(34, 58, 40)]), color="0.5", lw=0.3, ls=(0, (1, 2)))
     for la in range(36, 58, 5):
         axB.plot(*zip(*[tl.transform(lo, la) for lo in np.linspace(40, 100, 60)]), color="0.5", lw=0.3, ls=(0, (1, 2)))
-    axB.set_aspect("equal"); axB.set_xticks([]); axB.set_yticks([])
-    axB.set_title("(b) Central Asia, with the enlarged window (red)", fontsize=7)
+    axB.set_aspect("equal"); axB.set_xticks([]); axB.set_yticks([]); axB.set_xlabel(""); axB.set_ylabel("")
+    axB.set_title("(b) Central Asia; enlarged window in red", fontsize=7)
     axB.text(0.02, 0.02, "Lambert azimuthal equal-area (lat_0=45°N, lon_0=70°E); no scale bar", transform=axB.transAxes, fontsize=4.5)
     if ne_missing:
         axB.text(0.5, 0.5, "BASE MAP NOT AVAILABLE", transform=axB.transAxes, ha="center", fontsize=6, color="darkred")
-    # (c) enlarged Kazakhstan window in UTM 43N
     epsg = 32643
     t43 = Transformer.from_crs(4326, epsg, always_xy=True)
     corners = [t43.transform(x, y) for x, y in [(KZ_BBOX[0], KZ_BBOX[1]), (KZ_BBOX[2], KZ_BBOX[1]), (KZ_BBOX[2], KZ_BBOX[3]), (KZ_BBOX[0], KZ_BBOX[3])]]
@@ -916,100 +941,109 @@ def fig_A(ctx):
         L.plot_geom(axC, d["terr_utm"], color=cols[key], lw=1.4, zorder=6)
         L.plot_geom(axC, d["foot_utm"], color=cols[key], lw=0.8, ls=(0, (4, 2)), zorder=6)
         cx, cy = d["cxy"]
-        axC.plot(cx, cy, "o" if key not in ("kok_zhailau",) else "D", ms=3.5, color=cols[key], mec="k", mew=0.5, zorder=7)
+        axC.plot(cx, cy, "o" if key != "kok_zhailau" else "D", ms=3.5, color=cols[key], mec="k", mew=0.5, zorder=7)
         axC.text(e[0] + 120, e[3] - 120, SHORT[key], fontsize=6, color="k", va="top", zorder=8, bbox=dict(fc="white", ec=cols[key], lw=0.6, alpha=0.85, pad=1.2))
+        ctx.inventory.append(dict(figure="A", panel="c", site=key, quantity="processing window", crs=d["meta"]["crs"], cell_size_m=d["res"], n_valid_px=int(np.isfinite(d["cop"]).sum()),
+                                  area_km2=(e[1] - e[0]) * (e[3] - e[2]) / 1e6, contour_id=contour_id(d, "context"), threshold_deg=""))
     bx = [t43.transform(x, y) for x, y in [(KZ_BBOX[0], KZ_BBOX[1]), (KZ_BBOX[2], KZ_BBOX[1]), (KZ_BBOX[2], KZ_BBOX[3]), (KZ_BBOX[0], KZ_BBOX[3]), (KZ_BBOX[0], KZ_BBOX[1])]]
     axC.plot(*zip(*bx), color="#D55E00", lw=1.0, zorder=7)
+    ctx.inventory.append(dict(figure="A", panel="c", site="kz_inset_bbox", quantity="enlarged inset frame 76.85-77.20E, 43.05-43.25N", crs="EPSG:32643", cell_size_m=30,
+                              n_valid_px=int(np.isfinite(ctx.common["cop"]).sum()) if ctx.common else 0, area_km2=Polygon_area(bx), contour_id="BBOX:76.85,43.05,77.20,43.25", threshold_deg=""))
     map_furniture(axC, epsg, ext, (77.02, 43.15))
     axC.set_title("(c) Kazakhstan study windows (76.85-77.20°E, 43.05-43.25°N)", fontsize=7)
     from matplotlib.lines import Line2D
     h = [Line2D([], [], color="#D55E00", marker="*", ls="", ms=7, mec="k", mew=.4, label="Kazakhstan study sites (a)"), Line2D([], [], color="#0072B2", marker="^", ls="", ms=5, mec="k", mew=.4, label="Lidar validation regions (a)"),
          Line2D([], [], color="0.2", lw=1.2, label="Processing window (extent only, rectangle)"), Line2D([], [], color="0.2", lw=1.4, label="OSM named polygon (exploratory)"),
          Line2D([], [], color="0.2", lw=.8, ls=(0, (4, 2)), label="Derived footprint (not an official border)"), Line2D([], [], color="0.4", marker="o", ls="", ms=3.5, label="Configured/OSM centre (diamond = provisional V1)")]
-    fig.legend(handles=h, loc="lower center", bbox_to_anchor=(0.5, 0.215), ncol=3, fontsize=5.8)
-    cap = ("Figure A. Location of the study and validation regions. (a) World overview; (b) Central Asia with the enlarged Kazakhstan window; (c) enlarged window 76.85-77.20°E, 43.05-43.25°N in "
-           f"UTM zone 43N (EPSG:32643). Base layers (a, b): Natural Earth 1:110m / 1:50m admin-0 countries (public domain). Relief in (c): hillshade (azimuth 315°, altitude 45°) of {dem_source_line(ctx)}; "
-           "grey = outside the packaged 30 m windows (no data), no relief is simulated there. Coloured rectangles are PROCESSING WINDOWS (analysis extents), not resort territories; solid lines are named OSM polygons "
-           "where one exists (Medeu: a 0.043 km² sports-centre polygon; Shymbulak: a winter-sports polygon); dashed lines are footprints derived from mapped aerialways/pistes/tourism/leisure features within 2.5-3.5 km of the configured centre "
-           "(buffer 250 m, erosion 200 m); they are exploratory and are NOT official borders. Kok-Zhailau is shown as two alternative windows: V1 (configured centre, provisional) and V2 (centre from OSM-named objects, ~5.9 km west). "
-           "Panels a-b have no scale bar because distances are distorted at those scales; panel c has an exact metric scale bar, pyproj graticule and a true-north arrow rotated by the UTM grid convergence.")
-    fig.text(0.02, 0.012, L.wrap_caption(cap, 150), fontsize=5.3, ha="left", va="bottom")
+    fig.legend(handles=h, loc="lower center", bbox_to_anchor=(0.5, (L.cap_height_in(cap) + 0.05) / fh), ncol=3, fontsize=5.8)
+    L.place_caption(fig, cap)
     save_fig(ctx, fig, "FigA_location_maps", cap)
     # A-supplement: validation sites
-    fig = plt.figure(figsize=(7.5, 7.4))
-    gs = fig.add_gridspec(2, 2, left=0.05, right=0.985, top=0.94, bottom=0.2, hspace=0.30, wspace=0.12)
+    cap2 = ("Figure A (supplement). Lidar-DTM validation sites used to train and validate the abstention rule: Davos-Parsenn and Zermatt-Gornergrat (Switzerland, swissALTI3D 2 m, LN02) and Alta-Snowbird and Park City (USA, USGS 3DEP 10 m, NAVD88). "
+            "Background: hillshade of Copernicus GLO-30 DSM at 30 m (EGM2008). Green dot = configured site centre; dark-blue = OSM named polygon where found; pink dashed = derived footprint (exploratory, not an official border). "
+            "Each panel is drawn in its own local UTM zone with an exact metric scale bar, pyproj graticule and a true-north arrow rotated by the grid convergence.")
+    fh = 7.2
+    bot = bottom_frac(cap2, fh, 0.1)
+    fig = plt.figure(figsize=(7.5, fh))
+    gs = fig.add_gridspec(2, 2, left=0.05, right=0.985, top=0.935, bottom=bot + 0.02, hspace=0.26, wspace=0.12)
     for i, key in enumerate(VAL):
         d = ctx.sites.get(key)
         if d is None:
             continue
         ax = fig.add_subplot(gs[i // 2, i % 2])
         site_base(ax, d)
-        L.plot_geom(ax, d["foot_utm"], color="#CC79A7", lw=0.9, ls=(0, (4, 2)), zorder=6)
+        L.plot_geom(ax, d["foot_utm"], color="#E0218A", lw=1.0, ls=(0, (4, 2)), zorder=6)
         L.plot_geom(ax, d["terr_utm"], color="#00205B", lw=1.2, zorder=6)
         ax.plot(*d["cxy"], "o", ms=3.5, color="#009E73", mec="k", mew=0.5, zorder=7)
         map_furniture(ax, d, d["extent"], d["center"])
         ax.set_title(f"({chr(97 + i)}) {LABEL[key]}  (EPSG:{d['epsg']})", fontsize=6.8)
-    cap2 = ("Figure A (supplement). Lidar-DTM validation sites used to train and validate the abstention rule: Davos-Parsenn and Zermatt-Gornergrat (Switzerland, swissALTI3D 2 m, LN02) and Alta-Snowbird and Park City (USA, USGS 3DEP 10 m, NAVD88). "
-            "Background: hillshade of Copernicus GLO-30 DSM at 30 m (EGM2008). Green dot = configured site centre; dark-blue = OSM named polygon where found; pink dashed = derived footprint (exploratory, not an official border). "
-            "Each panel is drawn in its own local UTM zone with an exact metric scale bar, pyproj graticule and a true-north arrow rotated by the grid convergence.")
-    fig.text(0.02, 0.012, L.wrap_caption(cap2, 150), fontsize=5.3, ha="left", va="bottom")
+        e = d["extent"]
+        ctx.inventory.append(dict(figure="A-supp", panel=chr(97 + i), site=key, quantity="processing window", crs=d["meta"]["crs"], cell_size_m=d["res"], n_valid_px=int(np.isfinite(d["cop"]).sum()),
+                                  area_km2=(e[1] - e[0]) * (e[3] - e[2]) / 1e6, contour_id=contour_id(d, "context"), threshold_deg=""))
+    L.place_caption(fig, cap2)
     save_fig(ctx, fig, "FigA_supp_validation_sites", cap2)
+
+
+def Polygon_area(xy):
+    a = 0.0
+    for (x0, y0), (x1, y1) in zip(xy[:-1], xy[1:]):
+        a += x0 * y1 - x1 * y0
+    return abs(a) / 2 / 1e6
 
 
 def fig_C(ctx):
     plt = L_plt()
-    from matplotlib.colors import TwoSlopeNorm
     cmap = plt.get_cmap("RdBu_r").copy()
     cmap.set_bad(L.COL_NODATA)
     vm = 10.0
 
-    def panel(ax, d, a, b, title):
+    def panel(ax, d, a, b, title, fig_id, pname, small=False):
         diff = np.where(np.isfinite(a) & np.isfinite(b), a - b, np.nan)
         ax.imshow(diff, extent=d["extent"], cmap=cmap, vmin=-vm, vmax=vm, interpolation="nearest")
         L.style_map_axes(ax, d["extent"])
         L.plot_geom(ax, d["foot_utm"], color="k", lw=0.5, ls=(0, (3, 2)))
-        map_furniture(ax, d, d["extent"], d["center"])
+        map_furniture(ax, d, d["extent"], d["center"], small=small)
         st = L.slope_diff_stats(a, b)
-        ax.set_title(f"{title}\nn={st.get('common_px', 0):,} common px; mean {st.get('mean_diff_deg', float('nan')):+.2f}°, MAE {st.get('mae_deg', float('nan')):.2f}°", fontsize=6)
-        return diff
-    # C1: Kazakhstan, NASADEM - COP on the common valid mask
+        ax.set_title(f"{title}\nn={st.get('common_px', 0):,} common px; mean {st.get('mean_diff_deg', float('nan')):+.2f}°, MAE {st.get('mae_deg', float('nan')):.2f}°", fontsize=5.8 if small else 6)
+        ctx.inventory.append(dict(figure=fig_id, panel=pname, site=d["key"], quantity=title, crs=d["meta"]["crs"], cell_size_m=d["res"], n_valid_px=st.get("common_px", 0),
+                                  area_km2=st.get("common_px", 0) * d["res"] ** 2 / 1e6, contour_id=contour_id(d, "context"), threshold_deg=""))
     keys = [k for k in KZ if k in ctx.sites]
     if keys:
-        fig = plt.figure(figsize=(7.5, 8.2))
-        gs = fig.add_gridspec(2, 2, left=0.05, right=0.985, top=0.93, bottom=0.255, hspace=0.30, wspace=0.12)
-        for i, k in enumerate(keys):
-            d = ctx.sites[k]
-            ax = fig.add_subplot(gs[i // 2, i % 2])
-            panel(ax, d, d["nas_slope"], d["cop_slope"], f"({chr(97 + i)}) {SHORT[k]}: NASADEM minus Copernicus slope")
-        sm = plt.cm.ScalarMappable(norm=plt.Normalize(-vm, vm), cmap=cmap)
-        cax = fig.add_axes([0.25, 0.215, 0.5, 0.012])
-        cb = fig.colorbar(sm, cax=cax, orientation="horizontal")
-        cb.set_label("slope difference, degrees (Horn, 30 m); grey = no data in either DEM", fontsize=6)
         cap = ("Figure C1. Inter-DEM slope differences (NASADEM minus Copernicus GLO-30) on the common valid mask (pixels with a complete 3x3 neighbourhood in BOTH DEMs) for the four Kazakhstan windows. "
                "Both DEMs are DSMs resampled bilinearly to the same 30 m UTM 43N grid; slopes by the Horn (1981) 3x3 method. Differences show MODEL DISAGREEMENT between DEMs, not accuracy: no lidar reference exists for Kazakhstan. "
-               "ALOS AW3D30 and FABDEM are not mapped because their rasters are not redistributed in this package (licence terms; see exceptions report). Statistics: tables/inter_dem_slope_difference_summary.csv. "
-               "Dashed black outline = derived functional footprint (exploratory). Metric scale bar, pyproj graticule and true-north arrow as in Figure B.")
-        fig.text(0.02, 0.012, L.wrap_caption(cap, 150), fontsize=5.3, ha="left", va="bottom")
+               "ALOS AW3D30 and FABDEM are not mapped because their rasters are not redistributed in this package (licence terms; see exceptions report). Statistics (common pixels, mean, SD, MAE, RMSE, 95th percentile, class disagreement at 7.5/15/25°): "
+               "tables/inter_dem_slope_difference_summary.csv. Dashed black outline = derived functional footprint (exploratory). Metric scale bar, pyproj graticule and true-north arrow as in Figure B.")
+        fh = 7.4
+        bot = bottom_frac(cap, fh, 0.62)
+        fig = plt.figure(figsize=(7.5, fh))
+        gs = fig.add_gridspec(2, 2, left=0.05, right=0.985, top=0.925, bottom=bot + 0.02, hspace=0.26, wspace=0.12)
+        for i, k in enumerate(keys):
+            d = ctx.sites[k]
+            panel(fig.add_subplot(gs[i // 2, i % 2]), d, d["nas_slope"], d["cop_slope"], f"({chr(97 + i)}) {SHORT[k]}: NASADEM minus Copernicus slope", "C1", chr(97 + i))
+        sm = plt.cm.ScalarMappable(norm=plt.Normalize(-vm, vm), cmap=cmap)
+        cb = fig.colorbar(sm, cax=fig.add_axes([0.25, (L.cap_height_in(cap) + 0.3) / fh, 0.5, 0.011]), orientation="horizontal")
+        cb.set_label("slope difference, degrees (Horn, 30 m); grey = no data in either DEM", fontsize=6)
+        L.place_caption(fig, cap)
         save_fig(ctx, fig, "FigC1_kazakhstan_inter_dem_slope_difference", cap)
-    # C2: validation sites: COP-lidar, NASADEM-lidar, NASADEM-COP
     vk = [k for k in VAL if k in ctx.sites]
     if vk:
-        fig = plt.figure(figsize=(7.5, 9.6))
-        gs = fig.add_gridspec(len(vk), 3, left=0.04, right=0.985, top=0.95, bottom=0.2, hspace=0.45, wspace=0.08)
-        for r, k in enumerate(vk):
-            d = ctx.sites[k]
-            panel(fig.add_subplot(gs[r, 0]), d, d["cop_slope"], d["ref_slope"], f"{SHORT[k]}: Copernicus - lidar")
-            panel(fig.add_subplot(gs[r, 1]), d, d["nas_slope"], d["ref_slope"], f"{SHORT[k]}: NASADEM - lidar")
-            panel(fig.add_subplot(gs[r, 2]), d, d["nas_slope"], d["cop_slope"], f"{SHORT[k]}: NASADEM - Copernicus")
-        sm = plt.cm.ScalarMappable(norm=plt.Normalize(-vm, vm), cmap=cmap)
-        cax = fig.add_axes([0.25, 0.165, 0.5, 0.01])
-        cb = fig.colorbar(sm, cax=cax, orientation="horizontal")
-        cb.set_label("slope difference, degrees (Horn, 30 m); grey = no data", fontsize=6)
         cap = ("Figure C2. Slope differences at the lidar validation sites on the common valid mask of each pair: global DEM minus lidar-DTM reference (support-matched: the swissALTI3D 2 m / USGS 3DEP 10 m DTM is block-averaged to the 30 m grid "
                "before the slope is computed) and NASADEM minus Copernicus. Rows: Davos-Parsenn, Zermatt-Gornergrat (Switzerland), Alta-Snowbird, Park City (USA). Zermatt includes glaciers whose surface changed between the lidar epoch and the DSMs. "
                "Global DEMs are DSMs (canopy/buildings included), the reference is a bare-earth DTM; no co-registration was applied. Statistics: tables/inter_dem_slope_difference_summary.csv. "
-               "Each panel is drawn in its own local UTM zone with an exact metric scale bar, graticule and true-north arrow.")
-        fig.text(0.02, 0.012, L.wrap_caption(cap, 150), fontsize=5.3, ha="left", va="bottom")
+               "Each panel is drawn in its own local UTM zone with an exact metric scale bar, graticule and true-north arrow; dashed outline = derived footprint (exploratory).")
+        fh = 9.4
+        bot = bottom_frac(cap, fh, 0.5)
+        fig = plt.figure(figsize=(7.5, fh))
+        gs = fig.add_gridspec(len(vk), 3, left=0.045, right=0.985, top=0.945, bottom=bot + 0.02, hspace=0.42, wspace=0.14)
+        for r, k in enumerate(vk):
+            d = ctx.sites[k]
+            panel(fig.add_subplot(gs[r, 0]), d, d["cop_slope"], d["ref_slope"], f"{SHORT[k]}: Copernicus - lidar", "C2", f"{r + 1}a", small=True)
+            panel(fig.add_subplot(gs[r, 1]), d, d["nas_slope"], d["ref_slope"], f"{SHORT[k]}: NASADEM - lidar", "C2", f"{r + 1}b", small=True)
+            panel(fig.add_subplot(gs[r, 2]), d, d["nas_slope"], d["cop_slope"], f"{SHORT[k]}: NASADEM - Copernicus", "C2", f"{r + 1}c", small=True)
+        sm = plt.cm.ScalarMappable(norm=plt.Normalize(-vm, vm), cmap=cmap)
+        cb = fig.colorbar(sm, cax=fig.add_axes([0.25, (L.cap_height_in(cap) + 0.22) / fh, 0.5, 0.008]), orientation="horizontal")
+        cb.set_label("slope difference, degrees (Horn, 30 m); grey = no data", fontsize=6)
+        L.place_caption(fig, cap)
         save_fig(ctx, fig, "FigC2_validation_dem_vs_lidar_slope_difference", cap)
 
 
@@ -1027,9 +1061,18 @@ def fig_D(ctx):
             native, nm = read_raster(p)
         else:
             exc("ERROR", "Figure D", f"native lidar window missing for {key}; profile is drawn from the 30 m block-mean reference only", p.name)
-        fig = plt.figure(figsize=(7.5, 8.6))
-        gs = fig.add_gridspec(4, 2, width_ratios=[1, 1.45], height_ratios=[3, 1.2, 3, 1.2], left=0.045, right=0.985, top=0.94, bottom=0.2, hspace=0.35, wspace=0.14)
+        ref_name = "swissALTI3D (LN02, 2 m; swisstopo OGD)" if ctx.cfg["validation"][key]["reference"] == "swissalti3d" else "USGS 3DEP 1/3 arc-second (NAVD88, ~10 m)"
+        cap = (f"Figure D ({SHORT[key]}). Measured terrain profiles along two grid-aligned 3 km transects through the site centre (rule-based, not selected for agreement; defined in derived/vector/profile_lines.geojson). "
+               f"Reference: {ref_name}, a bare-earth lidar DTM, shown at native resolution (black) and block-averaged to the 30 m cell (grey) - the SUPPORT-MATCHED reference used in the validation; candidate DEMs: "
+               f"Copernicus GLO-30 DSM (EGM2008) and NASADEM DSM (EGM96), 30 m, bilinearly sampled along the line. Vertical datums are not harmonised, so absolute heights differ by a geoid offset of a few metres; "
+               "the lower panels remove the median offset along each transect. DSMs include canopy/buildings while the reference is bare earth. No co-registration was applied. "
+               "Profile values: tables/profile_samples.csv; statistics: tables/profile_summary.csv. Map: exact metric scale bar, pyproj graticule, true-north arrow (grid convergence printed).")
+        fh = 7.9
+        bot = bottom_frac(cap, fh, 0.15)
+        fig = plt.figure(figsize=(7.5, fh))
+        gs = fig.add_gridspec(4, 2, width_ratios=[1, 1.5], height_ratios=[3, 1.2, 3, 1.2], left=0.045, right=0.985, top=0.945, bottom=bot + 0.03, hspace=0.62, wspace=0.30)
         axm = fig.add_subplot(gs[:, 0])
+        axm.set_anchor("N")
         if native is not None:
             hsn = L.hillshade(native, nm["res"])
             axm.imshow(hsn, extent=extent_of(nm), cmap=L.gray_hillshade_cmap(), vmin=0, vmax=1, interpolation="nearest")
@@ -1045,7 +1088,7 @@ def fig_D(ctx):
             axm.text(xs[-1], ys[-1], kind, color=cols[kind], fontsize=7, fontweight="bold", zorder=7, ha="left" if kind == "WE" else "center", va="center" if kind == "WE" else "bottom",
                      bbox=dict(fc="white", ec="none", alpha=0.75, pad=0.6))
         axm.plot(*d["cxy"], "o", ms=3, color="k", zorder=7)
-        map_furniture(axm, d, mext, d["center"])
+        map_furniture(axm, d, mext, d["center"], small=True)
         axm.set_title(f"{LABEL[key]}\nhillshade of {'native lidar DTM' if native is not None else '30 m block-mean DTM'}", fontsize=6.5)
         for r, kind in enumerate(("WE", "SN")):
             step = rf if native is not None else 30.0
@@ -1056,14 +1099,14 @@ def fig_D(ctx):
             ax = fig.add_subplot(gs[2 * r, 1])
             if native is not None:
                 ax.plot(t, z_nat, color="k", lw=0.7, label=f"lidar DTM, native {rf:g} m")
-            ax.plot(t, z30, color="0.45", lw=1.1, ls="-", label="lidar DTM, 30 m block-mean (support-matched)")
+            ax.plot(t, z30, color="0.45", lw=1.1, label="lidar DTM, 30 m block-mean (support-matched)")
             ax.plot(t, zc, color="#D55E00", lw=0.9, label="Copernicus GLO-30 DSM, 30 m")
             ax.plot(t, zn, color="#0072B2", lw=0.9, label="NASADEM DSM, 30 m")
             ax.set_ylabel("elevation, m (datums differ)")
             ax.set_title(f"({'ab'[r]}) transect {kind} through the site centre (grid {'W-E' if kind == 'WE' else 'S-N'}, 3 km)", fontsize=6.5)
             ax.grid(color="0.85", lw=0.4)
             if r == 0:
-                ax.legend(loc="best", fontsize=5.2)
+                ax.legend(loc="best", fontsize=5.0)
             axd = fig.add_subplot(gs[2 * r + 1, 1], sharex=ax)
             ok = np.isfinite(z30)
             for nm_, zz, col in (("Copernicus", zc, "#D55E00"), ("NASADEM", zn, "#0072B2")):
@@ -1073,21 +1116,17 @@ def fig_D(ctx):
                 v = np.isfinite(dd)
                 rows_sum.append(dict(site=key, transect=kind, dem=nm_, n_points=int(v.sum()), rmse_debiased_m=float(np.sqrt(np.nanmean(dd[v] ** 2))) if v.any() else float("nan"),
                                      median_offset_m=float(np.nanmedian(zz - z30)) if v.any() else float("nan"), relief_ref30_m=float(np.nanmax(z30) - np.nanmin(z30)) if ok.any() else float("nan"),
-                                     reference_native=("yes" if native is not None else "NOT AVAILABLE"), step_m=step))
+                                     reference_native=("yes" if native is not None else "NOT AVAILABLE"), step_m=step, contour_id=f"PROFILE:{key}:{kind}:3000m"))
             axd.axhline(0, color="k", lw=0.4)
-            axd.set_ylabel("DEM - ref30,\nmedian removed, m")
+            axd.set_ylabel("DEM - ref30,\nmedian removed, m", fontsize=6)
             axd.set_xlabel("distance along transect from site centre, m")
             axd.grid(color="0.85", lw=0.4)
             for j in range(len(t)):
                 rows_s.append(dict(site=key, transect=kind, distance_m=float(t[j]), x_utm=float(xs[j]), y_utm=float(ys[j]), lidar_native_m=float(z_nat[j]), lidar_30m_blockmean_m=float(z30[j]),
                                    cop_glo30_m=float(zc[j]), nasadem_m=float(zn[j])))
-        ref_name = "swissALTI3D (LN02, 2 m; swisstopo OGD)" if ctx.cfg["validation"][key]["reference"] == "swissalti3d" else "USGS 3DEP 1/3 arc-second (NAVD88, ~10 m)"
-        cap = (f"Figure D ({SHORT[key]}). Measured terrain profiles along two grid-aligned 3 km transects through the site centre (rule-based, not selected for agreement; defined in vector/profile_lines.geojson). "
-               f"Reference: {ref_name}, a bare-earth lidar DTM, shown at native resolution (black) and block-averaged to the 30 m cell (grey) - the SUPPORT-MATCHED reference used in the validation; candidate DEMs: "
-               f"Copernicus GLO-30 DSM (EGM2008) and NASADEM DSM (EGM96), 30 m, bilinearly sampled along the line. Vertical datums are not harmonised, so absolute heights differ by a geoid offset of a few metres; "
-               "the lower panels remove the median offset along each transect. DSMs include canopy/buildings while the reference is bare earth. No co-registration was applied. "
-               "Profile values: tables/profile_samples.csv; statistics: tables/profile_summary.csv. Map: exact metric scale bar, pyproj graticule, true-north arrow (grid convergence printed).")
-        fig.text(0.02, 0.012, L.wrap_caption(cap, 150), fontsize=5.3, ha="left", va="bottom")
+            ctx.inventory.append(dict(figure="D", panel=f"{key}:{kind}", site=key, quantity="elevation profile 3 km", crs=d["meta"]["crs"], cell_size_m=rf if native is not None else 30.0,
+                                      n_valid_px=int(np.isfinite(z_nat).sum() if native is not None else ok.sum()), area_km2="", contour_id=f"PROFILE:{key}:{kind}:3000m", threshold_deg=""))
+        L.place_caption(fig, cap)
         save_fig(ctx, fig, f"FigD_profile_{key}", cap)
     if rows_s:
         C.write_csv(ctx.out / "tables" / "profile_samples.csv", rows_s)
@@ -1124,15 +1163,22 @@ def profile_vectors(ctx):
 
 def fig_E(ctx, pts_by_site):
     plt = L_plt()
-    sites = [s for s in ("kz_all",) + tuple(VAL) if s in pts_by_site]
+    sites = [s_ for s_ in ("kz_all",) + tuple(VAL) if s_ in pts_by_site]
     if not sites:
         return
-    fig = plt.figure(figsize=(7.5, 8.4))
-    gs = fig.add_gridspec(2, 3, left=0.04, right=0.985, top=0.93, bottom=0.27, hspace=0.30, wspace=0.10)
-    for i, s in enumerate(sites):
+    cap = ("Figure E. Real ICESat-2 ATL08 v007 terrain segments (100 m along-track; points are the true segment locations) used as a PARTIAL independent reference. Filters fixed before inspecting DEM errors: common = terrain height valid, "
+           ">= 30 terrain photons, ATM cloud flag <= 2; lenient = height uncertainty < 15 m; strict = < 5 m. Points exist only along the satellite ground tracks (point samples), so they must NOT be read as full-map validation of any slope map. "
+           "The strict subset is 1-4 % of all segments in every area (table in panel f). Counts in panel titles refer to the displayed extent; full-bbox counts are in tables/atl08_filter_counts.csv. Heights are ellipsoidal and were not geoid-corrected here. "
+           "Background: hillshade of Copernicus GLO-30 (30 m; grey = outside the packaged windows). Panel (a) covers 76.85-77.20°E, 43.05-43.25°N (UTM 43N); other panels are the lidar validation windows (own local UTM). "
+           "Exact metric scale bars, graticule, true-north arrows. Vector layers with quality flags: derived/vector/atl08_segments_and_tracks.gpkg.")
+    fh = 7.3
+    bot = bottom_frac(cap, fh, 0.45)
+    fig = plt.figure(figsize=(7.5, fh))
+    gs = fig.add_gridspec(2, 3, left=0.04, right=0.985, top=0.925, bottom=bot + 0.02, hspace=0.30, wspace=0.12)
+    for i, s_ in enumerate(sites):
         ax = fig.add_subplot(gs[i // 3, i % 3])
-        P = pts_by_site[s]
-        if s == "kz_all":
+        P = pts_by_site[s_]
+        if s_ == "kz_all":
             from pyproj import Transformer
             t43 = Transformer.from_crs(4326, 32643, always_xy=True)
             cs = [t43.transform(x, y) for x, y in [(KZ_BBOX[0], KZ_BBOX[1]), (KZ_BBOX[2], KZ_BBOX[1]), (KZ_BBOX[2], KZ_BBOX[3]), (KZ_BBOX[0], KZ_BBOX[3])]]
@@ -1140,11 +1186,12 @@ def fig_E(ctx, pts_by_site):
             if ctx.common:
                 ax.imshow(ctx.common["hs"], extent=ctx.common["extent"], cmap=L.gray_hillshade_cmap(), vmin=0, vmax=1, zorder=1)
             ax.set_facecolor(L.COL_NODATA)
-            epsg, center, ttl = 32643, (77.02, 43.15), "Kazakhstan (ICESat-2 window)"
+            epsg, center, ttl, cid = 32643, (77.02, 43.15), "Kazakhstan (ICESat-2 window)", "BBOX:76.85,43.05,77.20,43.25"
+            cell = 30.0
         else:
-            d = ctx.sites[s]
+            d = ctx.sites[s_]
             ax.imshow(d["hs"], extent=d["extent"], cmap=L.gray_hillshade_cmap(), vmin=0, vmax=1, zorder=1)
-            ext, epsg, center, ttl = d["extent"], d["epsg"], d["center"], SHORT[s]
+            ext, epsg, center, ttl, cid, cell = d["extent"], d["epsg"], d["center"], SHORT[s_], contour_id(d, "context"), d["res"]
         L.style_map_axes(ax, ext)
         x, y, rej = P["x"], P["y"], ~P["common"]
         inx = (x >= ext[0]) & (x <= ext[1]) & (y >= ext[2]) & (y <= ext[3])
@@ -1155,18 +1202,28 @@ def fig_E(ctx, pts_by_site):
         ax.scatter(x[c_only], y[c_only], s=0.5, c="#D9D9D9", lw=0, zorder=3, rasterized=True)
         ax.scatter(x[len_only], y[len_only], s=2.2, c="#E69F00", lw=0, zorder=4, rasterized=True)
         ax.scatter(x[stt], y[stt], s=3.4, c="#B2182B", lw=0.15, edgecolors="k", zorder=5, rasterized=True)
-        map_furniture(ax, epsg, ext, center)
-        ax.set_title(f"({chr(97 + i)}) {ttl}\nall {int(inx.sum()):,}; lenient {int((P['lenient'] & inx).sum()):,}; strict {int(stt.sum()):,}", fontsize=6)
+        map_furniture(ax, epsg, ext, center, small=True)
+        ax.set_title(f"({chr(97 + i)}) {ttl}\nin view {int(inx.sum()):,}; lenient {int((P['lenient'] & inx).sum()):,}; strict {int(stt.sum()):,}", fontsize=5.8)
+        ctx.inventory.append(dict(figure="E", panel=chr(97 + i), site=s_, quantity="ATL08 segments in view", crs=f"EPSG:{epsg}", cell_size_m=cell, n_valid_px=int(inx.sum()),
+                                  area_km2=(ext[1] - ext[0]) * (ext[3] - ext[2]) / 1e6, contour_id=cid, threshold_deg=""))
+    # panel f: counts table
+    axt = fig.add_subplot(gs[1, 2])
+    axt.axis("off")
+    try:
+        import csv as _csv
+        rows = list(_csv.DictReader(open(ctx.out / "tables" / "atl08_filter_counts.csv", encoding="utf-8")))
+        lines = ["(f) Segments per area (full bbox)", "", f"{'area':<18}{'all':>7}{'common':>8}{'lenient':>8}{'strict':>7}{'pairs*':>7}"]
+        for r_ in rows:
+            lines.append(f"{r_['site'][:17]:<18}{int(r_['n_segments_in_bbox']):>7,}{int(r_['n_pass_common_filters']):>8,}{int(r_['n_lenient_unc_lt_15m']):>8,}{int(r_['n_strict_unc_lt_5m']):>7,}{int(r_['n_pairs_both_strict']):>7,}")
+        lines += ["", "*adjacent segment pairs (80-120 m),", " both strict (unc. < 5 m)"]
+        axt.text(0.0, 0.98, "\n".join(lines), family="DejaVu Sans Mono", fontsize=4.9, va="top", ha="left", transform=axt.transAxes)
+    except Exception as e:  # noqa: BLE001
+        exc("WARN", "Figure E", "counts panel not drawn", repr(e))
     from matplotlib.lines import Line2D
     h = [Line2D([], [], marker="o", ls="", ms=3, color="#B2182B", mec="k", mew=.2, label="strict: unc. < 5 m"), Line2D([], [], marker="o", ls="", ms=3, color="#E69F00", label="lenient only: 5 - 15 m"),
          Line2D([], [], marker="o", ls="", ms=3, color="#D9D9D9", mec="0.5", mew=.2, label="passes common filters, unc. >= 15 m"), Line2D([], [], marker="o", ls="", ms=3, color="#6E6E6E", label="rejected by common filters")]
-    fig.legend(handles=h, loc="lower center", bbox_to_anchor=(0.5, 0.2), ncol=4, fontsize=5.8)
-    cap = ("Figure E. Real ICESat-2 ATL08 v007 terrain segments (100 m along-track, laser footprints plotted at their true locations) used as a PARTIAL independent reference. Filters fixed before inspecting DEM errors: common = terrain height valid, "
-           ">= 30 terrain photons, ATM cloud flag <= 2; lenient = height uncertainty < 15 m; strict = < 5 m. Points exist only along the satellite ground tracks (point samples), so they must NOT be read as full-map validation of any slope map; "
-           "the strict subset in the Almaty mountains is a small fraction of all segments because of steep terrain. Heights are ellipsoidal and were not geoid-corrected here. Background: hillshade of Copernicus GLO-30 "
-           "(30 m; grey = outside the packaged windows). Panel (a) covers 76.85-77.20°E, 43.05-43.25°N (UTM 43N); other panels are the lidar validation windows (own local UTM). Exact metric scale bars, graticule, true-north arrows. "
-           "Counts: tables/atl08_filter_counts.csv; vector layers with quality flags: derived/vector/atl08_segments_and_tracks.gpkg.")
-    fig.text(0.02, 0.012, L.wrap_caption(cap, 150), fontsize=5.3, ha="left", va="bottom")
+    fig.legend(handles=h, loc="lower center", bbox_to_anchor=(0.5, (L.cap_height_in(cap) + 0.05) / fh), ncol=4, fontsize=5.8)
+    L.place_caption(fig, cap)
     save_fig(ctx, fig, "FigE_atl08_track_samples", cap)
 
 
@@ -1198,6 +1255,8 @@ validation: Davos-Parsenn, Zermatt-Gornergrat (CH), Alta-Snowbird, Park City (US
 
 Generated: {C.now()}  |  code commit: {commit}  |  workflow run: {run_id}
 
+Reused result branches (commit hashes): {json.dumps({k: v for k, v in ctx.asset_commits.items() if k.startswith('r40')})}
+
 ## Contents
 * `inputs/` - assets REUSED from earlier verified runs (branch r40-results, r40-icesat2; SHA-256 re-checked against the original run in `inputs/provenance/reuse_integrity_check.csv`), plus freshly fetched native lidar-DTM windows and Natural Earth layers.
 * `derived/rasters/` - separate nodata masks (1 = nodata), pixel-to-polygon masks (`mask_*.tif`), the aligned Kazakhstan common 30 m grid (`common_grid_kz/`).
@@ -1214,6 +1273,13 @@ Generated: {C.now()}  |  code commit: {commit}  |  workflow run: {run_id}
 * Maps use true coordinate transforms: local metric UTM CRS; scale bars are exact lengths in that CRS; graticules from pyproj; north arrows account for grid convergence.
 * Figure B shows exactly the classes in the packaged `decision_combined_t*_risk2.tif`; its summaries were checked against `tables/decisions_by_site.csv` (tolerance 0.05 percentage points, identical pixel counts): {len(ver) - nbad} of {len(ver)} comparisons OK, {nbad} flagged. Flagged items are listed in the exceptions report and are NOT adjusted.
 * Not included: KazEOSat pixels (no licence), tokens, private imagery, ALOS AW3D30 and FABDEM rasters (licence/redistribution), the user's private location details.
+
+## Exact sources
+* Copernicus GLO-30 and NASADEM: Microsoft Planetary Computer STAC API https://planetarycomputer.microsoft.com/api/stac/v1 (collections `cop-dem-glo-30`, `nasadem`; item ids and dates in `inputs/provenance/*_sources_provenance.json`, retrieved by run r40-results 38058021115).
+* Lidar DTMs: swisstopo STAC https://data.geo.admin.ch/api/stac/v0.9 (collection ch.swisstopo.swissalti3d, 2 m); USGS 3DEP via Planetary Computer (`3dep-seamless`, 10 m).
+* OSM polygons: Overpass API (endpoint, query and time in `inputs/boundaries/*_boundary_provenance.json`).
+* ICESat-2 ATL08 v007: NASA NSIDC DAAC (segments extracted in branch r40-icesat2).
+* Natural Earth admin-0 countries: naciscdn.org/naturalearth (1:110m, 1:50m).
 
 ## Licences / attribution
 Copernicus GLO-30 (ESA/Copernicus, "Contains modified Copernicus data"); NASADEM (NASA/USGS, public domain); OpenStreetMap contributors (ODbL); Natural Earth (public domain);
@@ -1254,8 +1320,14 @@ def build(pkg, out, only_figs=None):
     pkg, out = Path(pkg), Path(out)
     out.mkdir(parents=True, exist_ok=True)
     commit = os.environ.get("GITHUB_SHA", git_head(CODE_ROOT.parent.parent))
+    try:
+        ac = json.loads((pkg / "inputs" / "provenance" / "asset_commits.json").read_text(encoding="utf-8"))
+        commit = ac.get("code_commit") or commit
+    except Exception:  # noqa: BLE001
+        ac = {}
     run_id = os.environ.get("GITHUB_RUN_ID", "local")
     ctx = Ctx(pkg, out)
+    ctx.asset_commits = ac
     for s in STANDING_EXCEPTIONS:
         exc(*s)
     for key in KZ + VAL:
@@ -1311,6 +1383,9 @@ def build(pkg, out, only_figs=None):
             C.log("cartography", name, "OK", "")
         except Exception as e:  # noqa: BLE001
             exc_tb(name, "step failed", e)
+    if ctx.inventory:
+        C.write_csv(ctx.out / "tables" / "map_inventory.csv", ctx.inventory)
+        ctx.man.add(ctx.out / "tables" / "map_inventory.csv", "table", "one row per map panel/quantity: area, valid px, cell size, CRS, threshold, shares, contour id", licence=LICENCE["own"])
     write_docs(ctx, commit, run_id)
     write_exceptions(ctx)
     ctx.man.finalize(commit, run_id)
