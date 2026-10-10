@@ -1,0 +1,17 @@
+{
+  "run_label": "R40-Kazakhstan-multisource-2026-10",
+  "sites": {
+    "shymbulak": {"lon": 77.08142, "lat": 43.12827, "radius_km": 3.0, "point_is_boundary": false},
+    "medeu": {"lon": 77.0584, "lat": 43.1577, "radius_km": 3.0, "point_is_boundary": false},
+    "kok_zhailau": {"lon": 77.055, "lat": 43.105, "radius_km": 3.0, "point_is_boundary": false}
+  },
+  "stac_catalog": "https://planetarycomputer.microsoft.com/api/stac/v1",
+  "cdse_catalog": "https://stac.dataspace.copernicus.eu/v1",
+  "collections": ["cop-dem-glo-30", "alos-dem", "nasadem", "sentinel-2-l2a", "landsat-c2-l2", "sentinel-1-grd"],
+  "optical_dates": "2024-01-01/2026-09-30",
+  "max_items_per_collection": 5,
+  "max_scenes_per_collection": 1,
+  "grid_crs": "EPSG:32643",
+  "grid_resolution_m": 30,
+  "slope_thresholds_deg": [7.5,15,25]
+}

@@ -1,0 +1,39 @@
+name: R40 Kazakhstan — all available satellite and elevation sources
+on:
+  workflow_dispatch:
+    inputs:
+      site:
+        type: choice
+        description: Research territory
+        options: [all, shymbulak, medeu, kok_zhailau]
+        default: all
+permissions:
+  contents: read
+defaults:
+  run:
+    working-directory: research/R40_KZ
+jobs:
+  multisource:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: research/R40_KZ/requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run pipeline
+        env:
+          SITE: ${{ inputs.site }}
+        run: python src/run.py --site "$SITE"
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: R40-Kazakhstan-results
+          path: research/R40_KZ/output/
+          retention-days: 30
+          if-no-files-found: warn
