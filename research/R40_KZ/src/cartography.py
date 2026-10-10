@@ -830,7 +830,7 @@ def fig_B(ctx, t):
            "Pixel-to-polygon assignment: pixel centre inside polygon (rasterio rasterize, all_touched=False), masks packaged as mask_*.tif. "
            "Per-mask counts, areas, cell size, shares and contour identifiers: tables/map_summary_figB.csv; check against tables/decisions_by_site.csv: tables/verification_figB_vs_decisions_by_site.csv.")
     fh = 7.9
-    bot = bottom_frac(cap, fh, 0.42)
+    bot = L.bottom_frac(cap, fh, 0.42)
     fig = plt.figure(figsize=(7.5, fh))
     gs = fig.add_gridspec(2, 2, left=0.05, right=0.985, top=0.925, bottom=bot + 0.02, hspace=0.26, wspace=0.12)
     for i, key in enumerate(keys):
@@ -874,7 +874,7 @@ def fig_A(ctx):
            "(buffer 250 m, erosion 200 m); they are exploratory and are NOT official borders. Kok-Zhailau is shown as two alternative windows: V1 (configured centre, provisional) and V2 (centre from OSM-named objects, ~5.9 km west). "
            "Panels a-b have no scale bar because distances are distorted at those scales; panel c has an exact metric scale bar, pyproj graticule and a true-north arrow rotated by the UTM grid convergence.")
     fh = 5.9
-    bot = bottom_frac(cap, fh, 0.55)
+    bot = L.bottom_frac(cap, fh, 0.55)
     fig = plt.figure(figsize=(7.5, fh))
     gs = fig.add_gridspec(2, 2, width_ratios=[1.5, 1], left=0.04, right=0.985, top=0.93, bottom=bot + 0.02, hspace=0.14, wspace=0.08)
     axC, axA, axB = fig.add_subplot(gs[:, 0]), fig.add_subplot(gs[0, 1]), fig.add_subplot(gs[1, 1])
@@ -963,7 +963,7 @@ def fig_A(ctx):
             "Background: hillshade of Copernicus GLO-30 DSM at 30 m (EGM2008). Green dot = configured site centre; dark-blue = OSM named polygon where found; pink dashed = derived footprint (exploratory, not an official border). "
             "Each panel is drawn in its own local UTM zone with an exact metric scale bar, pyproj graticule and a true-north arrow rotated by the grid convergence.")
     fh = 7.2
-    bot = bottom_frac(cap2, fh, 0.1)
+    bot = L.bottom_frac(cap2, fh, 0.1)
     fig = plt.figure(figsize=(7.5, fh))
     gs = fig.add_gridspec(2, 2, left=0.05, right=0.985, top=0.935, bottom=bot + 0.02, hspace=0.26, wspace=0.12)
     for i, key in enumerate(VAL):
@@ -1014,7 +1014,7 @@ def fig_C(ctx):
                "ALOS AW3D30 and FABDEM are not mapped because their rasters are not redistributed in this package (licence terms; see exceptions report). Statistics (common pixels, mean, SD, MAE, RMSE, 95th percentile, class disagreement at 7.5/15/25°): "
                "tables/inter_dem_slope_difference_summary.csv. Dashed black outline = derived functional footprint (exploratory). Metric scale bar, pyproj graticule and true-north arrow as in Figure B.")
         fh = 7.4
-        bot = bottom_frac(cap, fh, 0.62)
+        bot = L.bottom_frac(cap, fh, 0.62)
         fig = plt.figure(figsize=(7.5, fh))
         gs = fig.add_gridspec(2, 2, left=0.05, right=0.985, top=0.925, bottom=bot + 0.02, hspace=0.26, wspace=0.12)
         for i, k in enumerate(keys):
@@ -1032,7 +1032,7 @@ def fig_C(ctx):
                "Global DEMs are DSMs (canopy/buildings included), the reference is a bare-earth DTM; no co-registration was applied. Statistics: tables/inter_dem_slope_difference_summary.csv. "
                "Each panel is drawn in its own local UTM zone with an exact metric scale bar, graticule and true-north arrow; dashed outline = derived footprint (exploratory).")
         fh = 9.4
-        bot = bottom_frac(cap, fh, 0.5)
+        bot = L.bottom_frac(cap, fh, 0.5)
         fig = plt.figure(figsize=(7.5, fh))
         gs = fig.add_gridspec(len(vk), 3, left=0.045, right=0.985, top=0.945, bottom=bot + 0.02, hspace=0.42, wspace=0.14)
         for r, k in enumerate(vk):
@@ -1068,7 +1068,7 @@ def fig_D(ctx):
                "the lower panels remove the median offset along each transect. DSMs include canopy/buildings while the reference is bare earth. No co-registration was applied. "
                "Profile values: tables/profile_samples.csv; statistics: tables/profile_summary.csv. Map: exact metric scale bar, pyproj graticule, true-north arrow (grid convergence printed).")
         fh = 7.9
-        bot = bottom_frac(cap, fh, 0.15)
+        bot = L.bottom_frac(cap, fh, 0.15)
         fig = plt.figure(figsize=(7.5, fh))
         gs = fig.add_gridspec(4, 2, width_ratios=[1, 1.5], height_ratios=[3, 1.2, 3, 1.2], left=0.045, right=0.985, top=0.945, bottom=bot + 0.03, hspace=0.62, wspace=0.30)
         axm = fig.add_subplot(gs[:, 0])
@@ -1172,7 +1172,7 @@ def fig_E(ctx, pts_by_site):
            "Background: hillshade of Copernicus GLO-30 (30 m; grey = outside the packaged windows). Panel (a) covers 76.85-77.20°E, 43.05-43.25°N (UTM 43N); other panels are the lidar validation windows (own local UTM). "
            "Exact metric scale bars, graticule, true-north arrows. Vector layers with quality flags: derived/vector/atl08_segments_and_tracks.gpkg.")
     fh = 7.3
-    bot = bottom_frac(cap, fh, 0.45)
+    bot = L.bottom_frac(cap, fh, 0.45)
     fig = plt.figure(figsize=(7.5, fh))
     gs = fig.add_gridspec(2, 3, left=0.04, right=0.985, top=0.925, bottom=bot + 0.02, hspace=0.30, wspace=0.12)
     for i, s_ in enumerate(sites):
@@ -1229,6 +1229,7 @@ def fig_E(ctx, pts_by_site):
 
 # ======================================================================================================== docs + driver
 def write_docs(ctx, commit, run_id):
+    (ctx.out / "figures").mkdir(parents=True, exist_ok=True)
     (ctx.out / "figures" / "CAPTIONS.md").write_text("# Figure captions (full text)\n\n" + "\n".join(ctx.captions), encoding="utf-8")
     ctx.man.add(ctx.out / "figures" / "CAPTIONS.md", "captions", "generated with the figures", licence=LICENCE["own"])
     sc = ctx.out / "scripts"
