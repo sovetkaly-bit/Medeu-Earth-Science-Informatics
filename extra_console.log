@@ -1,0 +1,42 @@
+[davos_parsenn] cop-dem-glo-30: RASTER_READY 93636 valid px from 1/1 tiles
+[davos_parsenn] nasadem: RASTER_READY 93636 valid px from 1/1 tiles
+[davos_parsenn] alos-dem: RASTER_READY 93636 valid px from 1/1 tiles
+[davos_parsenn] swissALTI3D: REFERENCE_READY 20955916 px, 101/101 tiles
+[davos_parsenn] riskcov-acquire: REFERENCE_READY 
+[zermatt_gornergrat] cop-dem-glo-30: RASTER_READY 95472 valid px from 2/2 tiles
+[zermatt_gornergrat] nasadem: RASTER_READY 95472 valid px from 2/2 tiles
+[zermatt_gornergrat] alos-dem: RASTER_READY 95472 valid px from 2/2 tiles
+[zermatt_gornergrat] swissALTI3D: REFERENCE_READY 21481200 px, 100/100 tiles
+[zermatt_gornergrat] riskcov-acquire: REFERENCE_READY 
+[alta_snowbird] cop-dem-glo-30: RASTER_READY 93636 valid px from 1/1 tiles
+[alta_snowbird] nasadem: RASTER_READY 93636 valid px from 1/1 tiles
+[alta_snowbird] alos-dem: RASTER_READY 93636 valid px from 1/1 tiles
+[alta_snowbird] 3dep-seamless: REFERENCE_READY 842724 px
+[alta_snowbird] riskcov-acquire: REFERENCE_READY 
+[park_city] cop-dem-glo-30: RASTER_READY 93636 valid px from 1/1 tiles
+[park_city] nasadem: RASTER_READY 93636 valid px from 1/1 tiles
+[park_city] alos-dem: RASTER_READY 93636 valid px from 1/1 tiles
+[park_city] 3dep-seamless: REFERENCE_READY 842724 px
+[park_city] riskcov-acquire: REFERENCE_READY 
+[all] extra: PART_A_C_DONE t=7.5
+[all] extra: PART_A_C_DONE t=15
+[all] extra: PART_A_C_DONE t=25
+[all] extra: PART_B_DONE t=7.5
+[all] extra: PART_B_DONE t=15
+[all] extra: PART_B_DONE t=25
+[medeu] cop-dem-glo-30: RASTER_READY 44100 valid px from 1/1 tiles
+[medeu] nasadem: RASTER_READY 44100 valid px from 1/1 tiles
+[medeu] alos-dem: RASTER_READY 44100 valid px from 1/1 tiles
+[shymbulak] cop-dem-glo-30: RASTER_READY 44100 valid px from 1/1 tiles
+[shymbulak] nasadem: RASTER_READY 44100 valid px from 1/1 tiles
+[shymbulak] alos-dem: RASTER_READY 44100 valid px from 1/1 tiles
+[kok_zhailau] cop-dem-glo-30: RASTER_READY 44100 valid px from 1/1 tiles
+[kok_zhailau] nasadem: RASTER_READY 44100 valid px from 1/1 tiles
+[kok_zhailau] alos-dem: RASTER_READY 44100 valid px from 1/1 tiles
+[kok_zhailau_osm] cop-dem-glo-30: RASTER_READY 44100 valid px from 2/2 tiles
+[kok_zhailau_osm] nasadem: RASTER_READY 44100 valid px from 2/2 tiles
+[kok_zhailau_osm] alos-dem: RASTER_READY 44100 valid px from 2/2 tiles
+[all] extra: PART_D_DONE t=7.5
+[all] extra: PART_D_DONE t=15
+[all] extra: PART_D_DONE t=25
+DONE-EXTRA
