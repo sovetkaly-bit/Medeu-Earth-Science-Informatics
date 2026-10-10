@@ -142,11 +142,11 @@ def north_arrow(ax, extent, gamma_deg, fs=FS_TITLE):
     """Arrow to TRUE north (grid north is vertical, so true north is rotated by -gamma). Only 'N' and the arrow; gamma goes to the caption table."""
     xmin, xmax, ymin, ymax = extent
     W, H = xmax - xmin, ymax - ymin
-    cx, cy = xmax - 0.07 * W, ymax - 0.17 * H
-    ln = 0.105 * H
+    cx, cy = xmax - 0.07 * W, ymax - 0.215 * H
+    ln = 0.10 * H
     ang = math.radians(-gamma_deg)
     dx, dy = ln * math.sin(ang), ln * math.cos(ang)
-    for lw, col, z in ((3.2, "white", 9), (1.3, "black", 10)):
+    for lw, col, z in ((2.6, "white", 9), (1.3, "black", 10)):
         ax.annotate("", xy=(cx + dx, cy + dy), xytext=(cx, cy), arrowprops=dict(arrowstyle="-|>", color=col, lw=lw, mutation_scale=9 if col == "black" else 11,
                                                                                    shrinkA=0, shrinkB=0), zorder=z)
     halo(ax.text(cx + dx * 1.18, cy + dy * 1.18, "N", ha="center", va="bottom", fontsize=fs, fontweight="bold", zorder=11), lw=2.6)

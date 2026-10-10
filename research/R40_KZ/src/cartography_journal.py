@@ -193,16 +193,21 @@ def save(jx, fig, name, short, tech):
     plt.close(fig)
 
 
-def grid_layout(plt, aspects, cols=2, lm=0.5, rm=0.15, gap=0.55, title_h=0.55, bottom_h=0.3, extra_bottom=0.55, top=0.12, w=J.FIG_W):
+def grid_layout(plt, aspects, cols=2, lm=0.5, rm=0.15, gap=0.55, title_h=0.55, bottom_h=0.3, extra_bottom=0.55, top=0.12, w=J.FIG_W, max_h=8.45):
     pw = (w - lm - rm - gap * (cols - 1)) / cols
     rows = [aspects[i:i + cols] for i in range(0, len(aspects), cols)]
+    fixed = top + extra_bottom + len(rows) * (title_h + bottom_h)
+    if fixed + pw * sum(max(r) for r in rows) > max_h:     # shrink the panels (not the fonts) so figure + caption fit one A4 page
+        pw = (max_h - fixed) / sum(max(r) for r in rows)
     row_h = [pw * max(r) for r in rows]
-    H = top + sum(title_h + rh + bottom_h for rh in row_h) + extra_bottom
+    H = fixed + sum(row_h)
+    used = cols * pw + gap * (cols - 1)
+    x0 = lm + max(0.0, (w - lm - rm - used) / 2)
     pg = J.Page(plt, w, H)
     rects, y = [], top
     for ri, r in enumerate(rows):
         for ci, ar in enumerate(r):
-            rects.append((lm + ci * (pw + gap), y + title_h, pw, pw * ar))
+            rects.append((x0 + ci * (pw + gap), y + title_h, pw, pw * ar))
         y += title_h + row_h[ri] + bottom_h
     return pg, rects, pw
 
@@ -300,7 +305,7 @@ def fig_A(jx):
         axC.imshow(ov_relief(jx, "color", 2), extent=jx.ov["extent"], interpolation="nearest", zorder=1)
     J.style_axes(axC, ext)
     axC.set_facecolor(L.COL_NODATA)
-    lbl = {"medeu": ("tl", "Medeu"), "shymbulak": ("tr", "Shymbulak"), "kok_zhailau": ("br", "Kok-Zhailau V1"), "kok_zhailau_osm": ("bl", "Kok-Zhailau V2")}
+    lbl = {"medeu": ("tl", "Medeu"), "shymbulak": ("tr", "Shymbulak"), "kok_zhailau": ("br", "Kok-Zhailau V1"), "kok_zhailau_osm": ("ol", "Kok-Zhailau V2")}
     for key in K.KZ:
         d = ctx.sites.get(key)
         if d is None:
@@ -315,12 +320,16 @@ def fig_A(jx):
         axC.plot(cx, cy, "D" if key == "kok_zhailau" else "o", ms=6, color=col, mec="k", mew=0.8, zorder=8)
         pos, txt = lbl[key]
         dx, dy = 0.012 * (ext[1] - ext[0]), 0.016 * (ext[3] - ext[2])
-        x = e[0] + dx if pos[1] == "l" else e[1] - dx
-        y = e[3] - dy if pos[0] == "t" else e[2] + dy
-        J.halo(axC.text(x, y, txt, fontsize=9, fontweight="bold", ha="left" if pos[1] == "l" else "right", va="top" if pos[0] == "t" else "bottom", zorder=9), lw=3.0)
+        if pos == "ol":      # outside the window, left of its bottom-left corner (no outline of another window is crossed)
+            x, y, ha, va = e[0] - dx, e[2] + dy, "right", "bottom"
+        else:
+            x = e[0] + dx if pos[1] == "l" else e[1] - dx
+            y = e[3] - dy if pos[0] == "t" else e[2] + dy
+            ha, va = ("left" if pos[1] == "l" else "right"), ("top" if pos[0] == "t" else "bottom")
+        J.halo(axC.text(x, y, txt, fontsize=9, fontweight="bold", ha=ha, va=va, zorder=9), lw=3.0)
         jx.shares.append(dict(figure="A", panel="c", site=key, quantity="processing window", crs=d["meta"]["crs"], window_xmin=e[0], window_xmax=e[1], window_ymin=e[2], window_ymax=e[3]))
     rec = []
-    J.furniture(axC, 32643, ext, (77.02, 43.15), n_max=3.2, bar_frac=0.22, rec=rec)
+    J.furniture(axC, 32643, ext, (77.02, 43.15), n_max=5.0, bar_frac=0.22, rec=rec)
     jx.fur("A", "c", "overview", rec)
     J.panel_title(axC, "c", "Medeu, Shymbulak and Kok-Zhailau study windows", right=utm_label(32643))
     # vertical colour bar
@@ -636,7 +645,8 @@ def fig_E(jx, pts_by_site):
         rec = []
         J.furniture(ax, epsg, ext, center, rec=rec, n_max=2.4)
         jx.fur("R40_Fig_E_atl08_track_samples", chr(97 + i), s_, rec)
-        J.panel_title(ax, chr(97 + i), ttl, right=utm_label(epsg), stats=f"strict {int(stt.sum()):,} · lenient {int((P['lenient'] & inx).sum()):,}", fs=J.FS_BASE + 0.5)
+        J.halo(ax.text(0.985, 0.015, utm_label(epsg), transform=ax.transAxes, ha="right", va="bottom", fontsize=J.FS_SMALL, zorder=12), lw=2.4)
+        J.panel_title(ax, chr(97 + i), ttl, stats=f"strict {int(stt.sum()):,} · lenient {int((P['lenient'] & inx).sum()):,}", fs=J.FS_BASE + 0.5)
         jx.shares.append(dict(figure="E", panel=chr(97 + i), site=s_, quantity="ATL08 segments in view", n_in_view=int(inx.sum()), n_lenient=int((P["lenient"] & inx).sum()),
                               n_strict=int(stt.sum()), crs=f"EPSG:{epsg}"))
     # panel (f): legend + statement
@@ -796,7 +806,7 @@ def a4_proofs(jx):
             y += 50
         if y > 3508 - 177:
             K.exc("WARN", "A4 proof", f"{name}: figure + caption do not fit one A4 page at 100 %", f"{y} px of 3331")
-        dr.text((177, 3508 - 120), f"A4 proof at 100 %: figure width {w * 25.4:.0f} mm, 300 dpi; smallest text in the figure >= 7 pt. Page = 210 x 297 mm.", fill="0.4", font=fonts)
+        dr.text((177, 3508 - 120), f"A4 proof at 100 %: figure width {w * 25.4:.0f} mm, 300 dpi; smallest text in the figure >= 7 pt. Page = 210 x 297 mm.", fill=(100, 100, 100), font=fonts)
         pages.append(page)
     p = jx.out / "A4_proof_pages_100pct.pdf"
     pages[0].save(p, "PDF", resolution=300.0, save_all=True, append_images=pages[1:], quality=92)
