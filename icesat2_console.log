@@ -1,0 +1,42 @@
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/earthaccess/results.py:343: FutureWarning: As of version 1.0, `DataGranule.size` will be accessed as an attribute; e.g. use `DataCollection.size` **not** `DataCollection.size()`
+  self["size"] = self.size()
+[kz_all] ATL08-search: FOUND 126 granules, 19.6 GB if downloaded in full
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/earthaccess/store.py:516: FutureWarning: As of version 1.0, `DataGranule.size` will be accessed as an attribute; e.g. use `DataCollection.size` **not** `DataCollection.size()`
+  total_size = round(sum([granule.size() for granule in granules]) / 1024, 2)
+[kz_all] ATL08-extract: EXTRACTED 49162 segments in 1148s
+/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/earthaccess/results.py:343: FutureWarning: As of version 1.0, `DataGranule.size` will be accessed as an attribute; e.g. use `DataCollection.size` **not** `DataCollection.size()`
+  self["size"] = self.size()
+[davos_parsenn] ATL08-search: FOUND 66 granules, 8.0 GB if downloaded in full
+[davos_parsenn] ATL08-extract: EXTRACTED 12485 segments in 534s
+[zermatt_gornergrat] ATL08-search: FOUND 74 granules, 8.1 GB if downloaded in full
+[zermatt_gornergrat] ATL08-extract: EXTRACTED 11629 segments in 528s
+[alta_snowbird] ATL08-search: FOUND 73 granules, 12.5 GB if downloaded in full
+[alta_snowbird] ATL08-extract: EXTRACTED 11057 segments in 655s
+[park_city] ATL08-search: FOUND 66 granules, 11.4 GB if downloaded in full
+[park_city] ATL08-extract: EXTRACTED 10940 segments in 601s
+[kz_all] cop-dem-glo-30: RASTER_READY 746496 valid px from 2/2 tiles
+[kz_all] nasadem: RASTER_READY 746496 valid px from 2/2 tiles
+[kz_all] alos-dem: RASTER_READY 746496 valid px from 2/2 tiles
+[kz_all] FABDEM: RASTER_READY 427770 px []
+[kz_all] ICESat2-analyze: ANALYZED 7018 pts, 4852 track pairs, DEMs=['alos-dem', 'cop-dem-glo-30', 'fabdem', 'nasadem']
+[davos_parsenn] cop-dem-glo-30: RASTER_READY 138384 valid px from 1/1 tiles
+[davos_parsenn] nasadem: RASTER_READY 138384 valid px from 1/1 tiles
+[davos_parsenn] alos-dem: RASTER_READY 138384 valid px from 1/1 tiles
+[davos_parsenn] swissALTI3D: REFERENCE_READY 31027963 px, 146/146 tiles
+[davos_parsenn] ICESat2-analyze: ANALYZED 2390 pts, 1782 track pairs, DEMs=['alos-dem', 'cop-dem-glo-30', 'lidar_reference_dtm', 'nasadem']
+[zermatt_gornergrat] cop-dem-glo-30: RASTER_READY 142884 valid px from 2/2 tiles
+[zermatt_gornergrat] nasadem: RASTER_READY 142884 valid px from 2/2 tiles
+[zermatt_gornergrat] alos-dem: RASTER_READY 142884 valid px from 2/2 tiles
+[zermatt_gornergrat] swissALTI3D: REFERENCE_READY 31890692 px, 142/142 tiles
+[zermatt_gornergrat] ICESat2-analyze: ANALYZED 2618 pts, 1885 track pairs, DEMs=['alos-dem', 'cop-dem-glo-30', 'lidar_reference_dtm', 'nasadem']
+[alta_snowbird] cop-dem-glo-30: RASTER_READY 138384 valid px from 1/1 tiles
+[alta_snowbird] nasadem: RASTER_READY 138384 valid px from 1/1 tiles
+[alta_snowbird] alos-dem: RASTER_READY 138384 valid px from 1/1 tiles
+[alta_snowbird] 3dep-seamless: REFERENCE_READY 1245456 px
+[alta_snowbird] ICESat2-analyze: ANALYZED 912 pts, 604 track pairs, DEMs=['alos-dem', 'cop-dem-glo-30', 'lidar_reference_dtm', 'nasadem']
+[park_city] cop-dem-glo-30: RASTER_READY 138384 valid px from 1/1 tiles
+[park_city] nasadem: RASTER_READY 138384 valid px from 1/1 tiles
+[park_city] alos-dem: RASTER_READY 138384 valid px from 1/1 tiles
+[park_city] 3dep-seamless: REFERENCE_READY 1245456 px
+[park_city] ICESat2-analyze: ANALYZED 2045 pts, 1542 track pairs, DEMs=['alos-dem', 'cop-dem-glo-30', 'lidar_reference_dtm', 'nasadem']
+DONE-ICESAT2

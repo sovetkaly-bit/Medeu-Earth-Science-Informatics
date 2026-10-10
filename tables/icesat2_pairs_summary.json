@@ -1,0 +1,27 @@
+[
+  {
+    "site": "kz_all",
+    "n_pairs": 4852,
+    "median_spacing_m": 100.07971215059533
+  },
+  {
+    "site": "davos_parsenn",
+    "n_pairs": 1782,
+    "median_spacing_m": 100.09073089625977
+  },
+  {
+    "site": "zermatt_gornergrat",
+    "n_pairs": 1885,
+    "median_spacing_m": 100.0847237168538
+  },
+  {
+    "site": "alta_snowbird",
+    "n_pairs": 604,
+    "median_spacing_m": 100.28648545725585
+  },
+  {
+    "site": "park_city",
+    "n_pairs": 1542,
+    "median_spacing_m": 100.11385068288037
+  }
+]

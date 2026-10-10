@@ -1,0 +1,62 @@
+[
+  {
+    "site": "kz_all",
+    "bbox_WSEN": [
+      76.85,
+      43.05,
+      77.2,
+      43.25
+    ],
+    "granules": 126,
+    "segments_in_bbox": 49162,
+    "seconds": 1148
+  },
+  {
+    "site": "davos_parsenn",
+    "bbox_WSEN": [
+      9.733696363311145,
+      46.783535120064755,
+      9.878303636688853,
+      46.88246487993524
+    ],
+    "granules": 66,
+    "segments_in_bbox": 12485,
+    "seconds": 534
+  },
+  {
+    "site": "zermatt_gornergrat",
+    "bbox_WSEN": [
+      7.688805374821977,
+      45.94053512006476,
+      7.831194625178022,
+      46.039464879935245
+    ],
+    "granules": 74,
+    "segments_in_bbox": 11629,
+    "seconds": 528
+  },
+  {
+    "site": "alta_snowbird",
+    "bbox_WSEN": [
+      -111.7051283509798,
+      40.530535120064755,
+      -111.5748716490202,
+      40.62946487993524
+    ],
+    "granules": 73,
+    "segments_in_bbox": 11057,
+    "seconds": 655
+  },
+  {
+    "site": "park_city",
+    "bbox_WSEN": [
+      -111.57519662202556,
+      40.600535120064755,
+      -111.44480337797445,
+      40.69946487993524
+    ],
+    "granules": 66,
+    "segments_in_bbox": 10940,
+    "seconds": 601
+  }
+]
