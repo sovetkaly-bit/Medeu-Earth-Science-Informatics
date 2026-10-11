@@ -14,13 +14,14 @@ Prepared as a Zenodo deposit; **not yet submitted or published**. No DOI exists.
 | R40_SOURCE_GEODATA_part01..04_of_04.zip | redistributable source geodata and editable files for the figures |
 | R40_JOURNAL_PARTS_INDEX.csv | size and SHA-256 of the 9 journal/geodata parts |
 | R40_journal_docs_and_tables.zip | captions, README, exceptions report, manifest_journal.csv, consistency and readability tables |
+| R40_prior_stages_R35-R39_snapshot_88047f0.zip | **companion file, provided separately (not on the GitHub branch; add it to the Zenodo upload after author confirmation)**: workflows and code of the exploratory stages R35-R39 with run list and SHA-256 inventory; sha256 5d2e6819cae444569445ea24683e9f1a42bf1977f04ba5a6bd63819370b407ce |
 | docs: README_ZENODO.md, LICENSES_REPORT.md, REPRODUCIBILITY_REPORT.md, DATA_AND_CODE_AVAILABILITY_EN.md, zenodo_metadata.json, MANIFEST_ARCHIVE_FILES.csv, MANIFEST_MEMBERS.csv, INVENTORY_* | documentation and inventories |
 
 ## Final results used by the manuscript
 Tables 1-4 come from r40-extra (run 38074462352) and r40-icesat2-riskcov (run 38071303684) and r40-results (run 38058021115). Final maps: R40_JOURNAL_FIGURES (run 38084018547). Earlier first-edition previews (1500 px, r40-cartography-results) are kept as history and are superseded.
 
 ## Not included
-R29-R39 stage files are not in the GitHub repository (they exist in the author storage, see INVENTORY_EARLIER_STAGES_NOT_IN_ARCHIVE.csv). Manuscript and review documents, ALOS AW3D30 / FABDEM rasters, KazEOSat imagery, tokens and personal data are not included.
+R35-R39 are in the companion file above. R29-R34 stage files are not in any GitHub repository (they exist in the author storage, see INVENTORY_EARLIER_STAGES_NOT_IN_ARCHIVE.csv). Manuscript and review documents, ALOS AW3D30 / FABDEM rasters, KazEOSat imagery, tokens and personal data are not included.
 
 ## Verify
 `sha256sum -c` against MANIFEST_ARCHIVE_FILES.csv (column sha256). Reproduce: GitHub Actions workflows in `.github/workflows` (r40_kz_all_sources.yml, r40_icesat2.yml, r40_icesat2_riskcov.yml, r40_extra.yml, r40_cartography.yml, r40_cartography_journal.yml).

@@ -23,3 +23,6 @@ Verification performed: no file name containing alos/fabdem/aw3d in any archive;
 
 ## Recommendation (author decides)
 Split the deposit into (A) code, tables, figures, documentation under author-chosen licences (CC BY 4.0 for documents and tables, MIT/Apache-2.0 for code) and (B) OSM-derived vector data under ODbL 1.0, or deposit everything in one record with licence "other (open)" and this report as the licence statement. Zenodo's licence field takes one value, so the single-record route must point to LICENSES_REPORT.md.
+
+## Companion file R35-R39
+The source repository states in CODE_LICENSE_PROPOSAL_NOT_ACTIVE.md that the proposed licence (MIT or BSD-3-Clause) is not granted and that distribution rights of the legacy R34 source must be confirmed before public release. Do not deposit the companion file publicly until the author confirms.

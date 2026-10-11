@@ -27,10 +27,13 @@ Not traced in this pass: the 12-of-12 site x threshold claim, operating-point co
 - Unit tests, branch r40-cartography (63d9dbf): 34 run, 33 pass, 1 error (test_timeseries.test_grid: module pyproj not installed in the archiving environment). The 33 passing tests cover core, extra, ICESat-2 and journal-library code. The workflow runs 38084018547 and earlier successful runs completed with their test steps; logs were not readable from this environment.
 - Workflow runs (INVENTORY_GITHUB_ACTIONS_RUNS.csv): 30 runs listed; 5 earlier runs failed and were followed by fixed successful runs of the same workflow.
 
+## Prior exploratory stages R35-R39
+Companion file R40_prior_stages_R35-R39_snapshot_88047f0.zip (private repository medeu-r35-research, commit 88047f0): 10 GitHub Actions runs listed, all concluded success (R35 synthetic only; R36-A..F, R37, R38, R39 exploratory). Run artifacts and logs were not downloaded; their numerical results are not traced to the manuscript and are not evidence for it.
+
 ## Separation of evidence (kept as in the manuscript)
 1. Lidar validation: Switzerland (swissALTI3D) and United States (3DEP), four sites, leave-one-site-out and leave-one-country-out.
 2. ICESat-2 ATL08: along-track slope pairs, auxiliary reference with a noise floor.
 3. Kazakhstan: transferred decisions; error not measured; no independent DTM.
 
 ## Open limitations
-Repository has no LICENSE file. Stage outputs R29-R39 are not in the repository. HyP3/Sentinel-1/-2 stages are archived but not used in manuscript results. The cartography code commits show GitHub "Unverified" (author email); history was not rewritten.
+Repository has no LICENSE file. Stage outputs R29-R34 are not in any GitHub repository; R35-R39 code and workflows are in the companion file. HyP3/Sentinel-1/-2 stages are archived but not used in manuscript results. The cartography code commits show GitHub "Unverified" (author email); history was not rewritten.
