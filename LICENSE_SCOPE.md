@@ -10,3 +10,5 @@ It does not change the terms of third-party data or of derived products that con
 - ALOS AW3D30 and FABDEM rasters are not redistributed.
 
 The versioned archive at https://doi.org/10.5281/zenodo.23293120 is licensed CC BY 4.0 as a record; third-party terms above still apply to its contents.
+
+Research figures, maps, the manuscript and datasets are not automatically covered by this software licence. Their rights are described in the provenance and rights metadata of the research archive.
