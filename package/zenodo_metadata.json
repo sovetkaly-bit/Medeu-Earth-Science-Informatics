@@ -1,0 +1,19 @@
+{
+  "_status": "DRAFT METADATA - not submitted to Zenodo. Items marked CONFIRM need the author.",
+  "metadata": {
+    "title": "R40 research archive: code, results and journal maps for \"Support-Aware Terrain Threshold Decisions: Cross-Regional Evaluation and a Kazakhstan Mountain-Tourism Application\"",
+    "upload_type": "dataset",
+    "version": "1.0.0",
+    "publication_date": "CONFIRM at publication",
+    "creators": [{"name": "Sovetkali, Orazaly", "affiliation": "CONFIRM (not stated in the reviewed manuscript text)", "orcid": "CONFIRM or leave empty"}],
+    "description": "<p>Reproducible research archive for the manuscript on support-aware BELOW / ABOVE / ABSTAIN slope-threshold decisions prepared for Earth Science Informatics. Contents: source code and workflows (git history bundle and snapshots), stored result tables (leave-one-site-out and leave-one-country-out AURC, paired block bootstrap, ICESat-2 ATL08 risk-coverage), derived 30 m rasters and vector layers for Davos-Parsenn, Zermatt-Gornergrat (Switzerland), Alta-Snowbird, Park City (United States) and Medeu, Shymbulak, Kok-Zhailau (Kazakhstan), journal figures A-E (PNG 300 dpi, PDF, SVG) with captions, a file manifest with SHA-256 checksums, and licence and reproducibility reports.</p><p><b>Limitations.</b> Kazakhstan has no independent lidar terrain model; the Kazakhstan maps show transferred classifications and error is not measured there. ICESat-2 ATL08 provides along-track samples only. Resort outlines are exploratory (OpenStreetMap or derived footprints), not official boundaries. ALOS AW3D30 and FABDEM rasters and KazEOSat imagery are not redistributed.</p>",
+    "keywords": ["terrain slope", "abstention", "selective classification", "spatial support", "digital elevation models", "ICESat-2 ATL08", "Kazakhstan", "Almaty", "Medeu", "reproducibility"],
+    "license": "CONFIRM (cc-by-4.0 proposed for documents/tables; OSM-derived vectors are ODbL 1.0; see LICENSES_REPORT.md)",
+    "related_identifiers": [
+      {"identifier": "https://github.com/sovetkaly-bit/Medeu-Earth-Science-Informatics", "relation": "isSupplementTo", "scheme": "url"},
+      {"identifier": "https://github.com/sovetkaly-bit/Medeu-Earth-Science-Informatics/actions/runs/38084018547", "relation": "isDerivedFrom", "scheme": "url"}
+    ],
+    "notes": "Manuscript DOI/URL: none yet (under preparation). Third-party data terms apply as listed in LICENSES_REPORT.md.",
+    "access_right": "open"
+  }
+}
