@@ -18,7 +18,10 @@ def fetch(lat, lon, y):
              hourly="temperature_2m,relative_humidity_2m,surface_pressure",
              models="era5_land", timezone="Asia/Almaty")
     for k in range(6):
-        r = requests.get(URL, params=p, timeout=120)
+        try:
+            r = requests.get(URL, params=p, timeout=300)
+        except requests.exceptions.RequestException as e:
+            print("exc", y, repr(e)[:120], file=sys.stderr); time.sleep(20 * (k + 1)); continue
         if r.status_code == 200:
             h = r.json()["hourly"]
             return pd.DataFrame(h).assign(time=lambda d: pd.to_datetime(d.time))

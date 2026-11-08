@@ -5,7 +5,7 @@ from pystac_client import Client
 import odc.stac
 from rasterio.warp import Resampling
 warnings.filterwarnings("ignore")
-sys.path.insert(0, "../ALMATY_SNOW/src")
+sys.path.insert(0, "../../ALMATY_SNOW/src")
 from dem import dem_on_grid
 
 BBOX = [76.90, 43.08, 77.12, 43.22]

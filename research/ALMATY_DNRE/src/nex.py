@@ -1,5 +1,6 @@
 """NEX-GDDP-CMIP6 (Planetary Computer): delta-method change for Almaty mountain points."""
 import json, sys, warnings, numpy as np, pandas as pd, xarray as xr
+import fsspec
 import planetary_computer as pc
 from pystac_client import Client
 warnings.filterwarnings("ignore")
@@ -25,7 +26,7 @@ def series(model, scen, var, years, lat, lon):
         it = items[0]
         if var not in it.assets:
             return None
-        ds = xr.open_dataset(it.assets[var].href + "", engine="h5netcdf")
+        ds = xr.open_dataset(fsspec.open(it.assets[var].href).open(), engine="h5netcdf")
         lo = lon if ds.lon.max() <= 180 else lon % 360
         out.append(ds[var].sel(lat=lat, lon=lo, method="nearest").load())
     return xr.concat(out, "time")

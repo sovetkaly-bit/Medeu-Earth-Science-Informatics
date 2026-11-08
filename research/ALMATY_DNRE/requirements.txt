@@ -10,3 +10,4 @@ xarray>=2024.1
 h5netcdf
 fsspec
 aiohttp
+h5py
