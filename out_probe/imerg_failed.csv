@@ -1,0 +1,4 @@
+granule,error
+GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20200201-S000000-E235959.02.V07B.HDF5,"ValueError(""dimensions ('lat',) must have the same length as the number of data dimensions, ndim=2"")"
+GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20200301-S000000-E235959.03.V07B.HDF5,"ValueError(""dimensions ('lat',) must have the same length as the number of data dimensions, ndim=2"")"
+GPM_3IMERGM.07:3B-MO.MS.MRG.3IMERG.20200101-S000000-E235959.01.V07B.HDF5,"ValueError(""dimensions ('lat',) must have the same length as the number of data dimensions, ndim=2"")"
