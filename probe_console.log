@@ -1,0 +1,5 @@
+items: 729 tiles: {'h23v04': 729} sensors: {'MYD': 363, 'MOD': 366}
+asset key: NDSI_Snow_Cover assets: ['hdf', 'NDSI', 'tilejson', 'orbit_pnt', 'granule_pnt', 'NDSI_Snow_Cover', 'rendered_preview', 'Snow_Albedo_Daily_Tile', 'NDSI_Snow_Cover_Basic_QA', 'NDSI_Snow_Cover_Algorithm_Flags_QA']
+tile h23v04 crs PROJCS["unnamed",GEOGCS["Unknown datum based upon the custom spheroid",DATUM["Not specified (based on custom spheroid)",SPHEROID["Custom spheroid",6371007.181,0]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Sinusoidal"],PARAMETER["longitude_of_center",0],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]] window Window(col_off=1394, row_off=1596, width=193, height=96) shape (96, 193) pixel size 463.3127165279165
+band pixels: {1: 2966, 2: 1865, 3: 1318, 4: 1032, 5: 1019, 6: 1691, 7: 3221} dem tiles: ['Copernicus_DSM_COG_10_N43_00_E077_00_DEM', 'Copernicus_DSM_COG_10_N43_00_E076_00_DEM', 'Copernicus_DSM_COG_10_N42_00_E077_00_DEM', 'Copernicus_DSM_COG_10_N42_00_E076_00_DEM']
+done: days=6 failed=0

@@ -1,0 +1,24 @@
+asset href: az://cpdata/terraclimate.zarr extra keys: ['xarray:open_kwargs']
+open kwargs keys: ['chunks', 'engine', 'consolidated', 'storage_options']
+/home/runner/work/Medeu-Earth-Science-Informatics/Medeu-Earth-Science-Informatics/research/ALMATY_SNOW/src/terraclimate.py:65: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.rename(columns={"ppt": "precip_mm", "swe": "swe_mm", "tmax": "tmax_c", "tmin": "tmin_c"}, inplace=True)
+terraclimate rows: 5376 years: 1958 2021
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/weakref.py", line 666, in _exitfunc
+    f()
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/weakref.py", line 590, in __call__
+    return info.func(*info.args, **(info.kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/fsspec/asyn.py", line 79, in sync
+    raise RuntimeError("Loop is not running")
+RuntimeError: Loop is not running
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/weakref.py", line 666, in _exitfunc
+    f()
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/weakref.py", line 590, in __call__
+    return info.func(*info.args, **(info.kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/fsspec/asyn.py", line 79, in sync
+    raise RuntimeError("Loop is not running")
+RuntimeError: Loop is not running
