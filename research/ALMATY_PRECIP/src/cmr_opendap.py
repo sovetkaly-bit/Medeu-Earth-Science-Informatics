@@ -1,6 +1,7 @@
 """Monthly precipitation-phase series for Almaty from NASA Earthdata (MERRA-2 monthly flux, GPM IMERG monthly).
 Access: CMR granule search -> OPeNDAP subset with the Earthdata bearer token (secret EARTHDATA_TOKEN)."""
 import argparse, os, sys, time, json
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import numpy as np, pandas as pd, requests, xarray as xr
 
 CMR = "https://cmr.earthdata.nasa.gov/search/granules.json"
@@ -55,6 +56,7 @@ def main():
     ap.add_argument("--year-from", type=int, default=2000)
     ap.add_argument("--year-to", type=int, default=2025)
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--out", default="out")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
@@ -67,10 +69,12 @@ def main():
         gs = gs[:a.limit]
     s = session()
     rows, failed = [], []
-    for n, g in enumerate(gs, 1):
+
+    def work(g):
         url = opendap_url(g)
         if not url:
-            failed.append((g["title"], "no opendap link")); continue
+            return g, None, "no opendap link"
+        err = ""
         for attempt in range(3):
             try:
                 m = subset(url, cfg["vars"], s)
@@ -78,16 +82,25 @@ def main():
                 rec = {"month": t.strftime("%Y-%m"), "granule": g["title"]}
                 for v in cfg["vars"]:
                     rec[v] = float(np.asarray(m[v]).squeeze())
-                rows.append(rec); break
+                return g, rec, ""
             except Exception as e:
-                err = repr(e)[:200]; time.sleep(3)
-        else:
-            failed.append((g["title"], err))
-        if n % 24 == 0:
-            print("done %d/%d failed=%d" % (n, len(gs), len(failed)), flush=True)
+                err = repr(e)[:300]; time.sleep(3)
+        return g, None, err
+
+    with ThreadPoolExecutor(max_workers=a.workers) as ex:
+        futs = [ex.submit(work, g) for g in gs]
+        for n, f in enumerate(as_completed(futs), 1):
+            g, rec, err = f.result()
+            if rec: rows.append(rec)
+            else: failed.append((g["title"], err))
+            if n % 24 == 0 or n <= 3:
+                print("done %d/%d failed=%d last_err=%s" % (n, len(gs), len(failed), err), flush=True)
+    rows.sort(key=lambda r: r["month"])
     pd.DataFrame(rows).to_csv(os.path.join(a.out, "%s_monthly_almaty.csv" % a.product.lower()), index=False)
     pd.DataFrame(failed, columns=["granule", "error"]).to_csv(os.path.join(a.out, "%s_failed.csv" % a.product.lower()), index=False)
     print("rows:", len(rows), "failed:", len(failed), flush=True)
+    if not rows:
+        sys.exit("no rows retrieved")
 
 if __name__ == "__main__":
     main()
