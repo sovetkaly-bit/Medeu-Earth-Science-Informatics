@@ -1,0 +1,4 @@
+ok ACCESS-CM2 ssp245 Almaty_city
+ok ACCESS-CM2 ssp245 Medeu
+ok ACCESS-CM2 ssp245 Kok-Zhailau
+ok ACCESS-CM2 ssp585 Almaty_city

@@ -1,0 +1,16 @@
+exc 2001 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+exc 2011 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+Almaty_city_800m {'n': 34, 'slope_per_10yr': -35.0, 'p': 0.299351499591174} {'h_tw_m2': 1763.6764705882354, 'h_tw_m5': 1063.7058823529412, 'h_tw_m8': 558.4411764705883}
+exc 1991 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+exc 2006 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+exc 2021 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+Medeu_1700m {'n': 34, 'slope_per_10yr': -45.51724137931035, 'p': 0.11957343098865397} {'h_tw_m2': 2499.529411764706, 'h_tw_m5': 1715.1470588235295, 'h_tw_m8': 939.1470588235294}
+exc 2001 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+exc 2016 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+Shymbulak_2200m {'n': 34, 'slope_per_10yr': -56.25, 'p': 0.04695634825648232} {'h_tw_m2': 3125.0882352941176, 'h_tw_m5': 2526.3529411764707, 'h_tw_m8': 1700.1470588235295}
+exc 1996 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+exc 2011 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+Kok-Zhailau_2000m {'n': 34, 'slope_per_10yr': -71.30434782608695, 'p': 0.05393111600594208} {'h_tw_m2': 2535.5, 'h_tw_m5': 1807.764705882353, 'h_tw_m8': 1095.4411764705883}
+exc 1996 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+exc 2011 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='archive-api.open-meteo.com', port=443): Read timed out. (read ti
+BigAlmatyLake_2500m {'n': 34, 'slope_per_10yr': -72.72727272727272, 'p': 0.018418956405329572} {'h_tw_m2': 3125.823529411765, 'h_tw_m5': 2550.735294117647, 'h_tw_m8': 1769.7941176470588}
