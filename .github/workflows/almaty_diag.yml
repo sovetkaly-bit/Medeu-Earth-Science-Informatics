@@ -1,0 +1,23 @@
+name: almaty-diag
+on:
+  workflow_dispatch:
+  push:
+    branches: [almaty-diag]
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    permissions: {contents: write}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install pystac-client planetary-computer
+      - shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p /tmp/res && python research/ALMATY_DIAG/diag.py 2>&1 | tee /tmp/res/diag.txt
+          cd /tmp/res && git init -q && git checkout -q -b almaty-diag-results
+          git config user.email a@b.c && git config user.name bot
+          git add -A && git commit -qm r
+          git remote add o "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f o almaty-diag-results
