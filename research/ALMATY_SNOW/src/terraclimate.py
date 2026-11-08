@@ -23,10 +23,13 @@ def main(out=None):
     os.makedirs(out, exist_ok=True)
     aoi = CFG["aoi"]
     cat = pystac_client.Client.open(STAC, modifier=planetary_computer.sign_inplace)
-    col = cat.get_collection(CFG["terraclimate_collection"])
+    col = planetary_computer.sign(cat.get_collection(CFG["terraclimate_collection"]))
     asset = col.assets["zarr-abfs"]
-    ds = xr.open_zarr(asset.href, **asset.extra_fields["xarray:open_kwargs"],
-                      storage_options=asset.extra_fields["xarray:storage_options"], consolidated=True)
+    print("asset href:", asset.href, "extra keys:", list(asset.extra_fields), flush=True)
+    kw = dict(asset.extra_fields.get("xarray:open_kwargs") or {})
+    kw.setdefault("consolidated", True)
+    so = asset.extra_fields.get("xarray:storage_options") or {}
+    ds = xr.open_zarr(asset.href, storage_options=so, **kw)
     lat, lon = ds["lat"].values, ds["lon"].values
     ii = np.where((lat >= aoi["south"] - 0.03) & (lat <= aoi["north"] + 0.03))[0]
     jj = np.where((lon >= aoi["west"] - 0.03) & (lon <= aoi["east"] + 0.03))[0]

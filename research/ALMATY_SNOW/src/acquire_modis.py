@@ -25,6 +25,14 @@ from src.dem import dem_on_grid, STAC
 CFG = json.load(open(os.path.join(os.path.dirname(__file__), "..", "config.json")))
 
 
+def parse_id(item):
+    """MOD10A1.A2020045.h23v04.061.... -> (sensor, date, tile)."""
+    parts = item.id.split(".")
+    sensor = parts[0][:3]
+    date = (pd.Timestamp(year=int(parts[1][1:5]), month=1, day=1) + pd.Timedelta(days=int(parts[1][5:8]) - 1)).date()
+    return sensor, date, parts[2]
+
+
 def pick_asset_key(item):
     keys = list(item.assets)
     for k in keys:
@@ -66,11 +74,12 @@ def main():
     items = list(search.items())
     if not items:
         sys.exit("ERROR: no MOD10A1 items found")
-    tiles = collections.Counter(i.id.split(".")[2] if len(i.id.split(".")) > 2 else "?" for i in items)
-    print("items:", len(items), "tiles:", dict(tiles), flush=True)
+    tiles = collections.Counter(parse_id(i)[2] for i in items)
+    sensors = collections.Counter(parse_id(i)[0] for i in items)
+    print("items:", len(items), "tiles:", dict(tiles), "sensors:", dict(sensors), flush=True)
     tile = tiles.most_common(1)[0][0]
-    items = [i for i in items if (len(i.id.split(".")) > 2 and i.id.split(".")[2] == tile)]
-    items.sort(key=lambda i: i.datetime)
+    items = [i for i in items if parse_id(i)[2] == tile]
+    items.sort(key=lambda i: (parse_id(i)[1], parse_id(i)[0]))
     if a.limit:
         items = items[: a.limit]
     key = pick_asset_key(items[0])
@@ -95,32 +104,41 @@ def main():
                  ).to_csv(os.path.join(a.out, "bands_summary.csv"), index=False)
 
     thr = CFG["modis"]["snow_ndsi_threshold"]
-    rows, prov, failed = [], [], []
+    prov, failed = [], []
+    per_day = collections.defaultdict(dict)  # date -> sensor -> (clear, snow) boolean arrays
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=a.workers) as ex:
         futs = {ex.submit(read_window, it, key, win): it for it in items}
         for n, f in enumerate(as_completed(futs), 1):
             it = futs[f]
             arr = f.result()
-            date = it.datetime.date().isoformat()
+            sensor, date, _ = parse_id(it)
             if isinstance(arr, Exception) or arr is None or arr.shape != shape:
                 failed.append((it.id, str(arr)[:200]))
                 continue
             clear = arr <= 100
-            snow = clear & (arr >= thr)
+            per_day[date][sensor] = (clear, clear & (arr >= thr))
+            prov.append((it.id, sensor, date.isoformat()))
+            if n % 1000 == 0:
+                print("read %d/%d  %.0fs  failed=%d" % (n, len(items), time.time() - t0, len(failed)), flush=True)
+
+    rows = []
+    for date, sd in per_day.items():
+        variants = dict(sd)
+        if len(sd) > 1:  # combined Terra+Aqua: pixel is clear if clear in any overpass, snow if snow in any clear overpass
+            variants["COMB"] = (np.logical_or.reduce([v[0] for v in sd.values()]), np.logical_or.reduce([v[1] for v in sd.values()]))
+        else:
+            variants["COMB"] = list(sd.values())[0]
+        for sensor, (clear, snow) in variants.items():
             for i in range(1, nb + 1):
                 m = bands == i
                 if band_px[i]:
-                    rows.append((date, i, band_px[i], int((clear & m).sum()), int((snow & m).sum())))
-            prov.append((it.id, date))
-            if n % 500 == 0:
-                print("read %d/%d  %.0fs  failed=%d" % (n, len(items), time.time() - t0, len(failed)), flush=True)
-
-    df = pd.DataFrame(rows, columns=["date", "band", "band_px", "clear_px", "snow_px"]).sort_values(["date", "band"])
+                    rows.append((date.isoformat(), sensor, i, band_px[i], int((clear & m).sum()), int((snow & m).sum())))
+    df = pd.DataFrame(rows, columns=["date", "sensor", "band", "band_px", "clear_px", "snow_px"]).sort_values(["date", "sensor", "band"])
     df.to_csv(os.path.join(a.out, "modis_daily_by_band.csv"), index=False)
-    pd.DataFrame(prov, columns=["item_id", "date"]).sort_values("date").to_csv(os.path.join(a.out, "modis_items.csv"), index=False)
+    pd.DataFrame(prov, columns=["item_id", "sensor", "date"]).sort_values("date").to_csv(os.path.join(a.out, "modis_items.csv"), index=False)
     pd.DataFrame(failed, columns=["item_id", "error"]).to_csv(os.path.join(a.out, "modis_failed.csv"), index=False)
-    print("done: days=%d failed=%d" % (df["date"].nunique(), len(failed)), flush=True)
+    print("done: days=%d failed=%d" % (df["date"].nunique() if len(df) else 0, len(failed)), flush=True)
     if len(failed) > 0.2 * len(items):
         sys.exit("ERROR: more than 20 percent of reads failed")
 

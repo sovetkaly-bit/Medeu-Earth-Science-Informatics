@@ -122,18 +122,25 @@ def figures(out, monthly, seasons):
 def main(out=None):
     out = out or os.environ.get("ALMATY_OUT", "out")
     cfg = CFG
-    daily = pd.read_csv(os.path.join(out, "modis_daily_by_band.csv"))
-    seasons = season_table(daily)
-    monthly = monthly_table(daily)
-    seasons.to_csv(os.path.join(out, "snow_season_by_band.csv"), index=False)
-    monthly.to_csv(os.path.join(out, "snow_monthly_by_band.csv"), index=False)
-    tr = trend_rows(seasons, cfg["trend"]["min_n"])
-    tr.to_csv(os.path.join(out, "trends_snow_modis.csv"), index=False)
+    daily_all = pd.read_csv(os.path.join(out, "modis_daily_by_band.csv"))
+    if "sensor" not in daily_all.columns:
+        daily_all["sensor"] = "COMB"
+    for sensor, tag in (("COMB", ""), ("MOD", "_terra_only"), ("MYD", "_aqua_only")):
+        daily = daily_all[daily_all["sensor"] == sensor].drop(columns=["sensor"])
+        if daily.empty:
+            continue
+        seasons = season_table(daily)
+        monthly = monthly_table(daily)
+        seasons.to_csv(os.path.join(out, "snow_season_by_band%s.csv" % tag), index=False)
+        monthly.to_csv(os.path.join(out, "snow_monthly_by_band%s.csv" % tag), index=False)
+        trend_rows(seasons, cfg["trend"]["min_n"]).to_csv(os.path.join(out, "trends_snow_modis%s.csv" % tag), index=False)
+        if sensor == "COMB":
+            main_seasons, main_monthly = seasons, monthly
     p = os.path.join(out, "terraclimate_monthly_by_band.csv")
     if os.path.exists(p):
         terra_trends(pd.read_csv(p), cfg["trend"]["min_n"]).to_csv(os.path.join(out, "trends_terraclimate.csv"), index=False)
-    figures(out, monthly, seasons)
-    print("seasons:", len(seasons), "accepted:", int(seasons["accepted"].sum()))
+    figures(out, main_monthly, main_seasons)
+    print("seasons:", len(main_seasons), "accepted:", int(main_seasons["accepted"].sum()))
 
 
 if __name__ == "__main__":

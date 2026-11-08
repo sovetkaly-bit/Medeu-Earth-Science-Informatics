@@ -15,6 +15,7 @@ permissions:
   contents: write
 defaults:
   run:
+    shell: bash
     working-directory: research/ALMATY_SNOW
 env:
   ALMATY_OUT: out
