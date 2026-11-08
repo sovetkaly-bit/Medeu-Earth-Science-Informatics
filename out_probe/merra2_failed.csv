@@ -1,0 +1,4 @@
+granule,error
+M2TMNXFLX.5.12.4:MERRA2_400.tavgM_2d_flx_Nx.202001.nc4,HTTPError('HTTP Error occurred 403 Client Error:  for url: https://opendap.earthdata.nasa.gov/collections/C1276812868-GES_DISC/granules/M2TMNXFLX.5.12.4%3AMERRA2_400.tavgM_2d_flx_Nx.202001.nc4.dds - F
+M2TMNXFLX.5.12.4:MERRA2_400.tavgM_2d_flx_Nx.202002.nc4,HTTPError('HTTP Error occurred 403 Client Error:  for url: https://opendap.earthdata.nasa.gov/collections/C1276812868-GES_DISC/granules/M2TMNXFLX.5.12.4%3AMERRA2_400.tavgM_2d_flx_Nx.202002.nc4.dds - F
+M2TMNXFLX.5.12.4:MERRA2_400.tavgM_2d_flx_Nx.202003.nc4,HTTPError('HTTP Error occurred 403 Client Error:  for url: https://opendap.earthdata.nasa.gov/collections/C1276812868-GES_DISC/granules/M2TMNXFLX.5.12.4%3AMERRA2_400.tavgM_2d_flx_Nx.202003.nc4.dds - F
