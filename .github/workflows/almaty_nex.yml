@@ -11,8 +11,12 @@ jobs:
       fail-fast: false
       max-parallel: 16
       matrix:
-        model: [CanESM5, NorESM2-MM, UKESM1-0-LL, INM-CM5-0]
-        scen: [ssp245, ssp585]
+        include:
+          - {model: ACCESS-CM2, scen: ssp245}
+          - {model: ACCESS-CM2, scen: ssp585}
+          - {model: UKESM1-0-LL, scen: ssp245}
+          - {model: NorESM2-MM, scen: ssp245}
+          - {model: CanESM5, scen: ssp585}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -38,8 +42,8 @@ jobs:
         run: |
           set -uo pipefail
           mkdir -p /tmp/res && cp /tmp/art/*/* /tmp/res/ ; ls /tmp/res | head -50
-          cd /tmp/res && git init -q && git checkout -q -b almaty-nex2-results
+          cd /tmp/res && git init -q && git checkout -q -b almaty-nex3-results
           git config user.email a@b.c && git config user.name bot
           git add -A && git commit -qm results
           git remote add o "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-          git push -f o almaty-nex2-results
+          git push -f o almaty-nex3-results

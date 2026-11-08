@@ -26,9 +26,16 @@ def year_data(model, scen, var, y):
 
 
 def series(model, scen, var, years):
+    import time
     parts = {n: [] for n in PTS}
     for y in years:
-        d = year_data(model, scen, var, y)
+        for k in range(5):
+            try:
+                d = year_data(model, scen, var, y); break
+            except Exception as e:
+                print("retry", model, scen, var, y, k, repr(e)[:150], flush=True); time.sleep(30 * (k + 1))
+        else:
+            raise RuntimeError(f"giving up {model} {scen} {var} {y}")
         for n in PTS: parts[n].append(d[n])
         print("got", model, scen, var, y, flush=True)
     return {n: xr.concat(parts[n], "time") for n in PTS}
