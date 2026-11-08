@@ -1,0 +1,74 @@
+SUMMARIES {"cmip6:scenario": ["historical", "ssp245", "ssp585"], "cmip6:variable": ["hurs", "huss", "pr", "rlds", "rsds", "sfcWind", "tas", "tasmax", "tasmin"]}
+UKESM1-0-LL historical 2010 items 1 [['pr', 'tas', 'hurs', 'huss', 'rlds', 'rsds', 'tasmax', 'tasmin', 'sfcWind']] ['UKESM1-0-LL.historical.2010']
+UKESM1-0-LL ssp245 2030 items 1 [['pr', 'tas', 'hurs', 'huss', 'rlds', 'rsds', 'tasmax', 'tasmin', 'sfcWind']] ['UKESM1-0-LL.ssp245.2030']
+INM-CM5-0 historical 2010 items 1 [['pr', 'tas', 'hurs', 'huss', 'rlds', 'rsds', 'tasmax', 'tasmin', 'sfcWind']] ['INM-CM5-0.historical.2010']
+INM-CM5-0 ssp245 2030 items 1 [['pr', 'tas', 'hurs', 'huss', 'rlds', 'rsds', 'tasmax', 'tasmin', 'sfcWind']] ['INM-CM5-0.ssp245.2030']
+NorESM2-MM historical 2010 items 1 [['pr', 'tas', 'hurs', 'huss', 'rlds', 'rsds', 'tasmax', 'tasmin', 'sfcWind']] ['NorESM2-MM.historical.2010']
+NorESM2-MM ssp245 2030 items 1 [['pr', 'tas', 'hurs', 'huss', 'rlds', 'rsds', 'tasmax', 'tasmin', 'sfcWind']] ['NorESM2-MM.ssp245.2030']
+CanESM5 historical 2010 items 1 [['pr', 'tas', 'hurs', 'huss', 'rlds', 'rsds', 'tasmax', 'tasmin', 'sfcWind']] ['CanESM5.historical.2010']
+CanESM5 ssp245 2030 items 1 [['pr', 'tas', 'hurs', 'huss', 'rlds', 'rsds', 'tasmax', 'tasmin', 'sfcWind']] ['CanESM5.ssp245.2030']
+ACCESS-CM2 historical 2010 items 1 [['pr', 'tas', 'hurs', 'huss', 'rlds', 'rsds', 'tasmax', 'tasmin', 'sfcWind']] ['ACCESS-CM2.historical.2010']
+ACCESS-CM2 ssp245 2030 items 1 [['pr', 'tas', 'hurs', 'huss', 'rlds', 'rsds', 'tasmax', 'tasmin', 'sfcWind']] ['ACCESS-CM2.ssp245.2030']
+UKESM1-0-LL HREF https://nasagddp.blob.core.windows.net/nex-gddp-cmip6/NEX/GDDP-CMIP6/UKESM1-0-LL/historical/r1i1p1f2/tas/tas_day_UKESM1-0-LL_historical_r1i1p1f2_gn_2005.nc
+UKESM1-0-LL FAIL ecode_cf_datetime_dtype(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/xarray/coding/times.py", line 367, in _decode_cf_datetime_dtype
+    raise ValueError(msg) from err
+ValueError: unable to decode time units 'days since 1850-01-01' with "calendar '360_day'". Try opening your dataset with decode_times=False or installing cftime if it is not installed.
+Raised while decoding variable 'time' with value <xarray.Variable (time: 360)> Size: 3kB
+[360 values with dtype=float64]
+Attributes:
+    standard_name:  time
+    long_name:      time
+    units:          days since 1850-01-01
+    calendar:       360_day
+    axis:           T
+
+INM-CM5-0 HREF https://nasagddp.blob.core.windows.net/nex-gddp-cmip6/NEX/GDDP-CMIP6/INM-CM5-0/historical/r1i1p1f1/tas/tas_day_INM-CM5-0_historical_r1i1p1f1_gr1_2005.nc
+INM-CM5-0 FAIL = _decode_cf_datetime_dtype(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/xarray/coding/times.py", line 367, in _decode_cf_datetime_dtype
+    raise ValueError(msg) from err
+ValueError: unable to decode time units 'days since 1850-1-1' with "calendar '365_day'". Try opening your dataset with decode_times=False or installing cftime if it is not installed.
+Raised while decoding variable 'time' with value <xarray.Variable (time: 365)> Size: 3kB
+[365 values with dtype=float64]
+Attributes:
+    standard_name:  time
+    long_name:      time
+    units:          days since 1850-1-1
+    calendar:       365_day
+    axis:           T
+
+NorESM2-MM HREF https://nasagddp.blob.core.windows.net/nex-gddp-cmip6/NEX/GDDP-CMIP6/NorESM2-MM/historical/r1i1p1f1/tas/tas_day_NorESM2-MM_historical_r1i1p1f1_gn_2005.nc
+NorESM2-MM FAIL dtype(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/xarray/coding/times.py", line 367, in _decode_cf_datetime_dtype
+    raise ValueError(msg) from err
+ValueError: unable to decode time units 'days since 0001-01-01 00:00:00' with "calendar '365_day'". Try opening your dataset with decode_times=False or installing cftime if it is not installed.
+Raised while decoding variable 'time' with value <xarray.Variable (time: 365)> Size: 3kB
+[365 values with dtype=float64]
+Attributes:
+    standard_name:  time
+    long_name:      time
+    units:          days since 0001-01-01 00:00:00
+    calendar:       365_day
+    axis:           T
+
+CanESM5 HREF https://nasagddp.blob.core.windows.net/nex-gddp-cmip6/NEX/GDDP-CMIP6/CanESM5/historical/r1i1p1f1/tas/tas_day_CanESM5_historical_r1i1p1f1_gn_2005.nc
+CanESM5 FAIL e_dtype(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/xarray/coding/times.py", line 367, in _decode_cf_datetime_dtype
+    raise ValueError(msg) from err
+ValueError: unable to decode time units 'days since 1850-01-01 0:0:0.0' with "calendar '365_day'". Try opening your dataset with decode_times=False or installing cftime if it is not installed.
+Raised while decoding variable 'time' with value <xarray.Variable (time: 365)> Size: 3kB
+[365 values with dtype=float64]
+Attributes:
+    standard_name:  time
+    long_name:      time
+    units:          days since 1850-01-01 0:0:0.0
+    calendar:       365_day
+    axis:           T
+
+ACCESS-CM2 HREF https://nasagddp.blob.core.windows.net/nex-gddp-cmip6/NEX/GDDP-CMIP6/ACCESS-CM2/historical/r1i1p1f1/tas/tas_day_ACCESS-CM2_historical_r1i1p1f1_gn_2005.nc
+ACCESS-CM2 DIMS {'time': 365, 'lat': 600, 'lon': 1440} LON 0.125 359.875 LAT -59.875 89.875
+ACCESS-CM2 OK (365,) 285.72845458984375
