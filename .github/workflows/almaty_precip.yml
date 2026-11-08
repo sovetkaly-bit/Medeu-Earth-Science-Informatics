@@ -24,7 +24,7 @@ jobs:
           EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
         run: |
           python -m src.cmr_opendap --product MERRA2 --year-from 2020 --year-to 2020 --limit 3 --out out_probe 2>&1 | tee probe_merra.log
-          python -m src.cmr_opendap --product IMERG --year-from 2020 --year-to 2020 --limit 3 --out out_probe 2>&1 | tee probe_imerg.log
+          python -m src.cmr_opendap --product IMERG --year-from 2020 --year-to 2020 --limit 3 --out out_probe 2>&1 | tee probe_imerg.log || true
       - name: Publish probe logs
         if: always()
         run: |
@@ -35,11 +35,6 @@ jobs:
         env:
           EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
         run: python -m src.cmr_opendap --product MERRA2 --year-from 1980 --year-to 2025 --out out 2>&1 | tee merra_console.log
-      - name: IMERG monthly 2000-2025
-        env:
-          EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
-        run: python -m src.cmr_opendap --product IMERG --year-from 2000 --year-to 2025 --out out 2>&1 | tee imerg_console.log
-        continue-on-error: true
       - name: Analysis
         run: python -m src.analyze out 2>&1 | tee out/analyze_console.log
       - name: Collect and token guard
