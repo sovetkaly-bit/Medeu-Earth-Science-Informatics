@@ -1,0 +1,53 @@
+name: Almaty precipitation phase (MERRA-2, IMERG via Earthdata)
+on:
+  workflow_dispatch:
+  push:
+    branches: [almaty-precip-phase]
+    paths: ['research/ALMATY_PRECIP/**', '.github/workflows/almaty_precip.yml']
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    permissions:
+      contents: write
+    defaults:
+      run:
+        shell: bash
+        working-directory: research/ALMATY_PRECIP
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python -m pip install -r requirements.txt
+      - name: Probe (3 granules each)
+        env:
+          EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
+        run: |
+          python -m src.cmr_opendap --product MERRA2 --year-from 2020 --year-to 2020 --limit 3 --out out_probe 2>&1 | tee probe_merra.log
+          python -m src.cmr_opendap --product IMERG --year-from 2020 --year-to 2020 --limit 3 --out out_probe 2>&1 | tee probe_imerg.log
+      - name: MERRA-2 monthly 1980-2025
+        env:
+          EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
+        run: python -m src.cmr_opendap --product MERRA2 --year-from 1980 --year-to 2025 --out out 2>&1 | tee merra_console.log
+      - name: IMERG monthly 2000-2025
+        env:
+          EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
+        run: python -m src.cmr_opendap --product IMERG --year-from 2000 --year-to 2025 --out out 2>&1 | tee imerg_console.log
+        continue-on-error: true
+      - name: Analysis
+        run: python -m src.analyze out 2>&1 | tee out/analyze_console.log
+      - name: Collect and token guard
+        if: always()
+        env:
+          EARTHDATA_TOKEN: ${{ secrets.EARTHDATA_TOKEN }}
+        run: |
+          mkdir -p out; cp *.log out/ 2>/dev/null || true; cp -r out_probe out/ 2>/dev/null || true
+          if [ -n "$EARTHDATA_TOKEN" ] && grep -rF -- "$EARTHDATA_TOKEN" out; then echo "TOKEN LEAK"; rm -rf out; exit 1; fi
+      - name: Publish to branch almaty-precip-results
+        if: always()
+        run: |
+          rm -rf /tmp/res && mkdir /tmp/res && cp -r out/. /tmp/res/
+          cd /tmp/res && git init -q -b almaty-precip-results
+          git config user.email "actions@github.com" && git config user.name "github-actions"
+          git add -A && git commit -q -m "Almaty precip phase: run ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" almaty-precip-results
