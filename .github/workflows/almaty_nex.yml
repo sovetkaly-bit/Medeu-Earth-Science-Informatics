@@ -1,0 +1,45 @@
+name: almaty-nex
+on:
+  workflow_dispatch:
+  push:
+    branches: [almaty-nex]
+jobs:
+  nex:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 16
+      matrix:
+        model: [ACCESS-CM2, CanESM5, MPI-ESM1-2-HR, MRI-ESM2-0, NorESM2-MM, UKESM1-0-LL, INM-CM5-0, EC-Earth3]
+        scen: [ssp245, ssp585]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas xarray h5netcdf h5py fsspec aiohttp requests pystac-client planetary-computer
+      - shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p /tmp/res && cd research/ALMATY_NEX
+          python nex1.py /tmp/res ${{ matrix.model }} ${{ matrix.scen }} 2>&1 | tee /tmp/res/log_${{ matrix.model }}_${{ matrix.scen }}.txt
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: {name: "nex-${{ matrix.model }}-${{ matrix.scen }}", path: /tmp/res}
+  publish:
+    needs: [nex]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    permissions: {contents: write}
+    steps:
+      - uses: actions/download-artifact@v4
+        with: {path: /tmp/art}
+      - shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p /tmp/res && cp /tmp/art/*/* /tmp/res/ ; ls /tmp/res | head -50
+          cd /tmp/res && git init -q && git checkout -q -b almaty-nex-results
+          git config user.email a@b.c && git config user.name bot
+          git add -A && git commit -qm results
+          git remote add o "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f o almaty-nex-results
