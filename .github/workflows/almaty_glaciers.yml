@@ -1,0 +1,29 @@
+name: Almaty glaciers (RGI 6.0, Central Asia)
+on:
+  workflow_dispatch:
+  push:
+    branches: [almaty-glaciers]
+    paths: ['research/ALMATY_GLACIERS/**', '.github/workflows/almaty_glaciers.yml']
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    defaults:
+      run:
+        shell: bash
+        working-directory: research/ALMATY_GLACIERS
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python -m pip install numpy pandas requests dbfread
+      - run: python src/rgi.py out 2>&1 | tee out_console.log
+      - name: Publish
+        if: always()
+        run: |
+          mkdir -p out; cp out_console.log out/ 2>/dev/null || true
+          rm -rf /tmp/res && mkdir /tmp/res && cp -r out/. /tmp/res/
+          cd /tmp/res && git init -q -b almaty-glaciers-results && git config user.email a@b.c && git config user.name gha
+          git add -A && git commit -q -m "glaciers" --allow-empty && git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" almaty-glaciers-results
