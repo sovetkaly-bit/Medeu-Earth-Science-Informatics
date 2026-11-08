@@ -11,13 +11,13 @@ jobs:
       fail-fast: false
       max-parallel: 16
       matrix:
-        model: [ACCESS-CM2, CanESM5, MPI-ESM1-2-HR, MRI-ESM2-0, NorESM2-MM, UKESM1-0-LL, INM-CM5-0, EC-Earth3]
+        model: [CanESM5, NorESM2-MM, UKESM1-0-LL, INM-CM5-0]
         scen: [ssp245, ssp585]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
-      - run: pip install numpy pandas xarray h5netcdf h5py fsspec aiohttp requests pystac-client planetary-computer
+      - run: pip install cftime numpy pandas xarray h5netcdf h5py fsspec aiohttp requests pystac-client planetary-computer
       - shell: bash
         run: |
           set -uo pipefail
@@ -38,8 +38,8 @@ jobs:
         run: |
           set -uo pipefail
           mkdir -p /tmp/res && cp /tmp/art/*/* /tmp/res/ ; ls /tmp/res | head -50
-          cd /tmp/res && git init -q && git checkout -q -b almaty-nex-results
+          cd /tmp/res && git init -q && git checkout -q -b almaty-nex2-results
           git config user.email a@b.c && git config user.name bot
           git add -A && git commit -qm results
           git remote add o "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-          git push -f o almaty-nex-results
+          git push -f o almaty-nex2-results
