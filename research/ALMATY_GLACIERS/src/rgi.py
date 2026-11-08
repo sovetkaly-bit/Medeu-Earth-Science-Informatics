@@ -1,27 +1,16 @@
 import io, os, sys, zipfile, requests
 import numpy as np, pandas as pd
 OUT = sys.argv[1] if len(sys.argv) > 1 else "out"; os.makedirs(OUT, exist_ok=True)
-URLS = ["https://www.glims.org/RGI/rgi60_files/13_rgi60_CentralAsia.zip",
-        "https://www.glims.org/RGI/rgi60_files/13_rgi60_CentralAsia.zip".replace("www.glims.org", "glims.org")]
-data = None
-for u in URLS:
-    try:
-        r = requests.get(u, timeout=600); print(u, r.status_code, len(r.content), flush=True)
-        if r.status_code == 200 and len(r.content) > 1e6: data = r.content; break
-    except Exception as e: print(u, e, flush=True)
-if data is None: sys.exit("download failed")
-z = zipfile.ZipFile(io.BytesIO(data)); print(z.namelist()[:10], flush=True)
-dbf = [n for n in z.namelist() if n.lower().endswith(".csv")]
-print("csv files:", dbf, flush=True)
-if dbf:
-    df = pd.read_csv(z.open(dbf[0]))
-else:
-    z.extractall("rgi"); 
-    sys.path.append(".")
-    from dbfread import DBF
-    f = [n for n in z.namelist() if n.endswith(".dbf")][0]
-    df = pd.DataFrame(iter(DBF(os.path.join("rgi", f), encoding="latin1")))
+URL = "https://cluster.klima.uni-bremen.de/~oggm/rgi/rgi62_stats.csv"
+r = requests.get(URL, timeout=600); print(URL, r.status_code, len(r.content), flush=True)
+r.raise_for_status()
+df = pd.read_csv(io.StringIO(r.text), index_col=0, low_memory=False)
 print(df.columns.tolist(), len(df), flush=True)
+df = df.reset_index().rename(columns={df.index.name or "index": "RGIId"}) if "RGIId" not in df.columns else df
+for c in ("CenLat", "CenLon"):
+    df[c] = pd.to_numeric(df[c])
+for c in ("BgnDate", "EndDate", "Slope", "Aspect", "Name", "GLIMSId"):
+    if c not in df.columns: df[c] = np.nan
 lat = "CenLat"; lon = "CenLon"
 box = df[(df[lat].between(43.0, 43.5)) & (df[lon].between(76.4, 78.0))].copy()
 box["Zmed"] = pd.to_numeric(box["Zmed"]); box["Area"] = pd.to_numeric(box["Area"])
