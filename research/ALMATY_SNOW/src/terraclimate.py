@@ -23,8 +23,8 @@ def main(out=None):
     os.makedirs(out, exist_ok=True)
     aoi = CFG["aoi"]
     cat = pystac_client.Client.open(STAC, modifier=planetary_computer.sign_inplace)
-    col = planetary_computer.sign(cat.get_collection(CFG["terraclimate_collection"]))
-    asset = col.assets["zarr-abfs"]
+    col = cat.get_collection(CFG["terraclimate_collection"])
+    asset = planetary_computer.sign(col.assets["zarr-abfs"])
     print("asset href:", asset.href, "extra keys:", list(asset.extra_fields), flush=True)
     kw = dict(asset.extra_fields.get("xarray:open_kwargs") or {})
     kw.setdefault("consolidated", True)
