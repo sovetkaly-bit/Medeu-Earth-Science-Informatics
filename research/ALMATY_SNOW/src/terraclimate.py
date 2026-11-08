@@ -28,8 +28,11 @@ def main(out=None):
     print("asset href:", asset.href, "extra keys:", list(asset.extra_fields), flush=True)
     kw = dict(asset.extra_fields.get("xarray:open_kwargs") or {})
     kw.setdefault("consolidated", True)
-    so = asset.extra_fields.get("xarray:storage_options") or {}
-    ds = xr.open_zarr(asset.href, storage_options=so, **kw)
+    so = asset.extra_fields.get("xarray:storage_options")
+    if so and "storage_options" not in kw:
+        kw["storage_options"] = so
+    print("open kwargs keys:", list(kw), flush=True)
+    ds = xr.open_zarr(asset.href, **kw)
     lat, lon = ds["lat"].values, ds["lon"].values
     ii = np.where((lat >= aoi["south"] - 0.03) & (lat <= aoi["north"] + 0.03))[0]
     jj = np.where((lon >= aoi["west"] - 0.03) & (lon <= aoi["east"] + 0.03))[0]
