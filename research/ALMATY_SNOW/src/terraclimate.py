@@ -32,7 +32,8 @@ def main(out=None):
     if so and "storage_options" not in kw:
         kw["storage_options"] = so
     print("open kwargs keys:", list(kw), flush=True)
-    ds = xr.open_zarr(asset.href, **kw)
+    kw.pop("consolidated", None)
+    ds = xr.open_dataset(asset.href, consolidated=True, **kw)
     lat, lon = ds["lat"].values, ds["lon"].values
     ii = np.where((lat >= aoi["south"] - 0.03) & (lat <= aoi["north"] + 0.03))[0]
     jj = np.where((lon >= aoi["west"] - 0.03) & (lon <= aoi["east"] + 0.03))[0]
