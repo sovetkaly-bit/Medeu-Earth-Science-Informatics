@@ -16,8 +16,9 @@ jobs:
       - shell: bash
         run: |
           set -euo pipefail
-          mkdir -p /tmp/res && cd research/ALMATY_DNRE/src && python era5.py /tmp/res
-      - uses: actions/upload-artifact@v4
+          mkdir -p /tmp/res && cd research/ALMATY_DNRE/src && python era5.py /tmp/res 2>&1 | tee /tmp/res/log_era5.txt
+      - if: always()
+        uses: actions/upload-artifact@v4
         with: {name: era5, path: /tmp/res}
   nex:
     runs-on: ubuntu-latest
@@ -30,8 +31,9 @@ jobs:
       - shell: bash
         run: |
           set -euo pipefail
-          mkdir -p /tmp/res && cd research/ALMATY_DNRE/src && python nex.py /tmp/res
-      - uses: actions/upload-artifact@v4
+          mkdir -p /tmp/res && cd research/ALMATY_DNRE/src && python nex.py /tmp/res 2>&1 | tee /tmp/res/log_nex.txt
+      - if: always()
+        uses: actions/upload-artifact@v4
         with: {name: nex, path: /tmp/res}
   s2:
     runs-on: ubuntu-latest
@@ -44,8 +46,9 @@ jobs:
       - shell: bash
         run: |
           set -euo pipefail
-          mkdir -p /tmp/res && cd research/ALMATY_DNRE/src && python s2snow.py /tmp/res
-      - uses: actions/upload-artifact@v4
+          mkdir -p /tmp/res && cd research/ALMATY_DNRE/src && python s2snow.py /tmp/res 2>&1 | tee /tmp/res/log_s2snow.txt
+      - if: always()
+        uses: actions/upload-artifact@v4
         with: {name: s2, path: /tmp/res}
   publish:
     needs: [era5, nex, s2]
@@ -60,7 +63,7 @@ jobs:
       - shell: bash
         run: |
           set -euo pipefail
-          mkdir -p /tmp/res && cp -r /tmp/art/*/* /tmp/res/ 2>/dev/null || true
+          mkdir -p /tmp/res && cp -r /tmp/art/*/* /tmp/res/ 2>/dev/null || true; echo run > /tmp/res/RUN.txt
           ls -la /tmp/res
           cd /tmp/res && git init -q && git checkout -q -b almaty-dnre-results
           git config user.email a@b.c && git config user.name bot
