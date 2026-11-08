@@ -1,0 +1,69 @@
+name: almaty-dnre
+on:
+  workflow_dispatch:
+  push:
+    branches: [almaty-dnre]
+    paths: ['research/ALMATY_DNRE/**', '.github/workflows/almaty_dnre.yml']
+jobs:
+  era5:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -r research/ALMATY_DNRE/requirements.txt
+      - shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/res && cd research/ALMATY_DNRE/src && python era5.py /tmp/res
+      - uses: actions/upload-artifact@v4
+        with: {name: era5, path: /tmp/res}
+  nex:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -r research/ALMATY_DNRE/requirements.txt
+      - shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/res && cd research/ALMATY_DNRE/src && python nex.py /tmp/res
+      - uses: actions/upload-artifact@v4
+        with: {name: nex, path: /tmp/res}
+  s2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -r research/ALMATY_DNRE/requirements.txt
+      - shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/res && cd research/ALMATY_DNRE/src && python s2snow.py /tmp/res
+      - uses: actions/upload-artifact@v4
+        with: {name: s2, path: /tmp/res}
+  publish:
+    needs: [era5, nex, s2]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    permissions: {contents: write}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {path: /tmp/art}
+        continue-on-error: true
+      - shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/res && cp -r /tmp/art/*/* /tmp/res/ 2>/dev/null || true
+          ls -la /tmp/res
+          cd /tmp/res && git init -q && git checkout -q -b almaty-dnre-results
+          git config user.email a@b.c && git config user.name bot
+          git add -A && git commit -qm "results" 
+          git remote add o "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f o almaty-dnre-results
