@@ -1,0 +1,67 @@
+name: Almaty snow satellite (MODIS via Planetary Computer, TerraClimate)
+on:
+  workflow_dispatch:
+    inputs:
+      year_from:
+        description: first year
+        default: "2000"
+      year_to:
+        description: last year
+        default: "2026"
+  push:
+    branches: [almaty-climate-snow]
+    paths: ["research/ALMATY_SNOW/**", ".github/workflows/almaty_snow.yml"]
+permissions:
+  contents: write
+defaults:
+  run:
+    working-directory: research/ALMATY_SNOW
+env:
+  ALMATY_OUT: out
+jobs:
+  snow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: research/ALMATY_SNOW/requirements.txt
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest discover -s tests
+      - name: Probe (few items, logs asset keys, window and band pixels)
+        run: python -m src.acquire_modis --year-from 2020 --year-to 2020 --limit 12 --workers 4 --out out_probe 2>&1 | tee probe_console.log
+      - name: MODIS daily snow cover
+        run: python -m src.acquire_modis --year-from "${{ inputs.year_from || '2000' }}" --year-to "${{ inputs.year_to || '2026' }}" 2>&1 | tee modis_console.log
+      - name: TerraClimate (model-based; failure does not stop the package)
+        continue-on-error: true
+        run: python -m src.terraclimate 2>&1 | tee terraclimate_console.log
+      - name: Analysis, figures, manifest
+        run: |
+          python -m src.analyze 2>&1 | tee analyze_console.log
+          cp *_console.log out/ 2>/dev/null || true
+          cp config.json out/
+          python -m src.manifest out
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ALMATY_SNOW_SATELLITE_PACKAGE
+          path: |
+            research/ALMATY_SNOW/out/
+            research/ALMATY_SNOW/out_probe/
+            research/ALMATY_SNOW/*_console.log
+          retention-days: 90
+      - name: Publish results to branch almaty-snow-results
+        if: always()
+        continue-on-error: true
+        run: |
+          rm -rf /tmp/res && mkdir /tmp/res
+          cp -r out/. /tmp/res/ 2>/dev/null || true
+          cp -r out_probe /tmp/res/ 2>/dev/null || true
+          cp *_console.log /tmp/res/ 2>/dev/null || true
+          cd /tmp/res && git init -q -b almaty-snow-results
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -q -m "Almaty snow results: run ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" almaty-snow-results

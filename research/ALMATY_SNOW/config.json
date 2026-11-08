@@ -1,0 +1,18 @@
+{
+  "aoi": {"west": 76.75, "south": 42.95, "east": 77.35, "north": 43.35},
+  "bands_m": [[600, 1000], [1000, 1500], [1500, 2000], [2000, 2500], [2500, 3000], [3000, 3500], [3500, 5000]],
+  "modis": {
+    "collection": "modis-10A1-061",
+    "snow_ndsi_threshold": 40,
+    "min_clear_share_day": 0.3,
+    "snow_state_share": 0.5,
+    "season_start_md": "09-01",
+    "season_end_md": "05-31",
+    "min_valid_day_share_season": 0.5,
+    "run_min_obs": 3,
+    "run_min_span_days": 10
+  },
+  "trend": {"min_n": 10},
+  "dem_collection": "cop-dem-glo-30",
+  "terraclimate_collection": "terraclimate"
+}
