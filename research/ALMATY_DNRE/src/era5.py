@@ -13,20 +13,21 @@ Y0, Y1 = 1991, 2025
 URL = "https://archive-api.open-meteo.com/v1/archive"
 
 
-def fetch(lat, lon, y):
-    p = dict(latitude=lat, longitude=lon, start_date=f"{y}-01-01", end_date=f"{y}-12-31",
+def fetch(lat, lon, y, y2=None):
+    y2 = y2 or y
+    p = dict(latitude=lat, longitude=lon, start_date=f"{y}-01-01", end_date=f"{y2}-12-31",
              hourly="temperature_2m,relative_humidity_2m,surface_pressure",
              models="era5_land", timezone="Asia/Almaty")
-    for k in range(6):
+    for k in range(4):
         try:
-            r = requests.get(URL, params=p, timeout=300)
+            r = requests.get(URL, params=p, timeout=180)
         except requests.exceptions.RequestException as e:
-            print("exc", y, repr(e)[:120], file=sys.stderr); time.sleep(20 * (k + 1)); continue
+            print("exc", y, repr(e)[:120], file=sys.stderr); time.sleep(60 * (k + 1)); continue
         if r.status_code == 200:
             h = r.json()["hourly"]
             return pd.DataFrame(h).assign(time=lambda d: pd.to_datetime(d.time))
         print("retry", y, r.status_code, r.text[:200], file=sys.stderr)
-        time.sleep(20 * (k + 1))
+        time.sleep(60 * (k + 1))
     raise RuntimeError(f"fail {lat},{lon},{y}")
 
 
@@ -34,8 +35,8 @@ def main(out):
     rows, tr, elev = [], {}, {}
     for name, (lat, lon) in LOCS.items():
         dfs = []
-        for y in range(Y0, Y1 + 1):
-            dfs.append(fetch(lat, lon, y)); time.sleep(1.5)
+        for y in range(Y0, Y1 + 1, 5):  # 5-year chunks: 7 calls per point
+            dfs.append(fetch(lat, lon, y, min(y + 4, Y1))); time.sleep(5)
         d = pd.concat(dfs, ignore_index=True)
         d["tw"] = wet_bulb_c(d.temperature_2m.values, d.relative_humidity_2m.values, d.surface_pressure.values)
         d["m"] = d.time.dt.month
