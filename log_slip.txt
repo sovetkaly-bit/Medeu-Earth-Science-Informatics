@@ -1,0 +1,98 @@
+ok Almaty_city_800m CMCC_CM2_VHR4
+retry FGOALS_f3_H 429 {"error":true,"reason":"Minutely API request limit exceeded. Please try again in one minute."}
+retry FGOALS_f3_H 429 {"reason":"Minutely API request limit exceeded. Please try again in one minute.","error":true}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+ok Almaty_city_800m FGOALS_f3_H
+retry HiRAM_SIT_HR 429 {"error":true,"reason":"Minutely API request limit exceeded. Please try again in one minute."}
+retry HiRAM_SIT_HR 429 {"reason":"Minutely API request limit exceeded. Please try again in one minute.","error":true}
+ok Almaty_city_800m HiRAM_SIT_HR
+retry MRI_AGCM3_2_S 429 {"error":true,"reason":"Minutely API request limit exceeded. Please try again in one minute."}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+ok Almaty_city_800m MRI_AGCM3_2_S
+retry EC_Earth3P_HR 429 {"reason":"Minutely API request limit exceeded. Please try again in one minute.","error":true}
+retry EC_Earth3P_HR 429 {"error":true,"reason":"Minutely API request limit exceeded. Please try again in one minute."}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+ok Almaty_city_800m EC_Earth3P_HR
+retry MPI_ESM1_2_XR 429 {"error":true,"reason":"Minutely API request limit exceeded. Please try again in one minute."}
+retry MPI_ESM1_2_XR 429 {"reason":"Minutely API request limit exceeded. Please try again in one minute.","error":true}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+ok Almaty_city_800m MPI_ESM1_2_XR
+retry NICAM16_8S 429 {"reason":"Minutely API request limit exceeded. Please try again in one minute.","error":true}
+retry NICAM16_8S 429 {"error":true,"reason":"Minutely API request limit exceeded. Please try again in one minute."}
+ok Almaty_city_800m NICAM16_8S
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+ok Medeu_1700m CMCC_CM2_VHR4
+retry FGOALS_f3_H 429 {"error":true,"reason":"Minutely API request limit exceeded. Please try again in one minute."}
+ok Medeu_1700m FGOALS_f3_H
+retry HiRAM_SIT_HR 429 {"error":true,"reason":"Minutely API request limit exceeded. Please try again in one minute."}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+ok Medeu_1700m HiRAM_SIT_HR
+retry MRI_AGCM3_2_S 429 {"reason":"Minutely API request limit exceeded. Please try again in one minute.","error":true}
+ok Medeu_1700m MRI_AGCM3_2_S
+retry EC_Earth3P_HR 429 {"error":true,"reason":"Hourly API request limit exceeded. Please try again in the next hour."}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+retry EC_Earth3P_HR 429 {"error":true,"reason":"Hourly API request limit exceeded. Please try again in the next hour."}
+retry EC_Earth3P_HR 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+retry EC_Earth3P_HR 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+retry EC_Earth3P_HR 429 {"error":true,"reason":"Hourly API request limit exceeded. Please try again in the next hour."}
+skip Medeu_1700m EC_Earth3P_HR
+retry MPI_ESM1_2_XR 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+retry MPI_ESM1_2_XR 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+retry MPI_ESM1_2_XR 429 {"error":true,"reason":"Hourly API request limit exceeded. Please try again in the next hour."}
+retry MPI_ESM1_2_XR 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+retry MPI_ESM1_2_XR 429 {"error":true,"reason":"Hourly API request limit exceeded. Please try again in the next hour."}
+retry MPI_ESM1_2_XR 429 {"error":true,"reason":"Hourly API request limit exceeded. Please try again in the next hour."}
+skip Medeu_1700m MPI_ESM1_2_XR
+retry NICAM16_8S 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+retry NICAM16_8S 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+retry NICAM16_8S 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+retry NICAM16_8S 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+retry NICAM16_8S 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+skip Medeu_1700m NICAM16_8S
+retry CMCC_CM2_VHR4 429 {"error":true,"reason":"Hourly API request limit exceeded. Please try again in the next hour."}
+retry CMCC_CM2_VHR4 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+retry CMCC_CM2_VHR4 429 {"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+ok Kok-Zhailau_2000m CMCC_CM2_VHR4
+retry FGOALS_f3_H 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+retry FGOALS_f3_H 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+retry FGOALS_f3_H 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry FGOALS_f3_H 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry FGOALS_f3_H 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+skip Kok-Zhailau_2000m FGOALS_f3_H
+retry HiRAM_SIT_HR 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+retry HiRAM_SIT_HR 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry HiRAM_SIT_HR 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry HiRAM_SIT_HR 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry HiRAM_SIT_HR 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+retry HiRAM_SIT_HR 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+skip Kok-Zhailau_2000m HiRAM_SIT_HR
+retry MRI_AGCM3_2_S 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry MRI_AGCM3_2_S 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+retry MRI_AGCM3_2_S 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+retry MRI_AGCM3_2_S 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+retry MRI_AGCM3_2_S 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+skip Kok-Zhailau_2000m MRI_AGCM3_2_S
+retry EC_Earth3P_HR 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry EC_Earth3P_HR 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+retry EC_Earth3P_HR 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+retry EC_Earth3P_HR 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+retry EC_Earth3P_HR 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+skip Kok-Zhailau_2000m EC_Earth3P_HR
+retry MPI_ESM1_2_XR 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry MPI_ESM1_2_XR 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+retry MPI_ESM1_2_XR 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+retry MPI_ESM1_2_XR 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry MPI_ESM1_2_XR 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+skip Kok-Zhailau_2000m MPI_ESM1_2_XR
+retry NICAM16_8S 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry NICAM16_8S 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+exc ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='climate-api.open-meteo.com', port=443): Read
+retry NICAM16_8S 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."}
+retry NICAM16_8S 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+retry NICAM16_8S 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true}
+skip Kok-Zhailau_2000m NICAM16_8S
